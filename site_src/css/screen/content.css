@@ -418,4 +418,10 @@
   {
     padding: 4px;
   }
+  .smallVid {
+    display: block;
+    width: [small_video_width]px;
+    height: [small_video_height()]px;
+    /* position: relative; */
+  }
 }
