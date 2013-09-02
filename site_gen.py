@@ -74,7 +74,6 @@ popup_divs_footer = '<!-- end: image popups -->'
 popup_divs = popup_divs_header
 
 # How to convert Valve's special-snowflake previewimg tag to HTML.
-# XXX Needs to handle popup link too.
 class PreviewImgTag(postmarkup.TagBase):
     def __init__(self, name, **kwargs):
         super(PreviewImgTag, self).__init__(name, inline=True)
