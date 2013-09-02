@@ -1,0 +1,59 @@
+#header_image_bg_color #fbc636
+#sidebar_image_color #963c3c
+#button_image_color #963c3c
+#button_image_hover_color #596c80
+
+#default_text_color #000
+#default_bg_color #fff
+
+#skiplinks_banner_text_color #eee
+#skiplinks_banner_bg_color #222
+#noscript_banner_text_color #eee
+#noscript_banner_bg_color #222
+#info_banner_text_color [default_text_color]
+#info_banner_bg_color #eee
+
+#main_bg_color #fff
+
+#header_text_color #000
+#h1_text_color #222
+#h2_text_color #555
+#h3_text_color #444
+#body_text_color #333
+#quote_text_color #666
+#code_mono_text_color #800
+#mono_text_color #666
+
+#h2_separator_color #bbb
+
+#link_color #bd2b2b
+#visited_link_color #551A8B
+#focus_link_color [header_image_bg_color]
+
+#topnav_text_color #ddd
+#topnav_curchoice_text_color #222
+#topnav_hover_text_color #eee
+#topnav_focus_text_color [focus_link_color]
+#topnav_separator_color #000
+
+#sidenav_text_color #ddd
+#sidenav_curchoice_text_color #222
+#sidenav_hover_text_color #eee
+#sidenav_focus_text_color [focus_link_color]
+#sidenav_hover_bg_color [button_image_hover_color]
+
+#overlay_text_color #ddd
+#overlay_bg_color #000
+
+#gallery_bg_color #222
+
+#image_border_color #888
+#image_bg_color #eee
+
+#blockquote_border_color [image_border_color]
+
+#screenshot_bg_color #222
+
+#footer_text_color #666
+#footer_link_color [link_color]
+#footer_focus_link_color #000

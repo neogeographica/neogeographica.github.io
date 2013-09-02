@@ -1,0 +1,47 @@
+[h1]Engine Versions[/h1]
+The most recent date that I checked out the features of these engines and mods was April 13 2013.
+
+The latest stable version of each engine was:
+[list]
+[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]FTEQW: version 1.0 from Jun 2011
+[*]Fodquake: version 0.3 from Mar 2012
+[*]DarkPlaces: build 20130304 from March 2013
+[*]QuakeSpasm: version 0.85.9 from April 2013
+[*]Fitzquake Mark V: revision 9 from April 2013
+[*]DirectQ: version 1.9.0 from Feb 2012
+[*]ProQuake: version 4.93 from Oct 2012
+[*]Qrack: version 2.011.3467 from Aug 2011
+[/list]
+
+The latest version of each mod was:
+[list]
+[*]Omicron: version 1.02
+[*]FBX++ (my tweak to FBX+)
+[*]FBCA standalone: version 1.02kt beta
+[*]FBCA modified by Trinca: build 379
+[*]nQuake: Feb 2013
+[*]FBCA included in nQuake: 1.01kt (modified by Vegetous?)
+[/list]
+[list]
+[/list]
+[h1]Guide Change History[/h1]
+
+[b]2013[/b]
+[list]
+[*]Aug 10: added link to negke's guide for playing third-party maps/mods
+[*]Jul 14: fixes in reaction to the changes in Steam Guide markup behavior
+[*]Jun 16: added a brief description of Baker's NetQuake FBCA; need to provide more details later
+[*]Apr 13: checked Fitzquake Mark V revision 9 and QuakeSpasm version 0.85.9
+[*]Mar 10: checked Fitzquake Mark V revision 8 and DarkPlaces build 20130304
+[*]Feb 27: latest nQuake version fixes several issues with FBCA bot scripts
+[*]Feb 16: added "GLQuake Issues" section to warn about cache mismatch errors
+[*]Feb 16: added "Quick Start" section
+[*]Feb 07: better workarounds for the nQuake FBCA Clan Arena menu issue
+[*]Feb 04: more about teamplay, and an nQuake issue with FBCA Clan Arena
+[*]Feb 04: info about a problem with the nQuake FBCA configs for 2on2/4on4; and a workaround
+[*]Feb 02: more details about map cycles with Omicron and FBX++
+[*]Feb 02: more details about issues using FBCA with the FTEQW engine
+[*]Feb 02: updates for nQuake 2.3: "frogbot.pk3" instead of "frogbot.pak"; new versions of extracted FBCA configs
+[*]Feb 01: added "Link Recap" section
+[/list]

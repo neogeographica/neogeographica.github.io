@@ -1,0 +1,20 @@
+#sidebar_choice_key#
+jlctf4
+jlctf3
+jlctf2
+m3amap1
+jlctf1
+none
+#sidebar_choice_active#
+[sidebar_choice_active_template('jlctf4','Heaven\'s Engines')]
+[sidebar_choice_active_template('jlctf3','Industrial Revolution')]
+[sidebar_choice_active_template('jlctf2','T I T A N S')]
+[sidebar_choice_active_template('m3amap1','Lost Colossus')]
+[sidebar_choice_active_template('jlctf1','Grazer Station')]
+#sidebar_choice_inactive#
+[sidebar_choice_inactive_template('jlctf4','Heaven\'s Engines')]
+[sidebar_choice_inactive_template('jlctf3','Industrial Revolution')]
+[sidebar_choice_inactive_template('jlctf2','T I T A N S')]
+[sidebar_choice_inactive_template('m3amap1','Lost Colossus')]
+[sidebar_choice_inactive_template('jlctf1','Grazer Station')]
+#

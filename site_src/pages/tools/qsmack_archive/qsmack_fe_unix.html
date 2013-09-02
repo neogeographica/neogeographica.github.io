@@ -1,0 +1,68 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend on UNIX</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+First, you can delete the libtcl_qsmackfe.dll file.  That is for Windows only.
+</P>
+<P>
+Now you can just execute the script. To work properly, there must be a program named &quot;wish&quot; somewhere in your path. The version of &quot;wish&quot; must be 4.2 or greater. If this doesn't work, you may have an older version of &quot;wish&quot;. On our systems, we keep around binaries named &quot;wish4.2&quot; or &quot;wish8.0&quot; and then simply link &quot;wish&quot; to the latest version.
+</P>
+<P> 
+If your default version of &quot;wish&quot; is older than 4.2, but you have a newer version available and installed, you simply type:
+</P>
+<BLOCKQUOTE>
+<PRE>
+wish4.2 qsmackfe.tcl
+</PRE>
+</BLOCKQUOTE>
+<P> 
+or
+</P>
+<BLOCKQUOTE>
+<PRE>
+wish8.0 qsmackfe.tcl
+</PRE>
+</BLOCKQUOTE>
+<P>
+to explicitly specify which version to run.
+</P>
+<P>
+qsmackfe.tcl takes one command line argument. That is the name of a config file. The frontend also will search for a &quot;.qsmack&quot; config file in the user's home directory. If both a &quot;~/.qsmack&quot; file and a command line argument exist, the file given on the command line takes precedence.
+</P>
+<P>
+Side note:  to enable the <A HREF="qsmack_fe_comm.html#nslookup">nslookup</A> command, you're going to need to compile the included &quot;tcl_qsmackfe.c&quot; into a shared object. This is actually really easy and only involves typing one line. On SPARC/Solaris platforms, this should do the trick:
+</P>
+<BLOCKQUOTE>
+<PRE>
+gcc -O -G tcl_qsmackfe.c -o libtcl_qsmackfe.so
+</PRE>
+</BLOCKQUOTE>
+<P>
+On Linux and IRIX platforms, the command is:
+</P>
+<BLOCKQUOTE>
+<PRE>
+gcc -O -shared tcl_qsmackfe.c -o libtcl_qsmackfe.so
+</PRE>
+</BLOCKQUOTE>
+<P>
+Of course, your mileage may vary. Basically, you want to enable the creation of a shared object with your compiler. If your system/compiler doesn't support shared objects then you're out of luck with the &quot;nslookup&quot command.
+</P>
+<P>
+You can skip this compilation for now, if you like.  The frontend will run fine without this library; you just won't be able to do nslookup without it.  When/if you do create the libtcl_qsmackfe.so file, put it in the same directory that contains qsmackfe.tcl. The frontend expects to find it there.
+</P>
+<P>
+Now start up the frontend with the &quot;qsmackfe.cfg.quickstart&quot; config file and continue with the rest of the Quickstart directions.  Once you've verified that everything works, you can try more complicated config files, like the examples in &quot;qsmackfe.cfg.highres&quot; and &quot;qsmackfe.cfg.lowres&quot;.
+</P>
+<BR/>
+[qsmack_archive_fyi]

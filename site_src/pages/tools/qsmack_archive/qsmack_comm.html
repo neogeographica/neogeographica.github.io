@@ -1,0 +1,82 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>I</FONT>n-Game Banning With QSmack</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+Once a QSmack client has been started, a server admin (or any other player with admin privileges) wants the ability to add and delete players from the ban list.  You could, of course, do this by stopping QSmack, changing the <A HREF="qsmack_banfile.html">ban file</A>, and then restarting QSmack, or by iconifying quake and firing up the <A HREF="qsmack_fe.html">frontend</A>, but it would be especially convenient if you could ban that really annoying player while you were actually playing without leaving Quake.  Well, QSmack lets you do it.  Here's how.
+</P>
+<P>
+You start up Quake, connect to the server that QSmack is also connected to, and <A HREF="qsmack_FAQ.html#GET_ADMIN">gain admin privileges</A>.  Now any time you send a special impulse (237 in the server code we provide), your <B>name</B> is printed out to to all clients who have admin privileges.  This includes you (so you have confirmation that you have admin and the special impulse was sent correctly), and, most importantly, it includes QSmack.  Why would you want to do this?  Well, before doing that impulse, you can change your name to any string of 15 characters or less, which means that essentially this impulse lets you send many different <B>commands</B> to QSmack, since when QSmack sees the print, it will interpret it as a command.
+</P>
+<P>
+The command print is prefixed by &quot;#qsmack_command# &quot; (this part is added by the server) so that QSmack can recognize it as a command.  This also makes the command print impervious to spoofing by other clients, due to the nature of strings that are sent by the Quake server and the limit on the length of names for players.
+</P>
+<P>
+Currently, the following commands are supported.  Remember, to invoke the command you have to make your <B>name</B> the command to execute and then send an impulse 237 (or whatever impulse your server code uses for this).  Then you can change your name back. :-)  Note: any command that causes the ban lists to change will cause the ban file to be rewritten with the new list.  In this way, any changes you make will stay in effect even if QSmack or the server goes down.
+</P>
+</P>
+<PRE>
+reread_banfile
+</PRE>
+<BLOCKQUOTE>
+This will cause QSmack to reread the ban file.  Useful if you have manually made new entries in the ban file.
+</BLOCKQUOTE>
+<PRE>
+<EM>IP address</EM>
+</PRE>
+<BLOCKQUOTE>
+Not literally &quot;IP address&quot;, but any valid IP address, including wildcards.  You can specify addresses in the exact same way you do in the <A HREF="qsmack_banfile.html">ban file</A>.  For example, make your name &quot;1.2.3.*&quot;, and send impulse 237 to ban that subnet.  Hey, isn't it kinda lucky that the maximum length of a name in Quake is exactly the same as the maximum length of an IP address?  15 characters!
+</BLOCKQUOTE>
+<PRE>
+ban <EM>playernumber</EM>
+ban
+</PRE>
+<BLOCKQUOTE>
+<P>
+First do a &quot;status&quot; at the console and find out the player number of the person you want to ban.  This number will be between 1 and 16.  Now change your name to &quot;ban 2&quot;, or &quot;ban 13&quot;, or whatever is appropriate, and send that special impulse.  Say bye-bye to the loser.  This will ban a single IP address (that of the banned player).
+</P>
+<P>
+With no arguments, the &quot;ban&quot; command will instead cause QSmack to &quot;say&quot; the current list of banned names and IPs.  It looks kind of like this:
+</P>
+<BLOCKQUOTE>
+<PRE>
+C9_AutoAdmin: Banned Ips:
+C9_AutoAdmin: 1 24.1.67.118    
+C9_AutoAdmin: 2 207.228.71.199 
+C9_AutoAdmin: 3 205.231.11.38  
+C9_AutoAdmin: 4 157.22.179.*   
+C9_AutoAdmin: Banned Names:
+C9_AutoAdmin: 5 \[\r\n]         
+C9_AutoAdmin: Banned Colors:
+C9_AutoAdmin: 5 13 4
+</PRE>
+</BLOCKQUOTE>
+<P>
+The numbers listed in front of each IP and name can be used in the &quot;unban&quot; command.
+</P>
+</BLOCKQUOTE>
+<PRE>
+ban_color <EM>shirt pants</EM>
+</PRE>
+<BLOCKQUOTE>
+<P>
+This command has the same format as the &quot;ban_color&quot; command found in the <A HREF="qsmack_banfile.html">ban file</A>. For example, to ban those pesky players who wear lightblue, change your name to &quot;ban_color 2 2&quot; and send that impulse 237.
+</P>
+</BLOCKQUOTE>
+<PRE>
+unban <EM>number</EM>
+</PRE>
+<BLOCKQUOTE>
+Here, the <EM>number</EM> is the number next to the IP or name you want to remove from the banlist.  Use the &quot;ban&quot; command with no arguments to find out the numbers.  So, for example, to remove the 207.228.71.199 IP from the list shown above you would change your name to &quot;unban 2&quot;, then send impulse 237.  (After each IP or name you remove, the list gets renumbered starting from 1, so re-execute a &quot;ban&quot; command after each &quot;unban&quot; command to see the new numbering if you need to do more unbanning.)
+</BLOCKQUOTE>
+<BR/>
+[qsmack_archive_fyi]

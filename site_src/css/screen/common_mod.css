@@ -1,0 +1,78 @@
+/**
+ * Overrides of yaml-base.css, and style overrides for content elements in
+ * specific layout areas.
+ */
+ 
+@media screen, projection
+{
+  /* Force vertical scrollbars. */
+  body { overflow-y: scroll; }
+
+  /* Size the layout areas. */
+  .page_margins {
+    margin: 0 auto;
+    /*max-width: 100em; don't be font-size dependent */
+    max-width: 1200px;
+  }
+  #header, #nav, #main, #footer {
+    overflow: hidden;
+    padding: 0 [right_margin_after_sidebar]px 0 [left_content_margin]px;
+    min-width: [min_page_width()]px;
+  }
+  #header .page { padding: [header_top_margin]px 0 [header_button_separation]px 0; }
+  #footer .page { padding: 0; }
+  .sidebar {
+    float: right;
+    width: [sidebar_image_width]px;
+  }
+  #main .sidebar_content { padding: [sidenav_top_margin]px 0 0 0; }
+  /* Commenting out while using an image in the foreground of footer sidebar.
+  #footer .sidebar_content { padding: [footer_top_margin]px 0 [footer_bottom_margin]px 0; }
+  */
+  .maincol {
+    width: auto;
+    margin-left: 0;
+    margin-right: [sidebar_image_width]px;
+  }
+  #main .maincol_content { padding: [top_content_margin]px [right_content_margin]px [bottom_content_margin]px 0; }
+  #footer .maincol_content { padding: [footer_top_margin]px 0 0 0; }
+
+  /* Style the layout areas. */
+  body { background-color: [header_image_bg_color]; text-align: center; }
+  .page_margins { text-align:left; }
+  #header .page,
+  #nav .sidebar,
+  #main .page,
+  #footer .sidebar {
+    background-image: url("[global_common_images_path]bgbar_red.png");
+    background-position: top right;
+    background-repeat: repeat-y;
+    background-color: transparent;
+  }
+  #header { color: [header_text_color]; }
+  #nav { background: transparent url("[global_common_images_path]blackline.gif") repeat-x bottom; }
+  #main { background-color: [main_bg_color]; }
+  #footer {
+    color: [footer_text_color];
+    background-image: url("[global_common_images_path]blackline.gif");
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color: transparent;
+  }
+
+  /* Override some area/element combos. */
+  #skiplinks a.skip:focus,
+  #skiplinks a.skip:active { 
+    color: [skiplinks_banner_text_color];
+    background: [skiplinks_banner_bg_color];
+    padding: 3px 0;
+    text-decoration: none;
+  }
+  #footer a {
+    color: [footer_link_color];
+    font-weight: bold;
+  }
+  #footer a:hover,
+  #footer a:active,
+  #footer a:focus { color: [footer_focus_link_color]; }
+}

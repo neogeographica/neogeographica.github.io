@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-US">
+<meta name="author" content="Joel Baxter">
+<meta name="description" content="game content and tools for Quake and Quake 3">
+<title>neogeographica</title>
+<link href="../../css/common.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="../../css/patches/ie_6_7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="../../css/screen/gallery.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../../js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../../js/common.min.js"></script>
+<script type="text/javascript" src="../../js/gallery.min.js"></script>
+<script type="text/javascript" src="../../js/jqModal.min.js"></script>
+<script type="text/javascript" src="../../js/iconmanager.min.js"></script>
+</head>
+<body>
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="index.html"><img src="../../images/common/map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="../../images/common/neogeographica_palatino.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+    <li><a href="../../pages/index.html"><b>Home</b></a></li>
+    <li class="active"><strong>Maps</strong></li>
+    <li><a href="../../pages/tools/index.html"><b>Tools</b></a></li>
+    <li><a href="../../pages/guides/index.html"><b>Guides</b></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->
+<!-- begin: item placement overview dialog -->
+<div class="jqmWindow" id="overview">
+<div id="mapview" class="jqmWindowContent overview" style="z-index: 1"><img src="../../images/q3maps/jlctf2/birdseye.jpg" class="jqmWindowContent overview" alt="" id="mapviewImg" /></div>
+<div id="w0" style="position: absolute; left: 679px; top: 240px; z-index: 3; display: none"><img id="w0Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="w1" style="position: absolute; left: 94px; top: 313px; z-index: 4; display: none"><img id="w1Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="s0" style="position: absolute; left: 684px; top: 220px; z-index: 5; display: none"><img id="s0Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="p0" style="position: absolute; left: 687px; top: 233px; z-index: 6; display: none"><img id="p0Img" name="60" src="../../images/q3maps/common//entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="p1" style="position: absolute; left: 86px; top: 320px; z-index: 7; display: none"><img id="p1Img" name="60" src="../../images/q3maps/common//entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="p2" style="position: absolute; left: 101px; top: 320px; z-index: 8; display: none"><img id="p2Img" name="60" src="../../images/q3maps/common//entity_icons/doubler.gif" width=25 height=25 alt="DBLR" /></div>
+<div id="p3" style="position: absolute; left: 672px; top: 233px; z-index: 9; display: none"><img id="p3Img" name="60" src="../../images/q3maps/common//entity_icons/doubler.gif" width=25 height=25 alt="DBLR" /></div>
+<div id="s1" style="position: absolute; left: 95px; top: 340px; z-index: 10; display: none"><img id="s1Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="p4" style="position: absolute; left: 388px; top: 276px; z-index: 11; display: none"><img id="p4Img" name="63" src="../../images/q3maps/common//entity_icons/iconh_mega.gif" width=25 height=25 alt="MH" /></div>
+<div id="p5" style="position: absolute; left: 414px; top: 276px; z-index: 12; display: none; background-color: white"><img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" id="p5Img" name="8">1FLAG over MH<img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="p6" style="position: absolute; left: 414px; top: 276px; z-index: 13; display: none; background-color: white"><img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" id="p6Img" name="32">GEN over MH<img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="w2" style="position: absolute; left: 456px; top: 296px; z-index: 14; display: none"><img id="w2Img" name="3" src="../../images/q3maps/common//entity_icons/iconw_grenade.gif" width=25 height=25 alt="GL" /></div>
+<div id="w3" style="position: absolute; left: 319px; top: 257px; z-index: 15; display: none"><img id="w3Img" name="3" src="../../images/q3maps/common//entity_icons/iconw_grenade.gif" width=25 height=25 alt="GL" /></div>
+<div id="w4" style="position: absolute; left: 728px; top: 353px; z-index: 16; display: none"><img id="w4Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w5" style="position: absolute; left: 52px; top: 201px; z-index: 17; display: none"><img id="w5Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w6" style="position: absolute; left: 456px; top: 296px; z-index: 18; display: none"><img id="w6Img" name="60" src="../../images/q3maps/common//entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="a0" style="position: absolute; left: 47px; top: 353px; z-index: 19; display: none"><img id="a0Img" name="63" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="a1" style="position: absolute; left: 723px; top: 201px; z-index: 20; display: none"><img id="a1Img" name="63" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="w7" style="position: absolute; left: 319px; top: 257px; z-index: 21; display: none"><img id="w7Img" name="60" src="../../images/q3maps/common//entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="r0" style="position: absolute; left: 732px; top: 298px; z-index: 22; display: none"><img id="r0Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r1" style="position: absolute; left: 676px; top: 293px; z-index: 23; display: none"><img id="r1Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s2" style="position: absolute; left: 713px; top: 293px; z-index: 24; display: none"><img id="s2Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s3" style="position: absolute; left: 732px; top: 298px; z-index: 25; display: none"><img id="s3Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s4" style="position: absolute; left: 733px; top: 336px; z-index: 26; display: none"><img id="s4Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s5" style="position: absolute; left: 676px; top: 293px; z-index: 27; display: none"><img id="s5Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s6" style="position: absolute; left: 730px; top: 227px; z-index: 28; display: none"><img id="s6Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s7" style="position: absolute; left: 712px; top: 270px; z-index: 29; display: none"><img id="s7Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r2" style="position: absolute; left: 712px; top: 270px; z-index: 30; display: none"><img id="r2Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s8" style="position: absolute; left: 70px; top: 267px; z-index: 31; display: none"><img id="s8Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s9" style="position: absolute; left: 106px; top: 267px; z-index: 32; display: none"><img id="s9Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s10" style="position: absolute; left: 49px; top: 333px; z-index: 33; display: none"><img id="s10Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s11" style="position: absolute; left: 52px; top: 224px; z-index: 34; display: none"><img id="s11Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s12" style="position: absolute; left: 51px; top: 262px; z-index: 35; display: none"><img id="s12Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s13" style="position: absolute; left: 69px; top: 290px; z-index: 36; display: none"><img id="s13Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="r3" style="position: absolute; left: 106px; top: 267px; z-index: 37; display: none"><img id="r3Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r4" style="position: absolute; left: 51px; top: 262px; z-index: 38; display: none"><img id="r4Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r5" style="position: absolute; left: 69px; top: 290px; z-index: 39; display: none"><img id="r5Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r6" style="position: absolute; left: 446px; top: 281px; z-index: 40; display: none"><img id="r6Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r7" style="position: absolute; left: 336px; top: 278px; z-index: 41; display: none"><img id="r7Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="w8" style="position: absolute; left: 176px; top: 238px; z-index: 42; display: none"><img id="w8Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="w9" style="position: absolute; left: 600px; top: 315px; z-index: 43; display: none"><img id="w9Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="m0" style="position: absolute; left: 100px; top: 50px; z-index: 2; display: none; background-color: white"><img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" id="m0Img" name="63">Each teleporter chooses between two nearest dests randomly<img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="p7" style="position: absolute; left: 100px; top: 75px; z-index: 44; display: none; background-color: white"><img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" id="p7Img" name="3">Center quads are teamed<img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="p8" style="position: absolute; left: 100px; top: 75px; z-index: 45; display: none; background-color: white"><img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" id="p8Img" name="60">Center kamis are teamed<img src="../../images/q3maps/common//entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="w10" style="position: absolute; left: 641px; top: 286px; z-index: 46; display: none"><img id="w10Img" name="2" src="../../images/q3maps/common//entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="w11" style="position: absolute; left: 134px; top: 267px; z-index: 47; display: none"><img id="w11Img" name="2" src="../../images/q3maps/common//entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="w12" style="position: absolute; left: 134px; top: 267px; z-index: 48; display: none"><img id="w12Img" name="1" src="../../images/q3maps/common//entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="w13" style="position: absolute; left: 641px; top: 286px; z-index: 49; display: none"><img id="w13Img" name="1" src="../../images/q3maps/common//entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="w14" style="position: absolute; left: 134px; top: 286px; z-index: 50; display: none"><img id="w14Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_lightning.gif" width=25 height=25 alt="LG" /></div>
+<div id="w15" style="position: absolute; left: 134px; top: 267px; z-index: 51; display: none"><img id="w15Img" name="60" src="../../images/q3maps/common//entity_icons/chaingun128.gif" width=25 height=25 alt="CG" /></div>
+<div id="w16" style="position: absolute; left: 641px; top: 286px; z-index: 52; display: none"><img id="w16Img" name="60" src="../../images/q3maps/common//entity_icons/chaingun128.gif" width=25 height=25 alt="CG" /></div>
+<div id="w17" style="position: absolute; left: 641px; top: 267px; z-index: 53; display: none"><img id="w17Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_lightning.gif" width=25 height=25 alt="LG" /></div>
+<div id="r8" style="position: absolute; left: 611px; top: 303px; z-index: 54; display: none"><img id="r8Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r9" style="position: absolute; left: 172px; top: 257px; z-index: 55; display: none"><img id="r9Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r10" style="position: absolute; left: 610px; top: 260px; z-index: 56; display: none"><img id="r10Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r11" style="position: absolute; left: 171px; top: 300px; z-index: 57; display: none"><img id="r11Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="w18" style="position: absolute; left: 711px; top: 327px; z-index: 58; display: none"><img id="w18Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_lightning.gif" width=25 height=25 alt="LG" /></div>
+<div id="w19" style="position: absolute; left: 67px; top: 226px; z-index: 59; display: none"><img id="w19Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_lightning.gif" width=25 height=25 alt="LG" /></div>
+<div id="a2" style="position: absolute; left: 693px; top: 302px; z-index: 60; display: none"><img id="a2Img" name="2" src="../../images/q3maps/common//entity_icons/iconr_green.gif" width=25 height=25 alt="GA" /></div>
+<div id="a3" style="position: absolute; left: 83px; top: 251px; z-index: 61; display: none"><img id="a3Img" name="2" src="../../images/q3maps/common//entity_icons/iconr_green.gif" width=25 height=25 alt="GA" /></div>
+<div id="a4" style="position: absolute; left: 83px; top: 251px; z-index: 62; display: none"><img id="a4Img" name="61" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="a5" style="position: absolute; left: 693px; top: 302px; z-index: 63; display: none"><img id="a5Img" name="61" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="s14" style="position: absolute; left: 694px; top: 281px; z-index: 64; display: none"><img id="s14Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s15" style="position: absolute; left: 88px; top: 278px; z-index: 65; display: none"><img id="s15Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s16" style="position: absolute; left: 69px; top: 253px; z-index: 66; display: none"><img id="s16Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="p9" style="position: absolute; left: 55px; top: 257px; z-index: 67; display: none"><img id="p9Img" name="60" src="../../images/q3maps/common//entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="r12" style="position: absolute; left: 548px; top: 281px; z-index: 68; display: none"><img id="r12Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="p10" style="position: absolute; left: 722px; top: 296px; z-index: 69; display: none"><img id="p10Img" name="60" src="../../images/q3maps/common//entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="s17" style="position: absolute; left: 714px; top: 307px; z-index: 70; display: none"><img id="s17Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r13" style="position: absolute; left: 234px; top: 278px; z-index: 71; display: none"><img id="r13Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="m1" style="position: absolute; left: 291px; top: 276px; z-index: 2; display: none"><img id="m1Img" name="63" src="../../images/q3maps/common//entity_icons/tele_in.gif" width=25 height=25 alt="TP-IN" /></div>
+<div id="m2" style="position: absolute; left: 484px; top: 276px; z-index: 2; display: none"><img id="m2Img" name="63" src="../../images/q3maps/common//entity_icons/tele_in.gif" width=25 height=25 alt="TP-IN" /></div>
+<div id="w20" style="position: absolute; left: 609px; top: 186px; z-index: 72; display: none"><img id="w20Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="w21" style="position: absolute; left: 559px; top: 366px; z-index: 73; display: none"><img id="w21Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_railgun.gif" width=25 height=25 alt="RG" /></div>
+<div id="w22" style="position: absolute; left: 218px; top: 188px; z-index: 74; display: none"><img id="w22Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_railgun.gif" width=25 height=25 alt="RG" /></div>
+<div id="w23" style="position: absolute; left: 162px; top: 369px; z-index: 75; display: none"><img id="w23Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="p11" style="position: absolute; left: 673px; top: 308px; z-index: 76; display: none"><img id="p11Img" name="60" src="../../images/q3maps/common//entity_icons/scout.gif" width=25 height=25 alt="SCOUT" /></div>
+<div id="s18" style="position: absolute; left: 122px; top: 360px; z-index: 77; display: none"><img id="s18Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="p12" style="position: absolute; left: 102px; top: 308px; z-index: 78; display: none"><img id="p12Img" name="60" src="../../images/q3maps/common//entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="p13" style="position: absolute; left: 672px; top: 245px; z-index: 79; display: none"><img id="p13Img" name="60" src="../../images/q3maps/common//entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="p14" style="position: absolute; left: 103px; top: 245px; z-index: 80; display: none"><img id="p14Img" name="60" src="../../images/q3maps/common//entity_icons/scout.gif" width=25 height=25 alt="SCOUT" /></div>
+<div id="s19" style="position: absolute; left: 656px; top: 201px; z-index: 81; display: none"><img id="s19Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="p15" style="position: absolute; left: 165px; top: 188px; z-index: 82; display: none"><img id="p15Img" name="60" src="../../images/q3maps/common//entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="r14" style="position: absolute; left: 256px; top: 360px; z-index: 83; display: none"><img id="r14Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r15" style="position: absolute; left: 524px; top: 201px; z-index: 84; display: none"><img id="r15Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s20" style="position: absolute; left: 126px; top: 190px; z-index: 85; display: none"><img id="s20Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s21" style="position: absolute; left: 660px; top: 371px; z-index: 86; display: none"><img id="s21Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="p16" style="position: absolute; left: 613px; top: 366px; z-index: 87; display: none"><img id="p16Img" name="60" src="../../images/q3maps/common//entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="r16" style="position: absolute; left: 443px; top: 317px; z-index: 88; display: none"><img id="r16Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r17" style="position: absolute; left: 339px; top: 243px; z-index: 89; display: none"><img id="r17Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="a6" style="position: absolute; left: 440px; top: 318px; z-index: 90; display: none"><img id="a6Img" name="63" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="a7" style="position: absolute; left: 335px; top: 236px; z-index: 91; display: none"><img id="a7Img" name="63" src="../../images/q3maps/common//entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="r18" style="position: absolute; left: 442px; top: 242px; z-index: 92; display: none"><img id="r18Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r19" style="position: absolute; left: 340px; top: 318px; z-index: 93; display: none"><img id="r19Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s22" style="position: absolute; left: 135px; top: 278px; z-index: 94; display: none"><img id="s22Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s23" style="position: absolute; left: 129px; top: 347px; z-index: 95; display: none"><img id="s23Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s24" style="position: absolute; left: 647px; top: 281px; z-index: 96; display: none"><img id="s24Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s25" style="position: absolute; left: 650px; top: 214px; z-index: 97; display: none"><img id="s25Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="f0" style="position: absolute; left: 388px; top: 276px; z-index: 98; display: none"><img id="f0Img" name="32" src="../../images/q3maps/common//entity_icons/iconf_neutral1.gif" width=25 height=25 alt="GEN" /></div>
+<div id="p17" style="position: absolute; left: 388px; top: 292px; z-index: 99; display: none"><img id="p17Img" name="3" src="../../images/q3maps/common//entity_icons/quad.gif" width=25 height=25 alt="QUAD" /></div>
+<div id="p18" style="position: absolute; left: 388px; top: 292px; z-index: 100; display: none"><img id="p18Img" name="60" src="../../images/q3maps/common//entity_icons/kamikaze.gif" width=25 height=25 alt="KAMI" /></div>
+<div id="p19" style="position: absolute; left: 388px; top: 261px; z-index: 101; display: none"><img id="p19Img" name="60" src="../../images/q3maps/common//entity_icons/kamikaze.gif" width=25 height=25 alt="KAMI" /></div>
+<div id="w24" style="position: absolute; left: 370px; top: 276px; z-index: 102; display: none"><img id="w24Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w25" style="position: absolute; left: 405px; top: 276px; z-index: 103; display: none"><img id="w25Img" name="63" src="../../images/q3maps/common//entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="p20" style="position: absolute; left: 388px; top: 261px; z-index: 104; display: none"><img id="p20Img" name="3" src="../../images/q3maps/common//entity_icons/quad.gif" width=25 height=25 alt="QUAD" /></div>
+<div id="s26" style="position: absolute; left: 728px; top: 230px; z-index: 105; display: none"><img id="s26Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r20" style="position: absolute; left: 731px; top: 333px; z-index: 106; display: none"><img id="r20Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r21" style="position: absolute; left: 728px; top: 230px; z-index: 107; display: none"><img id="r21Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r22" style="position: absolute; left: 524px; top: 281px; z-index: 108; display: none"><img id="r22Img" name="63" src="../../images/q3maps/common//entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="f1" style="position: absolute; left: 388px; top: 276px; z-index: 109; display: none"><img id="f1Img" name="8" src="../../images/q3maps/common//entity_icons/iconf_neutral1.gif" width=25 height=25 alt="NEUTFLAG" /></div>
+<div id="s27" style="position: absolute; left: 51px; top: 330px; z-index: 110; display: none"><img id="s27Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s28" style="position: absolute; left: 731px; top: 333px; z-index: 111; display: none"><img id="s28Img" name="63" src="../../images/q3maps/common//entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r23" style="position: absolute; left: 54px; top: 227px; z-index: 112; display: none"><img id="r23Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r24" style="position: absolute; left: 258px; top: 278px; z-index: 113; display: none"><img id="r24Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r25" style="position: absolute; left: 51px; top: 330px; z-index: 114; display: none"><img id="r25Img" name="63" src="../../images/q3maps/common//entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="s29" style="position: absolute; left: 54px; top: 227px; z-index: 115; display: none"><img id="s29Img" name="63" src="../../images/q3maps/common//entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="m3" style="position: absolute; left: 373px; top: 262px; z-index: 2; display: none"><img id="m3Img" name="63" src="../../images/q3maps/common//entity_icons/tele_out.gif" width=25 height=25 alt="TP-OUT" /></div>
+<div id="m4" style="position: absolute; left: 402px; top: 262px; z-index: 2; display: none"><img id="m4Img" name="63" src="../../images/q3maps/common//entity_icons/tele_out.gif" width=25 height=25 alt="TP-OUT" /></div>
+<div id="m5" style="position: absolute; left: 373px; top: 291px; z-index: 2; display: none"><img id="m5Img" name="63" src="../../images/q3maps/common//entity_icons/tele_out.gif" width=25 height=25 alt="TP-OUT" /></div>
+<div id="m6" style="position: absolute; left: 402px; top: 291px; z-index: 2; display: none"><img id="m6Img" name="63" src="../../images/q3maps/common//entity_icons/tele_out.gif" width=25 height=25 alt="TP-OUT" /></div>
+<div id="f2" style="position: absolute; left: 29px; top: 240px; z-index: 116; display: none"><img id="f2Img" name="48" src="../../images/q3maps/common//entity_icons/iconf_blueflag.gif" width=50 height=50 alt="BLUEBASE" /></div>
+<div id="f3" style="position: absolute; left: 673px; top: 240px; z-index: 117; display: none"><img id="f3Img" name="48" src="../../images/q3maps/common//entity_icons/iconf_redflag.gif" width=50 height=50 alt="REDBASE" /></div>
+<div id="f4" style="position: absolute; left: 29px; top: 240px; z-index: 118; display: none"><img id="f4Img" name="15" src="../../images/q3maps/common//entity_icons/iconf_blueflag.gif" width=50 height=50 alt="BLUEFLAG" /></div>
+<div id="f5" style="position: absolute; left: 673px; top: 240px; z-index: 119; display: none"><img id="f5Img" name="15" src="../../images/q3maps/common//entity_icons/iconf_redflag.gif" width=50 height=50 alt="REDFLAG" /></div>
+<div id="iconSel" class="jqmWindowContent overviewForm">
+<form class="center jqmForm" id="iconSelForm" action="">
+<input type="checkbox" id="mapCheck" name="map" onClick="toggleMap()" checked />Map
+<input type="checkbox" id="armorCheck" name="armor" onClick="toggleType('#a')" />Armor
+<input type="checkbox" id="weaponsCheck" name="weapons" onClick="toggleType('#w')" />Weapons
+<input type="checkbox" id="powerupsCheck" name="powerups" onClick="toggleType('#p')" />Powerups
+<input type="checkbox" id="spawnsCheck" name="spawns" onClick="toggleType('#s')" />Spawns
+<input type="checkbox" id="respawnsCheck" name="respawns" onClick="toggleType('#r')" />Respawns<br />
+<input type="radio" id="setGametypesRadio0" name="setGametypes" onClick="setGametype(0)" checked />CTF
+<input type="radio" id="setGametypesRadio1" name="setGametypes" onClick="setGametype(1)" />CCTF
+<input type="radio" id="setGametypesRadio2" name="setGametypes" onClick="setGametype(2)" />TA CTF
+<input type="radio" id="setGametypesRadio3" name="setGametypes" onClick="setGametype(3)" />TA Oneflag
+<input type="radio" id="setGametypesRadio4" name="setGametypes" onClick="setGametype(4)" />TA Overload
+<input type="radio" id="setGametypesRadio5" name="setGametypes" onClick="setGametype(5)" />TA Harvester<br />
+<br />
+<input type="submit" class="jqmClose" value="Exit" />
+</form>
+</div>
+</div>
+<!-- end: item placement overview dialog-->
+<!-- begin: main content area (#main) -->
+<div id="main">
+<div class="page_margins">
+<div class="page">
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+    <li><a href="jlctf4.html"><img src="../../images/q3maps/common/jlctf4_nav_thumb.png" /><strong>Heaven's Engines</strong></a></li>
+    <li><a href="jlctf3.html"><img src="../../images/q3maps/common/jlctf3_nav_thumb.png" /><strong>Industrial Revolution</strong></a></li>
+    <li class=active><img src="../../images/q3maps/common/jlctf2_nav_thumb.png" /><strong>T I T A N S</strong></li>
+    <li><a href="m3amap1.html"><img src="../../images/q3maps/common/m3amap1_nav_thumb.png" /><strong>Lost Colossus</strong></a></li>
+    <li><a href="jlctf1.html"><img src="../../images/q3maps/common/jlctf1_nav_thumb.png" /><strong>Grazer Station</strong></a></li>
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->
+<!-- begin: main column (#main_maincol) -->
+<div id="main_maincol" class="maincol" role="main">
+<div class="maincol_content clearfix">
+  <h1>T I T A N S</h1>
+  <ul>
+    <li>Quake 3 Team Arena &amp; CTF, 8-14 players</li>
+    <li>released April 2001 (original), April 2002 (UMP1 collection), January 2010 (final standalone version)</li>
+  </ul>
+  <p>Titans is a massive flag battlefield constructed with the texturing and architectural styles from <a href="m3amap1.html">Lost Colossus</a>.  It was made with full-sized Team Arena gameplay in mind, and its extensive layout of bunkers and courtyards matches the size of the Team Arena terrain map Overdose (mpterra1).  Titans also works for &quot;vanilla&quot; Q3CTF and similar mods, if you like big teams on a big map.</p>
+  <form id="popup" class="center" style="display: none" action=""><input type="submit" class="jqModal" value="&nbsp;click for interactive item placement overview&nbsp;" /></form>
+<p class="gallery_noscript center noprint"><em>(activate JavaScript for in-page image gallery)</em></p>
+<div class="gallery gallery_1rowthumbs center floatbox noprint">
+<div class="gallery_display galleria_instance_1"></div>
+<ul class="thumbnail_picker galleria_instance_1">
+<li class="active"><a href="../../images/q3maps/jlctf2/redpillars.png"><img src="../../images/q3maps/jlctf2/redpillars_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/blueflag.png"><img src="../../images/q3maps/jlctf2/blueflag_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/redpylon.png"><img src="../../images/q3maps/jlctf2/redpylon_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/blueback.png"><img src="../../images/q3maps/jlctf2/blueback_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/redside.png"><img src="../../images/q3maps/jlctf2/redside_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/bluefountain.png"><img src="../../images/q3maps/jlctf2/bluefountain_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/editortop.png"><img src="../../images/q3maps/jlctf2/editortop_thumb.jpg" /></a></li>
+<li><a href="../../images/q3maps/jlctf2/editorside.png"><img src="../../images/q3maps/jlctf2/editorside_thumb.jpg" /></a></li>
+</ul>
+</div>
+  <h2>Downloads</h2>
+  <p>Originally Titans was released as two separate maps, one for Team Arena and one for anything &quot;not Team Arena&quot;.  When a Quake 3 patch introduced support for gametype-specific item loadouts, it was possible to make a version of Titans that supported both styles of play; this version was released along with several other maps in the Unofficial Map Pack #1 (UMP1), as ump1ctf4.  The &quot;Final Version&quot; jlctf2 available for download below is identical to the version in UMP1, just in a smaller standalone package.</p>
+  <h3>&bull; Final Version</h3>
+  <ul>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/jlctf2.zip"><b>map package</b></a></li>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/jlctf2.txt"><b>readme</b></a> (included in map package)</li>
+  </ul>
+  <h3>&bull; Older Versions (not required)</h3>
+  <ul>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/ump1.zip"><b>entire UMP1 collection</b></a> (51 MB)</li>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/titans_ctf.zip"><b>original non-Team Arena version</b></a></li>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/titans_ta.zip"><b>original Team Arena-only version</b></a></li>
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/titans_mapstuff.zip"><b>map source for original versions</b></a></li>
+    <li><a href="http://files.neogeographica.com/downloads/q3maps/jlctf2/titans_mapstuff_readme.txt"><b>readme for map source</b></a> (included in map source package)</li>
+  </ul>
+  <h2>Notes</h2>
+  <h3>&bull; Genesis</h3>
+  <p>After wrapping <a href="m3amap1.html">m3amap1</a>, the M3A team members set out to make non-RA3 versions of their various arenas.  I think we all had become pretty fond of certain bits and pieces of our contributions, and we were dubious (correctly, as it turns out) that they would get much play time in an RA3 map.  While I was pondering what to do with my clan arena Lost Colossus, I was having fun with public pickup games on the big &quot;terrain maps&quot; in the Q3 expansion Team Arena; at some point I got curious about whether I could use my arena as a foundation for making a map that would be 1) as big as a terrain map but 2) presented as an artificial structure rather than as natural terrain.</p>
+  <p>So just like starting with a plan for a Q3F map led to an unconventional clan arena, starting with that clan arena then led to an unconventional Team Arena map.  I'm still very happy with the way it ended up looking and playing.</p>
+  <h3>&bull; Design</h3>
+  <p>The &quot;base&quot; area for each side is very similar to the lower courtyard of Lost Colossus.  The mountain, now the center of the map, needed more drastic changes: the top of the mountain removed, the under-mountain area expanded.  (And of course there are now two Titans instead of one.)</p>
+  <p>I may have spent less time duplicating/reconfiguring map areas for CTF play than I did just getting bots to behave.  Since Lost Colossus didn't have bot support to begin with, I was faced with existing design choices that really didn't play nicely with the AI.  Some things needed minor tweaks, like tilting the &quot;ladder&quot; jumps to make the bots recognize them as usable.  Others were more fundamental, like the layout having several large open areas.  I was lucky to get help from id Software's AI guy, Jan Paul van Waveren, in stamping out the worst problems.  It still takes a bigger-than-normal share of CPU to run full teams of bots on this map, although of course that's a moot point on modern hardware.</p>
+  <h3>&bull; Theme</h3>
+  <div class="floatbox">
+    <img src="../../images/q3maps/jlctf2/pylon_10fps_small.gif" class="pic_left" />
+    <p>The foundation texturing of Titans is the same as that for Lost Colossus, i.e. derived from the Egyptian materials created by Todd &quot;Mr.CleaN&quot; Rose.</p>
+    <p>Most of the new texture work for Titans involved breaking out the red &amp; blue paint buckets to color-code map areas for CTF play.  Some of that colorization is covered by your standard bits of trim, item markers, and logo decals, but the features that people seem to remember most about Titans are the three color-coded &quot;Vegas pylons&quot; in each base area.</p>
+    <p>I feel that I have to include an animated picture here since the screenshots don't capture their full, er, splendor.  Behold!</p>
+  </div>
+  <h3>&bull; Tricks</h3>
+  <p>Titans is a pretty straightforward construction.  About the only nonobvious functionality occurs in the surface parameters for some of the shaders:</p>
+  <p>&bull; Most vertical or angled surfaces outside of the normal playing field have &quot;surfaceparm slick&quot;, to prevent players from standing (hiding) there.  (Lost Colossus did this too.)</p>
+  <p>&bull; The outer walls of the base area, rarely seen by any player unless you manage to fling yourself over the wall, use &quot;surfaceparm nolightmap&quot;.  No need for fancy shadows out there, so no need to have them eat into the limited space available for lightmaps.  Ditto for the very dark stone surface of the courtyard roof and pylons.</p>
+  <p>&bull; Several surfaces also use &quot;surfaceparm nograpple&quot;, to indicate that you can't grapple to them; this is another mechanism for trying to prevent hiding in lame places.  That's not actually a standard surfaceparm; I had my local map compiler set up to translate &quot;nograpple&quot; to a particular value, and I tried to convince various CTF mod authors to have their code interpret that value appropriately.  At one point I had most mod authors on board with this, but mods change and die and merge, and features like this get lost in the shuffle.  I know that it's not supported in the last version of Threewave Classic CTF, for example.  The bottom line, probably, is that Titans was not designed well for mods that use grapple.  Can't please everyone!</p>
+  <h3>&bull; Useless Trivia</h3>
+  <p>In the original release, the door in the Titans throne would open so far that quite a bit of the top of the door would stick up through the Titan's lap.  I'm sure that I originally had the door's travel amount set correctly, then later forgot why I didn't have the door opening all the way and &quot;fixed&quot; it.</p>
+  <p>Since it's a one-way door, the only way you'd normally see the bug was to be standing outside the throne when someone else went through the door... this is the sort of thing you don't notice if most of your playtesting is alone or with bots.</p>
+  <p>It was nice to have a chance to re-release the map in UMP1 in order to merge the TA and non-TA versions together, but deep down I was most happy about getting a chance to fix that door.</p>
+  <br />
+  <div class="screenshot center floatbox" style="width:320px"><img src="../../images/q3maps/jlctf2/doorbug.gif" /></div>
+</div>
+<div id="ie_clearing">&nbsp;</div>
+</div>
+<!-- end: main column -->
+</div>
+</div>
+</div>
+<!-- end: main content area -->
+<!-- begin: footer (#footer) -->
+<div id="footer" role="contentinfo">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<!--<div class="sidebar_content clearfix">&nbsp;<br />&nbsp;<br />&nbsp;</div>-->
+<div class="sidebar_content clearfix"><img src="../../images/common/bgbar_red_footer.png" style="margin-bottom: 0; margin-top: auto;"></img></div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">copyright &copy; Joel Baxter (<img class="intext" alt="contact address (nospam)" src="../../images/common/contact.png" />) except where indicated otherwise<br />site constructed with <a href="http://www.yaml.de/">YAML</a>+<a href="http://jquery.com/">jQuery</a>+<a href="http://dev.iceburg.net/jquery/jqModal/">jqModal</a>+<a href="http://devkick.com/lab/galleria/">Galleria</a>+<a href="http://www.nthwave.net/elements/">Elements</a>+<a href="https://code.google.com/p/postmarkup/">Postmarkup</a>, hosted by <a href="https://github.com/">GitHub</a> and <a href="http://www.megapath.com/">MegaPath</a><br />have a nice day</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: footer -->
+
+<!-- full skiplink functionality in all browsers -->
+<script src="../../js/yaml-focusfix.min.js" type="text/javascript"></script>
+</body>
+</html>

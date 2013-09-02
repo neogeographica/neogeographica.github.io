@@ -1,0 +1,58 @@
+[previewimg=266086;sizeOriginal,inline;newfolder.png][/previewimg]
+(each mod gets its own new folder inside your Quake folder)
+
+
+negke has created a nice guide to using custom maps and mods, which applies to bot mods as well, so you probably want to check that out: http://steamcommunity.com/sharedfiles/filedetails/?id=166554615
+I had a brief description of the process here too, and I'll just leave it in below. Then we'll get to the specific downloads that you need for the various bot mods.
+
+To play a mod, you first need to download and "install" it, but installing a mod generally just involves dropping the files into the right spot in your existing Quake installation.
+
+Every Quake mod is placed into its own folder.  This folder should be placed next to your "id1" folder.  Usually (at least on Windows systems) this means that you will be creating the mod folder inside the same folder that contains your Quake engine executable.
+
+For a default Steam installation of Quake, the location you're looking for is the "C:\Program Files (x86)\Steam\steamapps\common\quake" folder ... that is where your Quake executables and "id1" folder are, and that's where you should create any mod folders.  If you've installed Steam somewhere else then look for "steamapps\common\quake" there.  (Personally I do like to keep my games, including Steam games, somewhere outside of the Program Files folders.)
+
+After creating the folder for a mod, put the mod's files in there and you're done.  Generally you'll receive the mod in a zipfile or some other compressed archive, so you'll need to open up that archive and extract its contents into the mod folder.  Any ".dat", ".pak", or ".pk3" files go directly into the mod folder; other files will often go into a subfolder, like ".bsp" files go into a "maps" subfolder.  The files should already be in the correct arrangement in the archive that you downloaded, so just preserve that arrangement when you put them into the mod folder that you created.
+
+While installing a mod is almost always super-simple, you should always read whatever documentation comes with it.  Just in case.
+
+You can install as many mods as you like.  When you run Quake you will choose which mod you want to activate for that session; that will be covered in the "Launching a Mod" section below.
+
+Here's the files you would need for installing each bot mod:
+[list]
+[/list]
+[h1]Omicron[/h1]
+[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/obots102.zip]Omicron version 1.02[/url]
+
+This is the Omicron bot created by Jan Paul van Waveren (who also worked on the Quake 2 Gladiator bot and was later hired by id software for Quake 3). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
+[list]
+[/list]
+[h1]FBX++[/h1]
+[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/fbx++.zip]FBX++[/url]
+
+The FrikBot code was created by Ryan Smith.  FBX++ has a few additional changes by "Igor9" and a fix by me (see readme_tweaks.txt for details). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
+[list]
+[/list]
+[h1]FBCA with nQuake[/h1]
+If you have installed the [url=http://www.nquake.com/]nQuake[/url] package, you already have a version of FBCA installed that has almost exactly the same functionality as the standalone mod.
+
+However, this version of FBCA is different enough that the sections of this guide will split FBCA discussion into two parts: one part for nQuake users, and one part for folks that have installed just the FBCA mod.
+
+If you don't have nQuake, you can take a detour to check it out and see if you want it... if you don't, then skip ahead to "FBCA without nQuake" below.
+
+The Frogbot code was created by Robert Field.  The version of FBCA included with nQuake is 1.01kt, a modification of the original Frogbot by "ParboiL" and several other credited folks.  The nQuake version also credits "Vegetous".  (I can't tell if extra map support was provided by "Trinca", but I would guess so.)
+
+The nQuake FBCA content is all contained inside the file "frogbot.pk3" in your "qw" folder.  You don't need to do anything to this file... it is ready for playing.  If you do want to look inside it, it's just a zip archive with a different-than-usual filename extension.  If you'd rather not bother extracting the documentation you can [url=http://eclecticmenagerie.com/jl/quake/bots/nquake-fbca-doc.zip]download the docs here[/url].
+
+Unlike the other "bare" mods described in this section, the version of FBCA included with nQuake already has support for extra maps.  nQuake comes bundled with some but not (by a long shot) all of those maps; you can get all the maps in the Frogbot Map Pack linked in the "Extra Map Support" section below.
+
+Note: The separate downloadable version of FBCA described below does have just a few more fixes and changes, but personally I don't feel like I have any reason to separately install FBCA if I already have nQuake.
+[list]
+[/list]
+[h1]FBCA without nQuake[/h1]
+[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/fbca102kt.zip]FBCA version 1.02kt beta[/url]
+
+If you are an ezQuake user, you probably want to name the folder for this mod "fbca".  ezQuake has a somewhat handy in-game menu for launching bot matches, and it assumes that if you have a separately installed FBCA mod (as opposed to the one that comes with nQuake) that you have put it in a folder named "fbca".
+
+The Frogbot code was created by Robert Field.  Frogbot Clan Arena is a modification of the original Frogbot by "ParboiL", "Tappak", and several other credited folks.  See docs/fbca102kt_eng.txt or docs/fbca102kt_rus.txt for details. Maps supported out-of-the-box: dm3, dm4, dm6, aerowalk, amphi2, crdm2, dranzdm8, e1m2, frobodm2, pkeg1, povdmm4, spinev2, ultrav, ztndm3.  See the "Extra Map Support" section below for more map support.
+
+This mod does not come bundled with those extra maps (the ones after dm6 in the list). You can find them at Quake map download sites around the web, or get the Frogbot Map Pack in the "Extra Map Support" section below which includes those maps and many more.

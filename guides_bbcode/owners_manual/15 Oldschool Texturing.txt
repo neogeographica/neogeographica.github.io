@@ -1,0 +1,14 @@
+If you're interested in re-creating the original Quake appearance then you should read the page at quaddicted.com about [url=https://www.quaddicted.com/engines/software_vs_glquake]differences between software rendered Quake and GLQuake[/url].
+
+One of the basic takeaways from that page is that you may want to change the texture filtering in Quake to make it more "pixel-y".  The quaddicted.com page has several comparison shots, but here's another (click for large versions to best see the difference):
+[previewimg=237206;sizeThumb,floatLeft;filtered.png][/previewimg] [previewimg=237207;sizeThumb,floatRight;pixel.png][/previewimg]
+
+The left image is the familiar GLQuake filtered look; the right image is still an OpenGL renderer but its textures look more like the original software Quake.
+
+If you are using an engine with an OpenGL renderer then you can do this with a console variable:
+[code]gl_texturemode GL_NEAREST_MIPMAP_LINEAR[/code]
+Some engines will save this to the config file, but in other cases you'll need to put it in autoexec.cfg to make it stick.
+
+This same console variable is also available in DirectQ and the Direct3D version of ProQuake, even though they use a Direct3D renderer.
+
+I'm not aware of how to do this for the Direct3D mode of FTEQW.

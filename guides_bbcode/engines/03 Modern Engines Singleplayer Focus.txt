@@ -1,0 +1,31 @@
+[previewimg=234248;sizeOriginal,floatLeft;DarkPlaces32.png][/previewimg] [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] (Windows, OS X, Linux) is the most popular engine for changing the look 'n feel of singleplayer Quake; it uses an OpenGL renderer.  DarkPlaces adds many optional visual effects, as well as support for several other mapfile and 3D model formats.  While it is most popular for singleplayer use, it also supports NetQuake and its own multiplayer protocol (client or server), and QuakeWorld (client only).
+
+The "Ultimate Quake Patch" bundle collected by MenaceInc incorporates the DarkPlaces engine.  That download is described in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113166739
+This is an easy-to-use Windows installer that works nicely with your Steam copy of Quake, but there's a few caveats to keep in mind:
+[list]
+[*]That installer will replace two of the Quake engine executables that were provided by Steam. After installation, if you run "Quake" or "GLQuake" from Steam, you will now be running DarkPlaces instead of the original engines.
+[*]As of the writing of this guide, it's been a while since that bundle was updated; its included version of DarkPlaces is an old one from April 2010. 
+[*]There is no dedicated uninstaller. If you want to remove the installed files, you will have to manually delete them. Steam's "Delete Local Content" feature will remove the DarkPlaces engine but will not clean up some other files like libraries or music tracks. Fortunately it's pretty easy to just delete everything and then redownload from Steam.
+[*]The installed library files will cause issues if you also want to use the "QuakeSpasm for Steam" or "ProQuake for Steam" installers, as described below in the sections about QuakeSpasm and ProQuake.
+[/list]
+
+The [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] and [url=http://www.moddb.com/mods/quake-epsilon-build]Quake Epsilon[/url] bundles also each include the DarkPlaces engine (more up-to-date) and a great deal of new media.  Those two bundles are probably the most extensive collections of replacement textures, models, music, and effects for Quake.
+[previewimg=249892;sizeThumb,floatLeft;qhd1.jpg][/previewimg] [previewimg=249893;sizeThumb,floatRight;qhd2.jpg][/previewimg]
+[previewimg=237159;sizeThumb,floatLeft;id1_screenshot2_large.jpg][/previewimg] [previewimg=237160;sizeThumb,floatRight;mp1_screenshot2_large.jpg][/previewimg]
+
+(top: images from Quake HD on Mod DB; bottom: images from the old Quake Epsilon website)
+[list]
+[/list]
+[previewimg=234255;sizeOriginal,floatLeft;QuakeSpasm32.png][/previewimg] [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url] (Windows, OS X, Linux) is a crossplatform descendant of the classic Fitzquake engine; it uses an OpenGL renderer.  It supports NetQuake multiplayer (client or server) but is primarily used for singleplayer content -- many Quake singleplayer map releases these days require (or at least are primarily tested with) an engine from the Fitzquake family.  QuakeSpasm can be configured to be quite faithful to Quake's original look while still providing bugfixes and usability improvements.
+
+A [url=http://quakeone.com/proquake/Quakespasm_Steam_Easy_Install.exe]QuakeSpasm installer for Steam Quake owners[/url] is available for Windows. It will place the QuakeSpasm engine and libraries in your Steam Quake folder; it doesn't replace any of the Steam-provided Quake engines, but it can access the .pak data files in Steam with no need for file copying. An uninstaller is provided that will clean up all of its files without harming your Steam installation.
+
+Note that QuakeSpasm has at least one library in common with the files installed by the "Ultimate Quake Patch". If you use both the "Ultimate Quake Patch" [i]and[/i] the "QuakeSpasm for Steam" installer at the same time, the operation of DarkPlaces and/or QuakeSpasm may be affected. And uninstalling the QuakeSpasm files will remove a library used by DarkPlaces. It's probably best not to use both of those installers at the same time; if you want to use both of those engines, then you will need to manually set up one or both of them in their own folder(s). If you want to continue to share the .pak data files, then the "Engine Coexistence" section below has some relevant tips.
+
+The "QuakeSpasm for Steam" installer can however co-exist happily with the "ProQuake for Steam" installer described below.
+[list]
+[/list]
+[previewimg=234251;sizeOriginal,floatLeft;Fitzquake32.png][/previewimg] [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url] (Windows) is another OpenGL-using branch of Fitzquake, therefore similar to QuakeSpasm (see above) in most aspects.  It has a particular focus on bugfixing, providing debug tools for content creation, and code cleanup/documentation for the benefit of engine hackers.
+[list]
+[/list]
+[previewimg=234249;sizeOriginal,floatLeft;DirectQ32.png][/previewimg] [url=http://directq.codeplex.com/]DirectQ[/url] (Windows) as the name implies uses Direct3D 9.  As the only widely-used engine with a primary focus on a written-from-scratch Direct3D renderer, it is arguably the Windows engine with the best performance -- although with standard Quake content, performance is only likely to be an issue on a low cost/power system (e.g. a small netbook with integrated graphics hardware).  DirectQ is aimed at providing a cleaned-up "faithful" renderer, with even more usability improvements than QuakeSpasm/Fitzquake, and it supports NetQuake multiplayer (client or server).

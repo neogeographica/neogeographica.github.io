@@ -1,0 +1,203 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Recent News</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+<B>04-17-00</B>: It's been a 1.5 years since the last update. I (ahnuld) decided to make the qsmack source available. Go to the download section and get it right now. This version 3.0 which has some features which were never in the other released versions because I was too lazy to make them available. I've also updated the frontend, so go and get that too.
+</P>
+<P>
+<B>08-09-98</B>: Long time no update, eh?  Well, if you've been paying attention to the rest of this site, you know that C9 is basically in standby mode.  There is no more active work being done on QSmack: it works, the latest ClanRing version fully supports it, and we don't have the man-hours to spend to port it to other server code.  As for the possibility of Q2Smack, the fact that the Q2 game code is in C opens up many avenues for different kinds of administration tools.  While the QSmack front end would be a nifty interface for these tools, there's no real screaming need for Q2Smack, so don't hold your breath waiting for any Quake 2 news on this page.
+</P>
+<P>
+We hope QSmack has been as useful to you as it has been to us.
+</P>
+<P>
+<B>01-19-98</B>: I've been looking at the new CR mod (3.1), preparatory to linking it in to these pages, and I found a QSmack-related bug in it.  If you are using QSmack with CR 3.1, you <B>really</B> need to go to line 519 of impulses.qc and change the single equal sign ("=") to a double equal sign ("==").  Otherwise Bad Things will happen when a banned player gets kicked.
+</P>
+<P>
+<B>01-04-98</B>: <A HREF="[local_downloads_path()]crctf27.zip">CRCTF version 2.7</A> updates the map warping to be compatible with All-Star version 1.0.  CRCTF admins: apply <A HREF="http://www.planetquake.com/academy/allstar/allstar_files.htm">the patch</A> to upgrade your All-Star files to v1.0 (or download the whole thing if you don't have the All-Star maps yet), then install this new CRCTF version.  (Speaking of versions of ClanRing stuff, I need to take a look at the final version of ClanRing 3.1, and then put it on our server code page as well.)
+</P>
+<P>
+By the way, it looks like it will be quite possible to have a form of QSmack that works with Quake II; the correct approach is probably to integrate the QSmack server directly with the Quake II server, rather than requiring it to connect as a client.  Our QSmack programmer (ahnuld) has made some noises about this, but I don't know if he's set up for Quake II DLL hacking yet.  Anyway it certainly seems that Quake II will need something like this; at first glance it appears to have even fewer administrative capabilities than QuakeWorld.
+</P>
+<P>
+<B>11-27-97</B>: I bit the bullet and updated the CRCTF code to <A HREF="[local_downloads_path()]crctf26.zip">version 2.6</A>, which adds optional support for Expansion and/or All-Star maps, and plugs up a lot of little holes that were annoying me.  Obviously if you use CRCTF v2.6 there is no need for the patch described below, or for the security patch from last month's news.  There may still be a problem with fastqcc, so keep qccdos handy.
+</P>
+<P>
+<B>11-21-97</B>: Yup, looks like using qccdos is pretty much guaranteed to work.  Don't know what the problem with fastqcc is.
+</P>
+<P>
+<B>11-20-97</B>: I've had one report that fastqcc is unable to compile the patched CRCTF files (it segfaults).  Dunno if this is a problem with the individual's setup or with fastqcc; personally I use plain ol' qccdos.  So I recommend you try that if your compiler is bombing out.  Please drop me a line if your compiler has problems like this, and if using qccdos makes it all better, let me know that too.
+</P>
+<P>
+<B>11-19-97</B>: I still haven't gotten around to integrating those security patches, but here's another patch for you in the meantime. :-P  If you are running a CRCTF 2.5 server and you'd like to make the <A HREF="http://www.planetquake.com/academy/allstar/allstar.htm">All-Star CTF</A> maps available via the &quot;warp&quot; command, then here's an easy way to do it.  First, get all the All-Star client files (up through version 0.91) and install them on your server.  Assuming you've already got the Threewave maps, sounds, and models, you will really only need the new maps, and you can skip re-downloading the Threewave packages.
+</P>
+<P>
+Next, get <A HREF="[local_downloads_path()]mappatch.zip">this patch (14 kB)</A> to update your warp.qc and weapons.qc files.  Recompile your progs.dat, and you're done.  Now the &quot;warp&quot; command will also include all the CTF Expansion, Thunderwalker, and Xeno maps.  It will list episodes and levels by name as well as number to avoid confusion.  Two minor points: first, the &quot;start map&quot; episode is still the old Threewave start map, so players can use it if they don't have the All-Star client files (although the start map is hardly ever warped to); and second, custom levels, if any, are not listed by name.
+</P>
+<P>
+This has nothing to do with QSmack, by the way; this is just a convenient place to talk about it.  I hope that CRCTF 2.5 server admins will do this.  It doesn't hurt any players who want to play the &quot;old&quot; maps, and it gives more options to players who want to try new maps.  Even hardcore CTF1-only players should take a look at XENO7, &quot;Remix&quot;, by Eben "dungo" Gulick.  You'll see why...  (And fans of &quot;The CHEAT Complex&quot;, another map from dungo, should note that it is available as TWCTF1.)  There's a lot of good maps in the All-Star collection, of all sorts of sizes and types.
+</P>
+<P>
+<B>11-02-97</B>: The <A HREF="http://www.cdrom.com/pub/idgames2/planetquake/academy/ctf_files/ctflogfix.zip">security fix</A> for Threewave &amp; variants has been updated.
+</P>
+<P>
+<B>10-30-97</B>: In reference to the news article below; the_DM from the Gunslingers CTF clan has released a version of <A HREF="http://www.cdrom.com/pub/idgames2/planetquake/academy/ctf_files/log-qc-fixed.zip">log.qc</A> for Threewave CTF that fixes the security hole; check it out.  I would assume this applies to all Threewave variants as well.
+</P>
+<P>
+As for the ClanRing and ClanRing CTF codes, you can apply the following patch to existing versions to remove the security hole:
+</P>
+<BLOCKQUOTE>
+<OL>
+<LI>Find <B>all</B> occurences of code that looks like this:
+<BLOCKQUOTE>
+<PRE>
+localcmd(&quot;kick &quot;);
+localcmd(self.netname);
+localcmd(&quot;\n&quot;);
+</PRE>
+</BLOCKQUOTE>
+It may be &quot;self.netname&quot; or it may be the netname of some other entity.<BR><BR>
+<LI>Replace with the following code:
+<BLOCKQUOTE>
+<PRE>
+local string number_s;
+localcmd(&quot;kick # &quot);
+number_s = ftos(self.colormap);
+localcmd(number_s);
+localcmd(&quot;\n&quot;);
+</PRE>
+</BLOCKQUOTE>
+If the original code used something besides &quot;self&quot;, then use that entity name in this replacement code instead of &quot;self&quot;.
+</OL>
+</BLOCKQUOTE>
+<P>
+...and you'll be safe and happy, at least for a little while longer.  I still do plan to make fixes in the code we distribute from the server code page, but no need for your server to be vulnerable while you're waiting for that.
+</P>
+<P>
+<B>10-29-97</B>: A bug has surfaced recently in the ClanRing server code; if you have experienced mysterious server crashes or other symptoms of a &quot;hacked server&quot; recently, you should get the <A HREF="ftp://ftp.mpog.com/pub/clanring/clanr260a.zip">ClanRing mod version 2.60a</A>.  The QSmack additions/changes from ClanRing 2.58 should apply in exactly the same way to this new code.  I'll have that done soon, if you don't want to tackle that yourself.  I'll also check out the ClanRing CTF mod for similar security holes.  It is known that Threewave CTF has similar problems as well, and Zoid is reportedly working on a bugfix version.  So our server mods page may soon get some massive updates.
+</P>
+<P>
+<B>09-03-97</B>: An IRIX version of the binary is now available on the <A HREF="qsmack_downloads.html">downloads page</A>.
+</P>
+<P>
+<B>08-31-97</B>: The CTF Expansion Project server arrives on the <A HREF="qsmack_server.html">server code page</A>.
+</P>
+<P>
+<B>08-30-97</B>: A little revision and reorg of the <A HREF="qsmack_FAQ.html">FAQ</A>.
+</P>
+<P>
+<B><A NAME="FE101">08-27-97</A></B>: Hey, I also found a bug in the frontend. This one caused it to hang when resizing the window under certain conditions. Unless you were in the habit of madly resizing the frontend you probably won't see this bug, but you should get <A HREF="qsmack_downloads.html">v1.01</A> anyway.
+</P>
+<P>
+<B><A NAME="QS202">08-27-97</A></B>: Sigh. I found a stupid bug in QSmack. I was trying to be extra cool, and I wound up being extra stupid. This probably won't affect most of you since you probably only run one frontend connected to a QSmack at a time. But if you're seeing QSmack log spew related to disconnecting a frontend client, you're seeing the bug, and you should get <A HREF="qsmack_downloads.html">v2.02</A>.
+</P>
+<P>
+<B>08-26-97</B>: Mac files updated to the latest version of the frontend (1.00).
+</P>
+<P>
+<B>08-26-97</B>: New (non-beta) version of ClanRing CTF on the <A HREF="qsmack_server.html">server code page</A>.
+</P>
+<P>
+<B><A NAME="FEPATCH2">08-24-97</A></B>: The frontends now have versions. I guess I should have started it that way. Well, lets kick off with version 1.00. Anyway, fixed a few bugs. One was causing the frontend to hang when you 'said' something that was really long with no spaces. The error messages are now more informative regarding the loading of libtcl_qsmackfe.dll. Also, handy messages are now printed when you try to send commands to QSmack while not connected.
+</P>
+<P>
+<B>08-24-97</B>: Added CTF 4.2v (Vader FLAG's version of CTF 4.2) to the <A HREF="qsmack_server.html">server code page</A>.
+</P>
+<P>
+<B>08-24-97</B>: Re the new frontend: the special Mac downloadable files for the new frontend will not be updated until later tonight.  You can wait until tomorrow to get them, or follow the instructions for making them yourself.  Also, if you are actually using QSmack on a Mac, let us know... we'll be tickled.
+</P>
+<P>
+<B><A NAME="FEPATCH1">08-24-97</A></B>: Minor changes with version 2.01. Both the main program and the frontend have changed slightly. There is really no need to upgrade the main program yet unless you use the stats_file output. The format of the stats_file will revert to a former method of always printing the IP address of a player with their name, for easier parsing. The frontend has a new &quot;all&quot; option for the &quot;<A HREF="qsmack_fe_comm.html#nslookup">nslookup</A>&quot; command which will do a lookup for all players in the game. Also, ctrl-T nows toggles between <B>three</B> modes, &quot;Command&quot;, &quot;Smack&quot;, and (this is new) &quot;Team Smack&quot;. The &quot;Team Smack&quot; mode will treat every line as a &quot;say_team&quot;.  Let me close with a Frontend Tip of the Day:  If you need to manually send consecutive impulses, you're going to have to use the <A HREF="qsmack_fe_comm.html#unlockban">unlockban</A> and the <A HREF="qsmack_fe_comm.html#lockban">lockban</A> commands.
+</P>
+<P>
+<B>08-23-97</B>: Had a look at the ClanRing CTF package today (version 2.4c), and the guys did a splendid job of adding QSmack support, but with a minor flaw.  The fix is easy and is described in the CRCTF section of the <A HREF="qsmack_server.html">server code page</A>.  While I was in a server-code mood, I incorporated the changes described in the 08-15 news item below into our downloadable Threewave CTF 4.2 package.
+</P>
+<P>
+<B>08-22-97</B>: Went into a little more detail about font specification on the <A HREF="qsmack_fe_config.html">frontend config file</A> page.
+</P>
+<P>
+<B>08-21-97</B>: If you specify an incorrect defaultQSmackServer in your <A HREF="qsmack_fe_config.html">frontend config file</A>, you won't be able to start up the frontend, since it will abort when it can't connect to the (bad) defaultQSmackServer.  ahnuld has a fix for this where it will just give you an error message instead of aborting the frontend; hopefully I'll be able to talk him into wedging that into the distribution archive soon (and providing a patch for those of you already using the frontend).  The best immediate solution to this problem is to not have a bogus defaultQSmackServer. :-)
+</P>
+<P>
+<B>08-21-97</B>: It's a news frenzy, I'm tellin' ya.  OK, we should find a way to work this one into our FAQ, but here's another clarification: You can run QSmack on any machine that we provide QSmack executables for.  This can be the same machine as is running your Quake server, or it can be different.  Likewise, you can run the frontend on any machine that supports it.  As long as all the computers have an internet connection, then QSmack can connect to the Quake server, and the frontend can talk to QSmack, and everyone is happy.  Don't kill yourself trying to figure out a way to run everything on the same computer; it's not necessary.
+</P>
+<P>
+<B>08-21-97</B>: The News Just Keeps Coming!  This just in: QSmack will only work with Quake servers that are version 1.06 or later!  We'll find some way to work this into the rest of our Web site in obvious places...
+</P>
+<P>
+<B>08-21-97</B>: P.S.  There actually is one reason you might want to upgrade to QSmack 2.00 even if you're sick in the head and don't want to use the frontend.  The reason is that v2.00 has added &quot;ban_exclude&quot; to the types of banning information you can specify in the <A HREF="qsmack_banfile.html">QSmack ban file</A>.
+</P>
+<P>
+<B>08-21-97</B>: Oh frabjous day!  The <A HREF="qsmack_fe.html">QSmack Frontend</A> is here!  Go to its pages right now and check out the interactive server admin features it provides.  ahnuld and lemurboy are busy patting themselves on the back for a brilliant job of porting the thing to Tcl/Tk and cranking out a slew of Web pages to document it.  You may, of course, pat them on the back as well.  Note that you will need the new executable QSmack 2.00 to support the frontend, so go get that from the <A HREF="qsmack_downloads.html">QSmack Downloads</A> page.  If you're some sort of weird mutant server admin who doesn't want to use the frontend, you don't really need to upgrade to 2.00.
+</P>
+<P>
+<B>08-19-97</B>: Added a link to the latest ClanRing CTF code in the list of <A HREF="qsmack_server.html">server code pre-modified for QSmack support</A>... because it is!  Straight out of the box.
+</P>
+<P>
+<B>08-15-97</B>: More shakedown for the new server code packages.  Apparently some people using the CTF 4.2 package may have the problem of QSmack not obtaining admin, although this works for me... if this is a problem you're having, try these new versions of <A HREF="[local_downloads_path()]admin.qc">admin.qc</A> and <A HREF="[local_downloads_path()]weapons.qc">weapons.qc</A>.  I believe this setup should work for everyone.  Please let me know.  I'll get them incorporated into the zip archive soon.
+</P>
+<P>
+<B>08-14-97</B>: The ServerModules 3.3.12 package wasn't giving auto-admin until you came out of observer (if you entered as an observer), which is kind of awkward for QSmack.  It has been changed to always do the auto-admin challenges immediately, even if you enter as an observer.
+</P>
+<P>
+<B>08-13-97</B>: Added ServerModules 3.3.12 to the sets of <A HREF="qsmack_server.html">server code pre-modified for QSmack support</A>.
+</P>
+<P>
+<B>08-12-97</B>: There hasn't been a new qsmack version in more than 48 hours. It's time. Version 1.28 has one minor change. The stats file, which is described on the <A HREF="qsmack_config.html">config file</A> page, contains a new time-stamping line.
+</P>
+<P>
+<B>08-10-97</B>: Yup, you guessed right, version 1.27 is released. This release has more reliable game data in the stats_file. A new &quot;player_enter&quot; now can reliably be used to determine when a player entered the game. Also, check out the <A HREF="qsmack_downloads.html">downloads</A> page. You can now download the content of these pages in both HTML and text form.
+</P>
+<P>
+<B>08-09-97</B>: Another day, another version. This time 1.26. A few things were cleaned up and now the log and stats file are appended to rather than overwritten when QSmack is restarted. Also, you'll notice that the version number has been suffixed on the name of the archive. Finally, if you have been here before, you have probably already noticed that &quot;news&quot; and &quot;downloads&quot; have each been given their own page.
+</P>
+<P>
+<B>08-08-97</B>: lemurboy is still away, and I'm taking over! He is going to have a fit when he see's what I've done with these web pages. Anyway, QSmack continues to grow with what some would call feature bloat. Get version 1.25 now! You can now specify a &quot;stats_file&quot; entry in the <A HREF="qsmack_config.html">config file</A>. This file will contain all the server messages, says, and player info for the game. Included in the player info is the IP address of all players so you can track which IP addresses are connecting to your server. With this log file, you could write a parser script to generate statistics about every aspect of the game. Neat-o!
+</P>
+<P>
+<B>08-08-97</B>: Ok, I believe I fixed a bug that wasn't allowing qsmack to connect to the most recent versions of quake servers (newer than 1.06). The DEM format changed slightly,and the network code was interpreting the data incorrectly. Apparently, this should still work with older versions of servers. Yet again (see the news from 8/5/97), eeevil had known about this bug and fixed it months ago in his networking library. &quot;Oh, I forgot&quot; is all he could muster as a response. Grrrr.
+</P>
+<P>
+<B>08-07-97</B>: QSmack will now ban a player based on their color with the release of version 1.20. A new command 'ban_color' has been added the banfile format. This is mainly intended for admins running CTF servers who want to eliminate cross dressing. The <A HREF="qsmack_banfile.html">banfile format page</A> has been updated. QSmack also has a new neat little feature that will 'tell' a player who is being banned by name or color why they were banned. This gives them some indication of why they can't connect to your server. BTW, one note on banning by color. It would be a really <I>bad</I> idea to ban all white players (color 0 0). This is because all players are all white when they first enter the game, so you would ban everybody! 
+</P>
+<P>
+<B>08-05-97</B>: QSmack 1.11 is here. Blah. I (ahnuld here this time) suck. QSmack really shouldn't ban itself. To prevent this, QSmack needs to know its player number. Previously, QSmack went through all kinds of gyrations to figure out its player number. First it queried the machine it was running on to find out its own IP address. Then it compared that IP with each one that the 'status' console command returned. The matched IP indicated QSmack's player number. All of this was completely unnecessary because the server tells you your player number when you enter the game, QSmack just wasn't looking in the right place. eeevil has known this for months and not told me - everyone make it point to kill him when you see him on kitty1.
+</P>
+<P>
+<B>08-04-97</B>: QSmack 1.10 is here.  This upgrade gets rid of some hesitancy QSmack had about kicking banned players in certain situations; we strongly recommended that you get it.  It also makes QSmack tolerant of those gazillion-character map names where the map maker feels compelled to include not only the name of the map, but also his own name, his web page URL, and his family tree. :-)  Again, note that version 1.10 <B>requires</B> that your server code do a five-impulse password challenge (no problem if you're using our pre-modified server code).
+</P>
+<P>
+<B>08-04-97</B>: The CTF 4.2 keep-admin-when-you-die fix has been incorporated into the downloadable code.  Also, QSmack 1.10 is on the way.  Note: it will <B>require</B> a 5-impulse password, not just &quot;support up to five impulses&quot;.
+</P>
+<P>
+<B>08-02-97</B>: It has been brought to our attention that in CTF, you lose admin when you die, which is inconvenient if you are a player using the QSmack admin codes, since because of the QSmack admin policy you have to disconnect/reconnect or wait for a level change before you can get admin again.  Our solution: change the CTF code so that you don't lose admin when you die.  (Why would you want that behavior anyway?)  The fix is simple and will soon be put into the code we provide, but for now you can make the change yourself.  Add the line &quot;parm15 = self.accesslvl;&quot; after the call to &quot;SetNewParms&quot; in the function &quot;respawn&quot; and in the function &quot;DecodeLevelParms&quot;.
+</P>
+<P>
+<B>08-01-97</B>: Added CTF 4.2 to the available types of pre-modified server code.
+</P>
+<P>
+<B>07-31-97</B>: Well, it looks like the Last Known Bug is not quite dead yet.  Fortunately we know how to deliver the coup de grace.  It will require changes to the QSmack executable, which we will then want to test for a while.  But look for QSmack 1.10 executables to be posted in a few days.
+</P>
+<P>
+<B>07-29-97</B>: QSmack 1.0 is upon us!  The QSmack executable has not changed, but the server code has.   Go <B>right now</B> to the <A HREF="qsmack_server.html">server code downloads</A> and get the appropriate new version.  We also added two related questions &amp; answers to the <A HREF="qsmack_FAQ.html">FAQ</A>.
+</P>
+<P>These are the changes.  First, we have fixed (hopefully) the Last Known Bug in QSmack, or more specifically, in the accompanying server code, where a kick would sometimes fail.  Besides this bugfix, the new server code adds the requirement for a <B>fifth password impulse</B>, so make sure you add an &quot;init04_impulse&quot; definition to your QSmack config file!  Also, finally, the two ClanRing code versions now have code to prevent the occasional infinite loop error in CycleWeaponCommand and CycleWeaponReverseCommand.  This last bugfix is taken from ServerModules, so obviously the ServerModules code already had it.
+</P>
+<P>
+Here's a more in-depth description of the changes.  The kick-failure, we think, was because we were compositing functions in the statement that produced the player number for the localcmd kick.  (Those of you who are not QuakeC gurus will have no idea what that means, while those of you that are will be embarrassed at our ineptitude.)  To fix this we added a &quot;local string tempstr;&quot; declaration to ImpulseCommands, and then changed the line &quot;localcmd(ftos(self.impulse - 220));&quot; to instead be &quot;tempstr = ftos(self.impulse - 220); localcmd(tempstr);&quot;.
+</P>
+<P>
+The addition of a fifth password impulse was very straightforward.  Add the declaration for &quot;AUTO_PASSWD_4&quot; in settings.qc, and then in ImpulseCommands look for the two blocks of code that deal with the various AUTO_PASSWD variables and change them in obvious ways.  See the <A HREF="qsmack_changes.html">Description of Server Code Changes</A> for the updated code.  The infinite loop bugfix is <B>not</B> (for now) in the described code changes, since it's really not a QSmack-related thing, but if you want to check it out, look for the string &quot;Bugfix&quot; in the pre-modified servercode we provide.
+</P>
+<BR/>
+[qsmack_archive_fyi]

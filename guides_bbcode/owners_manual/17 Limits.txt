@@ -1,0 +1,9 @@
+The original Quake engines, and to some extent modern engines as well, have hard limits on how much memory they can use for certain purposes.
+
+Two of the primary limits can be manipulated using the "-zone" and "-heapsize" command-line options for most engines.  Broadly speaking, "-zone" controls memory allocated to console scripts, and "-heapsize" the general memory pool used during gameplay.  Both are expressed in kilobytes.
+
+If you have a reasonable amount of RAM, then you can easily blow out both of these values large enough to be sufficient for just about any use of Quake, such as:
+[code]-zone 2048 -heapsize 192000[/code]
+That's less than 200MB of memory allocated for Quake, and it would be verrrrrry unusual for any bit of Quake content to need more than that.
+
+In any case, if you download something like a map or mod to try out, be sure to check the readme file.  It may contain requirements for these command-line options or for some console variables that control other limits.

@@ -1,0 +1,60 @@
+[h1]Saved or not?[/h1]
+Some of the settings changes that you make through the console will be saved to the config file, so that they will still be in force the next time you run Quake.  Generally speaking any variable that corresponds to some menu setting will be saved.  But other variables might not be.
+
+In this guide I'll try to be clear about which will be saved and which won't; but if you're ever unsure then it's easy enough just to check -- restart Quake and use the console to check the value of that variable.  Or quit Quake and use a text editor to search for the name of that variable in your config file.
+
+As a rule of thumb, modern QuakeWorld engines (ezQuake, Fodquake, FTEQW) should save every setting in the config file.  ([b]They may not save automatically though![/b]  See the info box in the "In-Game Menu" section for details.)
+
+With other Quake engines, some of your preferred settings may not get saved to your config file.
+[list]
+[/list]
+[h1]autoexec.cfg[/h1]
+You can take those unsaved settings, put them in a new file (one on each line of the file), and place that file inside one of the game data folders that Quake sees -- usually the "id1" folder is a good choice.  The "exec" console command or the "+exec" command-line option will cause Quake to "execute" that file: to treat it as if each line was typed into the console.  For example this console command will execute a file named "mysettings.cfg":
+[code]exec mysettings.cfg[/code]
+
+Most Quake engines also have a handy feature that will save you the trouble of using the "exec" command.  If there is a file named "autoexec.cfg", Quake will automatically execute that file on startup.  So the usual way to deal with settings not saved in the config file is to put them into an autoexec.cfg file.
+
+Once settings are in autoexec.cfg you can stop worrying about them; they will be automatically applied when Quake starts.  If you ever want to change any of those settings, edit the autoexec.cfg file.
+
+[quote]
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The FTEQW and Fodquake engines differ from other engines in that they do [i]not[/i] automatically execute autoexec.cfg on startup (at least in their Windows versions).  However, since they save every useful console setting to the config file, in simple Quake setups there's not much need for autoexec.cfg with those engines.
+
+If you do want FTEQW or Fodquake to use autoexec.cfg -- for example when playing a mod that has an autoexec.cfg file -- then you can use the "+exec" command-line option like so:
+[code]+exec autoexec.cfg[/code]
+
+See the section on "The Command Line" below if you're not familiar with using command-line options.
+[/quote]
+
+So to sum up what we've got so far: modern QuakeWorld engines generally stash every setting in the config file.  Other engines don't, but you can get around that using autoexec.cfg.  That's sort of straightforward, but there's one major "gotcha" with autoexec.cfg: precedence.
+[list]
+[/list]
+[h1]File precedence[/h1]
+Quake can look for files in a lot of places, and so it could end up finding multiple autoexec.cfg files.  When this happens it will only execute [i]one[/i] autoexec.cfg file: the last one it finds.  It will "forget" about the others.
+
+If you have an autoexec.cfg file that is mysteriously not being used, probably the reason is that Quake found some other autoexec.cfg file to use instead.
+
+If you have a simple Quake setup this is not going to be an issue, but if you start playing around with mods or juggling multiple configurations then it can bite you.
+
+The rules are:
+
+[list]
+[*]Quake will look in "id1" first, then look in the "qw" folder if it is a QuakeWorld engine, then finally look in the folder indicated by the "-game" command-line option (if any).
+[/list]
+
+[list]
+[*]Within a given folder, Quake will look at loose/unpackaged files and then look inside ".pak" files (and ".pk3" files if the engine supports that).
+[/list]
+
+[list]
+[*]".pak" or ".pk3" files are examined in alphabetical order.
+[/list]
+
+As an example of how this can surprise you: if you use the [url=http://www.nquake.com/]nQuake package[/url], you may not realize that it sets up a configuration using an autoexec.cfg file inside "nquake.pk3" in the "qw" folder.  When you run a QuakeWorld engine while the nQuake content is present, any loose autoexec.cfg file in "id1" or "qw" is going to be ignored in favor of the autoexec.cfg that is inside "nquake.pk3".
+[list]
+[/list]
+[h1]Special note for ezQuake[/h1]
+ezQuake provides a menu option called "Save Unchanged Options".  If this is disabled, then only variables that differ from their defaults will be saved to your config file.
+
+While it might seem like you should disable this to tidy up your config file, it's probably best to have it enabled.  Confusing stuff can happen otherwise.
+
+For example, nQuake includes an extensive configuration that is loaded when you start up ezQuake (by virtue of the nQuake autoexec.cfg described above).  If you want to change any of these options back to their default values in your own config, then you [i]must[/i] have "Save Unchanged Options" enabled.  Yeah it's a little counterintuitive.

@@ -1,0 +1,5 @@
+This guide is fairly comprehensive... basically a reference.  If you're a complete newbie or just impatient, you probably want to hit the "Quick Start" section and play around with that stuff for a while.  Finish the rest of the guide when you want to figure out what is really going on and how to reconfigure your games.
+
+If you're already familiar with Quake and mods, and you want to get your hands dirty: you can jump right to the "Mod Files" and "Extra Map Support" sections.  Come back and check the other sections later, or if you run across some confusing behavior.
+
+If you already know what file you want and you're just coming back to this guide to get a download link, head for the "Link Recap" section at the end.

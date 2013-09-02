@@ -1,0 +1,58 @@
+[previewimg=266119;sizeFull,inline;big_dogs.jpg][/previewimg]
+
+
+You've got Quake launched with the right mod activated, and the game set up the way you want it... about the only thing left to do is throw some bots in there and play!
+
+You'll also want to determine what "skill" (difficulty) to set the bots at.  Whenever you add a bot, it will take on the current skill value.  If you later decide to change the skill, your change will only affect bots that you add in the future.  If you want to change the skill of current bots you have to remove and re-add them.
+[list]
+[/list]
+[h1]Omicron[/h1]
+Usually you'll want to use the "menu" console command to bring up the interactive menu for starting and stopping games, and adding/removing bots.
+
+Sometimes though it is nice to quickly drop down the console and use one of the Omicron commands (which are listed under the "New console commands" header in the "OBOTS.HTM" page).
+
+The most obviously handy commands are "addbot", "removebot", and "removeallbots".  You may want to bind these (or any other) commands to keys, for example
+[code]bind b addbot[/code]
+if you want to add a bot whenever you press the "b" key.
+
+The "skill" console variable controls the difficulty of the next bot that you add.  It can be set for any value from 0 to 3.  And although the interactive menu only supports values of 0/1/2/3, if you use the console you can set it to fractional values like
+[code]skill 2.5[/code]
+[list]
+[/list]
+[h1]FBX++[/h1]
+The FBX++ bot management commands are simple:
+[list]
+[*]impulse 100 : Add a bot.  In a teamplay game mode this will add a bot on your own team.
+[*]impulse 101 : In a teamplay game mode this will add a bot to the enemy team.
+[*]impulse 102 : Remove the most recently added bot.
+[/list]
+
+If you don't want to type in impulse commands, you can set up aliases for them and/or bind the commands to keys.  The included file "bot.cfg" is an example of some simple aliases.  Or for example if you want to add a bot every time you press the "b" key you could do
+[code]bind b "impulse 100"[/code]
+
+Set the "skill" console variable to an integer value from 0 to 3 to set the difficulty of the next bot added.  (Unlike Omicron, you can't use fractional values.)
+
+As noted in the "Game Rules" section, when you change or restart the map all the bots will leave, unless you set
+[code]saved1 1[/code]
+[list]
+[/list]
+[h1]FBCA with or without nQuake[/h1]
+FBCA has the most in-depth set of bot management tools among these mods, but the basic commands are still pretty straightforward.
+
+The commands "addbot", "add2bots", "add3bots", and "add4bots" will add 1-4 bots into the game.  If you're playing in a team mode, the bots will be added in a way to balance the team sizes as much as possible.  You may want to bind these (or any other) commands to keys, for example
+[code]bind b addbot[/code]
+if you want to add a bot whenever you press the "b" key.
+
+If you want to add a bot to a specific team, you can use the command "addbot[i]X[/i]" where [i]X[/i] is a number from 0 to 13 that corresponds to a Quake player color.  The bot will be added to the team that is using that color.  Commonly used team colors are 13 (blue), 4 (red), 12 (yellow), and 3 (green).  So for example to add a bot to the red team you would use
+[code]addbot4[/code]
+However if the "autosteams" rule (no that is not a typo) is enabled to force team balance then the requested color for a bot doesn't matter; it will always choose a team based on team size.
+
+"removebot" removes the last-added bot, and "removeallbots" does what it says.
+
+Unlike in other bot mods, the skill values for FBCA bots range from 0-20.  And as far as I can tell, on a listen server you can't just set the "skill" console variable to the desired value.  Bot skill starts at 10 by default (5 if using nQuake), and you can easily tweak this by using the "skillup" and "skilldown" commands.  Or you can directly set the skill value by using the "skill=" command and then entering an impulse command with the value you want.  For example, you can set bot skill to 7 with
+[code]
+skill=
+impulse 7
+[/code]
+
+Note that some of the FBCA game modes start out with a warmup period, where everyone can bounce around with infinite health and ammo.  Once you're ready to start the game: enter the console command "ready", or press F3, or else press ESC and choose "ready" from the menu.

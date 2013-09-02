@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-US">
+<meta name="author" content="Joel Baxter">
+<meta name="description" content="game content and tools for Quake and Quake 3">
+<title>neogeographica</title>
+<link href="../../css/common.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="../../css/patches/ie_6_7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="../../js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../../js/common.min.js"></script>
+</head>
+<body>
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="index.html"><img src="../../images/common/map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="../../images/common/neogeographica_palatino.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+    <li><a href="../../pages/index.html"><b>Home</b></a></li>
+    <li><a href="../../pages/q3maps/index.html"><b>Maps</b></a></li>
+    <li class="active"><strong>Tools</strong></li>
+    <li><a href="../../pages/guides/index.html"><b>Guides</b></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->
+<!-- no popup dialog -->
+<!-- begin: main content area (#main) -->
+<div id="main">
+<div class="page_margins">
+<div class="page">
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+    <li class=active><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></li>
+    <li><a href="birdseye.html"><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
+    <li><a href="server_scripts.html"><img src="../../images/tools/common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
+    <li><a href="qsmack.html"><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></a></li>
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->
+<!-- begin: main column (#main_maincol) -->
+<div id="main_maincol" class="maincol" role="main">
+<div class="maincol_content clearfix">
+<h1>MeshTex GtkRadiant Plugin</h1>
+  <ul>
+  	<li>level editor plugin for manipulating patch mesh textures</li>
+    <li>version 3.0 beta for GtkRadiant 1.5</li>
+    <li>in development</li>
+  </ul>
+  <p>MeshTex adds operations for patch mesh texturing to the GtkRadiant level editor. These operations generally are concerned with having precise control over where texture coordinates end up on the mesh surface &mdash; especially along the edges &mdash; or precisely specifying the scale and/or tiling amount of the texture. You can download a beta version below, with a few caveats: it only works with GtkRadiant 1.5, the documentation could be a lot better, and some texture placements that you attempt to do with these operations may be defeated by the way that Quake 3 actually renders the patch mesh in-game (more about that below).</p>
+  <h2>Downloads</h2>
+  <h3>&bull; Current Version</h3>
+  <ul>
+    <li><a href="http://files.neogeographica.com/downloads/tools/meshtex/meshtex_3.0beta.zip"><b>MeshTex 3.0 beta</b></a></li>
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/MeshTex">GitHub repository</a></li>
+    <li><a href="https://rawgithub.com/neogeographica/MeshTex/master/docs/html/index.html">source code documentation</a> (Doxygen generated)</li>
+  </ul>
+  <h2>Background</h2>
+  <p>Back in 2001 I had noticed some problems with the way I textured patch meshes in <a href="../../pages/q3maps/jlctf1.html">jlctf1</a>, and I wanted to be able to handle those operations better in future maps. So I wrote a quick and dirty plugin called PatchAlign for GtkRadiant 1.1-TA. My main concerns were to have better control over what parts of the texture ended up on the mesh edges and to scale the texture in ways that looked the same as the texture scale on neighboring brushes.</p>
+  <p>With respect to that second goal, GtkRadiant offered a &quot;natural&quot; scaling option that should result in 2 texture pixels per world unit, but the amount of world units along the surface of the mesh was estimated in a way that was visibly not-right if the mesh was really curvy. It's possible to do a more precise calculation of that distance (assuming an ideal biquadratic surface), and while that's swinging too far in the &quot;overkill&quot; direction, it was an interesting exercise. And the resulting plugin did allow for making tidier-looking patch meshes in some circumstances.</p>
+  <p>When I fired up GtkRadiant again for a while in 2010, I ported the plugin to GtkRadiant 1.5, and since then I've been occasionally returning to clean it up, fix bugs, and add features. I also took the opportunity to organize and document the code in a way that could be helpful to other folks making plugins for GtkRadiant, although that's become less of a thing now that GtkRadiant 1.6 has changed the plugin interface. Anyway it gained enough new features that I renamed it MeshTex. The old PatchAlign plugin and its super-ugly code has been retired, although if for some reason you really need it for GtkRadiant 1.1-TA I can still dig up a copy for you.</p>
+  <h2>The Catch</h2>
+  <p>I've had maybe a bit too much fun adding different tools to the plugin, and it's a little intimidating to properly document it now with complete examples and pictures of how things work. Some of the functionalities may be non-obvious without that documentation. Sorry about that! The non-obvious ones are usually the less useful ones anyway.</p>
+  <p>Another reason I've been dithering around about the best way to document this plugin is that the visible results can be surprising in some cases. The texture coordinates on the mesh edges will be what you want, but in the interior of the mesh you're at the mercy of how Quake 3 will choose to chop up the mesh into triangles; the texture coordinates will only be correct at the vertices of those triangles.</p>
+  <p>As an example, below are views of a 3x3 trapezoidal patch mesh where each row slants up a little more sharply. It's textured with a 2x2 tiling of a red square that has black borders, with a corner of the texture landing on each control point.  In a perfect rendering of the surface from its control point values, the middle vertical black line would intersect a single slanted black line. Obviously that's not happening here though.<p>
+  <p>The leftmost of the three images is how it looks in GtkRadiant. The middle image has lines drawn to show the rows and columns of the mesh; the control point at the middle intersection is where black lines marking the texture border should intersect.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/tools/meshtex/trap_mesh.png" /></div>
+  <p>The black lines don't look like that because both GtkRadiant and Q3 will render this mesh as just two triangles, nailing down the texture coordinates at the triangle vertices and linearly interpolating between them. The rightmost image above is how GtkRadiant is triangulating the mesh. (Q3 actually chops it between the other two corners, but the result is similarly &quot;wrong&quot;.)<p>
+  <p>That said, if you have a square or rectangular mesh with regular columns/rows this won't be an issue for most &normal texturings. But if you try to do something with irregular mesh shapes or uneven control point placements you'll probably be disappointed. Especially if your mesh is a flat quadrilateral, which Q3 will always render with two triangles regardless of how many rows/columns it has.</p>
+  <p>(If I'm misunderstanding this problem, or there's a workaround, please clue me in!)</p>
+  <h2>Features</h2>
+  <p>I may not have the best instruction manual here, but I'll do a run-through of the functions that the plugin provides. Unless otherwise stated, any of the functionality described below will be applied to all currently selected patch meshes once you hit &quot;OK&quot; or &quot;Apply&quot;.</p>
+  <h3>&bull; Main Menu</h3>
+  <div class="floatbox">
+    <img src="../../images/tools/meshtex/menu.png" class="rawpic_left" />
+    <p>So for starters, here's what the plugin menu looks like (to the left).</p>
+    <p>The top three options open up further menus that I'll describe below. The other options are used to quickly align the S (horizontal) and/or T (vertical) axes of the texture with the edges of the mesh, using various stretch/shrink and shift operations:</p>
+    <p>&quot;Stretch&quot; or &quot;Shrink&quot; operations will stretch/shrink and shift the texture as necessary to make opposing sides of the patch mesh land on a texture boundary.</p>
+    <p>&quot;Auto&quot; is similar, except that it automatically chooses &quot;Stretch&quot; or &quot;Shrink&quot; depending on which one requires the least amount of change in the texture scale. &quot;S&amp;T Align Auto&quot; does this for both texture axes.</p>
+    <p>&quot;Align&quot; operations only shift the texture without scaling it, to make one side of the patch mesh correspond to a texture boundary.</p>
+    <p>These operations do make some simplifying assumptions. They determine the necessary shift/scale factors using the current min and max S/T values on the patch mesh, and they modify the texture mapping uniformly. Probably you won't have to care about those assumptions. But if you have an unusual texturing where an edge of the mesh doesn't have a constant S/T value, then these operations are <em>not</em> going to &quot;undistort&quot; your texture mapping to snap the texture to the edge along the entire edge.</p>
+  </div>
+  <h3>&bull; Set S/T Scale</h3>
+  <div class="rawpic center floatbox" style="width:356px"><img src="../../images/tools/meshtex/set_scale_dialog.png" /></div>
+  <p>The &quot;Set S/T Scale&quot; dialog is what you would usually use to set up the initial texture placement on a mesh. This dialog assumes that the S coordinate of a texture will vary along a row of the mesh, and that the T coordinate will vary along a column. It has the same general kind of behavior as the texture application in Radiant's patch inspector, just with a bit more control and accuracy.</p>
+  <p>You can choose to modify the texture mapping's S coordinates, the T coordinates, or both, according to the selection of the &quot;Set S&quot; and &quot;Set T&quot; checkboxes. Leaving a checkbox unselected means that the current texture mapping along that axis will be unaffected. Selecting a checkbox means that the choices below it will be available, to determine how the texture is placed along that axis.</p>
+  <p>The options in the &quot;Scaling&quot; box let you choose how the texture will be sized along that axis. You can choose either a &quot;Natural&quot; factor or a &quot;# Tiles&quot;. If you choose &quot;Natural&quot;, then the factor <em>n</em> that you enter will set a texture mapping of 2 texture pixels per <em>n</em> units. (The units will be measured along the surface of the curve using adaptive ten-point Gauss-Legendre quadrature &mdash; woo!). If you choose &quot;# Tiles&quot;, then the tiling number <em>n</em> that you enter will set a texture mapping that produces <em>n</em> texture repetitions across the mesh.</p>
+  <p>The selection in the &quot;Zero col&quot; or &quot;Zero row&quot; box chooses where the edge of the texture will be placed. You can choose to specify a particular column (for S) or row (for T), or you can select &quot;Max&quot; to choose the largest-numbered column or row in the mesh.</p>
+  <p>The &quot;Use reference row&quot; and &quot;Use reference col&quot; checkboxes, if selected, mean that the math that assigns texture coordinates to the mesh control points will only be performed at one row (for S) or column (for T), and then copied to the other rows or columns. This only matters if the control points have different spacing on some of the rows (or columns) than on others. As with the zero column/row selection, you can specify any row or column number as the reference, or you can choose &quot;Max&quot; to pick the largest-numbered row or column.</p>
+  <p>If you choose to use a reference row/column and also select the &quot;Total length only&quot; checkbox, then the reference is only used to determine the texture coordinates at the ends of the rows (or columns), with the spacing between control points still mattering in each row/column.</p>
+  <p>(Side note for the folks paying <em>really</em> close attention: if your &quot;Scaling&quot; behavior is set to &quot;# Tiles&quot;, then using no reference behaves the same as using a reference with &quot;Total length only&quot; selected.)</p>
+  <h3>&bull; Get Info</h3>
+  <div class="rawpic center floatbox" style="width:286px"><img src="../../images/tools/meshtex/get_info_dialog.png" /></div>
+  <div class="rawpic center floatbox" style="width:460px"><img src="../../images/tools/meshtex/get_info_result.png" /></div>
+  <p>The pictures above show the &quot;Get Info&quot; dialog, and an example &quot;Mesh Info&quot; result popup that comes from using &quot;Get Info&quot;. You will get one popup for every selected patch mesh. The &quot;Over entire mesh&quot; and &quot;Worldspace extents&quot; info will always be present; the info about a particular row and/or column will be present in the popup only if you marked that checkbox and chose a row/column number in the &quot;Get Info&quot; dialog.</p>
+  <p>The &quot;Transfer reference scale&quot; checkbox will cause the scale of the selected row and/or column to be copied into the &quot;Natural&quot; scale value boxes in the &quot;Set S/T Scale&quot; dialog. The normal use for this is to copy scaling from one patch mesh (with &quot;Get Info&quot;) and then apply it to another (with &quot;Set S/T Scale&quot;). Note that if you are using the &quot;Transfer reference scale&quot; checkbox, you must only have one patch mesh currently selected.</p>
+  <h3>&bull; General Function</h3>
+  <div class="rawpic center floatbox" style="width:640px"><img src="../../images/tools/meshtex/gen_func_dialog.png" /></div>
+  <p>This is undoubtedly the nerdiest of an already very nerdy set of tools, and I'm not sure when it would actually be useful given the limitations in Quake 3's rendering behavior described above. However it seemed a shame not to throw it in here to experiment with.</p>
+  <p>The &quot;General Function&quot; dialog allows you to describe each S and T value as a function of various inputs. You can choose to specify the S and T values of the control points, or you can choose to specify the values you want at the corresponding points on the surface of the curve (and let MeshTex work backwards to figure out what the control point values should be).</p>
+  <p>The &quot;Zero col&quot; or &quot;Zero row&quot; in this case marks where the row/col numbering and distance calculations begin for the purposes of those function inputs. A &quot;reference row&quot; or &quot;reference col&quot; can be used to copy the distance calculations from a given row/column to the others.</p>
+  <p>More detailed description of this particular dialog is not going to show up here any time soon; you probably won't miss out on anything by ignoring this dialog, and if you really want to use it then experimentation would be the most useful way to get a handle on it.</p>
+
+
+</div>
+<div id="ie_clearing">&nbsp;</div>
+</div>
+<!-- end: main column -->
+</div>
+</div>
+</div>
+<!-- end: main content area -->
+<!-- begin: footer (#footer) -->
+<div id="footer" role="contentinfo">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<!--<div class="sidebar_content clearfix">&nbsp;<br />&nbsp;<br />&nbsp;</div>-->
+<div class="sidebar_content clearfix"><img src="../../images/common/bgbar_red_footer.png" style="margin-bottom: 0; margin-top: auto;"></img></div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">copyright &copy; Joel Baxter (<img class="intext" alt="contact address (nospam)" src="../../images/common/contact.png" />) except where indicated otherwise<br />site constructed with <a href="http://www.yaml.de/">YAML</a>+<a href="http://jquery.com/">jQuery</a>+<a href="http://dev.iceburg.net/jquery/jqModal/">jqModal</a>+<a href="http://devkick.com/lab/galleria/">Galleria</a>+<a href="http://www.nthwave.net/elements/">Elements</a>+<a href="https://code.google.com/p/postmarkup/">Postmarkup</a>, hosted by <a href="https://github.com/">GitHub</a> and <a href="http://www.megapath.com/">MegaPath</a><br />have a nice day</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: footer -->
+
+<!-- full skiplink functionality in all browsers -->
+<script src="../../js/yaml-focusfix.min.js" type="text/javascript"></script>
+</body>
+</html>

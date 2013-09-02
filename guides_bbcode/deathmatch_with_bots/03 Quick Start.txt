@@ -1,0 +1,29 @@
+As you can see from the size of this guide, multiple bot mods exist and they can be configured in many different ways. If you want to get started as quickly as possible, the downloads in this section should help. When you want to know more then you can check out the rest of the guide.
+
+If you use one of these quickstart bundles without changing anything, then you will be launching Quake into a free-for-all bot match.  Press "b" to add a bot or "n" to remove a bot.  Whenever the fraglimit is hit then Quake will randomly pick a new map to play on.
+
+See the included quickstart readme file for more details.  You can also look at the "quickstart.cfg" file inside the mod folder to see how it is configuring the game, and edit that file if you like.
+[list]
+[/list]
+[h1]For most Quake engines...[/h1]
+If you like to play Quake using the original Quake (WinQuake) or GLQuake programs, then the FBX++ mod is a good choice. (But see the "GLQuake Issues" section below.) This mod will also work if you use many of the modern Quake engines: DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, or Qrack. 
+
+Grab the [url=http://eclecticmenagerie.com/jl/quake/bots/frikbot_quickstart.zip]FBX++ quickstart[/url] bundle.  This contains the FBX++ downloads from throughout this guide, ready to go in a mod folder named "frikbot".  Just put the "frikbot" folder next to your "id1" folder.
+
+The "frikbot_quickstart_readme.txt" file describes the command-line options that you should use to launch Quake in order to play against these bots.  The "glquake-bots-ffa-cycle.bat" batch file can be used to launch the Windows version of GLQuake with the right options; if you are using some other Quake engine then you can of course edit the batch file to change the name of the Quake executable, or create other batch files or shortcuts.
+
+Note: there is also a version of FBCA available for these Quake engines. It'll take me some time to work those details into this guide; for now, just see the description for NetQuake FBCA in the "Alternatives" section near the end of the guide.
+[list]
+[/list]
+[h1]QuakeWorld[/h1]
+If you really prefer the QuakeWorld style of play, then the easiest way to get some bot matches going is to use the ezQuake engine and the FBCA mod.  For what it's worth, this is the combo that I like.
+
+You can get the ezQuake engine [url=http://ezquake.sourceforge.net/]by itself[/url] or as part of the [url=http://www.nquake.com/]nQuake package[/url].  (nQuake actually includes some bot code but in this quickstart I'll ignore that... the rest of the guide goes into more details.)
+
+Grab the [url=http://eclecticmenagerie.com/jl/quake/bots/fbca_quickstart.zip]FBCA quickstart[/url] bundle.  This contains the FBCA downloads from throughout this guide, ready to go in a mod folder named "fbca".  Just put the "fbca" folder next to your "id1" folder.
+
+The "fbca_quickstart_readme.txt" file describes the command-line options that you should use to launch Quake in order to play against these bots.  The "ezquake-bots-ffa-cycle.bat" batch file can be used to launch the Windows version of ezQuake with the right options.
+
+The FTEQW engine can be used similarly to ezQuake but it has a few FBCA-related glitches, so for quickstart purposes ezQuake is better.
+
+The original QuakeWorld and GLQuakeWorld programs are harder to use for playing bots; more about that in the "Multiplayer Info" section below.

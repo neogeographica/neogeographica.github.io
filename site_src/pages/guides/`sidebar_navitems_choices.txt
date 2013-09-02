@@ -1,0 +1,17 @@
+#sidebar_choice_key#
+engines
+owners_manual
+soundtrack_solutions
+deathmatch_with_bots
+none
+#sidebar_choice_active#
+[sidebar_choice_active_template('engines','Quake Engines, Old and New')]
+[sidebar_choice_active_template('owners_manual','Quake Owner\'s Manual')]
+[sidebar_choice_active_template('soundtrack_solutions','Quake Soundtrack Solutions')]
+[sidebar_choice_active_template('deathmatch_with_bots','Deathmatch With Bots')]
+#sidebar_choice_inactive#
+[sidebar_choice_inactive_template('engines','Quake Engines, Old and New')]
+[sidebar_choice_inactive_template('owners_manual','Quake Owner\'s Manual')]
+[sidebar_choice_inactive_template('soundtrack_solutions','Quake Soundtrack Solutions')]
+[sidebar_choice_inactive_template('deathmatch_with_bots','Deathmatch With Bots')]
+#

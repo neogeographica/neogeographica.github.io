@@ -1,0 +1,46 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend on Win95/WinNT</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+Once you unzip the archive, put the qsmackfe.tcl program and libtcl_qsmackfe.dll in the <B>same</B> directory where they will permanently reside. You can delete &quot;tcl_qsmackfe.c&quot since the .dll file is the same thing - just in compiled form. This DLL gives the frontend the ability to execute the <A HREF="qsmack_fe_comm.html#nslookup">nslookup</A> command.
+</P>
+<P>
+The best way to run the frontend is to create a shortcut that contains the proper command line. This is what we do. We have two shortcuts. One that starts the frontend with a &quot;high res&quot; config file and another that starts it with a &quot;low res&quot; config file depending on the resolution of the monitor that we're using.
+</P>
+<P>
+Here is the command line we use for the &quot;high res&quot version:
+</P>
+<BLOCKQUOTE>
+<PRE>
+q:\tcl\bin\wish8.0.exe q:\qsmack\tcl\qsmackfe.tcl q:/qsmack/tcl/qsmackfe.cfg.highres
+</PRE>
+</BLOCKQUOTE>
+<P>
+And likewise for the &quot;low res&quot; version:
+</P>
+<BLOCKQUOTE>
+<PRE>
+q:\tcl\bin\wish8.0.exe q:\qsmack\tcl\qsmackfe.tcl q:/qsmack/tcl/qsmackfe.cfg.lowres
+</PRE>
+</BLOCKQUOTE>
+<P>
+Notice that the full filename of the config files are specified with <B>forward</B> slashes. This is very important.
+</P>
+<P>
+You get the picture.  For now, set up a shortcut so that the frontend will use the &quot;qsmackfe.cfg.quickstart&quot; config file.  You can try more complicated config files once you've verified that everything works.
+</P>
+<P>
+Double-click on the shortcut to get started...
+</P>
+<BR/>
+[qsmack_archive_fyi]

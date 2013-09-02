@@ -1,0 +1,39 @@
+If you want to jump right in and start Quaking with minimum effort, this section is for you.
+
+First you should get a modern Quake engine.  The basic idea is that you will download a new Quake executable.  There may be some other files or folders along with it, but at a minimum you're getting a program that you will run to play Quake.
+
+When you run this program, it will look for an "id1" folder in some location. Usually, at least on Windows systems, it will expect the "id1" folder to be placed right next to the Quake engine program.  (But consult the docs for your Quake engine if you want to be sure.)  So create the "id1" folder if it doesn't yet exist.
+
+Quake requires two files inside the "id1" folder: "pak0.pak" and "pak1.pak". You can get those two pak files from your Steam copy of Quake, or any other Quake installation. Once you have moved or copied those files into your "id1" folder you can start playing.
+
+Below are my recommendations for popular, full-featured, menu-driven modern Quake engines that require a minimum of unintuitive tomfoolery to configure.  There are other fine choices though!  I don't want to start a holy war, just to give folks a quick way to get started.  Please read the Quake Engines guide if you want the complete picture.
+[list]
+[/list]
+[h1]Multiplayer[/h1]
+The [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine is a good choice.
+
+(Note that the non-Windows versions of ezQuake are not as well maintained as the Windows version.  If you intend to Quake on OS X or Linux, then you will probably need to check the Quake Engines guide to find some other engine that fits your needs.)
+
+If you want to get ezQuake along with a collection of new textures, HUDs, etc. then you can use the [url=http://www.nquake.com/]nQuake[/url] package. See the ezQuake section of the Quake Engines guide for more details.
+
+When you're using ezQuake you can set up just about everything through the menus.  It's probably worth taking a look at the "Widescreen" section later in this guide if you want to get everything just right though.
+
+Although it's primarily for multiplayer, ezQuake can also play the original Quake campaign.  But for singleplayer beyond that -- mods, mission packs, many recent custom maps --  you'll want to use some other engine, which brings us to:
+[list]
+[/list]
+[h1]Singleplayer[/h1]
+Unfortunately I have to to waffle a bit here.
+
+First let me say that for maximum ease of use the pick should be [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url].
+
+Check the DarkPlaces section of the QuakeEngines guide for a little more info about some installers and bundles you might be interested in. (If you want to get DarkPlaces along with a [i]large[/i] collection of new media then I recommend [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url].)
+
+DarkPlaces has good in-game menus, but again I would recommend at least taking a look at the "Widescreen" section below in order to finish up your configuration.
+
+OK that aside... inconveniently for DarkPlaces fans, some custom maps are not really tested against DarkPlaces.  If you want to make sure that you can play recent map releases, especially the more experimental stuff, then you will probably want to use [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], and you'll benefit from digging into this guide a bit more.  QuakeSpasm (or some other "faithful graphics" engine like DirectQ or Fitzquake Mark V) is also a better choice than DarkPlaces if you prefer your Quake graphics oldschool.
+
+If you're playing on Windows, you may want to use the [url=http://quakeone.com/proquake/Quakespasm_Steam_Easy_Install.exe]QuakeSpasm installer for Steam Quake owners[/url].
+[list]
+[/list]
+[h1]Go forth and Quake[/h1]
+That's it, quickstart done!  You can just treat the rest of this guide as a reference for when you have problems or want to learn more.  It will be especially useful for some of the other Quake engines, and double-especially if you are trying to get the original Quake engines to behave.

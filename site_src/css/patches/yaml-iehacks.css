@@ -1,0 +1,97 @@
+/**
+ * This file is yaml/core/iehacks.css with the following changes:
+ * - rules related to #col2 and subtemplates stripped out
+ * - #col1 replaced with .sidebar
+ * - #col3 replaced with .maincol or #main .maincol
+ * Currently assuming that #ie_clearing is only used in #main area.
+ */
+
+@media all
+{
+  /* No need to force scrollbars in older IE's - it even makes problems in IE6 when set */
+  body { o\verflow: visible; }
+  
+  /* Fixes IE5.x and IE6 overflow behavior of textarea and input elements elements */
+  * html textarea {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  * html input { overflow: hidden; }
+
+  /* Stability fixes with 'position:relative' */
+  body, #main { position: relative; }
+  * html body { position: static; }
+
+  /* Clearfix adjustents for containing floats in IE */
+  .clearfix { height: 1%; }
+
+  /* Adjustment of .floatbox class for IE */
+  .floatbox { width: 100%; }
+
+  /* Special class for oversized content element */
+  .slidebox {
+    position: relative;
+    margin-right: -1000px;
+    height: 1%;
+  }
+
+  /* Bugfix for partially displayed column separators */
+  * html .sidebar,
+  * html .maincol { position: relative; }
+
+  /* Preventing several css bugs by forcing "hasLayout" */
+  body { height: 1%; }
+  .page_margins, .page, #header, #nav, #main, #footer { zoom: 1; }  /* IE6 & IE7    */
+  * html .page_margins, * html .page { height: 1%; hei\ght: auto; }  /* IE 5.x & IE6 | IE6 only */
+  * html #header, * html #nav, * html #main, * html #footer { width: 100%; wid\th: auto; }  /* IE 5.x & IE6 | IE6 only */
+
+  /* Disappearing List-Background Bug */
+  * html ul, * html ol, * html dl { position: relative; }
+
+  /* List-Numbering Bug */
+  body ol li { display: list-item; }
+
+  /* Form related bugfixes */
+  fieldset, legend { position: relative; }
+
+  /* Workaround for 'collapsing margin at .maincol' when using CSS-property clear */
+  html #ie_clearing {
+    /* (en) Only a small help for debugging */
+    position: static;
+    /* (en) Make container visible in IE */
+    display: block;
+    /* (en) No fix possible in IE5.x, normal clearing used instead */
+    \clear: both;
+    /* (en) forcing clearing-like behavior with a simple oversized container in IE6 & IE7*/
+    width: 100%;
+    font-size: 0px;
+    margin: -2px 0 -1em 1px;
+  }
+  * html #ie_clearing { margin: -2px 0 -1em 0; }
+  #main .maincol_content { margin-bottom: -2px; }
+
+  /* Avoid horizontal scrollbars in IE7 in borderless layouts because of negative margins */
+  html { margin-right: 1px; }
+  * html { margin-right: 0; }
+
+  /* Bugfix:Essential for IE7 */
+  #main .maincol { position: relative; }
+
+  /* IE/Win Guillotine Bug */
+  * html body a, * html body a:hover { background-color: transparent; }
+}
+
+@media screen, projection
+{
+  /* IE-Adjustments for content columns */
+  .sidebar { display: inline; }
+
+  /* Internet Explorer and the Expanding Box Problem */
+  * html .sidebar_content, * html .maincol_content { word-wrap: break-word; }
+}
+
+@media print
+{
+  /* Avoid unneeded page breaks of .maincol content in print layout */
+  .maincol { height: 1%; }
+}

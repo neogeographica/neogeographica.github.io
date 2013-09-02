@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-US">
+<meta name="author" content="Joel Baxter">
+<meta name="description" content="game content and tools for Quake and Quake 3">
+<title>neogeographica</title>
+<link href="../../../css/common.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="../../../css/patches/ie_6_7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="../../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="../../../js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../../../js/common.min.js"></script>
+</head>
+<body>
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="../index.html"><img src="../../../images/common/map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="../../../images/common/neogeographica_palatino.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+    <li><a href="../../../pages/index.html"><b>Home</b></a></li>
+    <li><a href="../../../pages/q3maps/index.html"><b>Maps</b></a></li>
+    <li class="active"><strong>Tools</strong></li>
+    <li><a href="../../../pages/guides/index.html"><b>Guides</b></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->
+<!-- no popup dialog -->
+<!-- begin: main content area (#main) -->
+<div id="main">
+<div class="page_margins">
+<div class="page">
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+    <li><a href="../meshtex.html"><img src="../../../images/tools/qsmack_archive/../common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
+    <li><a href="../birdseye.html"><img src="../../../images/tools/qsmack_archive/../common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
+    <li><a href="../server_scripts.html"><img src="../../../images/tools/qsmack_archive/../common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
+    <li class=active><img src="../../../images/tools/qsmack_archive/../common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->
+<!-- begin: main column (#main_maincol) -->
+<div id="main_maincol" class="maincol" role="main">
+<div class="maincol_content clearfix">
+<p class="info_banner center">This page is part of an archive of the original QSmack website.<br/>Most external links and a few download links don't work anymore.<br/>To exit this archive, use the top/side navbars or <a href="..\qsmack.html">return to the QSmack page</a>.</p>
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack</H1>
+<HR>
+<BR>
+</CENTER>
+<TABLE>
+<TR>
+<TD VALIGN=TOP><P>
+<FONT SIZE=+1>Q</FONT>Smack is a server administration tool for Quake (not QuakeWorld) servers: a program permanently connected to a server as a client with admin privileges, so that it can do anything a &quot;real&quot; admin could do (often automatically).  It exists primarily because the &quot;ban&quot; console command in regular Quake is insufficient.  That command does not allow multiple IP addresses or subnets to be banned.  It also doesn't allow banning based on player's names.  QSmack can do all that and more.
+</P>
+<P>
+We use it on the C9 servers for banning problem players, handling various console functions remotely, and conversing with players in the game without needing to actually join the game.  QSmack has been in operation on our servers for several months and has proven to be both stable and very useful.  We have finally been convinced to produce a publically available version of QSmack, with all sorts of useful features:
+</P></TD>
+<!--
+<TD VALIGN=TOP><TABLE BORDER>
+<TR>
+<TD ALIGN=RIGHT bgcolor=#d0d0d0>Latest&nbsp;Update&nbsp;04-17-00</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT bgcolor=#d0d0d0><FONT SIZE=-1><TT>*&nbsp;<A HREF="qsmack_news.html">News</A>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-17-00<BR>Source released.</TT></FONT></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT bgcolor=#d0d0d0><FONT SIZE=-1><TT>*&nbsp;<A HREF="qsmack2.html">QSmack</A>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;08-27-97<BR><A HREF="qsmack_downloads.html">v2.02</A>, see <A HREF="qsmack_news.html#QS202">news item</A></TT></FONT></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT bgcolor=#d0d0d0><FONT SIZE=-1><TT>*&nbsp;<A HREF="qsmack_server.html">Server&nbsp;code</A>:&nbsp;01-04-98<BR>CRCTF v2.7</TT></FONT></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT bgcolor=#d0d0d0><FONT SIZE=-1><TT>*&nbsp;<A HREF="qsmack_fe.html">Frontend</A>:&nbsp;&nbsp;&nbsp;&nbsp;08-27-97<BR><A HREF="qsmack_downloads.html">v1.01</A>; see <A HREF="qsmack_news.html#FE101">news item</A></TT></FONT></TD>
+</TR>
+</TABLE></TD>
+-->
+</TR>
+</TABLE>
+<UL>
+<LI>Flexible and powerful player banning, based on IP address, name or color.
+</UL>
+<UL>
+<LI>Persistence.  If the server goes down, QSmack reconnects as soon as the server comes up.  And banning information is permanently recorded until you remove it.
+</UL>
+<UL>
+<LI>In-game command.  If you are also on the server as an admin, you can direct QSmack to ban any current player, or indeed any IP address or pattern.
+</UL>
+<UL>
+<LI>Game statistics. QSmack can be directed to dump all meaningful game data to a file. This includes all server messages, and the says, names, frags, connect times, and IP addresses of all players.
+</UL>
+<UL>
+<LI>If you use the <A HREF="qsmack_fe.html">QSmack Frontend</A>: many more interactive features!
+</UL>
+<P>
+Think this sounds like something you could use to help administer your server?
+</P>
+<CENTER>
+<P>
+<B><FONT SIZE=+1><A HREF="qsmack2.html">Give it a try!</A></FONT></B>
+</P>
+<P>
+<B><FONT SIZE=+1><A HREF="qsmack_news.html">QSmack Recent News</A></FONT></B>
+</P>
+</CENTER>
+<HR>
+<BR>
+<P>
+If you've been here before and you wish to revisit a certain page, here's a site map:
+</P>
+<UL>
+<LI><A HREF="qsmack_FAQ.html">QSmack FAQ</A></LI>
+<LI><A HREF="qsmack_news.html">QSmack Recent News</A></LI>
+<LI><A HREF="qsmack2.html">Using QSmack</A>
+<UL class="inner">
+<LI><A HREF="qsmack_server.html">Modifying Your Server</A>
+<UL class="inner">
+<LI><A HREF="qsmack_changes.html">Description of Server Code Changes</A></LI>
+</UL>
+</LI>
+<LI><A HREF="qsmack_downloads.html">QSmack File Downloads</A></LI>
+<LI><A HREF="qsmack_config.html">QSmack Config File Setup</A></LI>
+<LI><A HREF="qsmack_banfile.html">QSmack Ban File Format</A></LI>
+<LI><A HREF="qsmack_comm.html">In-Game Banning With QSmack</A></LI>
+<LI><A HREF="qsmack_fe.html">QSmack Frontend</A></LI>
+<LI><A HREF="qsmack_fe2.html">Using the QSmack Frontend</A>
+<UL class="inner">
+<LI><A HREF="qsmack_fe_start.html">QSmack Frontend Quickstart</A></LI>
+<LI><A HREF="qsmack_fe_config.html">QSmack Frontend Config File Setup</A></LI>
+<LI><A HREF="qsmack_fe_comm.html">QSmack Frontend Commands</A></LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI><A HREF="qsmack_chars.html">QSmack Special Characters</A></LI>
+</UL>
+<BR/>
+<p class="info_banner center">This page is part of an archive of the original QSmack website.<br/>Most external links and a few download links don't work anymore.<br/>To exit this archive, use the top/side navbars or <a href="..\qsmack.html">return to the QSmack page</a>.</p>
+</div>
+<div id="ie_clearing">&nbsp;</div>
+</div>
+<!-- end: main column -->
+</div>
+</div>
+</div>
+<!-- end: main content area -->
+<!-- begin: footer (#footer) -->
+<div id="footer" role="contentinfo">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<!--<div class="sidebar_content clearfix">&nbsp;<br />&nbsp;<br />&nbsp;</div>-->
+<div class="sidebar_content clearfix"><img src="../../../images/common/bgbar_red_footer.png" style="margin-bottom: 0; margin-top: auto;"></img></div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">copyright &copy; Joel Baxter (<img class="intext" alt="contact address (nospam)" src="../../../images/common/contact.png" />) except where indicated otherwise<br />site constructed with <a href="http://www.yaml.de/">YAML</a>+<a href="http://jquery.com/">jQuery</a>+<a href="http://dev.iceburg.net/jquery/jqModal/">jqModal</a>+<a href="http://devkick.com/lab/galleria/">Galleria</a>+<a href="http://www.nthwave.net/elements/">Elements</a>+<a href="https://code.google.com/p/postmarkup/">Postmarkup</a>, hosted by <a href="https://github.com/">GitHub</a> and <a href="http://www.megapath.com/">MegaPath</a><br />have a nice day</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: footer -->
+
+<!-- full skiplink functionality in all browsers -->
+<script src="../../../js/yaml-focusfix.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+A game played against bots is a multiplayer game.  It doesn't just [i]look[/i] like a multiplayer game; as far as Quake is concerned, it really is one.  You can even have other human players join in if you like.  Quake is just running some modified code to generate AI players which take up some or all of the player slots that would normally be occupied by humans.
+
+Because of this factoid, you need to understand at least a little bit about Quake multiplayer before you choose and use a bot.
+[list]
+[/list]
+[h1]NetQuake vs. QuakeWorld[/h1]
+These are the fundamentals of Quake multiplayer technology:
+[list]
+[*]There are many different Quake engines (programs that can run Quake).  You get four Quake engines from Steam, but there are other more modern Quake engines that you can freely download.
+[/list]
+[list]
+[*]There are two different Quake multiplayer technologies: NetQuake and QuakeWorld.
+[/list]
+[list]
+[*]A Quake engine may be able to join a NetQuake multiplayer game (as a "client") or host the game (as a "server").  A Quake engine may also be able to act as a QuakeWorld client or server.  A Quake engine may be able to handle one, two, or even three of those roles -- but no single program can do all four, as far as I know.
+[/list]
+[list]
+[*]A mod that changes Quake code, like bot mods do, must be written to support either NetQuake or QuakeWorld.  If the mod author is feeling spunky they can provide code for both NetQuake and QuakeWorld, but it's definitely additional work.  Often a mod only supports one or the other.
+[/list]
+
+So you have to make sure you use an appropriate mod with your flavor of Quake engine.  For example if you really want to run a particular mod that only supports QuakeWorld, then you'll have to use a Quake engine that supports QuakeWorld.
+
+It's not as confusing as it might sound!  I'll put in a handy chart below to help, in the "Choosing the Bot for You" section.  Also if you want to learn more about modern Quake engines then hop over to the Quake Engines guide: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
+[list]
+[/list]
+[h1]Dedicated Server vs. Listen Server[/h1]
+There are two different ways to launch and play in a multiplayer game:
+[list]
+[*]You can run a server program that loads the mod, and then run a separate client program that connects to the server.  This is known as using a "dedicated server".  The server might or might not be running on the same computer as the client.
+[/list]
+[list]
+[*]Or you could run a single program that loads the mod and supports acting as both client and server.  This is known as using a "listen server".  (If you use the in-game menus in Quake to create a multiplayer game that other players can join, you are creating a listen server.)
+[/list]
+
+There are various reasons to use a dedicated server, but most of them don't apply if you are playing by yourself and you are using a computer from the 21st century.  Two reasons that you may still care about:
+[list]
+[*]The original QuakeWorld and GLQuakeWorld programs cannot be used as listen servers -- they are only client programs.  If you insist on using either of those clients then you'll have to use a dedicated server to run the mod.  However, I would instead recommend using a modern Quake engine that can act as a QuakeWorld listen server (ezQuake or FTEQW).
+[/list]
+[list]
+[*]Player movement physics can behave a little differently between dedicated server and listen server.  So if you're trying to perfect some difficult movement tricks that you want to use in "real" multiplayer games on some internet public server -- which will be a dedicated server -- then you could want to use a dedicated server in your practice.
+[/list]
+
+Speaking just for myself: if I want to blast through some bots for a while then I don't care about the physics nuances of listen servers (and honestly I'm not a good enough player for it to matter anyway).  I run a modern Quake engine as a listen server when I want to play with bots, as do most folks, and so for now this guide will mostly assume that you are using a listen server.
+
+If you want to use a dedicated server then almost everything in this discussion of bot mods will still be useful, but you would need to figure out some additional stuff about getting the right server program, configuring and starting the server, and how to send it commands.

@@ -1,0 +1,53 @@
+#styles#
+[common_styles]
+[gallery_styles]
+#scripts#
+[common_scripts]
+[gallery_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem m3amap1
+  <h1>Lost Colossus (arena in When Worlds Collide)</h1>
+  <ul>
+    <li>Quake 3 Rocket Arena / CPMA Clan Arena, 8-14 players</li>
+    <li>released February 2001</li>
+  </ul>
+  <p>When Worlds Collide is a multi-arena map for use with the Rocket Arena 3 (RA3) or CPMA mod, from the Multi Mapper Multi Arena (M3A) project.  My contribution to this map was the teamplay arena Lost Colossus: a long-abandoned temple complex of an ancient civilization, spanning two lofty plateaus in a mist-wreathed mountain range.</p>
+  <p>Several other authors contributed smaller arenas in a variety of themes, beautifully crafted and great fun to play.  I won't be writing about the other arenas on this page, but the second row of thumbs in the gallery below contains two images from each of the other arenas, just to show them off.  Check the readme for more information.</p>
+[gallery2('colossusview','underground','water','fire','monuments','telepillars','editortop','editorside','pigofdestiny1','pigofdestiny2','mentaloasis1','mentaloasis2','pump1','pump2','theruins1','theruins2')]
+  <h2>Downloads</h2>
+  <p>N.B.: No bot support in this map.  RA3 doesn't have bots, and this map was created before CPMA supported rocket arena maps.  It's a bummer.  Maybe someday I'll remix Lost Colossus as a deathmatch map, but it's not a simple job.  Probably I'll always have something new I'd prefer to work on instead.</p>
+  <ul>
+    [listitem_local_download('m3amap1.zip','map package')]
+    [listitem_local_download('m3amap1.txt','readme','(included in map package)')]
+  </ul>
+  <h2>Overview</h2>
+  <p>Since Lost Colossus is a rocket arena map, it contains no items.  The playable surface is made up of two areas.  The main (lower) area is largely open to the outdoors, but there is an underground room beneath the Colossus and another at the end opposite the Colossus.  The area around the Colossus can be good for observing and sniping, but it is vulnerable to attack from the underground rooms via jumpshaft or teleporter.  A few other teleporters help provide extra connectivity around the main area too... in general, there's a bit of a learning curve for effective map traversal.</p>
+  [centered_local_image('birdseye1.png', 'screenshot', 640)]
+  [centered_local_image('birdseye2.png', 'screenshot', 640)]
+  <h2>Notes</h2>
+  <h3>&bull; Genesis</h3>
+  <p>Lost Colossus actually started life as an idea for a Quake 3 Fortress map.  Opposing teams would start in the lower area, initially separated from each other but converging on a common path to fight their way up the inside of the mountain to an objective.  I was still in the &quot;noodling around&quot; phase when the M3A project started, and I decided to try to repurpose the texture theme and general structure for a large clan arena.</p>
+  <h3>&bull; Design</h3>
+  <p>This is a huge departure from a typical clan arena layout; fortunately, the M3A project was able to attract a solid group of RA3-experienced playtesters.  As a result, Lost Colossus has several layout tweaks &mdash; and some heavy lifting from the teleporter placement &mdash; to de-emphasize hiding, eliminate super-defensible areas, and allow knowledgeable players to chase and cut off a fleeing enemy.</p>
+  <p>Less fortunately, m3amap1 didn't get accepted in the RA3 community, and I'd guess that it's largely the fault of my arena.  For a third-party map, first impressions are everything, and that's bad when a map requires a player to go through a learning curve before they can effectively punish &quot;lame play.&quot;  Also there probably still are real problems with the map; sometimes you can't completely force a strange layout into shape.  If I had more RA3 chops of my own, perhaps I would have clued in to more design pitfalls and been able to better use the playtesters.</p>
+  <h3>&bull; Theme</h3>
+  <p>The teleporter model and most of the brick and stone textures are derived from materials provided by Todd &quot;Mr.CleaN&quot; Rose (his &quot;Egyptian&quot; set).  The Colossus and fountain models are based on models from, respectively, Bjornar Johansen and Ranjeet Singhal; I think that both were entries in a model-making contest for QuakeCon 2000.</p>
+  <h3>&bull; Tricks</h3>
+  <div class="floatbox">
+    [local_image('triggershell.png','pic_left')]
+    <p>&bull; For an arena that is ostensibly set on top of a mountain, Lost Colossus is surprisingly resistant to death-by-falling.  If you get knocked off the back or side of the area around the Colossus, for example, you're going to be &quot;blown&quot; back into the playing area, regardless of your exit vector.  It's a fun effect; you get a second of freefall over open space before the push kicks in, so that (at least the first time this happens) you can experience a momentary holyshit reaction.</p>
+    <p>The flimsy fiction behind this behavior is that... well, it's really windy up there.  The real mechanism is a carefully oriented shell of jump triggers.  A similar protection exists for a side opening in the lower area, but it's not nearly as funky looking in the editor.</p>
+  </div>
+  <div class="floatbox">
+    [local_image('scatter.png','pic_left')]
+    <p>&bull; I didn't want sharp shadows in the warmly-lit indoor areas, but I didn't want a blandly even ambient light either.  To help simulate scatter along the light shaft from a major light source, I used chains of point light entities leading out from the source.</p>
+    <p>The compiled result doesn't obviously look like scatter from those sources, but that's for the best... varied and soft lighting is all that I was after.  The light compiler available these days (in q3map2) would take care of these sorts of effects without requiring a mapper to jump through any such hoops.</p>
+  </div>
+  <div class="floatbox">
+    [local_image('teleporter.png','pic_left')]
+    <p>&bull; The teleporter that takes you to the Colossus services three different destinations in that area; one behind the throne, and one on each shoulder.  You can pick a destination by entering the teleporter from a different direction, as it is composed of three teleporter triggers.<p>
+    <p>The readme mentions this, and there are markings in the ceiling over the teleporter that hint at this behavior, but I'd bet that most players never realize.  Which is probably the reason that most mappers don't do this sort of thing, although I know I'm not the first; I remember seeing a multi-destination teleporter in a Quake map as early as 1997 (Contaminate by Dennis &quot;headshot&quot; Kaltwasser).</p>
+  </div>
+  <h3>&bull; Useless Trivia</h3>
+  <p>The Tolkien-esque script glowing on walls around the map is from a font for the synthetic language Denden.  I picked it because a) it looked neat, and b) it was free for anyone to use.  Apparently it's part of <a href="http://www.valdyas.org/andal/index.html">an imaginary world</a> that a particularly persistent Dutchman has been tinkering away at for decades.</p>

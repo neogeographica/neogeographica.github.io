@@ -1,0 +1,16 @@
+One potential "gotcha" with playing soundtrack music files through Quake is the prospect of losing some of the higher frequencies in CD-quality audio, when Quake goes through the process of mixing and (possibly) downsampling the audio before outputting it.  Quake engines do provide some control over the output rate, but it's not completely clear (to me) exactly what such a setting does internally to achieve that output rate.  Also FYI the setting will affect all sound effects, not just the music.
+
+The typical way to control the sound output's sample rate is with the "-sndspeed" command-line option.  Specifying "-sndspeed 44100" on the command line when launching a Quake engine is essentially asking for CD-quality output.
+
+Command-line options can be passed to a Quake engine executable by various methods. See the "Command Line" section of this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+Because of my uncertainty about the effects this has on the mixing process and other sound effects, and in what way any upsampling would be handled, I wouldn't say that you should always use this option.  Try it out if you want to hear the difference though.
+
+In my experience on the Windows versions of these engines, just listening through headphones:
+[list]
+[*]DarkPlaces is outputting at 48 kHz by default.  It sounds fine to me without any sndspeed changes.
+[*]QuakeSpasm is outputting at 11.025 kHz by default.  It sounds somewhat fuzzy to me.  Using "-sndspeed 44100" with QuakeSpasm does improve it for my tastes.
+[*]FitzQuake Mark V also outputs at 11.025 kHz by default, as far as I know, but it sounds clearer than the QuakeSpasm default.  I can take or leave any sndspeed adjustment here.
+[*]DirectQ mixes internally at CD quality.  It sounds fine to me without any sndspeed changes.
+[/list]
+
+This is completely a matter of taste.  If you're using one of the high-default-output-rate engines and are really attached to the original DOS Quake sound, you might even want to use "-sndspeed 11025" on the command line to try to re-create that.  It's also quite possible that playing this audio over a good set of speakers, rather than headphones, would lead to different decisions.

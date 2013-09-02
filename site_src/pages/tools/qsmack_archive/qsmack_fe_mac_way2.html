@@ -1,0 +1,38 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend with a Double-Click: Method 2</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+So you don't want to (or can't) just download the files?
+</P>
+<P>
+To make the changes yourself, you need to have and know how to use ResEdit.  If you don't, please don't ask us about this; just use the other method instead.
+</P>
+<UL>
+<LI>Change the creator type of qsmack.tcl to be &quot;WIsH&quot;.  (Yes, that's the correct capitalization.)
+<LI>Add a TEXT resource to your Wish application and name it &quot;tclshrc&quot;.  The contents of this resource should be:
+<BLOCKQUOTE>
+<PRE>
+proc tkOpenDocument args {
+    foreach file $args {
+        uplevel #0 source \&quot;$file\&quot;
+    }
+}
+</PRE>
+</BLOCKQUOTE>
+<LI>Quit out of ResEdit, saving your changes to both files.
+</UL>
+<P>
+Now double-clicking on qsmack.tcl should launch the QSmack frontend.
+</P>
+<BR/>
+[qsmack_archive_fyi]

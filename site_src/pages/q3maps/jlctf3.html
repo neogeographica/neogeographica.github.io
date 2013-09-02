@@ -1,0 +1,95 @@
+#styles#
+[common_styles]
+[gallery_styles]
+#scripts#
+[common_scripts]
+[gallery_scripts]
+[overview_scripts]
+#optional_popup [jlctf3_overview]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem jlctf3
+  <h1>Industrial Revolution</h1>
+  <ul>
+    <li>Quake 3 CTF &amp; Team Arena, 6-10 players</li>
+    <li>released October 2001 (Threewave mod), January 2010 (final standalone version)</li>
+  </ul>
+  <p>Industrial Revolution hearkens back to the days when men were men and CTF was played in strange factories that specialized in slime and conveyor belts.  The layout is tuned for fast but tactical gameplay.  The architecture is built for three-dimensional combat.  And the revolution will not be televised.  The revolution will be LIVE.</p>
+  [overview_button]
+[gallery('redbase','mid','redhigh','bluelow','redlow','bluejump','editortop','editorside')]
+  <h2>Downloads</h2>
+  <p>Originally Industrial Revolution was released in the Threewave mod, as q3wcp15.  The &quot;Final Version&quot; jlctf3 available for download below is almost identical to the Threewave version, with a couple of small tweaks/fixes, in a smaller standalone package.</p>
+  <h3>&bull; Final Version</h3>
+  <ul>
+    [listitem_local_download('jlctf3.zip','map package')]
+    [listitem_local_download('jlctf3.txt','readme','(included in map package)')]
+  </ul>
+  <h3>&bull; Older Versions (not required)</h3>
+  <ul>
+    [listitem_local_download('threewave17.zip','entire Threewave mod','(186 MB)')]
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    [listitem_local_download('revolution_mapstuff.zip','map source for Threewave version')]
+    [listitem_local_download('revolution_mapstuff_readme.txt','readme for map source','(included in map source package)')]
+  </ul>
+  <h2>Notes</h2>
+  <h3>&bull; Genesis</h3>
+  <p>When Michael &quot;Casey&quot; Goodhead and the Threewave folks were looking for maps to release with their mod, I asked Casey if <a href="jlctf2.html">Titans</a> would fit the bill.  His answer was something along the lines of &quot;Not really, do you have anything one-fourth that size?&quot;  Which I didn't... but that got me thinking about starting a &quot;competition-sized&quot; Q3CTF map.  If I could get a beta out quickly, and if it was accepted for Threewave, I'd have a resource for quality feedback and playtesting.</p>
+  <h3>&bull; Design</h3>
+  <p>It's probably difficult to tell, but one of my inspirations for this map was Troubled Waters (q3ctf2, my favorite of the CTF maps that shipped with Q3).  One of Troubled Waters' signature areas is a big jump over a central water-pit, with walkways on each side.  I wanted to take that basic concept, remove one of the side paths, and add connectivity between the central jump path and the remaining side path.  Having two dissimilar and non-crossing paths through the center then led to mirrored symmetry rather than rotational.</p>
+  <p>The end result doesn't play much like Troubled Waters.  One reason is that I was trying to have significant flag grabs happen more frequently on this map, and generally make it play faster.  I also wanted to make it &quot;bouncier&quot;, to see how much juice could be squeezed out of the Quake 3 jumppad as a gameplay element without getting silly.  As a consequence of all the open-air jump paths, I ended up removing the railgun as a weapon choice; you know you're going to alienate a chunk of the playerbase when you do that, but I think it was worth it to give Industrial Revolution a unique feel.</p>
+  <p>In retrospect, the only two things I'd tweak would be these:<p>
+  <ul>
+    <li>Add headroom for better jumping in the ramped tunnel behind the flag.</li>
+    <li>Try to reduce the dominance of the lightning gun in base defense.  It might play better if LG ammo was removed from the flagrooms.</li>
+  </ul>
+  <p>The ammo placement in particular would have been easy to change when re-packaging assets for the final standalone version of the map, but in the end I decided to leave it be. It would have been extra-terrible if making some untested change had other bad consequences, and anyway I'm just nitpicking.</p>
+  <h3>&bull; Theme</h3>
+  <p>Almost all of the textures used here were created by Kevin &quot;Rorshach&quot; Johnstone: his &quot;Clockwork Droid&quot; set (mainly used on the ground and upper floors) and his &quot;Vendetta&quot; set (mainly used in the lower halls).</p>
+  <p>For this map's theme I was aiming at something more factory-industrial than futuristic, like you might find in a Quake 2 map.  Part of this idea involved coming up with a &quot;multifunction platform&quot; to use as an architectural building block: a mechanism that could be configured as a lift, jumppad, or stationary platform.  I've got a love-hate relationship with those darn platforms; I like the look, but their geometry sure made some things difficult (construction, texture alignment, botplay-tuning).</p>
+  <h3>&bull; Tricks</h3>
+  <div class="floatbox">
+    [local_image('ribbon.gif','pic_left')]
+    <p>Industrial Revolution isn't what you'd call a flashy map, but there's more oddness under the covers than in my other maps so far.</p>
+    <p>Most of it is really far into the mapping-geek zone, so rather than try to find specific nuggets to describe on this page, I'll just point at the <a href="[local_downloads_path()]/revolution_mapstuff_readme.txt">readme included with the map source</a>. Topics covered there include: dealing with fallout from the &quot;vertex lighting&quot; mode used by competitive players, randomizing initial item spawns, changing the bot AI, and the mysteries of zero-speed pendulums (used in the windsock ribbons like the one to the left).</p>
+  </div>
+  <h3>&bull; Demos</h3>
+  <div class="floatbox">
+    [local_image('flagrun.gif','pic_left')]
+    <p>Watching someone use something that you made is pretty much the best thing, and I like Quake 3 spectating in general anyway, so I got a special kick out of tournament matches played on Industrial Revolution. Some of these matches have been preserved as &quot;demos&quot;, which are game recordings that can be played back using Quake 3. Most of the early demos (from North American tournaments like the Peacemakers Invitational, Winter Haste, and the Avalanche Invitational) are in a format that is no longer supported by the latest version of Quake 3, but I'll share here some recordings of later games that are still easily viewable. Note that all of these demos were recorded using the Threewave version of this map (q3wcp15), so you need that installed in order to view them. The standalone version of the map (jlctf2) won't work for this purpose.</p>
+  </div>
+  <p>If you're at all interested in this, you probably already know how to view a demo. But just in case here's the basics: find the &quot;baseq3&quot; folder in your Quake 3 installation; if you don't already have a &quot;demos&quot; folder inside &quot;baseq3&quot;, then create one; and put any demo files (files that have the extension dm_68) inside the &quot;demos&quot; folder. Now when you start Quake 3 and select &quot;Demos&quot; at the main menu, you can select and play from the list of available game recordings. Things can get more complicated than that under some circumstances, but I believe that the demos in the first list below are all viewable with that simple process.</p>
+  <table>
+    <tr><th>Year</th><th>Event</th><th>Context</th><th>Match (download link)</th></tr>
+    <tr><td>2004</td><td>Gamers Assembly</td><td>???</td><td><a href="[local_downloads_path()]demos/ga04_aaa_s.zip">aAa vs S?</a></td></tr>
+    <tr><td>2005</td><td>Eurocup XI</td><td>finals</td><td><a href="[local_downloads_path()]demos/ecxi05_foe_gzd.zip">FOE vs gzd</a> <strong>*</strong></td></tr>
+    <tr><td>2008</td><td>Clanbase Open Cup, Fall</td><td>finals</td><td><a href="[local_downloads_path()]demos/cbocf08_hmpd_omg.zip">hmpd vs oMg</a></td></tr>
+    <tr><td>2009</td><td>Clanbase Open Cup, Spring</td><td>finals</td><td><a href="[local_downloads_path()]demos/cbocs09_dp_lkff.zip">DP vs LKFF</a></td></tr>
+  </table>
+  <p><strong>*</strong> The FOE vs gzd demo is game 3 of the match; I wish I could see game 4, which was also played on q3wcp15 but was apparently quite different from game 3. If by any chance you have game 4, please share!</p>
+  <p>And below are a few more demos from Quakecon tournaments. The added twist for these demos is that you need to have the <a href="http://www.playmorepromode.org/">CPMA</a> mod for Quake 3 installed and activated before playing the demo.</p>
+  <table>
+    <tr><th>Year</th><th>Context</th><th>Match (download link)</th></tr>
+    <tr><td>2003</td><td>winners bracket</td><td><a href="[local_downloads_path()]demos/qcon03_aaa_pm.zip">aAa vs Pm</a></td></tr>
+    <tr><td>2003</td><td>winners bracket finals</td><td><a href="[local_downloads_path()]demos/qcon03_gzd_c9.zip">gzd vs c9</a></td></tr>
+    <tr><td>2003</td><td>finals</td><td><a href="[local_downloads_path()]demos/qcon03_c9_519.zip">c9 vs 519</a></td></tr>
+    <tr><td>2004</td><td>losers bracket</td><td><a href="[local_downloads_path()]demos/qcon04_c9_ni.zip">c9 vs -i</a></td></tr>
+    <tr><td>2004</td><td>finals</td><td><a href="[local_downloads_path()]demos/qcon04_aaa_c9.zip">aAa vs c9</a> <strong>**</strong></td></tr>
+  </table>
+  <p><strong>**</strong> Unlike the other demo recordings here, the aAa vs c9 demo covers all games of the match in one recording. The game played on q3wcp15 is the second of three.</p>
+  <h3>&bull; Useless Trivia</h3>
+  <p>It's interesting to nail down a conceit or motif early on, and then try your best to work within it while developing the look and layout of the map. Inevitably though you'll run into clashes between gameplay concerns and the &quot;purity&quot; of the conceit. Obviously the signature thing for this map was the multifunction platform mentioned above, and one of the problems with it as a play surface came out pretty early in testing:</p>
+  <p>Often players going up to the top level of the flagroom were running backwards and/or fighting as they traversed the jumppads. They would miss the mid-level jumppad (and its &quot;backstop&quot;), fall off the platform next to the wall, and bumble around in the recessed space below getting killed. The gameplay fix is to block off that space so players can't accidentally back through it, but I didn't want to mess up the platform/wall geometry on the one hand, or have invisible walls on the other hand.</p>
+  <p>So in the released version of the map you can see a little doohickey to the left of the jumppad backstop, which is visually signposting a clip brush that has closed off the gap between the backstop and the wall:</p>
+  [centered_local_image('clamp_top.jpg', 'screenshot', 320)]
+  <p>This is actually the top of a giant C-clamp holding a work light of sorts, shown below from a side POV that has noclipped into the wall a bit:</p>
+  [centered_local_image('clamp_side.jpg', 'screenshot', 320)]
+  <p>And from below here's the clamped-on spotlight, which as a bonus acts as a diagetic light source for brightening up the shadowed area below the platform:</p>
+  [centered_local_image('clamp_bottom.jpg', 'screenshot', 320)]
+  <p>I'm sure that the number of players who have actually noticed this doohickey and its nature is extremely tiny. If I had slapped an invisible wall in there or some unexplained structural tumor, probably not many would have noticed that either! That's OK with me.</p>
+  <h3>&bull; Variants</h3>
+  <p>When Quake 4 was released, I thought I could get my feet wet with id Tech 4 mapping by making a Q4 CTF map with the same topology as Industrial Revolution: skip worrying about some of the gameplay aspects and get straight to the technical issues. I had fun generating a new take on the geometry (especially with a higher polygon budget), but eventually I ran up against the facts that a) I didn't like working with the id Tech 4 lighting model and b) I wasn't really getting pulled into Q4 multiplayer.</p>
+  <p>So the Q4 CTF map (&quot;Industrial Evolution&quot;) died in early beta with only some rough texturing/detailing/lighting. It still managed to escape the mapping forum where I had posted it to get some feedback, and it got into the rotation for some tournaments, so copies of it exist here and there on the web.</p>
+[gallery2('q4redbase','q4mid','q4redhigh','q4bluelow','q4redlow','q4bluejump','q4editortop','q4editorside','q4bluebase','q4redcorner','q4bluegate','q4redlift','q4midquad','q4midlow','q4midplat','q4redgate')]
+  <p>In the gallery above, the first eight images show roughly the same views as in the gallery for the Q3 map; the next eight are views of other interesting areas. Touring the map to take those screenshots raised up some disappointment at leaving those areas unfinished &mdash; but not enough to actually have another go at Q4 mapping.</p>

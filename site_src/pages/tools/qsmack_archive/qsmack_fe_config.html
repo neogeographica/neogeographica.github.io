@@ -1,0 +1,165 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend Config File Setup</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+The QSmack frontend config file allows the user to customize the look and feel of the frontend tool. The frontend script reads in a config file in two ways. First, a command line argument can be given to the script which will be interpreted as the name of the config file to read in. As in:
+</P>
+<BLOCKQUOTE>
+<PRE>
+qsmackfe.tcl qsmack.cfg.highres
+</PRE>
+</BLOCKQUOTE>
+<P>
+The second way is system specific. The QSmack frontend will look in some default places for specially named files on both <A HREF="qsmack_fe_mac.html">Mac</A> and <A HREF="qsmack_fe_unix.html">UNIX</A> platforms.
+</P>
+<P>
+Here is an example frontend config file:
+</P>
+<BLOCKQUOTE>
+<PRE>
+password:               testing123
+defaultQSmackServer:    machine.that.is.running.qsmack.com:26789
+width:                  80
+historyDepth:           50
+saveTextLines:          500
+serverWindowHeight:     12
+smackWindowHeight:      12
+commandWindowHeight:    14
+serverPrints:           server
+smackPrints:            smack
+commandPrints:          command
+textFont:               -*-courier-medium-r-*-*-12-*-*-*-*-*-*-*
+infoFont:               -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+titleFont:              -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+showNum:                true
+showName:               true
+showColors:             true
+showFrags:              true
+showIpaddr:             false
+</PRE>
+</BLOCKQUOTE>
+<P>
+The format of the config file is pretty simple and very similar to the format of the config file for the regular QSmack program. The main difference is that this config file must have a colon ':' between the option and its value. Lines beginning with a hash mark (&quot;#&quot;) are comments, and blank lines and whitespace are ignored.  Config parameters should appear on lines by themselves.  
+</P>
+<P>
+The only parameter that must be specified in the config file is &quot;password&quot;. All other parameters will take on default values if they are left out. Here's a description of what the example frontend config file is doing, line by line:
+</P>
+<BR>
+<PRE>
+password:               testing123
+</PRE>
+<BLOCKQUOTE>
+<P>
+This specifies the password that the frontend will send to the QSmack program when it connects. This should be the same password that you specified in the regular QSmack <A HREF="qsmack_config.html">config file</A>. This parameter <B>must</B> be specified in the config file or the frontend won't be able to connect to QSmack.
+</P>
+</BLOCKQUOTE>
+<PRE>
+defaultQSmackServer:    machine.that.is.running.qsmack.com:26789
+</PRE>
+<BLOCKQUOTE>
+<P>
+This specifies the QSmack program that the frontend should connect when the program starts. This option is convenient if you only run one server and you only have one QSmack running. The default is not to connect to any QSmack at start up.
+</P>
+</BLOCKQUOTE>
+<PRE>
+width:                  80
+</PRE>
+<BLOCKQUOTE>
+<P>
+Specifies the minimum width (in characters) of the text windows. The windows may be wider due to the width of the status area. The default is 80 characters.
+</P>
+</BLOCKQUOTE>
+<PRE>
+historyDepth:           50
+</PRE>
+<BLOCKQUOTE>
+<P>
+Specifies the number of interactive commands to save in the history list. The default value is 50.
+</P>
+</BLOCKQUOTE>
+<PRE>
+saveTextLines:          500
+</PRE>
+<BLOCKQUOTE>
+<P>
+Specifies the number of lines to save in the three output windows. Once the window has this many lines in it, the oldest lines are discarded.
+</P>
+</BLOCKQUOTE>
+<PRE>
+serverWindowHeight:     12
+smackWindowHeight:      12
+commandWindowHeight:    14
+</PRE>
+<BLOCKQUOTE>
+<P>
+Specifies the height (in lines) of the three windows. If the height is set to zero '0', then that window will not be visible at all. For low resolution monitors you may want to set two of the window heights to zero and channel all the messages to one window. See the &quot;serverPrints&quot;, &quot;smackPrints&quot;, and &quot;commandPrints&quot; options below for details on how to do that. The default height for all three windows is 4 lines.
+</P>
+</BLOCKQUOTE>
+<PRE>
+serverPrints:           server
+smackPrints:            smack
+commandPrints:          command
+</PRE>
+<BLOCKQUOTE>
+<P>
+With these three options, you can direct the usual output from one window to another. This is useful if your monitor is low resolution and you only have room to display one window. To do this, set the heights of two of the windows to zero and then direct the output from those windows to the window with a non-zero height. This is one possible configuration:
+</P>
+<BLOCKQUOTE>
+<PRE>
+serverWindowHeight:     0
+smackWindowHeight:      0
+commandWindowHeight:    10
+serverPrints:           command
+smackPrints:            command
+commandPrints:          command
+</PRE>
+</BLOCKQUOTE>
+<P>
+The valid values for these options are &quot;server&quot, &quot;smack&quot;, and &quot;command&quot. Any other values will generate errors.
+</BLOCKQUOTE>
+<PRE>
+textFont:               -*-courier-medium-r-*-*-12-*-*-*-*-*-*-*
+infoFont:               -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+titleFont:              -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+</PRE>
+<BLOCKQUOTE>
+<P>
+These options set the fonts that the frontend uses in displaying information. The &quot;textFont&quot; is used for the text in the output windows. It is highly advisable to make this a fixed-width font. The &quot;infoFont&quot; is the font used in the player status area. The &quot;titleFont&quot; is the font used for the status area at the top, the window titles, and the command prompt at the bottom. Bold fonts look better for these last two fonts. The default value for all three fonts is the font that Tcl/Tk would choose if you specified no font at all. This is advantageous because Tcl/Tk picks fonts based on the machine that it is running on.
+</P>
+<P>
+If you select a font that you don't have installed on your system, a default font will be used instead.
+</P>
+<P>
+You can refer to the &quot;FONT DESCRIPTION&quot; section of the &quot;font.n.html&quot; page that came with your Tk documentation to learn more about describing fonts, but here is a capsule summary.  If you are using Tcl8.0/Tk8.0, you can specify the fonts in a more human readable form like &quot;Courier 12&quot; or &quot;Helvetica 14 bold&quot; (leave off the quotes though).  The format is family name, followed by size, followed by an optional list of zero or more styles.  The possible styles are normal, bold, roman, italic, underline, and overstrike.
+</P>
+<P>
+Those who use Tcl7.6/Tk4.2 must use the arcane font format shown in the examples above (it will also work under Tcl8.0/Tk8.0).  The dashes delimit various fields that describe the font; an asterisk (&quot;*&quot;) in a field tells Tk &quot;I don't care; pick something.&quot;.  In the examples above, we have only bothered to specify family, weight, slant, and size.  The complete list of fields is -foundry-family-weight-slant-setwidth-addstyle-pixel-point-resx-resy-spacing-width-charset-encoding.  (Whew!)  Most of these you won't need to mess with.  Helpful tip for those of you using the frontend on an X Windows system (e.g. most Linux systems): the command &quot;xlsfonts&quot; will show the available fonts, in this format.
+</P>
+<P>
+Obviously the new Tcl8.0/Tk8.0 format is the way to go unless you need to be inhumanly precise about your font specifications.  Another reason to upgrade to Tcl8.0/Tk8.0 if you're still mucking around with an older version. :-)
+</P>
+</BLOCKQUOTE>
+<PRE>
+showNum:                true
+showName:               true
+showColors:             true
+showFrags:              true
+showIpaddr:             false
+</PRE>
+<BLOCKQUOTE>
+<P>
+These options control what fields are displayed in the player info area. The default values are the ones shown above. By default, the IP address is not shown because it tends to make the frontend too wide. If all the options are set to &quot;false&quot;, the player info area will not be displayed at all. This may be necessary for people with really low resolution monitors. The only valid values for these options are &quot;true&quot and &quot;false&quot;.
+</P>
+</BLOCKQUOTE>
+<BR/>
+[qsmack_archive_fyi]

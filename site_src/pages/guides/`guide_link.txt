@@ -1,0 +1,9 @@
+#.guide_link_code#
+def guide_link(guide_id, guide_name):
+  return '<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=' + guide_id + '"><img src="' + local_common_images_path() + 'steam.png" class="linkBadge"></img> ' + guide_name + '</a>'
+#.guide_link_top_code#
+def guide_link_top(guide_id, guide_name):
+  return '<p>This guide is also hosted at the Steam community site: ' + guide_link(guide_id, guide_name) + '<br/>If you have comments, questions, corrections, or additions, please post a comment on the guide over there. Or, you can send me an email at my address at the bottom of this page.</p>'
+#.guide_link_bottom_code#
+def guide_link_bottom(guide_id, guide_name):
+  return '<hr><br/><p>This guide is also hosted at the Steam community site: ' + guide_link(guide_id, guide_name) + '<br/>If you have comments, questions, corrections, or additions, please post a comment on the guide over there. Or, you can send me an email at my address below.</p>'

@@ -1,0 +1,66 @@
+[h1]Command-line options[/h1]
+You may know that you can manually start Quake from some command shell in your operating system.  For example on Windows you could open a command shell using the Command Prompt program, type commands into that shell to navigate to your Quake folder, and then enter
+[code]GLquake.exe[/code]
+to start up Quake (in this case, the GLQuake engine).
+
+It's possible to type more things after the program name in order to control its behavior; these things are called command-line options.  Several kinds of behavior can only be forced using command-line options, rather than with console variables or config files.  This is especially true for the original Quake engines.
+
+If for example you want to make sure that Quake doesn't try to play music from the current CD in the drive, you can disable CD audio with a command-line option:
+[code]GLquake.exe -nocdaudio[/code]
+You can specify as many command-line options as you like, as long as you separate them with spaces.
+
+Of course usually you don't start Quake by manually typing in a command shell.  Instead you usually launch it by clicking an icon or some other sort of UI action.  In these cases it might not be obvious how to send command-line options to the engine, but it's still possible as described in the sections below.
+
+The available command-line options differ between Quake engines, but many of the most important ones are the same.  For modern engines, the final authority is the documentation that you downloaded with the engine or that is online at the engine's website.  For the original Quake engines you can dig up the necessary info by searching the web for Quake command line information (and much of that will still apply to modern engines).
+
+As an example of some of that original documentation, see the "Startup Commands" section of the [url=http://www.inside3d.com/qip/home.shtml]Quake Info Pool[/url], or the "Command Line Parameters" section of this [url=http://www.quakewiki.net/archives/console/commands/quake.html]archived info from PlanetQuake[/url].
+
+You can also use command-line options to execute console commands and set console variables, by preceding the console command or variable name with the "+" symbol.  This isn't terribly useful for most settings -- usually you should instead just set them permanently in the config file or autoexec.cfg -- but some console commands can be useful on the command line.  For example you could launch GLQuake directly into dm4 to practice your lava-diving with the command line
+[code]GLquake.exe +deathmatch 1 +map dm4[/code]
+That may not be the way you always want to launch Quake, but if it's something that you do from time to time, it could be handy to create a shortcut for it (as described below).
+
+If you have a long series of console settings/commands that you want to execute on launch, you don't have to specify them all on the command line.  Instead you could put them in a file (for example named "myscript.cfg") stored in some game directory visible to the Quake engine, and use the "exec" command to read that file:
+[code]GLquake.exe +exec myscript.cfg[/code]
+[list]
+[/list]
+[h1]Steam "launch options"[/h1]
+You may be launching Quake using Steam, especially considering which website you're on right now!  Obviously you need to use Steam if you're running the Quake executables that Steam provides.  Also some folks replace those old executables with modern Quake engines but still launch them through Steam to take advantage of the Steam overlay, time-tracking, and whatnot.  (This works fine if you rename the modern engine executable to have the same filename as the old executable that you're replacing.)
+
+To set up command-line options for a Steam-launched Quake engine:
+[list]
+[*]In the Steam client, go to your Library and find Quake in the list of installed games.
+[*]Get the context menu for that Quake item (in Windows: right-click on it) and select Properties at the bottom of that menu.  This opens the Properties dialog.
+[*]The Properties dialog should appear with the General tab showing.  Near the bottom of the General tab is a button labelled "Set launch options".
+[*]Click the "Set launch options" button.  This opens a Launch Options dialog with a text box.
+[*]Type any command-line options you want into this text box, and click OK.
+[/list]
+The "launch options" that you set through Steam should make up all of the command line except the name of the program itself.  So to continue with our example of disabling CD audio, the text that you would enter into the "launch options" box would be
+[code]-nocdaudio[/code]
+like so:
+[previewimg=238594;sizeFull,inline;launchopts_trimmed.jpg][/previewimg]
+
+
+The potential issue with doing this through Steam is that Steam only lets you specify one set of "launch options" for Quake.  But when you launch Quake you could be choosing to run Quake, GLQuake, QuakeWorld, or GLQuakeWorld.  The same set of launch options would be used with any of those.
+
+In practice this isn't always a problem because engines do share many common command-line options, and typically an engine will just ignore any options that it doesn't understand.  So for example if you have an option in "launch options" that only applies to GLQuake, and then you use Steam to launch GLQuakeWorld, you'll be sending a "bad" option to GLQuakeWorld... but it will probably ignore it and you'll be fine.  Just something to keep in mind.
+[list]
+[/list]
+[h1]OS mechanisms[/h1]
+If you're launching Quake outside of Steam, then the best way to provide command-line options depends on your operating system.  The best solution for you may be a script, shortcut, batch file, or even holding down some modifier key when launching the program.  Completely covering all of these options is outside the scope of this guide, but I'll just mention one solution that is handy on Windows.
+
+On Windows one way to provide command-line options is by using a shortcut:
+[list]
+[*]Find the executable for the Quake engine you want to launch.
+[*]Right-click on it and drag to some open space (where you will be creating the shortcut).
+[*]Release the right-click and a menu will pop up; choose "Create shortcuts here".
+[*]Now you have a shortcut.  Rename it if you like.
+[*]Right-click on the shortcut and choose "Properties".
+[*]The Properties dialog should appear with the Shortcut tab visible.
+[*]In the Shortcut tab there is a textbox labelled "Target".
+[*]Click inside the Target box and use arrow keys to move the cursor to the very end.
+[*]At this spot you can add a space and then type any command-line options you want to use.
+[/list]
+
+Now whenever you open/execute this shortcut, just as if it were a program, you will launch Quake with your desired set of command-line options.
+
+And that's about it for talking about the general ways to muck about with Quake configuration.  Now we'll cover some of the specifics.

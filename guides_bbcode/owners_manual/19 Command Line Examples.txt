@@ -1,0 +1,21 @@
+[h1]Modern Quake engines[/h1]
+For modern Quake engines, my command line options tend to be
+[code]-dinput -heapsize 192000[/code]
+Or sometimes (see the Quake Soundtrack Solutions guide for more info) I use
+[code]-dinput -heapsize 192000 -sndspeed 44100[/code]
+
+I don't bother with the "-zone" option since I don't have gigantic console scripts, and many of the modern Quake engines no longer use the "-zone" option anyway.
+
+The "-dinput" option is irrelevant for DirectQ, and "-heapsize" is ignored by a few engines (Fodquake, DarkPlaces, DirectQ), but it doesn't hurt to specify them.  So I'm lazy enough to just always use the same command line.
+[list]
+[/list]
+[h1]Original Quake engines[/h1]
+I would use these options for Quake/QuakeWorld:
+[code]-dinput -heapsize 192000[/code]
+
+For GLQuake/GLQuakeWorld I would use these for 1920x1080:
+[code]-dinput -heapsize 192000 -width 1920 -height 1080 -conwidth 864 -conheight 486[/code]
+or these for 1920x1200:
+[code]-dinput -heapsize 192000 -width 1920 -height 1200 -conwidth 768 -conheight 480[/code]
+
+(Assuming version 0.98 for GLQuake; it's not worth putting up with earlier versions in my opinion.)

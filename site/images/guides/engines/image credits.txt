@@ -1,0 +1,9 @@
+qgear.jpg is my modification of a free image (gear.jpg) from Wikimedia Commons.
+
+tmyk.jpg is of course a screen grab from those old NBC PSAs.
+
+The 32x32 icons are from each of the relevant Quake engines on Windows.
+
+qhd1.jpg and qhd2.jpg are from the Quake HD page on ModDB.
+
+id1_screenshot2_large.jpg and mp1_screenshot2_large.jpg are from the old Quake Epsilon website (http://www.xpfree.org/epsilon/).

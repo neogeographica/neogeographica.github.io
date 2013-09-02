@@ -1,0 +1,78 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>U</FONT>sing QSmack</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+To use QSmack, your server must use <B>registered</B> (not shareware) Quake, version 1.06 or later.  Follow these steps:
+</P>
+<TABLE CELLPADDING=4>
+<TR>
+<TD><IMG SRC="[local_images_path()]1.gif" ALT="1." WIDTH=30 HEIGHT=40></TD>
+<TD><B>First</B>, you need to modify your own server code so that QSmack can gain admin privileges on your server. Reading the <A HREF="qsmack_server.html">instructions</A> on how to do that is required. You can also download our server mods there, which would be the fastest way of completing this step.</TD>
+</TR>
+<TR>
+<TD><IMG SRC="[local_images_path()]2.gif" ALT="2." WIDTH=30 HEIGHT=40></TD>
+<TD><B>Next</B>, you need to <A HREF="qsmack_downloads.html">download</A> the files that you need to run QSmack.  These archives are avilable for Win32, Linux, SPARC/Solaris, and IRIX.</TD>
+</TR>
+<TR>
+<TD><IMG SRC="[local_images_path()]3.gif" ALT="3." WIDTH=30 HEIGHT=40></TD>
+<TD><B>Now</B> tailor the <A HREF="qsmack_config.html">config file</A> and the <A HREF="qsmack_banfile.html">ban file</A> to suit your own needs.</TD>
+</TR>
+<TR>
+<TD><IMG SRC="[local_images_path()]4.gif" ALT="4." WIDTH=30 HEIGHT=40></TD>
+<TD><B>You are ready</B> to run QSmack! The command is just &quot;qsmack -f config.file&quot;.  Once QSmack is connected to the server, you can also connect to your server, become an admin, and <A HREF="qsmack_comm.html">send commands to QSmack</A>.</TD>
+</TR>
+<TR>
+<TD><IMG SRC="[local_images_path()]5.gif" ALT="5." WIDTH=30 HEIGHT=40></TD>
+<TD><B>Finally</B>, if you can handle even more niftiness, check out the <A HREF="qsmack_fe.html">QSmack Frontend</A>.  The power of the QSmack frontend cannot be summarized in this little blurb.  Zip over to its pages and check it out.
+</TR>
+</TABLE>
+<P>
+Questions?  Problems?  First, <B>please</B> give the <A HREF="qsmack_FAQ.html">QSmack FAQ</A> a look-see. If you're still having problems, email either <A HREF="mailto:jsolomon@stanford.edu">ahnuld</A> or <A HREF="mailto:jbaxter@lemur.stanford.edu">lemurboy</A>.  In any mail concerning QSmack, please include the log file (no matter how short), and your config file (minus your secret impulses of course :-). This will help us immensely. Ahnuld is the expert on QSmack itself, and lemurboy is the resident server mods guru, so direct your mail appropriately.  Also, please drop us a line if you decide to use QSmack on your server!
+</P>
+<P>
+If QSmack successfully connects to your server, everything is probably correct.  Also, check the QSmack log output; it should look something like this after it has successfully entered the game, although the details obviously depend on your server:
+</P>
+<BLOCKQUOTE>
+<PRE>
+*******************************************************************************
+*                              Welcome to QSmack                              *
+*                                Version 2.01                                 *
+*                  Brought to you by Clan 9 from Outer Space                  *
+*                  See http://www-vlsi.stanford.edu/~jsolomon/clan9/qsmack    *
+*                   for documention, information and updates                  *
+*******************************************************************************
+Wed Aug 06 13:20:53 1997 Ipaddr 157.22.179.* added to ban list
+Wed Aug 06 13:20:53 1997 Name regex \[\n\r] added to ban list
+Wed Aug 06 13:20:53 1997 Colors '13 4' added to ban list
+Wed Aug 06 13:20:53 1997 Trying to connect to kitty1.stanford.edu:26000
+Wed Aug 06 13:20:53 1997 Quake connection accepted: kitty1.stanford.edu:2084
+Wed Aug 06 13:20:54 1997 My player number is 3
+Wed Aug 06 13:20:55 1997 Stuff Command: alias rank "impulse 203";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias help-rank "impulse 204";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias help-observer "impulse 205";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias observer-noclip "impulse 206";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias skin-next "impulse 200";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias skin-prev "impulse 201";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias help-skin "impulse 202";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias help-server "impulse 207";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias init-nextcall "impulse 208";
+Wed Aug 06 13:20:55 1997 Stuff Command: alias init-nextskin "impulse 209";
+Wed Aug 06 13:20:56 1997 Stuff Command: init;
+Wed Aug 06 13:20:56 1997 Stuff Command: init01;
+Wed Aug 06 13:20:56 1997 Stuff Command: init02;
+Wed Aug 06 13:20:56 1997 Stuff Command: init03;
+Wed Aug 06 13:20:56 1997 Stuff Command: init04;
+</PRE>
+</BLOCKQUOTE>
+<BR/>
+[qsmack_archive_fyi]

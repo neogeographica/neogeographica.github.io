@@ -1,0 +1,67 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend Quickstart</H1>
+<HR>
+<BR>
+</CENTER>
+<H3>Download it!</H3>
+<P>
+First of all, you need to be using QSmack v2.00 or later.  If you don't have that, get it from the <A HREF="qsmack_downloads.html">QSmack Downloads</A> page and set it up.
+</P>
+<P>
+If you haven't obtained the frontend too, here's a link directly to it: <A HREF="[local_downloads_path()]qsmackfe-1.10.zip">the QSmack Frontend archive</A>.  Download and unzip.  You will get the frontend Tcl script (qsmackfe.tcl) and some other odds and ends.
+</P>
+<H3>Start it!</H3>
+<P>
+Now you're going to start up the frontend.  The best way to do this varies depending on what kind of computer you are using, so we provide some directions and suggestions for the following platforms:
+</P>
+<UL>
+<LI><A HREF="qsmack_fe_win.html">Windows</A>
+<LI><A HREF="qsmack_fe_unix.html">Linux and other UNIX variants</A>
+<LI><A HREF="qsmack_fe_mac.html">Macintosh</A>
+</UL>
+<P>
+Once you have the frontend running, you will want to test it out by connecting to an operational QSmack.  First make sure that your <A HREF="qsmack_config.html">QSmack config file</A> has the &quot;listen_port&quot; and &quot;password&quot; parameters set.  The &quot;listen_port&quot; parameter can have any legal value you like.  The &quot;password&quot; parameter must have the same value as in the frontend config file that you are using.  If you've been following these steps exactly, that value is &quot;testing123&quot; (without the quote-marks).  You can change this if you like -- and in fact you <B>absolutely should change this sometime soon</B> -- but when you change it, make sure that you change it both in the QSmack config file and in your frontend config file.  Otherwise, your frontend won't be able to talk to QSmack.
+<P>
+Once these parameters are set in your QSmack config file, restart your QSmack.  If you have changed your frontend config file, restart your frontend too.
+</P>
+<P>
+To connect to your QSmack, you will use the &quot;connect&quot; command.  &quot;connect&quot; is <B>almost always the first command you use</B> on starting up the front end (unless your frontend is <A HREF="qsmack_fe_config.html">configured</A> to automatically do the connect for you).  In fact many frontend commands do nothing unless you are connected.  So let's say, for example, that your QSmack is running at zip.zop.edu, and your &quot;listen_port&quot; parameter is 28000.  To connect the frontend to this QSmack, you would enter the command
+<P>
+<BLOCKQUOTE>
+<PRE>
+connect zip.zop.edu:28000
+</PRE>
+</BLOCKQUOTE>
+<P>
+And...
+</P>
+<H3>Use it!</H3>
+<P>
+...you're in!  The frontend should now start showing you information about the game.  Once you're connected, the next usual command to use is the &quot;stagename&quot; command to set a name that will be used if you choose to talk to the players.  So, for example, you could enter the command &quot;stagename administrator&quot; if you have a teensy God complex. :-)  There are many other commands; rapidly double-tap the TAB key at an empty line to see all the possibilities.  It will list all QSmack frontend commands as well as any aliases that the server stuffed to you.  Try some simple commands like &quot;ping&quot; or &quot;status&quot;.
+</P>
+<P>
+You can use the &quot;say&quot; or &quot;say_team&quot; commands just like in Quake, if you want to talk some smack.  Or, use Ctrl-T to toggle between the normal &quot;command mode&quot;, &quot;smack mode&quot;, and &quot;team smack mode&quot;; in the latter two modes, everything you type is treated as a &quot;say&quot; or &quot;say_team&quot;, respectively.  Those modes are handy for longer conversations, but don't forget that you have them turned on when you try to do a command.  It's embarassing to say &quot;ping&quot; when you actually meant to do the command &quot;ping&quot; instead.  An additional bonus feature of these speaking modes is that the frontend will automatically wrap the text so that everything you type fits neatly onto separate lines. Give it a try! Type a really long &quot;say&quot and press return.  See how the frontend chopped it up for you!
+</P>
+<P>
+Also experiment with the command line editing features.  You can use the left and right arrows as you might expect, and also the up and down arrows to scroll through a command history buffer (like the Quake console).  You can do command completion with TAB, or double-tap TAB to see all potential command completions.  Finally, for you EMACS buffs, the frontend supports EMACS key bindings like Ctrl-A and Ctrl-E for beginning and end of line, and Ctrl-K to delete from cursor to end of line.
+</P>
+<H3>Protect it!</H3>
+<P>
+When you've looked around a little, use the &quot;quit&quot; command to quit the frontend.  If you haven't picked a new password yet, do so now.  Specify this password both in your QSmack config file and your frontend config file.  Yes, we already said this, but it's important that you pick a new password.  It's also important that you pick one that is not easy to guess, or to find by running through a dictionary.  Use the same caution you would use as when picking a password for any other occasion, because if someone cracks this password, they can effectively have admin privileges on your server.
+</P>
+<P>
+Also be aware that your QSmack frontend password is stored in these two config files now, and anyone who can read these files can get the password.  Therefore it wouldn't be a good idea to put either config file on a publically shared, unprotected network drive, for example.
+</P>
+<P>
+Anyway, that's it for step one!  The next order of business is learning more about your <A HREF="qsmack_fe_config.html">frontend config file</A> and the set of <A HREF="qsmack_fe_comm.html">frontend commands</A>.
+</P>
+<BR/>
+[qsmack_archive_fyi]

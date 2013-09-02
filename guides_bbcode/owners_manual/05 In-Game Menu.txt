@@ -1,0 +1,22 @@
+Let's get the obvious stuff out of the way first.  Explore the options menu!  If you don't see a way to get to the options menu, try pressing ESC.  The pictures below are an example of the rather simple menu in GLQuake and the comprehensive multi-section menu of the ezQuake engine:
+[previewimg=237190;sizeThumb,floatLeft;quakeoptions.jpg][/previewimg] [previewimg=237189;sizeThumb,floatRight;ezquakeoptions.jpg][/previewimg]
+
+At a minimum you want to enable the "Always Run" option, and you may also want to "Invert Mouse" if you swing that way.  Set up your movement keys, etc.
+
+[quote]
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Unlike other Quake engines, the Qrack engine doesn't have any keys bound by default, if you start it up in a "clean" install.  When you first run Qrack it will try to import any existing Quake settings, including key bindings.  If it can't do this import then you'll have more work than usual to do in the menus.
+
+(Specifically, it attempts to import settings from the "config.cfg" file in the "id1" folder; see the section below about "The Config File".)
+[/quote]
+
+Modern Quake engines can have a ton of menu options.  It can be a little intimidating, since some of the mega-menus are obviously aimed at people who are already familiar with Quake, but it's worth looking through everything.
+
+[quote]
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Most Quake engines will automatically save any options changes that you make.  But ezQuake, FTEQW, and Fodquake do not.  In those engines, any changes that you make using the menus will be discarded when you quit Quake unless you explicitly save your changes.  Look for a menu item labelled "Save Settings" or "Save Configuration".
+
+In ezQuake you can also enable an option to "Auto Save on Quit" which makes it unnecessary to explicitly save your settings.  At first it might seem like a no-brainer to turn this on.  But it can be nice to be able to freely experiment with settings, while knowing that if you totally screw things up you can just quit the game and everything will revert.
+
+Quick update: looks like if you set things up using the latest version of the [url=http://www.nquake.com/]nQuake package[/url], then ezQuake will have "Auto Save on Quit" enabled by default.
+[/quote]
+
+You'll almost certainly want to adjust settings beyond those provided in the in-game menus, so that's what the rest of the guide will be about.  Before we get to talking about those specific settings, we'll first cover [i]how[/i] you can really get under the hood to reach them.

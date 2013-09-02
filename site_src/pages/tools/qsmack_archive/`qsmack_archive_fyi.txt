@@ -1,0 +1,1 @@
+<p class="info_banner center">This page is part of an archive of the original QSmack website.<br/>Most external links and a few download links don't work anymore.<br/>To exit this archive, use the top/side navbars or <a href="..\qsmack.html">return to the QSmack page</a>.</p>

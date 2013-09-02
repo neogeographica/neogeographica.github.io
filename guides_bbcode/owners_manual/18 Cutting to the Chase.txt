@@ -1,0 +1,7 @@
+Hopefully the above sections help to show what options are out there and how to change them, but to wrap things up I'll summarize what I use for running Quake in the next couple of sections.
+
+Note that I don't use most of these engines very often.  If you notice something that I'm doing wrong please let me know!
+
+[b]And keep in mind that the values shown below are specifically for the settings I personally like to use.[/b]  If you use a different resolution, FOV, or whatever then the rest of the guide above should help you determine what values to use.
+
+I usually set my mouse sensitivity and Y-invert through the console, but that's not shown below.  I also "unbind F12" (the default screenshot key) to avoid a conflict with the Steam overlay screenshot key... if you launch Quake through Steam then you'll probably want to do the same, if not then not.

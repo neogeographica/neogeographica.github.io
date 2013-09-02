@@ -1,0 +1,16 @@
+Artificial intelligence opponents -- "bots" -- are not available in the plain vanilla Quake game as originally released by id software, but mods (add-ons) to provide bot skirmish functionality have been among the most popular Quake third-party content almost since the beginning.
+
+[previewimg=266014;sizeThumb,floatLeft;tiggerbot.gif][/previewimg] [previewimg=266015;sizeThumb,floatRight;bots.png][/previewimg]
+
+(Left: a screenshot I took in 1997 playing against an Omicron bot; Right: FBCA bots moshing in 2013)
+
+The purpose of a bot mod is to let you play a multiplayer gametype, such as FFA or team deathmatch, with the bots standing in for human opponents.  Now, bots are never really an accurate replacement for humans, since even the smartest Quake bots don't have much brainpower in the "high level" game like predicting opponent routes or coordinating team strategies.  But bots can be a fun way to learn a map or just burn some time shootin' stuff.  And if you're playing FFA then a bot game can be nearly indistinguishable from a game on a public server.
+
+The first widely used Quake bot was the Reaper bot by Steven Polge, who eventually went on to work at Epic.  It was never quite finished and polished up, but the Reaper (along with Cameron Newham's Eliminator bot) was a cool demonstration of possibilities that kicked off a long history of bot mods in Quake and other games.
+
+The Reaper bot probably isn't what you would want to play with these days, so this guide is going to cover some of the later bot mods that would be a better choice:
+[list]
+[*]Omicron
+[*]FrikBot X++ (FBX++)
+[*]Frogbot Clan Arena (FBCA)
+[/list]

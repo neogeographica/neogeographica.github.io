@@ -1,0 +1,421 @@
+/**
+ * Common styles for content elements.
+ * Based on parts of yaml/screen/content_default.cs.
+ */
+
+@media all
+{
+  /* Reset font size for all elements to standard (16 Pixel) */
+  html * {
+    font-size: 100.01%;
+    font-weight: 400;
+  }
+
+ /**
+  * Reset monospaced elements to font size 16px in all browsers
+  * @see: http://webkit.org/blog/67/strange-medium/
+  */
+  textarea, pre, code, kbd, samp, var, tt {
+    font-family: [fixed_font_family];
+  }
+
+  /* "Normal" content text */
+  body {
+    font-family: [body_font_family];
+    font-weight: 400;
+    color: [body_text_color];
+  }
+
+  /* Footer text */
+  #footer {
+    font-size: 75.00%;
+  }
+
+  /* Headings */
+  h1, h2, h3 {
+    font-family: [heading_font_family];
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 250%;
+    color: [h1_text_color];
+    margin: 0 0 0.5em 0;
+  }
+  h2 {
+    font-size: 150%;
+    color: [h2_text_color];
+    margin: 0 0 0.5em 0;
+    padding-top: 0.75em;
+    border-bottom: 1px solid [h2_separator_color];
+  }
+  h3 {
+    font-size: 140%;
+    color: [h3_text_color];
+    margin: 0.75em 0 0.5em 0;
+  }
+
+  /* Lists */
+  ul, ol, dl {
+    line-height: 1.5em;
+    margin: 0 0 1em 1em;
+  }
+  ul.inner, ol.inner, dl.inner {
+    margin: 0 0 0 1em;
+  }
+  ul { list-style-type: square; }
+  ol { list-style-type: decimal; }
+  li {
+    margin-left: 0.8em;
+    line-height: 1.5em;
+  }
+  dt { font-weight: 700; }
+  dd { margin: 0 0 1em 0.8em; }
+
+  /* Text formatting */
+  p {
+    line-height: 1.5em;
+    margin: 0 0 0.75em 0;
+  }
+  blockquote, cite, q {
+    font-family: [quote_font_family];
+  }
+  blockquote {
+    margin: 0 0 1em 1.6em;
+    color: [quote_text_color];
+  }
+  strong,b { font-weight: 700; }
+  em,i { font-style: italic; }
+  pre {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+  }
+  pre, code, kbd, tt, samp, var { font-size: 75%; }
+  pre, code { color: [code_mono_text_color]; }
+  kbd, samp, var, tt {
+    color: [mono_text_color];
+    font-weight: 700;
+  }
+  sub, sup {
+    font-size: 91.6667%;
+    line-height: 0;
+  }
+
+  /* Links */
+  a {
+    color: [link_color];
+    background: transparent;
+    text-decoration: none;
+  }
+  a:visited { color: [visited_link_color]; }
+  a:focus,
+  a:hover,
+  a:active { color: [focus_link_color]; }
+
+  /* Image as inline text */
+  img.intext { vertical-align: text-bottom; }
+
+  /* Small images beside text */
+  .pic,
+  .pic_left,
+  .pic_right {
+    margin-bottom: 0.75em;
+    padding: 5px;
+    background-color: [image_bg_color];
+    height: auto;
+    border: 1px [image_border_color] solid;
+  }
+  .pic_left {
+    margin-top: 4px;
+    float: left;
+    margin-right: 1em;
+  }
+  .pic_right {
+    margin-top: 4px;
+    float: right;
+    margin-left: 1em;
+  }
+
+  /* No-padding no-border images */
+  .rawpic,
+  .rawpic_left,
+  .rawpic_right {
+    margin-bottom: 0.75em;
+    background-color: transparent;
+    height: auto;
+    border: 0px;
+  }
+  .rawpic_left {
+    margin-top: 4px;
+    float: left;
+    margin-right: 1em;
+  }
+  .rawpic_right {
+    margin-top: 4px;
+    float: right;
+    margin-left: 1em;
+  }
+  
+  /* Big images */
+  .diagram {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    padding: 10px;
+    background-color: [image_bg_color];
+    height: auto;
+    border: 1px [image_border_color] solid;
+  }
+  .diagram img { float: left; }
+  .screenshot {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 10px;
+    background-color: [screenshot_bg_color];
+    height: auto;
+    border-radius: 5px;
+  }
+  .screenshot img { float: left; }
+
+  /* Generic content classes */
+  .float_left {
+    float: left;
+    display: inline;
+    margin-right: 1em;
+    margin-bottom: 0.15em;
+  }
+  .float_right {
+    float: right;
+    display: inline;
+    margin-left: 1em;
+    margin-bottom: 0.15em;
+  }
+  .center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /**
+   * Horizontal nav button list
+   * Derived from yaml/navigation/nav_slidingdoor.css
+   */
+  .hlist {
+    background: transparent url("[global_common_images_path]blackline.gif") repeat-x bottom;
+    float: left;
+    width: 100%;
+   }
+  .hlist ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    list-style: none;
+    white-space: nowrap;
+  }
+  .hlist li {
+    list-style-type: none !important;
+    background: [button_image_color] url("[global_common_images_path]navtabs/left.png") no-repeat top left;
+    border-bottom: 1px solid [topnav_separator_color];
+    float: left;
+    margin: 0;
+    padding: 0 0 0 3px;
+  }
+  .hlist a,
+  .hlist strong {
+    background: transparent url("[global_common_images_path]navtabs/right.png") no-repeat top right;
+    color: [topnav_text_color];
+    display: block;
+    font-weight: 400;
+    padding: 5px 11px 3px 8px;
+    text-decoration: none;
+    text-transform: none;
+    width: auto; /* only IE 5.x */
+    width/**/:/**/ .1em; /* only IE 6.0 */
+  }
+  .hlist a:link,
+  .hlist a:visited {
+    background-color: transparent;
+    color: [topnav_text_color];
+  }
+  .hlist > ul a,
+  .hlist > ul strong { width: auto; }
+  .hlist ul li:focus {
+    background-color: [button_image_color];
+    background-position: top left;
+  }
+  .hlist ul li:hover,
+  .hlist ul li:active {
+    background-color: [button_image_hover_color];
+    background-position: 0 -[topnav_button_image_height]px;
+  }
+  .hlist ul li:focus a {
+    background-position: top right;
+  }
+  .hlist ul li:hover a,
+  .hlist ul li:active a {
+    background-position: 100% -[topnav_button_image_height]px;
+  }
+  .hlist a:focus {
+    background: transparent url("[global_common_images_path]navtabs/right.png") no-repeat top right;
+    color: [topnav_focus_text_color];
+    text-decoration: none;
+  }
+  .hlist a:hover,
+  .hlist a:active {
+    background: transparent url("[global_common_images_path]navtabs/right.png") no-repeat top right;
+    color: [topnav_hover_text_color];
+    text-decoration: none;
+  }
+  .hlist ul li.active,
+  .hlist ul li.active:focus,
+  .hlist ul li.active:hover,
+  .hlist ul li.active:active {
+    background: [main_bg_color] url("[global_common_images_path]navtabs/left_on.png") no-repeat top left;
+    border: 0 none;
+  }
+  .hlist li.active strong {
+    background: transparent url("[global_common_images_path]navtabs/right_on.png") no-repeat top right;
+    color: [topnav_curchoice_text_color];
+    font-weight: 700;
+    padding-bottom: 4px;
+    padding-top: 5px;
+  }
+
+  /* Invisible elements used to column-height-match with hlist */
+  .invis_hlist {
+    float: left;
+  }
+  .invis_hlist ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    list-style: none;
+  }
+  .invis_hlist li {
+    list-style-type: none !important;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  .invis_hlist strong {
+    display: block;
+    font-weight: 700;
+    padding: 5px 0 4px 0;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  /* Vertical list of nav thumbnails */
+  .navthumbs {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    list-style-type: none;
+  }
+  .navthumbs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navthumbs li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .navthumbs li img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 0 0;
+  }
+  .navthumbs li strong {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em 0;
+  }
+  .navthumbs li a,
+  .navthumbs li a:visited {
+    text-decoration: none;
+    color: [sidenav_text_color];
+  }
+  .navthumbs li a:focus {
+    color: [sidenav_focus_text_color];
+  }
+  .navthumbs li a:hover,
+  .navthumbs li a:active {
+    color: [sidenav_hover_text_color];
+  }
+  .navthumbs li:hover,
+  .navthumbs li:active {
+    background-color: [sidenav_hover_bg_color];
+  }
+  .navthumbs li.active,
+  .navthumbs li.active:hover,
+  .navthumbs li.active:active {
+    background-color: [main_bg_color];
+    color: [sidenav_curchoice_text_color];
+  }
+
+  /* jqModal elements */
+  .jqModal {
+    margin-top: 1em;
+  }
+  /* Can't do position-fixed in IE6, but I think I don't care. */
+/*  .jqmWindow {
+    position: relative;
+    margin: auto;
+    display: none;
+  }*/
+  .jqmWindow {
+    position: fixed;
+    width: 100%;
+    margin-left: -[popup_image_half_width()]px;
+    margin-right: auto;
+    left: 50%;
+    display: none;
+  }
+  .jqmWindowContent {
+    width: [popup_image_width]px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .jqmWindowContent.overview {
+    height: [overview_height]px;
+  }
+  .jqmWindowContent.overviewForm {
+    top: [overview_height]px;
+    text-align: center;
+  }
+  .jqmOverlay {
+    background-color: [overlay_bg_color];
+  }
+  .jqmForm {
+    color: [overlay_text_color];
+    font-size: 125%;
+  }
+  .jqmForm input\[type="checkbox"],
+  .jqmForm input\[type="radio"] {
+    margin: 3px 3px 4px 6px;
+  }
+
+  /* Other stuff! */
+  .info_banner {
+    color: [info_banner_text_color];
+    background-color: [info_banner_bg_color];
+  }
+  table
+  {
+    margin-bottom: 1em;
+  }
+  table th
+  {
+    padding: 4px;
+    font-weight: 700;
+  }
+  table td
+  {
+    padding: 4px;
+  }
+}

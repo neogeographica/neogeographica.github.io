@@ -1,0 +1,98 @@
+[h1]GLQuake issues[/h1]
+If you want to use the original GLQuake (rather than a modern Quake engine or GLQuakeWorld): it's worth mentioning that the version of GLQuake distributed with Steam has problems with widescreen options (among other things), as described in the "GLQuake Version Issues" section. Check that out before proceeding here.
+[list]
+[/list]
+[h1]Resolution[/h1]
+For all modern Quake engines you can select your desired resolution using the in-game menus.
+
+The original (non-GL) Quake or QuakeWorld engines have an in-game menu but they just do not support widescreen. You're out of luck with those.
+
+For the original GLQuake or GLQuakeWorld engines, you have to use the command-line options "-width" and "-height" to specify your desired resolution, for example
+[code]-width 1920 -height 1080[/code]
+[list]
+[/list]
+[h1]Console dimensions[/h1]
+Bear with me for a bit of explanation.
+
+The original Quake engines use the pixel width and height of the console to determine the size and aspect ratio of some things -- not just console text, but also the statusbar HUD, and even the way your weapon is rendered. The original 640x480 console dimensions are fine for 4:3 displays, but they lead to some weirdness in widescreen resolutions.
+
+Some modern Quake engines inherit these issues.
+
+If you use QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, or Qrack then you won't have aspect ratio problems. For QuakeSpasm, Fitzquake Mark V, and DirectQ (at least) you can use other console variables to adjust the console text size and HUD size; as a starter check out the variables with names that begin with "scr_con" or "scr_sbar".
+
+Other engines may need a little more tweaking. Specifically, for proper widescreen display we want to specify new console dimensions, following two rules:
+[list]
+[*]The ratio between console width and height should be the same as the ratio between the width and height of your screen resolution. This prevents distortion of text, statusbar, and weapon.
+[*]Console size (the magnitude of the width and height numbers) affects the size of console text and statusbar. Bigger console size means smaller text and statusbar.
+[/list]
+I like to keep the console height as close to 480 as possible to match the original design. So for 16:10 displays I use 768x480 console dimensions; for 16:9 I use 864x486.
+
+As an example here's a couple of images from GLQuake 0.98 using a 16:9 resolution. I haven't changed the FOV (field of view) yet -- we'll get to that in the next section -- so the FOV is still 90 degrees. In the top image the console dimensions haven't been changed yet; on the bottom they've been corrected to have a 16:9 aspect. Notice how on the top the HUD statusbar is stretched out and the weapon render is different. (And if you were to look at some console text in the top case, it would be horizontally stretched.)
+
+[previewimg=236915;sizeFull,inline;1_res_view.jpg][/previewimg]
+
+[previewimg=236917;sizeFull,inline;3_conres_view.jpg][/previewimg]
+
+
+In ezQuake, FTEQW, Fodquake, and DarkPlaces, you can set the console dimensions using the "vid_conwidth" and "vid_conheight" console variables, which will save to the config file. So for a 16:9 resolution you could use
+[code]
+vid_conwidth 864
+vid_conheight 486
+[/code]
+or for 16:10 you could use
+[code]
+vid_conwidth 768
+vid_conheight 480
+[/code]
+
+Quirks to be aware of:
+[list]
+[*]You may need to set these values [i]after[/i] choosing a screen resolution using the in-game menu, in case that action resets them.
+[*]FTEQW doesn't have HUD aspect ratio problems, but the HUD will be very small unless you adjust these values.
+[*]Fodquake doesn't have HUD aspect ratio problems, and the HUD looks pretty good by default, but you can change these values to adjust the HUD size if you like.
+[*]ezQuake users should see the "Special note for ezQuake" below.
+[/list]
+
+Finally: for the original GLQuake (version 0.97 or 0.98) or GLQuakeWorld, those console variables do not exist; instead you need to use the command-line options "-conwidth" and "-conheight". So these would be good GLQuake/GLQuakeWorld command-line options for a 16:9 resolution:
+[code]-conwidth 864 -conheight 486[/code]
+or for a 16:10 resolution:
+[code]-conwidth 768 -conheight 480[/code]
+[list]
+[/list]
+[h1]FOV[/h1]
+The original field of view for Quake is 90 degrees horizontally. If you are used to this for a 4:3 resolution, then when you switch to a widescreen resolution it can seem cramped and even make you motionsick.
+
+A larger FOV can also just give you an advantage from seeing more, although if you increase it too much you get fisheye effects that can be disorienting and make it harder to aim. In the end the right setting is a matter of personal taste.
+
+I use an FOV of 100 horizontal degrees for 16:10 resolutions, or 106 for 16:9, since these horizontal FOV settings result in approximately the same vertical FOV that I was used to on a 4:3 display. For example, the top image here uses a 90 degree FOV on a 4:3 display (like original Quake); the bottom image uses 106 FOV on a 16:9 display. Notice how in both images you can see the same amount of your surroundings vertically, and the 16:9 display shows more stuff to the left and right.
+
+[previewimg=238404;sizeFull,inline;ogfov_padded.png][/previewimg]
+
+[previewimg=236923;sizeFull,inline;5_fov_view.jpg][/previewimg]
+
+
+In all Quake engines, FOV is adjusted by setting a value for the console variable "fov". The value for "fov" may or may not be saved to the config file; if not, it needs to be placed in your autoexec.cfg file. See the examples at the end of this guide for engine-by-engine specifics. ezQuake users should also see the "Special note for ezQuake" below.
+
+[quote]
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Often the value for "fov" is just the horizontal FOV that you want. So for example if you want an FOV of 106 degrees, you set "fov" to 106. But QuakeSpasm, Fitzquake Mark V, and Fodquake interpret the "fov" value specifically as "the field of view for a 4:3 display". If you have a screen resolution in a different aspect ratio, the engine will automatically adjust your view to keep the same vertical field of view that you would have in a 4:3 resolution.
+
+Note that QuakeSpasm versions 0.85.8 and earlier do not have this auto-adjustment feature. In QuakeSpasm 0.85.9 and later, you can also choose to disable auto-adjustment by setting "fov_adapt" to 0. When auto-adjustment is disabled, the QuakeSpasm FOV behaves like GLQuake and most other engines, where you just directly set it to the value you want.
+
+As far as I know you can't disable the auto-adjustment in Fodquake or in Fitzquake Mark V.
+[/quote]
+[list]
+[/list]
+[h1]Special note for ezQuake[/h1]
+ezQuake has a menu option called "Wide Aspect" which can be enabled or disabled. This corresponds to values of 1 or 0 for the "vid_wideaspect" console variable.
+
+If you enable this setting, ezQuake does the following things:
+[list]
+[*]assume that your console dimensions and FOV are currently set the way you like for a 4:3 display
+[*]assume that you want to change these things to be appropriate for a 16:10 display
+[*]increase the horizontal FOV so that the 16:10 display will have the same vertical FOV as the 4:3 display did
+[*]decrease the console height so that the console aspect ratio is 16:10
+[/list]
+
+If you later [i]dis[/i]able this setting, then ezQuake munges console dimensions and FOV with the intent of going back from 16:10 settings to 4:3 settings.
+
+This can be handy if you have a 16:10 display, as long as you don't mind that it shrinks the console height a bit. However if you have a 16:9 display, or if you want more direct control over FOV and console dimensions, leave this setting alone and instead modify the "vid_conwidth", "vid_conheight", and "fov" variables as described above.

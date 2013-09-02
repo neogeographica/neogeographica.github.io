@@ -1,0 +1,12 @@
+[previewimg=234253;sizeOriginal,floatLeft;ProQuake32.png][/previewimg] [url=http://quakeone.com/proquake/]ProQuake[/url] (Windows, OS X, Linux) has been a popular NetQuake multiplayer client, which also supports playing singleplayer content and can act as a server to host NetQuake games.  ProQuake provides both OpenGL and Direct3D 8 renderers, although the OpenGL renderer appears to be the primary focus.
+
+A [url=http://quakeone.com/proquake/ProQuake4_Steam_Upgrade.exe]ProQuake installer for Steam Quake owners[/url] is available for Windows. It will place the ProQuake engine and libraries in your Steam Quake folder; it doesn't replace any of the Steam-provided Quake engines, but it can access the .pak data files in Steam with no need for file copying. An uninstaller is provided that will clean up all of its files without harming your Steam installation.
+
+Note that ProQuake has at least one library in common with the files installed by the "Ultimate Quake Patch". If you use both the "Ultimate Quake Patch" [i]and[/i] the "ProQuake for Steam" installer at the same time, the operation of DarkPlaces and/or ProQuake may be affected. And uninstalling the ProQuake files will remove a library used by DarkPlaces. It's probably best not to use both of those installers at the same time; if you want to use both of those engines, then you will need to manually set up one or both of them in their own folder(s). If you want to continue to share the .pak data files, then the "Engine Coexistence" section below has some relevant tips.
+
+The "ProQuake for Steam" installer can however co-exist happily with the "QuakeSpasm for Steam" installer described above.
+[list]
+[/list]
+[previewimg=234254;sizeOriginal,floatLeft;Qrack32.png][/previewimg] [url=http://quakeone.com/qrack/]Qrack[/url] (Windows) is another OpenGL client that some prefer as a NetQuake multiplayer client.  It also supports playing singleplayer content and can act as a server to host NetQuake games.
+
+The NetQuake multiplayer scene is probably the one I am least familiar with, so any contributions about the unique features of ProQuake or Qrack are welcome.

@@ -1,0 +1,38 @@
+#.sidebar_navlist_code#
+def sidebar_navlist():
+  if type(sidebar_active_navitem) == type(list()):
+    sidebar_active_navitem_key = sidebar_active_navitem[0].rstrip()
+  else:
+    sidebar_active_navitem_key = sidebar_active_navitem.rstrip()
+  keyindex = sidebar_choice_key.index(sidebar_active_navitem_key)
+  result = ''
+  for i in range(len(sidebar_choice_active)):
+    if i == keyindex:
+      result = result + '    ' + sidebar_choice_active[i].rstrip() + '\n'
+    else:
+      result = result + '    ' + sidebar_choice_inactive[i].rstrip() + '\n'
+  return result.rstrip()
+#.sidebar_nav_path_code#
+def sidebar_nav_path(choice):
+  return choice + '.html'
+#.sidebar_nav_thumb_code#
+def sidebar_nav_thumb(choice):
+  return local_common_images_path() + choice + '_nav_thumb.png'
+#.sidebar_choice_active_template_code#
+def sidebar_choice_active_template(choice,pagename):
+  return '<li class=active><img src="' + sidebar_nav_thumb(choice) + '" /><strong>' + pagename + '</strong></li>'
+#.sidebar_choice_inactive_template_code#
+def sidebar_choice_inactive_template(choice,pagename):
+  return '<li><a href="' + rel_path_segment() + sidebar_nav_path(choice) + '"><img src="' + sidebar_nav_thumb(choice) + '" /><strong>' + pagename + '</strong></a></li>'
+#
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+[sidebar_navlist()]
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->

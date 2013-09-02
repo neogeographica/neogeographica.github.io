@@ -1,0 +1,7 @@
+In versions of Windows after Windows XP, some folders like "Program Files" and "Program Files (x86)" are treated specially.  The contents of these folders have some protection against files being written inside them (or inside their subfolders).
+
+Some older programs won't work if installed under these special folders.  Some other programs work but have changed behavior.
+
+Personally I don't install games under these folders, especially not old games.  My Steam installation is under "C:\Games", for example.
+
+So the rest of the information in this guide was observed and tested with Quake installations outside of those special folders.  If you have your Quake installation under a special folder, it might be perfectly fine.  But I can't guarantee that it will behave the same way as mine.

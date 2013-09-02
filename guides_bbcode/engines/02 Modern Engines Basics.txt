@@ -1,0 +1,28 @@
+With the release of the Quake source code, enterprising developers started work on their own versions of Quake almost immediately.  These new versions of Quake are generally focussed on bug fixing, increasing the limits on the number of things supported in a Quake map, tackling usability problems, supporting the use of other textures/models/sounds, and adding new visual effects.
+
+Also many of these new engines can play music files in OGG and/or MP3 format.  This is especially useful if you only own a digital download of Quake and you don't have the soundtrack as it was originally provided (music tracks on the Quake CD).  If you can obtain the Quake soundtrack in OGG/MP3 format, then using a modern Quake engine you can once again hear it while you play.  More details about soundtrack file support in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=119489135
+There is very little reason to stick with the original Quake engines instead of using a modern engine.  If you intend to play third-party content a modern engine may actually be required.
+
+Each engine mentioned below has a long development history and many features, but I'm going to do my best to describe its intentions and "selling points" very briefly.  There are also many other Quake engines out there, but I want to limit this section to those that are most widely used.  If you're a superfan of a particular engine and notice that I've gotten something wrong, please let me know.
+
+As a first pass for engine selection, keep these criteria in mind:
+[list]
+[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=http://directq.codeplex.com/]DirectQ[/url], and [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] are the most popular engines for playing singleplayer.  The first three are intended to provide a "classic" look, while DarkPlaces is more about a modified/updated look.  All of the engines described in this guide (except [url=http://www.fodquake.net/]Fodquake[/url]) have some amount of support for singleplayer.
+[/list]
+[list]
+[*][url=http://ezquake.sourceforge.net/]ezQuake[/url], [url=http://www.fteqw.com/]FTEQW[/url], and [url=http://www.fodquake.net/]Fodquake[/url] are the most popular engines for playing QuakeWorld multiplayer.  [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] also provides QuakeWorld support.
+[/list]
+[list]
+[*][url=http://quakeone.com/proquake/]ProQuake[/url], [url=http://quakeone.com/qrack/]Qrack[/url], and [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] are the most popular engines for playing NetQuake multiplayer.  All of the engines described below, except [url=http://ezquake.sourceforge.net/]ezQuake[/url] and [url=http://www.fodquake.net/]Fodquake[/url], have some amount of support for NetQuake multiplayer.
+[/list]
+[list]
+[*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. [url=http://ezquake.sourceforge.net/]ezQuake[/url] and [url=http://www.fteqw.com/]FTEQW[/url] can host QuakeWorld games; all of the remaining engines (except [url=http://www.fodquake.net/]Fodquake[/url]) can host NetQuake games.
+[/list]
+
+Whichever engine you choose, you're going to end up getting a new Quake executable. There may be some other files or folders along with it, but at a minimum you're getting a program that you will run to play Quake.
+
+When you run this program, it will look for an "id1" folder in some location. Usually, at least on Windows systems, it will expect the "id1" folder to be placed right next to the Quake engine program. (But consult the docs for your Quake engine if you want to be sure.) So create the "id1" folder if it doesn't yet exist.
+
+Quake requires two files inside the "id1" folder: "pak0.pak" and "pak1.pak". You can get those two pak files from your Steam copy of Quake, or any other Quake installation. Once you have moved or copied those files into your "id1" folder you can start playing.
+
+So if you own Quake on Steam, you can use any of the engines described below. Some of the engines have related file-bundles or other installers that can make the process easier, and I'll mention some of those, but none of those installers/bundles are required.

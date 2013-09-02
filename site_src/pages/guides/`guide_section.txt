@@ -1,0 +1,19 @@
+#alphanum_pattern init
+#.guide_section_code#
+def guide_section(section_num, section_name):
+  global alphanum_pattern
+  import re
+  if alphanum_pattern == "init":
+    alphanum_pattern = re.compile('[^\w\- ]+')
+  alpha_section_name = alphanum_pattern.sub('', section_name)
+  element_name = ' '.join([fileName, section_num, alpha_section_name])
+  return '  <h2 id="%s">%s</h2>\n  [%s]' % (section_num, section_name, element_name)
+#.guide_with_toc_code#
+def guide_with_toc(*section_list):
+  toc = '  <h2>Table of Contents</h2>\n  <ul>\n'
+  body = '  </ul>\n'
+  for section in section_list:
+    (section_num, section_name) = section
+    toc += '    <li><a href="#%s">%s</a></li>\n' % (section_num, section_name)
+    body += guide_section(section_num, section_name)
+  return toc + body

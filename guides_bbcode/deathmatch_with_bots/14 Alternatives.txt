@@ -1,0 +1,43 @@
+[h1]Deathmatch[/h1]
+If you don't like any of the deathmatch bots described in this guide... you're kind of picky, aren't you?  But you do have some other options available:
+[list]
+[*]If you really like the Frogbot playstyle but you would rather play NetQuake, there's a [url=http://quakeone.com/proquake/frogbots-099.zip]NetQuake version of FBCA[/url] as modified by the prolific Quake engine coder "Baker". I need to find the time to investigate this more and then work the details into this guide. It does include a lot of the map waypoints created by "Trinca", and I believe that the [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url] should cover all of those supported maps. This mod should be configurable/controllable in a way that is similar to the QuakeWorld version of FBCA.
+[/list]
+[list]
+[*]If you really like the FrikBot playstyle but you would rather play QuakeWorld (which FBX++ doesn't support), then you can try the [url=http://eclecticmenagerie.com/jl/quake/bots/fbxb.zip]original FrikBot X[/url].  But the QuakeWorld version of FrikBot X can't load waypoint files, only supports deathmatch modes 1&2, and only knows how to play the original deathmatch maps (dm1-dm6).
+[/list]
+[list]
+[*]If you're playing NetQuake on a map that doesn't have FrikBot waypoints, and it isn't supported by NetQuake FBCA, and you don't like the Omicron bot... well, you can stick with FBX++ if you are willing to create and use your own waypoint files.  The [url=http://www.inside3d.com/frikbot/fbx/readme.html]FrikBot X documentation[/url] covers this pretty well (but it will involve some work).
+[/list]
+[list]
+[*]If you're playing QuakeWorld and you want bot support for a map that isn't covered by FBCA, and you're feeling industrious, you could research the process for creating and using your own Frogbot waypoints. Personally I don't know what's involved there.  Or you could use the [url=http://eclecticmenagerie.com/jl/quake/bots/fbxb.zip]original FrikBot X[/url] which does have a QuakeWorld version, and create FrikBot waypoints.  Unfortunately QuakeWorld code prevents you from using waypoint files (long story); you'll either have to save the waypoints into code and recompile the mod, or else insert the waypoints into the map file itself.  That's getting serious.
+[/list]
+[list]
+[*]There are certainly other Quake bots scattered around the internet that you could search out and try.  Look for sites that mention Omicron, Frogbot, and FrikBot... they'll probably have pointers to other bot mods as well.
+[/list]
+[list]
+[/list]
+[h1]Capture the Flag[/h1]
+CTF bots are harder to come by than deathmatch bots.
+
+[url=http://eclecticmenagerie.com/jl/quake/bots/ctfbotp032399.zip]CTFBot+[/url] by Anthony Distler and Drew Davidson is the only competent one that I know of.  Even this mod seems to have some problems with bot pathfinding and smooth movement, and if you want good teamplay you'll have to keep giving the bots specific orders.  But if you want to play CTF by yourself then this mod seems to be the only game in town.  (If you have other suggestions please share.)
+
+I don't have a lot of experience with CTFBot+, and it's different in many ways from the deathmatch bots in this guide, so I'll just share a few notes about it here instead of trying to work it into the body of the guide.
+[list]
+[*]It's a NetQuake mod, so you'll need to use a NetQuake-compatible Quake engine.  Basically if you can use a Quake program to play Omicron or FBX++ then it should work with CTFBot+ also.
+[/list]
+[list]
+[*]CTFBot+ supports almost 200 maps.  You can get most of them, including all the major CTF map packs, in a [url=http://eclecticmenagerie.com/jl/quake/bots/quake_ctf_maps.zip]bundle collected by the Thunderwalker Revival Project[/url].
+[/list]
+[list]
+[*]There are a bunch of configuration settings for the mod, and part of the setup actually involves compiling the code.  Fortunately it comes with a handy "CTF Bot Coordinator" program (Windows only) that lets you pick your options and then takes care of the setup for you.  You can then launch Quake from that program, or create a batch file that you can later use to launch Quake with those settings.
+[/list]
+[list]
+[*]"CTF Bot Coordinator" assumes by default that the mod is installed in a folder named "ctfbotp".  You can change this if you want, but using a folder named "ctfbotp" will make setup go smoother.
+[/list]
+[list]
+[*]You can play CTF on some of the original deathmatch and singleplayer maps, but you need to use "CTF Bot Coordinator" to create new modified versions of those maps.  (In the "Maps" menu, choose "id Map Modification".)
+[/list]
+[list]
+[*]"id Map Modification", and perhaps other operations, will get confused if the path to your Quake installation has spaces in it.  If you have this problem and you'd rather not move your Quake stuff to a new path, it's sort of fixable -- open up "ctfcoord.ini" in a text editor and replace any occurrences of your Quake path with the DOS-style "short name" version.  For example replacing "C:\Program Files (x86)\Steam\steamapps\common\quake" with "C:\PROGRA~2\Steam\steamapps\common\quake".  Icky, but it works.
+[/list]

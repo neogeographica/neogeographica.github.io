@@ -1,0 +1,6 @@
+<head>
+[metatags]
+<title>[title]</title>
+[styles]
+[scripts]
+</head>

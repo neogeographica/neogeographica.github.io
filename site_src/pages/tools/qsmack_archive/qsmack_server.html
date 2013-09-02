@@ -1,0 +1,60 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>M</FONT>odifying Your Server</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+QSmack works by logging into the server as a client, becoming an admin, doing frequent &quot;status&quot; checks of the other players, and kicking any players with banned names or colors, or from banned IP addresses.  As a client, it can only communicate with the server by sending impulses.  So, the server needs to have certain QuakeC modifications to handle the impulses produced by QSmack.
+</P>
+<P>
+To simplify things, we can provide you with already-modified server code, which you can use as-is or modify further to suit your needs.  There are currently these choices:
+</P>
+<UL>
+<LI><B>C9 Mothership</B> &lt;<A HREF="[local_downloads_path()]aa_sm.zip">aa_sm.zip</A>&gt;:  This is basically the same servercode that we run on the Mothership servers; you can get a description of it in the &quot;configuration&quot; section of our <A HREF="server.html">server page</A>.  It is kind of an old mod (ServerModules 1.9.6), but it does exactly what we want &amp; is super-stable.  At a minimum, you will need to change the message of the day in _motd.qc, and in weapons.qc replace the strings &quot;PASSWORD IMPULSE 1&quot;, &quot;PASSWORD IMPULSE 2&quot;, &quot;PASSWORD IMPULSE 3&quot;, &quot;PASSWORD IMPULSE 4&quot;, and &quot;PASSWORD IMPULSE 5&quot; with the five actual impulse numbers (not used elsewhere) that make up your QSmack password.  Then of course you can also do other stuff, like reconfiguring the various modules if you want to.  You <B>will</B> have to leave the &quot;init&quot; module enabled for our current method of auto-obtaining admin privileges to work correctly.
+</UL>
+<UL>
+<LI><B>ServerModules 3.3.12</B> &lt;<A HREF="[local_downloads_path()]aasm3312.zip">aasm3312.zip</A>&gt;:  This is a more recent version of ServerModules, version 3.3.12.  It does not include any of our personal &quot;Mothership hacks&quot;; it is simply the ServerModules 3.3.12 distribution with QSmack changes and without progs.dat (since you're going to have to compile one of your own anyway).  You need to edit defs.qc and make the definitions of AUTO_PASSWD_0, AUTO_PASSWD_1, and etc. correspond to your five-impulse password.  One other change is that we moved the &quot;help-ctf&quot; impulse from 220 to 240 to avoid a conflict with one of our default impulses, but that should be completely transparent to all users since they will be using the &quot;help-ctf&quot; alias rather than directly employing the impulse.  As with the previous mod, you can fiddle with the configuration all you like, but you need to leave the &quot;init&quot; module enabled.
+</UL>
+<UL>
+<LI><B>Latest ClanRing</B> I highly recommend that for the ClanRing code, you use the latest version available from the <A HREF="http://www.mpog.com/clanring/crmod/">CRMod site</A>.  But if for some reason you need to use an earlier version instead, two possibilities are below:
+</UL>
+<UL>
+<LI><B>ClanRing 2.49</B> &lt;<A HREF="[local_downloads_path()]aa_cr249.zip">aa_cr249.zip</A>&gt;:  This is the code for the ClanRing server v2.49, modified only by adding QSmack support.  You will need to do all the usual ClanRing configuration, plus specify the five password impulses in settings.qc (it will be obvious where).
+</UL>
+<UL>
+<LI><B>ClanRing 2.58beta</B> &lt;<A HREF="[local_downloads_path()]aa_cr258.zip">aa_cr258.zip</A>&gt;:  Same as above, but for ClanRing server version 2.58 beta.
+</UL>
+<UL>
+<LI><B>Latest ClanRing CTF</B> Ditto for CRCTF, get the latest.  Actually the <B>latest</B> latest is something of a chore to find, but you can get a pretty recent version from the <A HREF="http://www.mpog.com/clanring/crmod/download.html">CRMod downloads page</A>.  If you'd rather use an earlier version for some reason, try this next one:
+</UL>
+<UL>
+<LI><B>ClanRing CTF 2.7</B> &lt;<A HREF="[local_downloads_path()]crctf27.zip">crctf27.zip</A>&gt;:  ClanRing CTF has QSmack support included.  How cool is that?  If you were using QSmack with an earlier version, you should upgrade to this one.
+</UL>
+<UL>
+<LI><B>Threewave CTF 4.2</B> &lt;<A HREF="[local_downloads_path()]aa_ctf42.zip">aa_ctf42.zip</A>&gt;:  The <A HREF="http://www.planetquake.com/threewave/">Threewave CTF</A> v4.2 normal Quake codebase (i.e. the stuff in the &quot;src&quot; directory), modified for QSmack support.  This is only the QuakeC; you still need the rest of the Threewave server distribution.  The QSmack password impulse definitions (&quot;AUTO_PASSWD_0&quot;, &quot;AUTO_PASSWD_1&quot;, etc.) are in defs.qc, and you must set these to your password before compiling the code.  The admin function impulse definitions (for kicking, changing levels, etc.) have also been moved from admin.qc to defs.qc for various reasons, if you want to change those.<BR><BR>Note:  If you want to have admin privileges as a player on your CTF 4.2 server, we recommend that you leave the original CTF admin password <B>disabled</B> (i.e. leave &quot;ADMIN_PWD_1&quot, &quot;ADMIN_PWD_2&quot, and &quot;ADMIN_PWD_3&quot in admin.qc all set to -1) and instead use the QSmack password yourself.  We describe <A HREF="qsmack_FAQ.html#GET_ADMIN">how to do that</A> in the QSmack FAQ.  The reason for this recommendation is that the QSmack admin password is much more secure than the CTF password (something else that we <A HREF="qsmack_FAQ.html#SECURITY">also discuss</A> in the FAQ).
+</UL>
+<UL>
+<LI><B>CTF 4.2v</B> &lt;<A HREF="[local_downloads_path()]aactf42v.zip">aactf42v.zip</A>&gt;: <A HREF="http://www.columbia.edu/~dbw13/capture/vcg.html">Vader FLAG's adaptation</A> of Threewave CTF 4.2, with QSmack support added.  See the Threewave comments above, since they apply to this package as well.  As with Threewave CTF 4.2, this download is only the QuakeC files, not the rest of the package (instructions, entity files, etc.).
+</UL>
+<UL>
+<LI><B>CTF EPS 1.0</B> &lt;<A HREF="[local_downloads_path()]aactfe10.zip">aactfe10.zip</A>&gt;: The Quake server source for the <A HREF="http://www.frag.com/ctf/">CTF Expansion Project</A> v1.0, with QSmack support added.  Yet another Threewave CTF 4.2 variant.  Again, this is only the replacement QuakeC, not the entire CTF EPS distribution.
+</UL>
+<P>
+Even if you choose to use one of these pre-modified sets of server code, you should probably read the <A HREF="qsmack_changes.html">description of server code changes</A> to see exactly how the code was modified.  If you want to make the modifications yourself, for example to some other sort of server code besides those above, you <B>definitely</B> need to read that description.  It covers what impulses are used by QSmack &amp; how the server should respond to them, and it includes as an example the modifications made in the ClanRing v2.58 code.
+</P>
+<P>
+If you want QSmack support added to a particular server code package, it wouldn't hurt to <A HREF="mailto:jbaxter@lemur.stanford.edu">drop lemurboy a line</A> to see if he's willing to handle it for you.  The more popular/stable/well-written/etc. the package in question, the more likely it is you'll get him to do your work for you. :-)
+</P>
+<P>
+If you plan on modifying some other server code, we still recommend that you first get QSmack working with one of the above sets of code before you try anything else.
+</P>
+<BR/>
+[qsmack_archive_fyi]

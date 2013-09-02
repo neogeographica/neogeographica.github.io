@@ -1,0 +1,8 @@
+You can set "Always Run" using the in-game menus, but you can also set it through console variables.  By default the "cl_forwardspeed" and "cl_backspeed" variables each have a value of 200, but you can enable "Always Run" by increasing them to 400:
+[code]
+cl_forwardspeed 400
+cl_backspeed 400
+[/code]
+Values higher than 400 won't help you go any faster, by the way. :-)
+
+These settings are saved in the config file.

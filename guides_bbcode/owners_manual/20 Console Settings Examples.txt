@@ -1,0 +1,221 @@
+[h1]ezQuake, FTEQW, and Fodquake[/h1]
+When it comes to console settings, these three popular QuakeWorld clients can be treated a little differently than other engines.  So let's tackle them first.
+[list]
+[/list]
+[previewimg=237127;sizeOriginal,inline;ezQuake32.png][/previewimg] ezQuake  [previewimg=237129;sizeOriginal,inline;FTEQW32.png][/previewimg] FTEQW  [previewimg=237128;sizeOriginal,inline;Fodquake32.png][/previewimg] Fodquake
+
+A quick way to get a bunch of settings into one of these engines is to put the settings all into some file in the "id1" folder, start up Quake, and then use the "exec" console command to read that file.  For example if you have your settings in the file "foo.cfg", you can import those settings with the console command
+[code]exec foo.cfg[/code]
+
+Next you should explicitly save the settings to your config file with this console command:
+[code]cfg_save[/code]
+or by using the appropriate menu option to save settings/configuration.
+
+These are the settings that I would use for those engines after choosing a 16:9 resolution like 1920x1080 in the in-game menus:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+vid_conwidth 864
+vid_conheight 486
+[/code]
+or these settings after picking a 16:10 resolution like 1920x1200:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+vid_conwidth 768
+vid_conheight 480
+[/code]
+
+For ezQuake or FTEQW I would also include a setting of "fov 106" or "fov 100", respectively, to fix the field of view.  For Fodquake I'd leave "fov" at its default value of 90 since Fodquake internally takes care of increasing the field of view for widescreen resolutions.
+
+You can also experiment with different values (or menu choices) for the "crosshair" variable.
+[list]
+[/list]
+[h1]Other modern Quake engines[/h1]
+For all other modern Quake engines, some of the settings may be automatically saved to your config, and some may not be.  One way to deal with this is just to put them all into your autoexec.cfg file so that they get set every time Quake launches.
+
+Of course this means that some settings will end up both in your config file and in autoexec.cfg.  If you think that could lead to some confusion, then you can pare down your autoexec.cfg file -- delete any lines that contain settings covered by the config file.  It's up to you how you want to handle that.
+
+So generally speaking these are the settings that I like:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+sv_aim 1
++mlook
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+
+I could get away with just throwing those into autoexec.cfg.  Some are redundant or unnecessary for some modern Quake engines.  And for DarkPlaces I'd also want to fix "vid_conwidth" and "vid_conheight".  But that's the general idea.
+
+If you want specifics about which of those settings are needed for which engines, and which are saved to the config, then I've captured below the way it looked to me when I tested each engine.
+[list]
+[/list]
+[previewimg=237062;sizeOriginal,inline;DarkPlaces32.png][/previewimg] DarkPlaces
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+fov 106
+vid_conwidth 864
+vid_conheight 486
+[/code]
+(or "fov 100", "vid_conwidth 768", and "vid_conheight 480" for a 16:10 resolution like 1920x1200)
+
+You can also experiment with different values for the "crosshair" variable.
+
+This setting is not saved in the config file (must be in autoexec.cfg):
+[code]
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+[/code]
+[list]
+[/list]
+[previewimg=237067;sizeOriginal,inline;QuakeSpasm32.png][/previewimg] QuakeSpasm
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
++mlook
+[/code]
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+sv_aim 1
+[/code]
+I'd leave "fov" at its default value of 90 since QuakeSpasm 0.85.9 and later versions internally take care of increasing the field of view for widescreen resolutions.  If you do need to change "fov" then you must put it in autoexec.cfg.
+[list]
+[/list]
+[previewimg=237064;sizeOriginal,inline;Fitzquake32.png][/previewimg] Fitzquake Mark V
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
++mlook
+[/code]
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+sv_aim 1
+[/code]
+I'd leave "fov" at its default value of 90 since Fitzquake Mark V internally takes care of increasing the field of view for widescreen resolutions.  If you do need to change "fov" then you must put it in autoexec.cfg.
+[list]
+[/list]
+[previewimg=237063;sizeOriginal,inline;DirectQ32.png][/previewimg] DirectQ
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+[/code]
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+fov 106
+scr_conspeed 9999
+sv_aim 1
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+[list]
+[/list]
+[previewimg=237065;sizeOriginal,inline;ProQuake32.png][/previewimg] ProQuake
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+fov 106
+scr_conspeed 9999
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+sv_aim 1
+[/code]
+[list]
+[/list]
+[previewimg=237066;sizeOriginal,inline;Qrack32.png][/previewimg] Qrack
+
+These settings will be saved to the config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+m_filter 0
+[/code]
+(Qrack defaults to "m_filter 1", which I don't prefer.)
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+[list]
+[/list]
+[h1]Original Quake engines[/h1]
+The original engines are consistent in saving "cl_backspeed", "cl_forwardspeed", "crosshair", and (in the QuakeWorld case) "noaim" to the config file.  Anything else among the settings below must be placed in autoexec.cfg if you want them to take effect every time you play.
+
+For the original (non-GL) Quake and QuakeWorld engines, widescreen is not supported, so I wouldn't change the FOV.  These settings would be useful for Quake:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+scr_conspeed 9999
+sv_aim 1
++mlook
+[/code]
+
+And these for QuakeWorld:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+noaim 1
+scr_conspeed 9999
++mlook
+[/code]
+
+For GLQuake I would use these settings (the "fov" setting only works with GLQuake 0.98):
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+sv_aim 1
++mlook
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+
+And these for GLQuakeWorld:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+noaim 1
+scr_conspeed 9999
++mlook
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)

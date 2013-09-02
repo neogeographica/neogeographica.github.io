@@ -1,0 +1,12 @@
+/* Hacks specific to IE6 & IE7 (and probably earlier IE versions). */
+
+/* Bring in the standard YAML bugfixes */
+@import url(yaml-iehacks.css);
+
+/* Account for different main-column-clearing layout behaviour */
+@media screen, projection
+{
+  #main .sidebar {
+    padding-bottom: [bottom_content_margin]px;
+  }
+}

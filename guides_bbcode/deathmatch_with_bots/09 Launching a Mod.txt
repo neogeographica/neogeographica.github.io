@@ -1,0 +1,47 @@
+To play a bot match, you need to start Quake in a way that activates the mod and makes Quake ready to host a multiplayer game for some maximum number of players (you+bots). You will also want to make sure that Quake can allocate enough memory.  You will need to use command-line options to take care of these things; if you're not familiar with how to use command-line options then read the section about "The Command Line" in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+You can use the "-listen" command-line option to start Quake as a multiplayer listen server with a certain number of player slots.  For example to start with 16 player slots (the max for the original Quake and some other engines) you would use
+[code]-listen 16[/code]
+The actual gameplay will start once you select a map, as described in the "Game Rules" section.
+
+If you use the "Multiplayer" in-game menu (rather than console commands) to start up a game on some map, then that menu action creates a listen server without the need of using the "-listen" option.  However with some Quake engines the Multiplayer menu will limit you to 4 player slots, unless you used the "-listen" option to set a higher number of available slots.  So the "-listen" option is usually a good thing whether or not you plan to start a game through the menus.
+
+[quote]
+[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Note that in ezQuake, selecting the Multiplayer menu will start you on a Servers screen that will take a few seconds to find and refresh info about internet servers.
+
+If you see the server refresh happening, you can press ESC to cancel this action so that you can quickly move over to the Create screen.
+[/quote]
+
+To make sure that Quake has enough memory to deal with the bots and various configuration scripts, you can use these command-line options:
+[code]-zone 2048 -heapsize 192000[/code]
+Those numbers are in kilobytes so all together that's less than 200MB, which any modern computer should laugh at.  Nevertheless if you want to decrease those numbers (or just omit those options altogether) you can, but keep them in mind if you get errors when playing or when executing a configuration script.  See the "Limits" section of the Quake Owner's Manual guide, and the command-line documentation linked from that guide, for a few more details.
+
+Which just leaves us with the issue of activating the mod.  This can go slightly differently for FBCA than for other mods:
+[list]
+[/list]
+[h1]Omicron or FBX++[/h1]
+Activate the mod using the "-game" command-line option. For example if you want to activate a mod stored in the "omicron" folder, you would use
+[code]-game omicron[/code]
+(For FBX++ users, presumably you have chosen some other folder name.  It's just an example!)
+
+Your Quake engine of choice may also provide an in-game menu option to choose a mod folder to activate, so you can of course use that feature if it's available.  But the "-game" command-line option will work with any Quake engine.
+[list]
+[/list]
+[h1]FBCA with nQuake[/h1]
+If you're using the version of FBCA included with nQuake, you don't need to use the "-game" option.  In the nQuake setup, FBCA is the default code used for QuakeWorld multiplayer games, since "frogbot.pk3" is sitting in the "qw" folder.
+
+[quote]
+[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you happen to be using the FTEQW engine (instead of ezQuake) with the nQuake FBCA setup, there's a quirk you should keep in mind.  It's related to the fact that FTEQW also has some NetQuake support... so when you start a game using FTEQW it might get confused about whether you want NetQuake or QuakeWorld.
+
+This is [i]not[/i] an issue if you use the Multiplayer menu to start a game; that will start a QuakeWorld-style game.  It's also not an issue if you've activated a mod folder that only has one kind of code in it, like FBCA which only has QuakeWorld code in the "fbca" folder.
+
+But if you're a) using the console to start a map and b) trying to run QuakeWorld code that is sitting in the "id1" or "qw" folder (such as the FBCA code in "frogbot.pk3"), then you need to make sure to tell FTEQW what you are trying to do by setting this console variable:
+[code]sv_progs qwprogs[/code]
+After that you can start a map using the "map" console command and FTEQW will correctly start a game using the available QuakeWorld code.
+[/quote]
+[list]
+[/list]
+[h1]FBCA without nQuake[/h1]
+Using the "-game" command-line option may be necessary & doesn't hurt if not.  For example, if you want to be sure that a mod in the "fbca" folder is activated, you would use
+[code]-game fbca[/code]
+
+However, if you're using ezQuake and starting the game using the Multiplayer menu, this isn't necessary.  If you use the "Start Bot Match" selection ([i]not[/i] "Start Deathmatch") then ezQuake will automatically activate the "fbca" mod folder.

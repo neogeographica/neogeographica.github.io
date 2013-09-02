@@ -1,0 +1,18 @@
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="[rel_path_segment()]index.html"><img src="[global_common_images_path]map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="[global_common_images_path]neogeographica_palatino.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->

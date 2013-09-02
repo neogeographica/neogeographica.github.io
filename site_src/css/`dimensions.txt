@@ -1,0 +1,52 @@
+#topnav_button_image_height 150
+#sidebar_image_width 240
+#left_content_margin 40
+#right_margin_after_sidebar 20
+#top_content_margin 30
+#right_content_margin 40
+#bottom_content_margin 20
+#header_top_margin 20
+#header_button_separation 10
+#sidenav_top_margin 20
+#footer_top_margin 10
+#footer_bottom_margin 10
+#popup_image_width 800
+#.popup_image_half_width_code#
+def popup_image_half_width():
+  return str(int(popup_image_width) / 2)
+#overview_height 600
+#gallery_main_image_width 640
+#gallery_main_image_height 400
+#gallery_thumb_image_width 80
+#gallery_thumb_image_height 50
+#gallery_padding 10
+#gallery_corner_radius 5
+#.gallery_width_code#
+def gallery_width():
+  return str(int(gallery_main_image_width) + (2*int(gallery_padding)))
+#.gallery_thumb_height_code#
+def gallery_thumb_height(num_thumrows):
+  return str((num_thumrows*int(gallery_thumb_image_height)) + (2*int(gallery_padding)))
+#.gallery_height_code#
+def gallery_height(num_thumrows):
+  return str(int(gallery_main_image_height) + int(gallery_thumb_height(num_thumrows)) + int(gallery_padding))
+#.ie_6_main_margin_right_code#
+def ie_6_main_margin_right():
+  return str(int(sidebar_image_width) - 3)
+#guide_badge_size 125
+#guide_full_image_width 640
+#guide_image_top_margin 4
+#guide_image_side_margin 8
+#guide_thumb_half_gutter 4
+#.guide_full_video_height_code#
+def guide_full_video_height():
+  return str(((int(guide_full_image_width)*9)/16) + 25)
+#.guide_max_page_width_code#
+def guide_max_page_width():
+  return str(int(guide_full_image_width) + int(right_content_margin) + int(sidebar_image_width))
+#.guide_max_thumb_width_code#
+def guide_max_thumb_width():
+  return str((int(guide_full_image_width) - (2*int(guide_thumb_half_gutter))) / 2)
+#.min_page_width_code#
+def min_page_width():
+  return str(max(int(gallery_width()), int(guide_full_image_width)) + int(right_content_margin) + int(sidebar_image_width))

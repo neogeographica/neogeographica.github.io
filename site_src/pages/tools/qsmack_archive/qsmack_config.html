@@ -1,0 +1,207 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Config File Setup</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+Here is an example config file:
+</P>
+<BLOCKQUOTE>
+<PRE>
+quakeserver            kitty1.stanford.edu:26789
+player_name            C9_AutoAdmin
+shirt_color            0
+pants_color            0
+log_file               26789.log
+ban_impulse            220
+init_impulse           32
+init01_impulse         99
+init02_impulse         96
+init03_impulse         253
+init04_impulse         254
+banfile                ban.26789
+stats_file             stats.log
+
+listen_port            26789
+password               testing123
+</PRE>
+</BLOCKQUOTE>
+<P>
+The format of the config file is pretty simple.  Lines beginning with a hash mark (&quot;#&quot;) are comments, and blank lines and whitespace are ignored.  Config parameters should appear on lines by themselves.  Here's a description of what the example config file is doing, line by line:
+</P>
+<BR>
+<PRE>
+quakeserver            kitty1.stanford.edu:26789
+</PRE>
+<BLOCKQUOTE>
+<P>
+This specifies which Quake server to connect to.  It can be either a DNS name or an IP address, so &quot;171.64.65.70:26789&quot; would also have worked.  The port number <B>must</B> be specified, even if it is the default port (26000).
+</P>
+</BLOCKQUOTE>
+<BR>
+<PRE>
+player_name            C9_AutoAdmin
+</PRE>
+<BLOCKQUOTE>
+<P>
+Specify what the QSmack client will be named in the game.  The maximum length of a Quake name is 15 characters.  Our policy on names is as follows: In general we want QSmack to be as low-key as possible, so for our 26000 and 26001 servers, we make the name nothing, as in:
+</P>
+<BLOCKQUOTE>
+<PRE>
+player_name
+</PRE>
+</BLOCKQUOTE>
+<P>
+In this way, when a player presses tab (or whatever they have bound to the &quot;showscores&quot; command) they won't see QSmack in the game.  However, we also don't like it when players have this &quot;nothing&quot; name, so our server code will rename a player who has more than zero frags and &quot;nothing&quot; for a name to &quot;Nameless Dork&quot;.  :-) We really like this feature.  Since QSmack never gets any frags (we hope), it never gets renamed.
+</P>
+<P>
+On a ClanRing server, you have to use an actual name (like &quot;C9_AutoAdmin&quot;).  This is because the ClanRing code already kicks players that have &quot;nothing&quot; for a name at the beginning of every level.  (Unless you modify the ClanRing code to not do that.)
+</P>
+<P>
+If you want your QSmack name to have the funky Quake characters in it, check out the <A HREF="qsmack_chars.html">special characters</A> page.
+</P>
+</BLOCKQUOTE>
+<BR>
+<PRE>
+shirt_color            0
+pants_color            0
+</PRE>
+<BLOCKQUOTE>
+This specifies the shirt and pants color of QSmack.  The valid colors are 0 to 13.  Some servers, like ClanRing or CTF, will assign a player colors when they enter the game.  QSmack is smart enough to recognize those commands and respond to them.  In these cases, don't expect the colors you set for QSmack in the config file to be the ones that QSmack has in the game.
+</BLOCKQUOTE>
+<BR>
+<PRE>
+log_file               26789.log
+</PRE>
+<BLOCKQUOTE>
+<P>
+This specifies the name of the log file.  The log file contains useful information that QSmack spits out.  Everytime a banned player is kicked, a message is printed to the log.  It also contains useful debugging info that we could use to help fix a problem that you might be having using QSmack.  This is also the only parameter that can be usefully left out of the config file.  If the log_file parameter is missing, the output will go to stderr (if you're not conversant with that jargon, this generally just means that it will spew to your screen instead of to a file).  This is useful when you first start running QSmack and you just want to see if its doing anything without having to check the log file.
+</P>
+</BLOCKQUOTE>
+<BR>
+<PRE>
+ban_impulse            220
+</PRE>
+<BLOCKQUOTE>
+This number serves two purposes.  First, it is the impulse sent once a second to ensure that the server doesn't kick the wrong player.  (See the <A HREF="qsmack_changes.html#STEP2">server changes description</A> for why this could happen, if you're curious.)  Second, this number serves as a base to identify which impulse to use to kick which player.  When a player enters the game, he is assigned a player number from 1 to 16.  A unique impulse command is sent to indicate which player to kick.  That impulse is composed of the &quot;ban_impulse&quot; plus the player number.  For our servers, then, those impulses are 221 to 236.  <B>Important:</B> If you are using the <A HREF="qsmack_server.html">server code we provide</A>, these are the impulses you must use, unless you change the server code as well as the config file.  The server and QSmack <B>must</B> agree on which impulses are to be used, otherwise QSmack will not function correctly.
+</BLOCKQUOTE>
+<BR>
+<PRE>
+init_impulse           32
+init01_impulse         99
+init02_impulse         96
+init03_impulse         253
+init04_impulse         254
+</PRE>
+<BLOCKQUOTE>
+These five impulses specify the secret password used by QSmack to automatically gain admin privileges.  Make sure you choose impulses that aren't being used for any other purpose on your server.  You will need to specify these same five impulses in the QuakeC of your server code.  This is described on the <A HREF="qsmack_server.html">server code</A> page, and in more detail in the <A HREF="qsmack_changes.html">server changes description</A>.
+</BLOCKQUOTE>
+<BR>
+<PRE>
+banfile                ban.26789
+</PRE>
+<BLOCKQUOTE>
+This specifies the name of the file containing the names and IP addresses to ban.  You should read how to set up your <A HREF="qsmack_banfile.html">ban file</A> if you haven't already.  Also read about how you can <A HREF="qsmack_comm.html">dynamically update the ban file</A> from within the game.
+</BLOCKQUOTE>
+<BR>
+<PRE>
+stats_file             stats.log
+</PRE>
+<BLOCKQUOTE>
+If this line is in the config file, all server messages and statistics are dumped to the named file. If it is left out, no statistics are recorded. This file basically keeps a running account of what is going on in the game. This file is output so that people can keep track of who is playing on their server, how many frags they get, and what they say while they are in the game. Here is an excerpt from a stats.log that was taken from lithium.com:
+<BLOCKQUOTE>
+<BR>
+<PRE>
+server_mesg        VERSION 1.07 SERVER (39468 CRC)
+date             Sun Aug 24 16:27:31 1997
+mapname          the Installation
+qsmack_num     4
+player_frags   1 5
+player_frags   2 8
+player_frags   3 10
+player_frags   4 0
+player_frags   5 1
+player_frags   6 4
+player_frags   7 11
+player_frags   8 5
+player_enter   1 206.163.57.54   player
+player_enter   2 207.21.124.171  happy camper
+player_enter   3 206.236.111.253 dumbass
+player_enter   4 171.64.72.130   foo
+player_enter   5 207.104.138.157 the \[TICK]
+player_enter   6 207.48.46.116   ^_^
+player_enter   7 207.211.199.5   *Mad Mole**
+player_enter   8 206.170.211.205 **CHEWBACCA**
+server_mesg      **CHEWBACCA** accepts player's shaft
+player_frags   1 6
+server_mesg      the \[TICK] rides *Mad Mole**'s rocket
+player_frags   7 12
+server_mesg      player was gibbed by dumbass's rocket
+player_frags   3 11
+server_mesg      player got the rune of Regeneration.
+server_mesg      **CHEWBACCA** was gibbed by *Mad Mole**'s rocket
+player_frags   7 13
+player_say     8 **CHEWBACCA**  : why is dumbass everywehre
+player_say     6 ^_^            : cause he is a bot
+server_mesg      player rides dumbass's rocket
+player_frags   3 13
+player_exit    5 0:07:22
+player_name    4 171.64.72.130   foobar
+</PRE>
+</BLOCKQUOTE>
+Each line in the stats_file begins with one of nine keywords. The most general of these keywords is &quot;server_mesg&quot;. Any message sent from the server that is not a 'say' will be output as a &quot;server_mesg&quot. This includes all death messages and whatever else your server decides to print to all players. 
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+A &quot;mapname&quot; line simply specifies the name of the level and can be used to keep track of when levels change. 
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+A &quot;date&quot; line gives the current date and time. It is printed with every level change.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+A &quot;player_say&quot; is fairly self-explanatory. It is the probable player number followed by the name of the player and what they said. Note that two players could easily have the same name and then the player number could be wrong. It is impossible to reliably determine who said something because of this. Also note that any special characters in the player's name are mapped into a printable form. This means that a player with really weird quake characters in their name won't necessarily be recogizeable in the stats_file.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+The keywords &quot;player_enter&quot; and &quot;player_exit&quot; can be used to assuredly determine when a player enters or leaves the game. Since QSmack does a status every second, it can reliably determine the player list (unlike regular clients which are fooled by the nothing name). A &quot;player_enter&quot; line will contain the player number, their IP address, and their name. Note that a player's name will not be set yet when they enter the game. However, when QSmack enters the game all the players have names, so the &quot;player_enter&quot; lines will all show the proper names.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+A &quot;player_exit&quot; line is printed whenever a player leaves the game. This can be reliably determined from the status command. Whenever a player leaves the games, the total time that they were conntected to the server is also printed on this line.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+The &quot;player_name&quot; line is printed whenever a player changes their name. Like the &quot;player_say&quot; line, special characters in the player's name are mapped into a printable form. Note that the server sets a player's name to the empty string (as in &quot;&quot;) when a player leaves the game. Do not count on this behavior since can also change their name to the empty string while they are still connected and playing. The IP address of the player is also printed.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+A &quot;player_frags&quot; line is printed whenever a player's frags change. Note that when a player leaves the game, the server can set a player's frags momentarily to either zero or their final frag count.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+The &quot;qsmack_num&quot; keyword indicates QSmack's player number. This information could also be gleaned from the &quot;player_enter&quot;, but why not just tell you. :-)
+</BLOCKQUOTE>
+<BR>
+<PRE>
+listen_port                26789
+</PRE>
+<BLOCKQUOTE>
+The &quot;listen_port&quot; option is only needed if you plan to connect to QSmack with the <A HREF="qsmack_fe.html">frontend</A>. This specfies which port QSmack should listen for frontend connections.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+The port you specify can be any integer between 1024 and 65536. It does not have to be the same port as the port that the quake server is listening. Even if QSmack and the server are running on the same machine, they can both use the same port. This is because quake uses the UDP protocol and QSmack uses the TCP protocol to communicate with its frontend(s).
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+If this option is not present, QSmack will not accept connections from frontend clients.
+</BLOCKQUOTE>
+<BR>
+<PRE>
+password                   testing123
+</PRE>
+<BLOCKQUOTE>
+The &quot;password&quot; option is only needed if you plan to connect to QSmack with the <A HREF="qsmack_fe.html">frontend</A>. This option specifies the password that the frontend must send in order connect to QSmack. No spaces, tabs or non-printable characters are allowed in the password. A password must be specified if the &quot;listen_port&quot; option is present.
+</BLOCKQUOTE>
+<BR/>
+[qsmack_archive_fyi]

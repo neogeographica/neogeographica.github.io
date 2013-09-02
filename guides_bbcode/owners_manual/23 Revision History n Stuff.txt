@@ -1,0 +1,46 @@
+[h1]Engine Versions[/h1]
+The most recent date that I checked out these engines' features was April 13 2013.
+
+The latest stable version of each engine was:
+[list]
+[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]FTEQW: version 1.0 from Jun 2011
+[*]Fodquake: version 0.3 from Mar 2012
+[*]DarkPlaces: build 20130304 from March 2013
+[*]QuakeSpasm: version 0.85.9 from April 2013
+[*]Fitzquake Mark V: revision 9 from April 2013
+[*]DirectQ: version 1.9.0 from Feb 2012
+[*]ProQuake: version 4.93 from Oct 2012
+[*]Qrack: version 2.011.3467 from Aug 2011
+[/list]
+[list]
+[/list]
+[h1]Guide Change History[/h1]
+
+[b]2013[/b]
+[list]
+[*]Aug 10: added link to GLQuake 0.98
+[*]Aug 10: added link to negke's guide for playing third-party maps/mods
+[*]Jul 14: fixes in reaction to the changes in Steam Guide markup behavior
+[*]Jun 16: some changes to the Quick Start, particularly including the link to QuakeSpasm installer for Steam users
+[*]Jun 02: fixed description of Fitzquake Mark V's handling of FOV
+[*]Jun 02: added link to new Quake wiki
+[*]Jun 02: changed Quake HD link to ModDB page
+[*]Apr 13: checked Fitzquake Mark V revision 9 and QuakeSpasm version 0.85.9; updated info on QuakeSpasm FOV
+[*]Mar 27: in the Quick Start, added a warning about the non-Windows versions of ezQuake
+[*]Mar 17: just fiddling with the console examples section: fixing Fodquake FOV, moving "unbind f12" out of the examples
+[*]Mar 10: checked Fitzquake Mark V revision 8 and DarkPlaces build 20130304
+[*]Feb 21: describing how Fodquake handles FOV
+[*]Feb 19: added a warning against enabling "lookspring" or "lookstrafe"
+[*]Feb 12: added "Quick Start" section
+[*]Feb 12: more details about autoexec.cfg, precedence, and related nQuake stuff
+[*]Feb 09: moved GLQuake version warnings to the top of the guide
+[*]Feb 02: added info about console vars for mouse invert and always run
+[*]Feb 02: added a warning about special folders in Windows
+[*]Feb 02: "Auto Save on Quit" enabled if ezQuake installed using nQuake
+[*]Jan 19: more about "sv_aim" and "noaim" variables
+[*]Jan 16: changes to the "Widescreen" section: bigger images, more FOV discussion, more ezQuake discussion
+[*]Jan 16: added a note about Qrack behavior in the "In-Game Menu" section
+[*]Jan 15: correction for the ProQuake info in the "Oldschool Texturing" section
+[*]Jan 15: added info on mods/missionpacks to the "Config File" section
+[/list]

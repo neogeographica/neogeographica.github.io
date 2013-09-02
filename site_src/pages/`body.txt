@@ -1,0 +1,9 @@
+<body>
+[optional_skiplinks]
+[banner]
+[navigation]
+[optional_popup]
+[main]
+[footer]
+[optional_skiplinks_support]
+</body>

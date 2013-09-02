@@ -1,0 +1,14 @@
+One of the most interesting things you can do with the console and config file is "key binding": controlling what happens when you press a specific key.  Key bindings are saved to your config file.
+
+Open the config file in a text editor and look at what is bound to the number keys, the keys that you usually use to select weapons.  For most engines, as an example, you'll see this line partway down the file:
+[code]bind 7 "impulse 7"[/code]
+This just means that when you press the 7 key, it should execute the console command "impulse 7", which happens to select the rocket launcher.
+
+In most engines you can use the "bindlist" console command to call up a display of which keys do what.
+
+A good description of key binding is out of scope for this guide, but you may want to search out more details.  Quake players have sometimes gone a little crazy setting up detailed and complex things to happen at the push of a button.
+
+One specific thing that Steam users may want to pay attention to is the screenshot key.  Search the config file for the "screenshot" command, and for most engines you'll see something like this:
+[code]bind F12 "screenshot"[/code]
+If F12 is your Steam screenshot key then this is redundant.  To prevent F12 from triggering the Quake screenshot function, you can delete this line from your config file, or else while Quake is running use the console to enter the command
+[code]unbind F12[/code]

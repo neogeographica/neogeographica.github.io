@@ -1,0 +1,5 @@
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->

@@ -1,0 +1,16 @@
+/* Print styles; only print main content. */
+
+@media print
+{
+  body { font-size: 10pt; }
+  #header, #nav { display: none; }
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  .sidebar { display: none; }
+  #main .maincol,
+  #footer .maincol {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}

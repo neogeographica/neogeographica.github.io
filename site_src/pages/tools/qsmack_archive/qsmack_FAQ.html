@@ -1,0 +1,204 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack FAQ</H1>
+<HR>
+<BR>
+</CENTER>
+<B>
+<BR>
+<FONT SIZE=+1><A HREF="qsmack_FAQ.html#1.">1.</A> Historical</FONT><BR>
+<BLOCKQUOTE>
+<BR>
+<A HREF="qsmack_FAQ.html#1.1.">1.1.</A> Why is it called QSmack?<BR>
+<A HREF="qsmack_FAQ.html#1.2.">1.2.</A> Who wrote QSmack?<BR>
+</BLOCKQUOTE>
+<FONT SIZE=+1><A HREF="qsmack_FAQ.html#2.">2.</A> Operational</FONT><BR>
+<BLOCKQUOTE>
+<BR>
+<A HREF="qsmack_FAQ.html#2.1.">2.1.</A> Can I run Quake on the same machine as QSmack?<BR>
+<A HREF="qsmack_FAQ.html#2.2.">2.2.</A> Can I run more than one QSmack on the same machine?<BR>
+<A HREF="qsmack_FAQ.html#2.3.">2.3.</A> Will QSmack work with QuakeWorld?<BR>
+<A HREF="qsmack_FAQ.html#2.4.">2.4.</A> What happens to QSmack if the Quake server goes down or QSmack gets disconnected?<BR>
+<A HREF="qsmack_FAQ.html#2.5.">2.5.</A> Will QSmack kick itself if its own name, color, or IP matches a banned one?<BR>
+<A HREF="qsmack_FAQ.html#2.6.">2.6.</A> Why does the frontend say &quot;connection refused&quot; when I try to connect?<BR>
+<A HREF="qsmack_FAQ.html#2.7.">2.7.</A> How do you get admin privileges when you're playing the game?<BR>
+</BLOCKQUOTE>
+<FONT SIZE=+1><A HREF="qsmack_FAQ.html#3.">3.</A> Philosophical</FONT><BR>
+<BLOCKQUOTE>
+<BR>
+<A HREF="qsmack_FAQ.html#3.1.">3.1.</A> Why aren't the config file and the ban file just one file?<BR>
+<A HREF="qsmack_FAQ.html#3.2.">3.2.</A> How secure is QSmack?<BR>
+<A HREF="qsmack_FAQ.html#3.3.">3.3.</A> Why do I need this if I have QHost?<BR>
+<A HREF="qsmack_FAQ.html#3.4.">3.4.</A> Won't QSmack just make it easier for admins to abuse players?<BR>
+<A HREF="qsmack_FAQ.html#3.5.">3.5.</A> Will you ever make a QuakeWorld version?<BR>
+</BLOCKQUOTE>
+</B>
+<BR>
+<CENTER>
+<HR WIDTH=50%>
+</CENTER>
+<BR>
+<P>
+<B><FONT SIZE=+1><A NAME="1.">1.</A>  Historical</FONT></B>
+</P>
+<BLOCKQUOTE>
+<P>
+<B><A NAME="1.1.">1.1.</A>  Why is it called QSmack?</B>
+</P>
+<P>
+QSmack was originally written as a way for a certain individual (ahnuld) to continually talk smack to his fellow C9ers while he was sitting at his workstation in his office.  None of C9 uses a Windows PC as their main office computer, and thus Quake doesn't run on their primary workstations.  Ahnuld decided that it was too much effort to walk the 15 feet across the hall to verbally assault people playing the game, so he undertook the project to write a Quake client that had all the functionality of a real Quake client, except no playing.
+</P>
+<P>
+That idea grew into QSmack.  It soon became apparent that the only redeeming quality of QSmack was the possibility to add banning functionality to it.  Ahnuld soon added that and the C9 servers were llama free!
+</P>
+<P>
+Not long after that, other people began to notice the omnipresent C9_AutoAdmin and wanted the banning functionality for themselves.  The name &quot;QSmack&quot; stuck however and the rest is history.
+</P>
+<BR>
+<P>
+<B><A NAME="1.2.">1.2.</A>  Who wrote QSmack?</B>
+</P>
+<P>
+QSmack consists of the program itself as well as the server mods necessary to make it work.  <A HREF="mailto:jbaxter@lemur.stanford.edu">lemurboy</A> is wholly responsible for those server mods.  <A HREF="mailto:jsolomon@stanford.edu">ahnuld</A> is mostly responsible for the QSmack program itself, although he would be greatly remiss if he didn't mention the <A HREF="http://www-graphics.stanford.edu/~quake/">Stanford Graphics Quake Project</A>, who contributed the network library used to communicate with the Quake server.  Without that library of functions, QSmack might never have come into being.
+</P>
+<BR>
+</BLOCKQUOTE>
+<P>
+<B><FONT SIZE=+1><A NAME="2.">2.</A>  Operational</FONT></B>
+</P>
+<BLOCKQUOTE>
+<P>
+<B><A NAME="2.1.">2.1.</A>  Can I run Quake on the same machine as QSmack?</B>
+</P>
+<P>
+You can run QSmack on any machine that you can run a regular Quake client from.  You can, for example, run QSmack on the machine that is running the server, but you can't run it from a machine while you are playing on that same machine.  Basically, Quake doesn't allow two clients to connect with the same IP address.  It just won't work.
+</P>
+<P>
+Note: don't get QSmack itself confused with the <A HREF="qsmack_fe.html">frontend</A>.  The frontend can run on any machine with an internet connection, including the machine you are playing Quake on.  But since the network traffic to the frontend may slow down your Quake game, we don't recommend that you run the frontend while you're actually playing.  We're thinking about giving the frontend a &quot;sleep mode&quot; to address this problem.
+</P>
+<BR>
+<P>
+<B><A NAME="2.2.">2.2.</A>  Can I run more than one QSmack on the same machine?</B>
+</P>
+<P>
+Yes. It is possible to do this. In fact, this is what we do at C9. Ahnuld runs four QSmacks on his workstation controlling various servers on kitty1.  Remember also that QSmack doesn't need to run on the same machine as the server, it can run on any machine that has internet access to your server.
+</P>
+<BR>
+<P>
+<B><A NAME="2.3.">2.3.</A>  Will QSmack work with QuakeWorld?</B>
+</P>
+<P>
+No.  The network protocol is different and it just doesn't work.  Besides, QuakeWorld has built-in IP banning that is just as powerful as QSmack's, so there's not quite as much of a need for QSmack in QuakeWorld.
+</P>
+<BR>
+<P>
+<B><A NAME="2.4.">2.4.</A>  What happens to QSmack if the Quake server goes down or QSmack gets disconnected?</B>
+</P>
+<P>
+If QSmack ever gets disconnected from the Quake server for any reason (either because the server went down or some other kind of error occurred), it will attempt to reconnect.  Currently, it will attempt to reconnect every 60 seconds.  That interval was chosen so that if the server goes down and is restarted, QSmack will reconnect itself very soon after. If your server has been down a long time, you may want to restart QSmack because the log files will be very long with reconnect attempt information. Also remember that the log files are over-written everytime QSmack is restarted.
+</P>
+<BR>
+<P>
+<B><A NAME="2.5.">2.5.</A>  Will QSmack kick itself if its own name, color, or IP matches a banned one?</B>
+</P>
+<P>
+No. The server tells QSmack its player number when it enters the game and QSmack will not ban that player number.  Some other player with admin privileges, however, can of course manually kick QSmack off the server. Why would you ever instruct QSmack to ban itself?  Well, some players think its cute to make their name the same as QSmack's. This occurs occasionally on our Clan Ring port 26666 where some players will change their name to 'C9_AutoAdmin'. We could ban the name 'C9_AutoAdmin' and everyone would be gone except QSmack!
+</P>
+<BR>
+<P>
+<B><A NAME="2.6.">2.6.</A>  Why does the frontend say &quot;connection refused&quot; when I try to connect?</B>
+</P>
+<P>
+The most common problem is that you are trying to tell the frontend (either via the &quot;connect&quot; command or with a defaultQSmackServer parameter) to connect to a <B>Quake</B> server instead of to <B>QSmack</B>.  The frontend is supposed to connect to QSmack, while QSmack is connected to the Quake server.  You cannot connect the frontend directly to a Quake server.
+</P>
+<BR>
+<P>
+<B><A NAME=GET_ADMIN></A><A NAME="2.7.">2.7.</A>  How do you get admin privileges when you're playing the game?</B>
+</P>
+<P>
+This is also a good question since throughout these pages we have talked about gaining admin privileges as a regular player.  Some server code, like the ClanRing code, has an established method for becoming an admin, and you can just use that if you like.  However, there is another way that will work with any server that you are running QSmack on, as long as you know the QSmack password:  use the same challenge/response method that QSmack uses by placing &quot;aliases&quot; in your personal config file.  In this way, you gain admin privileges automatically and by default when you enter the game.  Here is an excerpt from such a config file:
+</P>
+<BLOCKQUOTE>
+<PRE>
+alias init   &quot;impulse <I>secret impulse</I>;&quot;
+alias init01 &quot;impulse <I>secret impulse</I>;&quot;
+alias init02 &quot;impulse <I>secret impulse</I>;&quot;
+alias init03 &quot;impulse <I>secret impulse</I>;&quot;
+alias init04 &quot;impulse <I>secret impulse</I>;&quot;
+</PRE>
+</BLOCKQUOTE>
+<P>
+Now in place of all those <I>secret impulse</I>s, you would put the five impulses that you chose for your own QSmack admin password.  Just make sure to exec your config file before you enter the game and you're good to go!
+</P>
+<P>
+Once more, to be absolutely clear: here we are talking about the Quake config file that you use as a player, <B>not</B> your QSmack config file.  The QSmack config file defines the password in a slightly different way, as described on the <A HREF="qsmack_config.html">QSmack Config File Setup</A> page.
+</P>
+<BR>
+</BLOCKQUOTE>
+<P>
+<B><FONT SIZE=+1><A NAME="3.">3.</A>  Philosophical</FONT></B>
+</P>
+<BLOCKQUOTE>
+<P>
+<B><A NAME="3.1.">3.1.</A>  Why aren't the config file and the ban file just one file?</B>
+</P>
+<P>
+This was mainly done for two reasons.  The first is that the ban file is written out everytime a change is made.  Given this, it seemed impractical to constantly rewrite other values which for the most part are static.  You would also lose any comments that existed in the config file.  The second reason is that down the road QSmack may support the sharing of a ban file.  Consider our site.  At C9, we run several servers on different ports.  Potentially, we would want to maintain just one ban file so that a player banned on one port would be banned on them all.  This would be impossible is the ban information was kept in the config file.
+</P>
+<BR>
+<P>
+<B><A NAME=SECURITY></A><A NAME="3.2.">3.2.</A>  How secure is QSmack?</B>
+</P>
+<P>
+Some people have reservations about adding remote admin capability to their server code.  After all, if someone guesses the admin password, they can do all the things an admin can do (kick people, change levels, whatever).  That's a valid concern.  So let's see how hard it would be to guess the five-password admin code that we provide for use with QSmack.  To be pessimistic, we'll assume that the server is using the ClanRing code, since that makes fewer impulses available for use as passwords.
+</P>
+<P>
+The first password impulse is basically useless from a security standpoint.  It only exists to keep people from seeing a lot of &quot;Unknown command&quot; messages if they are not trying to become an admin.  To guess the first password impulse, all you have to do is try impulses until the server does an &quot;init01&quot; stuffcmd back to you.  So that leaves four useful password impulses.
+</P>
+<P>
+A user won't be able to tell whether or not any of the impulses are correct until the end of the sequence, at which point he only knows whether or not he got the whole sequence right.  So basically a &quot;bad guy&quot; trying to guess the password has to guess four-impulse combinations until he hits the jackpot.  Moreover, if he guesses the <B>wrong</B> combination, our code makes him wait until the next level, or disconnect and reconnect, before he can guess again.
+</P>
+<P>
+Let's assume the existence of a password-guessing bot that guesses a four-impulse combination, then disconnects, reconnects, and tries again automatically.  To be <B>really</B> generous, say that each trial takes only 5 seconds.  Given the number of possible password impulses in the ClanRing code, this password-bot will take an average of over <B>eighty years</B> to find the correct password.  And that's assuming that the server admin doesn't notice this bot continually disconnecting/reconnecting for months and years on end... and ban it from the server.  :-)
+</P>
+<P>
+So we think QSmack is pretty secure.
+</P>
+<P>
+Late addendum: with the release of the <A HREF="qsmack_fe.html">QSmack Frontend</A>, we want to emphasize that QSmack is only as secure as your config files that contain the frontend password.  If you are using the frontend, make sure that the QSmack config file and and the frontend config file are protected so that only you (or people you trust) can read them.
+</P>
+<BR>
+<P>
+<B><A NAME="3.3.">3.3.</A>  Why do I need this if I have QHost?</B>
+</P>
+<P>
+<A HREF="http://www.wasatchfault.com/index-qv.htm">QHost</A> is a great utility for server management, and we think everyone running a public Quake server on a Windows platform should use it.  You do need QHost for configuring your servers, starting/stopping them, and for doing arbitrary console commands.  What QSmack (and the frontend) brings to the party are the following additional features: banning, logging, watching and participating in conversations, a faster method of seeing up-to-the minute server status, faster player kicking, and, well, other stuff too, especially with the frontend.  The two tools complement each other.
+</P>
+<BR>
+<P>
+<B><A NAME="3.4.">3.4.</A>  Won't QSmack just make it easier for admins to abuse players?</B>
+</P>
+<P>
+If the admin is likely to do that, and knows enough about the server to use QSmack, he/she will already have in place many other methods for cheating and giving players grief.  It is true, however, that QSmack raises the bar by adding the capability for banning, which admins can abuse.  But &quot;bad seed&quot; admins seem to be in far shorter supply than the type of disruptive player that QSmack banning is aimed at.  Admins may have different tolerances for how much crap they are willing to take, but the large majority of them will leave you to play in peace if you don't shovel any crap at all.  For those few that will kick or ban you arbitrarily, or because you outscored them, or for whatever bogus reason: just don't go back to their server.  Bad admins are localized, and easy to avoid.  Bad players are another thing entirely.
+</P>
+<P>
+If you're hesitant about playing on a QSmack-monitored server, think about this: QuakeWorld server admins have as much IP banning power as Quake server admins using QSmack.  As (most likely) will admins of future multiplayer games.  Why?  Because game designers agree with us that this is, on balance, a good feature.
+</P>
+<BR>
+<P>
+<B><A NAME="3.5.">3.5.</A>  Will you ever make a QuakeWorld version?</B>
+</P>
+<P>
+It's not likely, at least not soon.  QuakeWorld has pretty good IP banning, so there's not a huge need for QSmack's banning capabilities, although name/color banning is a nice extra.  We realize that the frontend would still be handy on QuakeWorld servers.  However, developing a new networking library for dealing with QuakeWorld is a pretty significant task, even though the QSmack player doesn't do anything except log into the server and stay there.  If we can get that protocol code from someone, we would probably have a burst of motivation to get QWSmack out the door.  Otherwise, don't hold your breath.
+</P>
+<BR>
+</BLOCKQUOTE>
+<BR/>
+[qsmack_archive_fyi]

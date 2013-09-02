@@ -1,0 +1,47 @@
+#.centered_local_image_code#
+def centered_local_image(img,imgclass,width):
+  return '<div class="' + imgclass + ' center floatbox" style="width:' + str(width) + 'px"><img src="' + local_images_path() + img + '" /></div>'
+#.local_image_code#
+def local_image(img,imgclass):
+  return '<img src="' + local_images_path() + img + '" class="' + imgclass + '" />'
+#.local_id_image_code#
+def local_id_image(img,imgid,imgclass):
+  return '<img src="' + local_images_path() + img + '" id="' + imgid + '" class="' + imgclass + '" />'
+#.listitem_local_download_code#
+def listitem_local_download(file,name,comment=None):
+  if comment is None:
+    comment_suffix = ''
+  else:
+    comment_suffix = ' ' + comment
+  return '<li><a href="' + local_downloads_path() + file + '"><b>' + name + '</b></a>' + comment_suffix + '</li>'
+#gallery_noscript#
+<p class="gallery_noscript center noprint"><em>(activate JavaScript for in-page image gallery)</em></p>
+#gallery_preamble#
+<div class="gallery gallery_1rowthumbs center floatbox noprint">
+#gallery2_preamble#
+<div class="gallery gallery_2rowthumbs center floatbox noprint">
+#.gallery_containers_code#
+def gallery_containers(instanceclass):
+  return '<div class="gallery_display ' + instanceclass + '"></div>\n<ul class="thumbnail_picker ' + instanceclass + '">\n'
+#.listitem_gallery_image_code#
+def listitem_gallery_image(img,isactive=False):
+  if isactive:
+    activeclass = ' class="active"'
+  else:
+    activeclass = ''
+  return '<li' + activeclass + '><a href="' + local_images_path() + img + '.png"><img src="' + local_images_path() + img + '_thumb.jpg" /></a></li>\n'
+#gallery_postscript#
+</ul>
+</div>
+#gallery_instance_num 0
+#.gallery_code#
+def gallery(img1,img2,img3,img4,img5,img6,img7,img8):
+  global gallery_instance_num
+  gallery_instance_num = int(gallery_instance_num) + 1
+  return '\n'.join(gallery_noscript) + '\n' + '\n'.join(gallery_preamble) + '\n' + gallery_containers('galleria_instance_' + str(gallery_instance_num)) + listitem_gallery_image(img1,True) + listitem_gallery_image(img2) + listitem_gallery_image(img3) + listitem_gallery_image(img4) + listitem_gallery_image(img5) + listitem_gallery_image(img6) + listitem_gallery_image(img7) + listitem_gallery_image(img8) + '\n'.join(gallery_postscript)
+#.gallery2_code#
+def gallery2(img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16):
+  global gallery_instance_num
+  gallery_instance_num = int(gallery_instance_num) + 1
+  return '\n'.join(gallery_noscript) + '\n' + '\n'.join(gallery2_preamble) + '\n' + gallery_containers('galleria_instance_' + str(gallery_instance_num)) + listitem_gallery_image(img1,True) + listitem_gallery_image(img2) + listitem_gallery_image(img3) + listitem_gallery_image(img4) + listitem_gallery_image(img5) + listitem_gallery_image(img6) + listitem_gallery_image(img7) + listitem_gallery_image(img8) + listitem_gallery_image(img9) + listitem_gallery_image(img10) + listitem_gallery_image(img11) + listitem_gallery_image(img12) + listitem_gallery_image(img13) + listitem_gallery_image(img14) + listitem_gallery_image(img15) + listitem_gallery_image(img16) + '\n'.join(gallery_postscript)
+#

@@ -1,0 +1,14 @@
+The version of GLQuake distributed with Steam (0.95) is not the latest version for some reason, and it is a bit crashy. It also does not understand some of the options described in the "Widescreen" section of this guide.
+
+You can get a more recent version of GLQuake (0.97) from the official id software FTP site and elsewhere. This version is better, but still doesn't support FOV changes.
+[list]
+[*]Windows: ftp://ftp.idsoftware.com/idstuff/unsup/glq1114.exe
+[*]Linux: ftp://ftp.idsoftware.com/idstuff/unsup/unix/glquake-0.97-i386-unknown-linux2.0.tar.gz
+[/list]
+(Steam guides don't support FTP links, sorry... cut and paste into your browser address bar.)
+
+Version 0.98 of GLQuake adds FOV support.  It was never officially released, but the Windows version has been available around the web and used by Quake players since way back in the 20th century. If you want an OpenGL renderer and don't want to use a modern Quake engine, GLQuake 0.98 is the version I'd recommend. One link that is still working: http://www.quaketerminus.com/nqexes/glquake098alpha.zip
+
+When you're installing a downloaded version of GLQuake, do [i]not [/i] select an installer option that mentions a "3Dfx GL miniport" and discard any library file (like "opengl32.dll") that comes with the download.  That bit is only useful if you're rocking a 3Dfx Voodoo graphics card from 1996.  All you need these days is the GLQuake executable.  (I'm only speaking from experience with the Windows version; not sure about the Linux version.)
+
+But you really should just use a modern Quake engine instead and avoid these worries altogether!

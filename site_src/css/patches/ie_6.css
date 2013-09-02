@@ -1,0 +1,30 @@
+/* Hacks specific to IE6 (and probably earlier IE versions). */
+
+@media screen, projection
+{
+  /**
+   * IE6 doesn't support min-width or max-width; rather than trying to get
+   * fancy simulating that behavior, just force a fixed-width site
+   */
+  .page_margins {
+    width: [min_page_width()]px;
+  }
+
+  /* Deal with the "3 pixel jog" bug */
+  #main .maincol {
+     height: 1%;
+     margin-left: -3px;
+     margin-right: [ie_6_main_margin_right()]px;
+  }
+  #main .sidebar {
+    margin-left: -3px;
+  }
+
+  /** Hover doesn't affect nav bg images, so make links more prominent */
+  .hlist a:hover,
+  .hlist a:active,
+  .navthumbs li a:hover,
+  .navthumbs li a:active {
+    color: [focus_link_color];
+  }
+}

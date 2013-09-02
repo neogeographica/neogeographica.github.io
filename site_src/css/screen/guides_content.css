@@ -1,0 +1,109 @@
+/**
+ * Styles for "guides" content converted from BBCode.
+ */
+
+
+@media all
+{
+ .page_margins {
+    max-width: [guide_max_page_width()]px;
+  }
+  .blurb {
+    font-weight: 700;
+  }
+  .guideTitle {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .linkBadge {
+    vertical-align: middle;
+  }
+  .guidePic {
+    margin-top: [guide_image_top_margin]px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background-color: transparent;
+    height: auto;
+    background-color: transparent;
+    border: 0px;
+  }
+  .guidePic.badge {
+    width: [guide_badge_size]px;
+    height: [guide_badge_size]px;
+    border: 1px [image_border_color] solid;
+    margin-bottom: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+  .guidePic.floatLeft {
+    float: left;
+    margin-right: [guide_image_side_margin]px;
+  }
+  .guidePic.floatRight {
+    float: right;
+    margin-left: [guide_image_side_margin]px;
+  }
+  .guidePic.sizeOriginal {
+    max-width: [guide_full_image_width]px;
+  }
+  .guidePic.sizeOriginal.inline {
+    max-width: [guide_full_image_width]px;
+    margin-left: [guide_image_side_margin]px;
+    margin-right: [guide_image_side_margin]px;
+  }
+  .guidePic.sizeFull {
+    width: [guide_full_image_width]px;
+    cursor: pointer;
+  }
+  .guidePic.sizeThumb {
+    width: [guide_max_thumb_width()]px;
+    cursor: pointer;
+  }
+  .guidePic.sizeThumb.floatLeft {
+    margin-top: [guide_thumb_half_gutter]px;
+    margin-bottom: [guide_thumb_half_gutter]px;
+    margin-right: [guide_thumb_half_gutter]px;
+  }
+  .guidePic.sizeThumb.floatRight {
+    margin-top: [guide_thumb_half_gutter]px;
+    margin-bottom: [guide_thumb_half_gutter]px;
+    margin-left: [guide_thumb_half_gutter]px;
+  }
+  .guideVid {
+    display: block;
+    width: [guide_full_image_width]px;
+    height: [guide_full_video_height()]px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  blockquote {
+    font-family: [quote_font_family];
+    font-style: normal;
+    color: [quote_text_color];
+  	border: 1px [blockquote_border_color] solid;
+  	border-radius: 3px;
+  	padding: 1em;
+  }
+  .code {
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  table
+  {
+    border: 1px solid [blockquote_border_color];
+    border-spacing: 0px;
+    font-size: 75%;
+  }
+  table th
+  {
+    border: 1px solid [blockquote_border_color];
+    padding: 4px;
+    font-weight: 700;
+  }
+  table td
+  {
+    border: 1px solid [blockquote_border_color];
+    padding: 4px;
+  }
+}

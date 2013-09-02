@@ -1,0 +1,372 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>D</FONT>escription of Server Code Changes</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+This describes how the Quake server code is changed to support QSmack.  If you are going to be using one of our pre-modified server code packages, you don't need to make these changes (they're already in there), but if you read about them here you will better understand what is going on.  If you are <B>not</B> going to use one of the pre-modified server code packages, but instead you want to modify some other codebase to support QSmack, then reading this section is a must.  Once you understand what changes are necessary, and see how we applied them to the example (ClanRing code), you can figure out how to make the changes to the server code that you are interested in.
+</P>
+<P>
+To make changes like these to server code, you <B>will</B> need to already know how to modify and recompile QuakeC.  No getting around it.  The changes are really not that complex or numerous, but there is still a likelihood of things getting screwed up if you don't know your way around the QuakeC files.  For that reason, I'm going to explain what the changes are doing as I go.  That makes these instructions a little longer than they might be otherwise, but I think it increases the chances of things working once you're done.
+</P>
+<P>
+So, here we go!
+</P>
+<BR>
+<P>
+<A NAME=STEP1><B>STEP 1 of 2</B></A>: Modifying your code to give admin privileges automatically.
+</P>
+<P>
+This is the hard part. :-)
+</P>
+<P>
+What we want to do here is add a challenge/response method of getting admin, where the server &quot;challenges&quot; a client by doing stuffcmds, and the client &quot;responds&quot; by sending impulses (obviously by having the commands aliased to do those impulses).  If the client answers every challenge correctly, the client becomes an admin.  This is good because it is easily automated, so that if we provide the correct command aliases to QSmack (which is itself a Quake client), it will automatically answer the challenges and become an admin when it connects to the server.
+</P>
+<P>
+To begin with, the server must stuff the command &quot;init&quot; to every client when that client first connects.  If the client responds with the correct impulse value, the server then stuffs &quot;init01&quot; which the client needs to respond to with another impulse, and so on.  The server should stuff &quot;init&quot; to a client only when the client first enters the game, if admin privileges persist across level changes.  However, if the mod you are using clears admin privileges after each level change, then you should stuff the &quot;init&quot; command each time a client enters a new level.
+</P>
+<P>
+QSmack expects and responds to five challenges (&quot;init&quot; &quot;init01&quot; &quot;init02&quot; &quot;init03&quot; then finally &quot;init04&quot;).  This allows your server to have a five-impulse password for automatically gaining admin privileges, which allows for billions of combinations.  For the best security, the server should <B>always</B> send the &quot;init02&quot;, &quot;init03&quot;, and &quot;init04&quot; challenges even if at some point the client responds with an incorrect impulse.  This is a little harder to do than just sending them after correct responses, but the code below shows how to do this with the ClanRing code.  Another security issue:  if the client starts the challenge sequence but makes a mistake somewhere along the way, you should do something to prevent them from immediately trying again.  You might want to kick them out of the game.  The example code below, though, takes less drastic measures; it forces the client to wait for a level change (or disconnect and reconnect) before trying again.
+</P>
+<P>
+In the ClanRing 2.58 code, you would need to change the files defs.qc, client.qc, motd.qc, settings.qc, and weapons.qc.
+</P>
+<BR>
+<P>
+defs.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+We're going to need two more entity fields.  Might as well add them in just above the builtin functions section.
+</P>
+<PRE>
+// QSmack mod
+.float	  autoAdminLevel;
+.float	  autoAdminTryLevel;
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+client.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+Next, we need to add some code to reset these to zero when a client disconnects, just to be safe.  You can add these lines to ClientDisconnect, just below the &quot;if (gameover) return&quot;.
+</P>
+<PRE>
+// QSmack mod
+self.autoAdminLevel = 0;
+self.autoAdminTryLevel = 0;
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+motd.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+This is a handy spot to put in the stuffcmd of &quot;init&quot; since the MOTD is only shown once, and we only need to do &quot;init&quot; once.  At the end of MOTDShow, we're going to modify the if-then-centerprint code a little so that it also does the stuffcmd.  The new code should look something like this (although the centerprint message will be different... i.e. don't change the message already there).
+</P>
+<PRE>
+if (!self.seen_motd) {
+	centerprint2(self, ClanRing message, Server greeting message);
+	// QSmack mod
+	if (self.motd == 1) {
+		stuffcmd(self,&quot;init;\n&quot;);
+			// Must stuff &quot;init&quot; once, and only once if
+			// admin privileges persist across level
+			// changes.  Otherwise we would have to stuff
+			// it after each level change.
+	}
+	// QSmack mod end
+}
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+settings.qc
+</P>
+<BLOCKQUOTE>
+<P>
+In settings.qc, we'll define the five password impulses.  Put these anywhere reasonable.  In place of &quot;FIRST IMPULSE GOES HERE&quot; and etc., put the numbers of the five password impulses.  <B>Important:</B> They <B>must</B> be impulses that are <B>not</B> used for commands on your server!  ClanRing has a lot of command impulses, so be careful selecting these password impulses.  If you accidentally pick a command impulse, likely nothing bad will happen, but QSmack will not be able to respond to the challenges correctly.
+</P>
+<PRE>
+// QSmack mod
+float AUTO_PASSWD_0 = FIRST IMPULSE GOES HERE;
+float AUTO_PASSWD_1 = SECOND IMPULSE GOES HERE;
+float AUTO_PASSWD_2 = THIRD IMPULSE GOES HERE;
+float AUTO_PASSWD_3 = FOURTH IMPULSE GOES HERE;
+float AUTO_PASSWD_4 = FIFTH IMPULSE GOES HERE;
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+weapons.qc
+</P>
+<BLOCKQUOTE>
+<P>
+Below is the last set of changes for step 1.  We're going to modify the code for processing impulse commands so that it responds properly to the password impulses.  First of all, it is important that the function ImpulseCommands only be called if the impulse is non-zero.  ClanRing does this correctly, but just to remind myself I put the following comment in W_WeaponFrame above the call to ImpulseCommands:
+</P>
+<PRE>
+// QSmack mod COMMENT... for this stuff to work it is
+// IMPORTANT that ImpulseCommands only be called if self.impulse
+// != 0.  The ClanRing mod already took care of that for me.
+</PRE>
+<P>
+OK, now on to the ImpulseCommands function itself.  At the very beginning of the function add these lines:
+</P>
+<PRE>
+// QSmack mod
+local float didAdmin;
+local string tempstr;
+didAdmin = 0;
+// QSmack mod end
+</PRE>
+<P>
+The very last statement in ImpulseCommands should be &quot;self.impulse = 0&quot;; <EM>above</EM> that statement, add the following code.  Note that the initial &quot;else&quot; should be fine because it should be right below an &quot;if&quot; block.
+</P>
+<PRE>
+// QSmack mod
+else if (self.impulse == AUTO_PASSWD_0) {
+	if (self.autoAdminLevel == 0) {
+		self.autoAdminLevel = 1;
+		self.autoAdminTryLevel = 1;
+		didAdmin = 1;
+	}
+}
+else if (self.impulse == AUTO_PASSWD_1) {
+	if (self.autoAdminLevel == 1) {
+		self.autoAdminLevel = 2;
+		didAdmin = 1;
+	}
+}
+else if (self.impulse == AUTO_PASSWD_2) {
+	if (self.autoAdminLevel == 2) {
+		self.autoAdminLevel = 3;
+		didAdmin = 1;
+	}
+}
+else if (self.impulse == AUTO_PASSWD_3) {
+	if (self.autoAdminLevel == 3) {
+		self.autoAdminLevel = 4;
+		didAdmin = 1;
+	}
+}
+else if (self.impulse == AUTO_PASSWD_4) {
+	if (self.autoAdminLevel == 4) {
+		self.autoAdminLevel = 666;
+		didAdmin = 1;
+		// Here do whatever is necessary to grant ops.
+		self.quaketv = self.quaketv | QTV_ADMIN;
+		MakeObserverMode();
+		Commands_Admin();
+	}
+}
+if (didAdmin == 0) {
+	if (self.autoAdminLevel != 0) {
+		self.autoAdminLevel = 666;
+	}
+}
+if (self.autoAdminTryLevel != 0) {
+	if (self.autoAdminTryLevel == 1) {
+		stuffcmd(self, &quot;init01;\n&quot;);
+		self.autoAdminTryLevel = 2;
+	}
+	else if (self.autoAdminTryLevel == 2) {
+		stuffcmd(self, &quot;init02;\n&quot;);
+		self.autoAdminTryLevel = 3;
+	}
+	else if (self.autoAdminTryLevel == 3) {
+		stuffcmd(self, &quot;init03;\n&quot;);
+		self.autoAdminTryLevel = 4;
+	}
+	else if (self.autoAdminTryLevel == 4) {
+		stuffcmd(self, &quot;init04;\n&quot;);
+		self.autoAdminTryLevel = 5;
+	}
+	else {
+		self.autoAdminTryLevel = 0;
+	}
+}
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+<A NAME=STEP2><B>STEP 2 of 2</B></A>: Modifying your code to allow QSmack to kick people.
+</P>
+<P>
+The easy part. :-)
+</P>
+<P>
+Basically, all you need is a range of 16 impulses (normally 221-236), each meaning that the server should kick a certain player number from 1 to 16 with a localcmd kick.  There's a little twist, though, because the player list may have changed between the time that QSmack checks the status and the time that it decides to kick someone.  This is a very, very small chance, but since it is possible to avoid it, we might as well.
+</P>
+<P>
+So here is the sequence of things that QSmack does.  It sends a special impulse (normally 220) to the server to say &quot;I'm checking the status now&quot;  It then checks the status, and maybe then decides to kick someone.  If any player has left the game between the impulse 220 and the kick impulse, the server doesn't honor the kick request, because of the chance it might kick the wrong player.  So QSmack will have to try again.  Since QSmack checks the status <B>really</B> often, this retry will never be a problem.  It will happen too fast to notice.
+</P>
+<P>
+For these last bits of functionality, in the ClanRing 2.58 code you will need to change the files defs.qc, weapons.qc, admin.qc, client.qc, and motd.qc.  The examples below assumes that the usual impulses of 220-236 are being used (the impulses to use are defined in the <A HREF="qsmack_config.html">QSmack config file</A>).  We're also going to cover the code needed to handle <A HREF="qsmack_comm.html">sending commands to QSmack while you are in the game</A>; the example code below assume that impulse 237 is the impulse that causes the command print to occur.
+</P>
+<BR>
+<P>
+defs.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+We need a global float for a &quot;kicking is OK&quot; flag.  Put it next to the two entity fields we added earlier.
+</P>
+<PRE>
+// QSmack mod
+float	   status_isvalid;
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+weapons.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+Now, in ImpulseCommands, we'll add the code to set that flag on impulse 220, the code to do the kicking, and the code to do command prints from admin clients to QSmack.  Add this code in above the last big chunk of code you added to ImpulseCommands.
+</P>
+<PRE>
+// QSmack mod
+else if ((self.impulse == 220) && (self.quaketv & QTV_ADMIN)) {
+	status_isvalid = 1;
+}
+else if ((self.impulse > 220) && (self.impulse <= 236)
+	 && (self.quaketv & QTV_ADMIN) && (status_isvalid == 1)) {
+	localcmd(&quot;kick # &quot;);
+	tempstr = ftos(self.impulse - 220);
+	localcmd(tempstr);
+	localcmd(&quot;\n&quot;);
+}
+else if ((self.impulse == 237) && (self.quaketv & QTV_ADMIN)) {
+	local entity aa;
+	aa = find(world, classname, &quot;player&quot;);
+	while (aa != world) {
+		if (!aa.not_exist) {
+			if (aa.quaketv & QTV_ADMIN) {
+				// You must use this format!
+				sprint(aa, &quot;#qsmack_command# &quot;);
+				sprint(aa, self.netname);
+				sprint(aa, &quot;\n&quot;);
+			}
+		}
+		aa = find(aa, classname, &quot;player&quot;);
+	}
+}
+// QSmack mod end
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+admin.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+These last few files all need the same sort of change.  Any time a player leaves the game, we need to clear the &quot;status_isvalid&quot; flag.  So we'll need to do that in the normal disconnect code, plus any place we kick a player.  For the current version of the ClanRing code, this means fiddling with admin.qc, client.qc, and motd.qc.  If future versions add more kick localcmds, those kicks will also need this one line of code added to them.
+</P>
+<P>
+In admin.qc, we obviously need to add this to the DoKick function.  Put this code at the end of the function.
+</P>
+<PRE>
+status_isvalid = 0;     // QSmack mod
+			// isvalid must be reset whenever a client
+			// leaves the server... so it is done in
+			// ClientDisconnect and also wherever a
+			// localcmd kick is done.
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+client.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+ClientKill has a happy little block of code near the beginning of the function that kicks a player that suicides too much.  We need to add the flag reset code to it.  The resulting code will be like this:
+</P>
+<PRE>
+if (self.kill > 20)
+{
+	stuffcmd(self,&quot;say Suiciding is fun!\n&quot;);
+	localcmd(&quot;kick &quot;);
+	localcmd(self.netname);
+	localcmd(&quot;\n&quot;);
+	stuffcmd(self,&quot;disconnect\n&quot;);
+	status_isvalid = 0;     // QSmack mod
+				// isvalid must be reset whenever a
+				// client leaves the server... so it is
+				// done in ClientDisconnect and also
+				// wherever a localcmd kick is done
+</PRE>
+<P>
+PutClientInServer has code at the beginning of the function for kicking unnamed players, which should be changed similarly:
+</P>
+<PRE>
+if ((self.netname == &quot;unconnected&quot; || (self.netname == &quot;&quot;))
+{
+	localcmd(&quot;kick &quot;);
+	localcmd(self.netname);
+	localcmd(&quot\n&quot;);
+	stuffcmd(self,&quot;disconnect\n&quot;);
+	status_isvalid = 0;     // QSmack mod
+				// isvalid must be reset whenever a
+				// client leaves the server... so it
+				// is done in ClientDisconnect and
+				// also wherever a localcmd kick is
+				// done.
+}
+</PRE>
+<P>
+And then of course we need to add it to ClientDisconnect.  Put this right under the two lines that you added in step 1.
+</P>
+<PRE>
+status_isvalid = 0;	// QSmack mod
+			// isvalid must be reset whenever a client
+			// leaves the server... so it is done in
+			// ClientDisconnect and also wherever a
+			// localcmd kick is done.
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+motd.qc:
+</P>
+<BLOCKQUOTE>
+<P>
+Finally, there is a block of code at the beginning of MOTDCheck that does a kick.  Change it similarly so it looks like this:
+</P>
+<PRE>
+if (self.motd == -1)
+{
+	localcmd(&quot;kick &quot;);
+	localcmd(self.netname);
+	localcmd(&quot;n&quot;);
+	stuffcmd(self,&quot;disconnect\n&quot;);
+	status_isvalid = 0;     // QSmack mod
+				// isvalid must be reset whenever a
+				// client leaves the server... so it
+				// is done in ClientDisconnect and
+				// also wherever a localcmd kick is
+				// done.
+} else
+</PRE>
+</BLOCKQUOTE>
+<BR>
+<P>
+OK, that's all!  Actually a lot harder to describe than it is to do.  With these changes to the ClanRing code, it should be all set to work with QSmack.  For earlier versions of the ClanRing code, the changes are slightly different; for example, some earlier versions use &quot;flags&quot; and &quot;FL_ADMIN&quot; rather than &quot;quaketv&quot; and &quot;QTV_ADMIN&quot;.  You can also make these sorts of changes to entirely different server mod packages.  The tricky part is putting in the challenge/response code, but actually, once you get the initial &quot;init&quot; stuffcmd firing at the correct time, you're most of the way there; all the rest of the changes for step 1 will be almost identical to the ClanRing changes, and step 2 is easy to figure out for any given server code.
+</P>
+<BR/>
+[qsmack_archive_fyi]

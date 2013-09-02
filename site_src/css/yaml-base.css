@@ -1,0 +1,156 @@
+/**
+ * This file is yaml/core/base.css with the following changes:
+ * - rules related to #col2 and subtemplates stripped out
+ * - #col1 replaced with .sidebar
+ * - #col3 replaced with .maincol
+ */
+
+@media all
+{
+ /**
+  * @section browser reset
+  * @see     http://www.yaml.de/en/documentation/css-components/base-stylesheet.html
+  */
+
+  /* Global reset of paddings and margins for all HTML elements */
+  * { margin: 0; padding: 0; }
+
+  /* Correction: margin/padding reset caused too small select boxes */
+  option { padding-left: 0.4em; }
+  select { padding: 1px; }
+
+ /* Global fix of the Italics bugs in IE 5.x and IE 6 */
+  * html body * { overflow: visible; }
+  * html iframe, * html frame { overflow: auto; }
+  * html frameset { overflow: hidden; }
+
+  body {
+    /* Fix for rounding errors when scaling font sizes in older versions of Opera browser */
+    font-size: 100.01%;
+
+    /* Standard values for colors and text alignment */
+    background: [default_bg_color];
+    color: [default_text_color];
+    text-align: left;
+  }
+
+  /* Avoid visible outlines on DIV containers in Webkit browsers */
+  div { outline: 0 none; }
+
+  /* Clear borders for <fieldset> and <img> elements */
+  fieldset, img { border: 0 solid; }
+
+  /* New standard values for lists, blockquote and cite */
+  ul, ol, dl { margin: 0 0 1em 1em; }
+  li {
+    line-height: 1.5em;
+    margin-left: 0.8em;
+  }
+  dt { font-weight: bold; }
+  dd { margin: 0 0 1em 0.8em; }
+  blockquote { margin: 0 0 1em 0.8em; }
+  blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+ /**
+  * @section clearing methods
+  * @see     http://yaml.de/en/documentation/basics/general.html
+  */
+
+  /* Clearfix method for clearing floats */
+  .clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  /* Essential for Safari browser !! */
+  .clearfix { display: block; }
+
+  /* Alternative solution to contain floats */
+  .floatbox { overflow: hidden; }
+
+  /* IE-Clearing: Only used in Internet Explorer, switched on in yaml-iehacks.css */
+  #ie_clearing { display: none; }
+
+ /**
+  * @section hidden elements
+  * @see     http://www.yaml.de/en/documentation/basics/skip-links.html
+  */
+
+  /* Classes for invisible elements in the base layout */
+  .skip, .hideme, .print {
+    position: absolute;
+    top: -32768px;
+    left: -32768px; /* LTR */
+  }
+
+  /* Make skip links visible when using tab navigation */
+  .skip:focus, .skip:active {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  /* Skiplinks: technical setup */
+  #skiplinks { 
+    position: absolute;
+    top: 0px; 
+    left: -32768px; 
+    z-index: 1000; 
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none;   
+  }
+  #skiplinks a.skip:focus,
+  #skiplinks a.skip:active {
+    left: 32768px; 
+    outline: 0 none;
+    position: absolute; 
+    width: 100%;
+  }  
+}
+
+@media screen, projection
+{
+ /**
+  * @section base layout
+  * @see     http://www.yaml.de/en/documentation/css-components/base-stylesheet.html
+  */
+
+  #header { position: relative; }
+
+  /* Backup for correct positioning */
+  #header, #nav, #main, #footer { clear: both; }
+
+  .sidebar { float: left; width: 200px; }
+  .maincol { width: auto; margin: 0 200px; }
+
+  /* Preparation for absolute positioning within content columns */
+  .sidebar_content, .maincol_content { position: relative; }
+}
+
+@media print
+{
+ /**
+  * @section print rules
+  */
+
+  /* Float clearing for .floatbox. Uses display: table to avoid bugs in FF & IE */
+  .floatbox { 
+    overflow: visible; 
+    display: table;
+  } 
+
+  /* Make .print class visible */
+  .print { 
+    position: static; 
+    left: 0;
+  }
+
+  /* Generic class to hide elements for print */
+  .noprint { display: none !important; }
+}

@@ -1,0 +1,70 @@
+[previewimg=266104;sizeFull,inline;mapstrip.png][/previewimg]
+(deathmatch map images from wiki.quakeworld.nu)
+
+
+When one game ends, another game will start up on the same map unless you have a "map cycle" set up.  You could use the "map" command or the Multiplayer menu to start a new game on some map of your choice, but that's annoying if you want to play through a lot of different maps.  A map cycle provides some nice automation that rotates your games through a list of maps either in a particular order or randomly.
+
+A map cycle is set up by using console commands.  Typically you don't want to have to enter these in the console each time you play; instead you would save them to a script file.  For example if you had a sequence of console settings in the file "my_map_cycle.cfg" in your mod folder, you could apply those settings with the console command
+[code]exec my_map_cycle.cfg[/code]
+
+And there are various ways to make Quake automatically read a configuration when you want it to -- using autoexec.cfg, or command-line options, or sticking your settings inside some other script file that is being executed... really it just depends on exactly what you want to do.  If you're up to speed on the topics in the Quake Owner's Manual guide and in this guide, then you'll be able to figure it out!
+[list]
+[/list]
+[h1]Omicron[/h1]
+The Omicron mod supports a map cycle with up to 64 entries.  The "OBOTS.HTM" page that comes with the mod describes how to set this up, under the "Cycle Map & Map Randomizer" heading.
+
+An Omicron map cycle is set by defining a series of "changelevel" aliases, one for each map in the cycle.  For example a very simple three-map cycle that rotates through dm4, dm6, and dm2 would be defined by
+[code]
+alias map1 "changelevel dm4"
+alias map2 "changelevel dm6"
+alias map3 "changelevel dm2"
+[/code]
+
+The "samelevel" variable is used to control the behavior of the cycle.  A positive value will pick maps from the list at random.  So you could randomly choose from a 3-map cycle by setting
+[code]samelevel 3[/code]
+(If your cycle size is [i]X[/i], be sure you have defined all the aliases for "map1" up through "map[i]X[/i]".)  A negative value will move through that many maps in the specified order, so for example a fixed order for our 3-map cycle would be instituted by
+[code]samelevel -3[/code]
+To ignore the cycle in favor of just repeating the current map over and over, set
+[code]samelevel 1[/code]
+
+In a randomized cycle, Omicron ensures that you won't see the same map twice in a row.
+
+I don't have any pre-configured Omicron map cycles to provide for download.  Be creative!
+[list]
+[/list]
+[h1]FBX++[/h1]
+The FBX++ readme describes map cycles in the "Playing" section under the "Map cycling" heading.  It uses the same sort of cycle configuration as Omicron.  But instead of a 64-map limit, FBX++ supports an extremely large map cycle that is limited only by the storage available for aliases (which is affected by the "-zone" command-line option) and by the maximum size for config files.  As a (slight) downside, a random map cycle in FBX++ doesn't provide any guarantee against getting the same map twice in a row.
+
+If you downloaded all of the extra map support for FBX++, including the [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]split-up config files[/url], then you have the materials to set up a map cycle that is 506 maps long.  Just enter
+[code]exec maps.cfg[/code]
+in the console.  This will execute the other config files that begin with "maps-part"; together these config files define one big map cycle, and it's broken up into multiple files just to avoid exceeding the config file size limit.
+
+FBX++ will choose maps from this cycle randomly, because "maps-part1.cfg" sets "samelevel 506".  Remember that a positive "samelevel" value causes random picking.
+[list]
+[/list]
+[h1]FBCA with or without nQuake[/h1]
+FBCA defines a map cycle by using a bunch of "localinfo" console settings.  "localinfo A B" means to play map "B" after playing map "A".  For example a very simple three-map cycle that rotates through dm4, dm6, and ztndm3 would be defined by
+[code]
+localinfo dm4 dm6
+localinfo dm6 ztndm3
+localinfo ztndm3 dm4
+[/code]
+If you want to go through the maps in random order you would also define
+[code]localinfo ffa_mapqueue 1[/code]
+Even though that has "ffa" in its name, it works for all game modes.  (The queue will be run in-order if the "ffa_mapqueue" localinfo value is unset or zero.)
+
+The size of the mapqueue is limited only by the fact that (most?) Quake engines have a hardcoded limit of storing 32 kilobytes of "localinfo" data.
+
+Some of the predefined config files for FBCA game modes (described in the "Game Rules" section) already set up a map cycle.  But you can change the cycle by editing that config file, or by just setting up your own map cycle after executing the game mode's config.
+
+If you downloaded all of the extra map support for FBCA then you have some sample config files for setting up a map cycle, in the "configs" subfolder.  See the comments at the top of each of these files for more details.
+[list]
+[*]configs/big-cycle-nquake.cfg : Executing this file will set up a map cycle that runs through almost all of the maps supported by the nQuake version of FBCA, except for "arena" maps that don't have weapon items in them.
+[*]configs/big-cycle-trinca.cfg : Executing this file will set up a map cycle that runs through almost all of the maps supported by Trinca's version of FBCA (from the "Extra Map Support" section), except for "arena" maps that don't have weapon items in them.  This is actually only 4 more maps than the nQuake version.
+[*]configs/ra-cycle.cfg : Executing this file will set up a map cycle of Rocket Arena maps.  These maps should be played with the "raspawn" rule enabled, and using some deathmatch mode that spawns players with weapons (because there aren't any weapon items in the maps).
+[*]configs/dmm4-cycle.cfg : This is similar to "ra-cycle.cfg", but these are arena maps that were [i]not[/i] made for use with the Rocket Arena mod, so they should be played with the "raspawn" rule disabled.
+[*]configs/ezquake-arena-cycle.cfg : This is a (somewhat experimental) config that will only work with an ezQuake listen server.  It cycles through all of the arena-style maps and takes care of setting "raspawn" correctly depending on the map name.
+[/list]
+
+As an example just to make things clear: let's say you're using the nQuake version of FBCA to play FFA.  You would first start a FFA game using a configuration for that game mode (as described in the "Game Rules" section).  If you're using the default FFA config script that came with nQuake, this will set you up with a randomized 11-map cycle.  If you'd rather have a super-huge map cycle, after getting the FFA game set up you could enter
+[code]exec configs/big-cycle-nquake.cfg[/code]

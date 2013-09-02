@@ -1,0 +1,26 @@
+#images_path [pathToTop]images/
+#global_common_images_path [images_path]common/
+#rel_path_level 0
+#.rel_path_segment_code#
+def rel_path_segment():
+  if type(rel_path_level) == type(list()):
+    return "../" * int(rel_path_level[0])
+  else:
+    return "../" * int(rel_path_level)
+#local_files_dir [fileName]
+#.local_common_images_path_code#
+def local_common_images_path():
+  return images_path + '/'.join(pathNames[1:-1]) + '/' + rel_path_segment() + 'common/'
+#.local_images_path_code#
+def local_images_path():
+  return images_path + '/'.join(pathNames[1:-1]) + '/' + rel_path_segment() + local_files_dir + '/'
+#downloads_path http://files.neogeographica.com/downloads/
+#.local_downloads_path_code#
+def local_downloads_path():
+  return downloads_path + '/'.join(pathNames[1:-1]) + '/' + rel_path_segment() + local_files_dir + '/'
+#styles_path [pathToTop]css/
+#scripts_path [pathToTop]js/
+#docs_home_path [pathToTop]pages/
+#docs_q3maps_home_path [pathToTop]pages/q3maps/
+#docs_tools_home_path [pathToTop]pages/tools/
+#docs_guides_home_path [pathToTop]pages/guides/

@@ -1,0 +1,7 @@
+<link href="[styles_path]common.css" rel="stylesheet" type="text/css"/>
+<!--\[if lte IE 7]>
+<link href="[styles_path]patches/ie_6_7.css" rel="stylesheet" type="text/css" />
+<!\[endif]-->
+<!--\[if lte IE 6]>
+<link href="[styles_path]patches/ie_6.css" rel="stylesheet" type="text/css" />
+<!\[endif]-->

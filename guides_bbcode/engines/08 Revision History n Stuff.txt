@@ -1,0 +1,39 @@
+[h1]Engine Versions[/h1]
+The most recent date that I checked out these engines' features was April 13 2013.
+
+The latest stable version of each engine was:
+[list]
+[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]FTEQW: version 1.0 from Jun 2011
+[*]Fodquake: version 0.3 from Mar 2012
+[*]DarkPlaces: build 20130304 from March 2013
+[*]QuakeSpasm: version 0.85.9 from April 2013
+[*]Fitzquake Mark V: revision 9 from April 2013
+[*]DirectQ: version 1.9.0 from Feb 2012
+[*]ProQuake: version 4.93 from Oct 2012
+[*]Qrack: version 2.011.3467 from Aug 2011
+[/list]
+[list]
+[/list]
+[h1]Guide Change History[/h1]
+
+[b]2013[/b]
+[list]
+[*]Aug 10: added link to negke's guide for playing third-party maps/mods
+[*]Jul 14: fixes in reaction to the changes in Steam Guide markup behavior
+[*]Jun 16: more description of the nQuake and "Ultimate Quake Patch" installers; new links to QuakeSpasm and ProQuake installers
+[*]Jun 02: replaced broken Quake Epsilon link w/ link to ModDB; also replaced Quake HD link w/ ModDB link
+[*]Apr 13: checked Fitzquake Mark V revision 9 and QuakeSpasm version 0.85.9
+[*]Mar 10: checked Fitzquake Mark V revision 8 and DarkPlaces build 20130304
+[*]Feb 12: a few words about setup in the Modern Engines Basics section
+[*]Feb 01: link to the Deathmatch with Bots guide
+[*]Jan 23: details about which engines can host multiplayer games
+[*]Jan 20: link to the Quake HD bundle
+[*]Jan 19: details about Fitzquake Mark V's problems with "-basedir"
+[*]Jan 19: a few intro words about what a "Quake engine" is, and where WinQuake fits in
+[*]Jan 15: link back to the Quake Owner's Manual guide for info on configuration
+[*]Jan 15: corrections for the "More You Know" box about config file placement
+[*]Jan 14: added media for nQuake and Quake Epsilon
+[*]Jan 14: link back to the Quake Owner's Manual guide for info on command-line options
+[*]Jan 12: added information about the Fodquake engine and the Quake Epsilon bundle.
+[/list]

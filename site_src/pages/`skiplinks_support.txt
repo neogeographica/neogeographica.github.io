@@ -1,0 +1,2 @@
+<!-- full skiplink functionality in all browsers -->
+<script src="[scripts_path]yaml-focusfix.js" type="text/javascript"></script>

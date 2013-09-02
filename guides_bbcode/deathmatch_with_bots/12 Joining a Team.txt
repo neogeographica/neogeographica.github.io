@@ -1,0 +1,46 @@
+[previewimg=271033;sizeFull,inline;Smith-College-Class-1902-basketball-team.jpg][/previewimg]
+
+
+Most botmatches are probably FFA or perhaps 1-on-1.  But if you want to play a team mode, then you need to put yourself on one of the available teams.  So:
+
+In Quake, teams have colors.
+
+In the original NetQuake multiplayer code, players were separated onto teams based on their pants color.  QuakeWorld still separated teams by color but added the concept of a team name; generally picking your team name was the important thing, and your color followed from that.
+
+Each bot mod provides a slightly different way of joining a team.
+[list]
+[/list]
+[h1]Omicron[/h1]
+Use the "menu" command to bring up the interactive menu.
+
+If a game is currently running, choose the "stop game" option.
+
+Select the "teamplay" option in the menu until it shows the number of teams you wish to have.  (For example, if you want to have 2 teams then select that option twice.)
+
+Now you need to use a console command to join a team.  The available commands are "team1", "team2", etc. up through the number of teams.
+[list]
+[/list]
+[h1]FBX++[/h1]
+In FBX++, if "teamplay" is set to a value of 1 then you are already on a team.  Your team's color is determined by your current pants color.  When you first add bots to the opposing team, FBX++ will just choose some other color for that team.
+[list]
+[/list]
+[h1]FBCA with nQuake[/h1]
+Generally your team assignment is handled for you in FBCA (see the "FBCA without nQuake" section below for a few more details) but there is one issue with the nQuake configuration that affects joining a team in Clan Arena mode.
+
+nQuake setup will bind your number keys to commands like "weapon 1", "weapon 2", etc. instead of the normal "impulse 1", "impulse 2", etc.  It also by default enables "Gun Preselect" on the "Player" screen of the options menu.  The reason nQuake has this setup is to better support [url=http://ezquake.sourceforge.net/docs/?weapon-handling]an ezQuake feature that can do "weapon hiding" and other cool things[/url].
+
+The problem is that the Clan Arena mode uses an onscreen menu for team selection that asks you to press a number key.  It's expecting to receive an impulse command when you do that, but the nQuake key bindings won't immediately generate impulse commands.
+
+If you're not interested in the fancier ezQuake weapon-selecting features, you can disable "Gun Preselect" in the options menu (or use the console to set "cl_weaponpreselect 0").  This will make the number keys work as you expect in that menu.
+
+Or, you can keep "Gun Preselect" enabled and work around the number key behavior by pressing your attack key after the number key.  So instead of just pressing "1", you should press "1" and then click your left mouse button (or whatever your attack key is).
+
+And of course you could enter impulse commands in the console, like
+[code]impulse 1[/code]
+The other two solutions above are a lot easier, but if you ever really get stuck with some mod's number-key menu that seems to be ignoring your keypresses, console impulse commands are always a thing you can try.
+[list]
+[/list]
+[h1]FBCA without nQuake[/h1]
+If you use the provided teamplay game mode scripts, then you will either be automatically be placed on a team or (for Clan Arena) be asked what team you wish to join.
+
+If you are experimenting with your own combinations of settings for teamplay, various things can happen; the bottom line though should be that if the game code doesn't force you to a particular team, then the value of your "team" console variable will provide your team name.

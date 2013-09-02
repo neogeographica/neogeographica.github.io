@@ -1,0 +1,16 @@
+[h1]Console speed[/h1]
+In some Quake engines, by default when you open the console it animates down from the top of the screen fairly slowly.  If you would rather not wait on this, you can change the animation speed with this setting:
+[code]scr_conspeed 9999[/code]
+[list]
+[/list]
+[h1]Crosshair[/h1]
+Us weak 21st-century gamers can't get along without a crosshair.  Enable the crosshair by entering
+[code]crosshair 1[/code]
+in the console.  This value will be saved to your config file.
+
+Modern Quake engines may support drawing different crosshair styles if you set "crosshair" to other nonzero values.  They may also have support for crosshair choice in the in-game menus.
+[list]
+[/list]
+[h1]Weapon display[/h1]
+If the view of your weapon model is just getting in your way, you can remove it with this setting:
+[code]r_drawviewmodel 0[/code]

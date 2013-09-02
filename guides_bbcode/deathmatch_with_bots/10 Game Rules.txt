@@ -1,0 +1,84 @@
+[previewimg=271040;sizeFull,inline;1280px-Patchesi-rules.jpg][/previewimg]
+
+
+Once you have Quake running your mod, you need to set the rules of the game.
+
+Some of these rules can be set through the Multiplayer menu if you are creating a game that way, but all of them can be accessed through console variables.  Which means that you can either set them manually using the console, or set them on the command line, or put them in a configuration script that you execute.  If you're not familiar with the Quake console, check out the section on "The Console and autoexec.cfg" in the Quake Owner's Manual guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+
+The basic settings are shared among all mods, so we'll cover those first before getting into the mod-specific stuff.
+
+One of the most important console commands is "map", which starts a new game on the map you specify.  For example
+[code]map dm4[/code]
+will start a game on dm4.  If you already have a game underway when you use the "map" command, the current game will instantly be stopped and a new game started on the specified map.
+
+[quote]
+[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Another gotcha about using the FTEQW engine to play the FBCA mod:
+
+FTEQW will experience an error on the very first attempt to start a bot match after you begin running Quake.  Just use the "map" command or the Multiplayer menu to try again, and things will go smoothly after that.
+[/quote]
+
+"fraglimit" and "timelimit" are console variables that set the conditions for ending the game.  If "fraglimit" is set to something nonzero, then the game will end when any player gets that many frags; if "timelimit" is set to something nonzero, then the game will end when that many minutes have elapsed.  You can set either or both of these limits.  Or neither, if you want the game to never end!  For example if you want the game to last until some player hits 25 frags, regardless of how long it takes, then you would enter this in the console:
+[code]
+fraglimit 25
+timelimit 0
+[/code]
+
+The "deathmatch" variable is another basic setting you should take care of.  Its value determines how the weapon/armor/health items behave:
+[list]
+[*]deathmatch 1 : An item disappears when it is picked up, then reappears ("respawns") after a few seconds.
+[*]deathmatch 2 : Weapon items do not disappear when picked up.  All other items disappear permanently when picked up.
+[*]deathmatch 3 : Weapon items do not disappear when picked up.  All other items respawn after a few seconds.
+[/list]
+Some mods also support other values for the "deathmatch" variable; check their docs/readme.  Higher values for "deathmatch" will mean that players start with all weapons/armor and some amount of health, with various respawn rules for items.
+
+The "teamplay" variable is the last of the basic settings, and it determines how players can damage themselves and each other:
+[list]
+[*]teamplay 0 : Appropriate for free-for-all.  You can damage yourself or any other player.
+[*]teamplay 1 : You can't damage the health of players on your team (including yourself), but you'll still damage their armor if you hit them.
+[/list]
+Some mods also support other values for the "teamplay" variable; check their docs/readme.
+
+Changes to "deathmatch", "teamplay", and some other settings will not take effect until a new game begins.
+[list]
+[/list]
+[h1]Omicron[/h1]
+Read the mod's "OBOTS.HTM" page for details about how to configure games.
+
+The key part is the "menu" console command; this command will bring up an interactive in-game menu that you can navigate using your number keys.  The only major thing you can't do with the menu is change to Rocket Arena mode; you have to use the "rocketarena" console command for that.
+[list]
+[/list]
+[h1]FBX++[/h1]
+FBX++ doesn't have any fancy menu for you, so you'll just have to soldier on using console settings/commands described at the start of this section.
+
+Another useful console setting is the FrikBot-specific variable "saved1".  If it is set to 0 (default), then all bots will be removed from the game at every map change.  But if you want the set of bots at the end of one map to reappear at the beginning of the next map, set this variable to 1:
+[code]saved1 1[/code]
+This setting will also let players carry their weapons/health/armor from one game into the next.
+[list]
+[/list]
+[h1]FBCA with nQuake[/h1]
+As mentioned before, the nQuake version of FBCA is squirrelled away in a file called "frogbot.pk3" in your "qw" folder.  You can extract the documentation out of that zip archive, or just [url=http://eclecticmenagerie.com/jl/quake/bots/nquake-fbca-doc.zip]download the docs here[/url].
+
+The FBCA docs can be somewhat confusing because you have the original Frogbot docs in there, then another readme for some experimental Frogbot changes, then [i]another[/i] readme about the FBCA changes.  But here's the two things you need to know:
+
+1) Along with the FBCA code and docs, "frogbot.pk3" also includes some configuration scripts for setting up all sorts of different gameplay types.  These scripts are in the "configs" subfolder and named "duel.cfg", "2on2.cfg", "team.cfg", "arena.cfg", "clarena.cfg", and "ffa.cfg".
+
+The scripts inside "frogbot.pk3" are ready to use; you don't need to extract them.  You can though if you want to have a look at the scripts' content; or you can [url=http://eclecticmenagerie.com/jl/quake/bots/nquake_fbca_configs.zip]download the extracted scripts here[/url].
+
+You can exec the FBCA scripts from the console to set up and start a game.  For example to start a FFA match you would enter
+[code]exec configs/ffa.cfg[/code]
+
+If you are using the ezQuake engine, then the nQuake installation gave you a configuration that already includes some aliases for doing just this.  In the console type "bot_" and press tab to see a list of these 6 aliases.  For example a quicker way to start a FFA match would be to enter
+[code]bot_ffa[/code]
+
+If you use ezQuake's Multiplayer menu to start a bot match, it will execute the appropriate script from that set. (Although the Multiplayer menu doesn't have an option for 2on2.)
+
+2) Once the game has started, enter the "rules" console command to see some other settings that you can play around with.  For settings that just have an enabled/disabled state, enter that setting name in the console to flip it.
+[list]
+[/list]
+[h1]FBCA without nQuake[/h1]
+Very similar to FBCA with nQuake, with these differences:
+[list]
+[*]If you want to have a look at the configuration scripts, they're in the "configs" subfolder of your FBCA mod folder.
+[*]No "2on2.cfg" script.
+[*]No predefined aliases for executing the scripts.  Make your own if you like!
+[/list]

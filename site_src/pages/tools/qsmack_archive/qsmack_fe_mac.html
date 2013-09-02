@@ -1,0 +1,44 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend on a Macintosh</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+<B>Note:</B>This was tested on an old and slow Mac (IIvx, 68030) with System 7.5.  We welcome any info about fixes or alternate procedures for other setups.
+</P>
+<P>
+First, you can delete the libtcl_qsmackfe.dll file.  That is for Windows only.
+</P>
+<P>
+Next, take the file &quot;qsmackfe.cfg.quickstart&quot;, put it in the Preferences folder in your System Folder, and rename it &quot;QSmack Preferences&quot;.  This is <B>different</B> from the way the frontend config file is handled on other platforms!  The frontend config file for the Mac version <B>must</B> always have that name, and it <B>must</B> always be in that folder.  You <B>cannot</B> specify the config file &quot;on the command line&quot;, because there will be no command line.
+</P>
+<P>
+(&quot;qsmackfe.cfg.quickstart&quot; is a pretty bare-bones config file, but that's what we want for the inital run.  Later you can experiment with more complex config files like the examples in &quot;qsmackfe.cfg.highres&quot; and &quot;qsmackfe.cfg.lowres&quot;.)
+</P>
+<P>
+Now, we'd like to just be able to double-click something to launch the frontend.  Unfortunately Tcl's UNIX roots are showing a little here, and it's not immediately obvious how to set this up.  Fortunately, though, the mad hackers of C9 have blazed a trail for you!
+<P>
+It turns out there are actually two (at least) ways to handle this.  Have a look at the options below and choose one that tickles your fancy; you can either download a new file or two, or make the changes yourself.
+</P>
+<P>
+<B>Method #1</B> is to create a copy of Wish (the Tcl interpreter) that has the script embedded in it.  This is pretty easy, but it has the downside of taking up an extra 45k of disk space compared to the other method, since it creates a whole `nother Wish application dedicated to running the frontend.  If you're game for a 62k download, you can download such an application now: <A HREF="[local_downloads_path()]mac-QSmackFE.hqx">QSmackFE, BinHex-encoded</A>.  This assumes you're using Tcl8.0/Tk8.0.  If you're not, or you'd rather skip the download, or if you need to recreate this application after making changes to the script, you can <A HREF="qsmack_fe_mac_way1.html">create the application yourself</A>.
+</P>
+<P>
+<B>Method #2</B> is to make the script itself double-clickable, so that double-clicking the script will start Wish and launch the front end.  If you want to go this route, you will need to download (62k total) BinHex-encoded new versions of <A HREF="[local_downloads_path()]mac-qsmackfe.tcl.hqx">qsmackfe.tcl</A> and <A HREF="[local_downloads_path()]mac-wish.hqx">Wish 8.0</A> (assuming you're using Tcl8.0/Tk8.0).  Replace the previous copies of the frontend script and your Wish application with these two files that you download.  Now you can double-click on the script to start it up.  (You can still edit qsmackfe.tcl using your favorite text editor, if you need to.)  If you'd rather skip the download, or if you're not using Tcl8.0/Tk8.0, you can <A HREF="qsmack_fe_mac_way2.html">make the changes yourself</A>.
+</P>
+<P>
+Both of these methods only allow one QSmack front end running on your Mac at any given time.  One is all you need though!  Double-click and start that baby up.
+</P>
+<P>
+One final note: the &quot;nslookup&quot; command is not currently available in the Mac version.  Adding it would require taking the C code from the download package (tcl_qsmackfe.c) and recompiling the Tcl source to include it as a Tcl extension to implement &quot;gethostbyaddr&quot;.  The C9 Mac users don't currently have the compiler tools to do this and would rather not bother.  But if you're a Mac hacker and you wanna take a shot at it, be our guest.
+</P>
+<BR/>
+[qsmack_archive_fyi]

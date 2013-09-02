@@ -1,0 +1,12 @@
+#heading_font_family "Open Sans", Arial, Helvetica, sans-serif
+#body_font_family Lato, Arial, Helvetica, sans-serif
+#quote_font_family Lato, Arial, Helvetica, sans-serif
+#fixed_font_family Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier
+
+/**
+ * There are reportedly clever ways to get around the problems with font
+ * rendering in Windows Chrome, but they actually look worse to me.
+ * e.g. http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363
+ * Still hoping that Google will just get its act together w.r.t. this.
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700,400italic);

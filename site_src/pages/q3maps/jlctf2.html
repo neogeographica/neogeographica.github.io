@@ -1,0 +1,62 @@
+#styles#
+[common_styles]
+[gallery_styles]
+#scripts#
+[common_scripts]
+[gallery_scripts]
+[overview_scripts]
+#optional_popup [jlctf2_overview]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem jlctf2
+  <h1>T I T A N S</h1>
+  <ul>
+    <li>Quake 3 Team Arena &amp; CTF, 8-14 players</li>
+    <li>released April 2001 (original), April 2002 (UMP1 collection), January 2010 (final standalone version)</li>
+  </ul>
+  <p>Titans is a massive flag battlefield constructed with the texturing and architectural styles from <a href="m3amap1.html">Lost Colossus</a>.  It was made with full-sized Team Arena gameplay in mind, and its extensive layout of bunkers and courtyards matches the size of the Team Arena terrain map Overdose (mpterra1).  Titans also works for &quot;vanilla&quot; Q3CTF and similar mods, if you like big teams on a big map.</p>
+  [overview_button]
+[gallery('redpillars','blueflag','redpylon','blueback','redside','bluefountain','editortop','editorside')]
+  <h2>Downloads</h2>
+  <p>Originally Titans was released as two separate maps, one for Team Arena and one for anything &quot;not Team Arena&quot;.  When a Quake 3 patch introduced support for gametype-specific item loadouts, it was possible to make a version of Titans that supported both styles of play; this version was released along with several other maps in the Unofficial Map Pack #1 (UMP1), as ump1ctf4.  The &quot;Final Version&quot; jlctf2 available for download below is identical to the version in UMP1, just in a smaller standalone package.</p>
+  <h3>&bull; Final Version</h3>
+  <ul>
+    [listitem_local_download('jlctf2.zip','map package')]
+    [listitem_local_download('jlctf2.txt','readme','(included in map package)')]
+  </ul>
+  <h3>&bull; Older Versions (not required)</h3>
+  <ul>
+    [listitem_local_download('ump1.zip','entire UMP1 collection','(51 MB)')]
+    [listitem_local_download('titans_ctf.zip','original non-Team Arena version')]
+    [listitem_local_download('titans_ta.zip','original Team Arena-only version')]
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    [listitem_local_download('titans_mapstuff.zip','map source for original versions')]
+    [listitem_local_download('titans_mapstuff_readme.txt','readme for map source','(included in map source package)')]
+  </ul>
+  <h2>Notes</h2>
+  <h3>&bull; Genesis</h3>
+  <p>After wrapping <a href="m3amap1.html">m3amap1</a>, the M3A team members set out to make non-RA3 versions of their various arenas.  I think we all had become pretty fond of certain bits and pieces of our contributions, and we were dubious (correctly, as it turns out) that they would get much play time in an RA3 map.  While I was pondering what to do with my clan arena Lost Colossus, I was having fun with public pickup games on the big &quot;terrain maps&quot; in the Q3 expansion Team Arena; at some point I got curious about whether I could use my arena as a foundation for making a map that would be 1) as big as a terrain map but 2) presented as an artificial structure rather than as natural terrain.</p>
+  <p>So just like starting with a plan for a Q3F map led to an unconventional clan arena, starting with that clan arena then led to an unconventional Team Arena map.  I'm still very happy with the way it ended up looking and playing.</p>
+  <h3>&bull; Design</h3>
+  <p>The &quot;base&quot; area for each side is very similar to the lower courtyard of Lost Colossus.  The mountain, now the center of the map, needed more drastic changes: the top of the mountain removed, the under-mountain area expanded.  (And of course there are now two Titans instead of one.)</p>
+  <p>I may have spent less time duplicating/reconfiguring map areas for CTF play than I did just getting bots to behave.  Since Lost Colossus didn't have bot support to begin with, I was faced with existing design choices that really didn't play nicely with the AI.  Some things needed minor tweaks, like tilting the &quot;ladder&quot; jumps to make the bots recognize them as usable.  Others were more fundamental, like the layout having several large open areas.  I was lucky to get help from id Software's AI guy, Jan Paul van Waveren, in stamping out the worst problems.  It still takes a bigger-than-normal share of CPU to run full teams of bots on this map, although of course that's a moot point on modern hardware.</p>
+  <h3>&bull; Theme</h3>
+  <div class="floatbox">
+    [local_image('pylon_10fps_small.gif','pic_left')]
+    <p>The foundation texturing of Titans is the same as that for Lost Colossus, i.e. derived from the Egyptian materials created by Todd &quot;Mr.CleaN&quot; Rose.</p>
+    <p>Most of the new texture work for Titans involved breaking out the red &amp; blue paint buckets to color-code map areas for CTF play.  Some of that colorization is covered by your standard bits of trim, item markers, and logo decals, but the features that people seem to remember most about Titans are the three color-coded &quot;Vegas pylons&quot; in each base area.</p>
+    <p>I feel that I have to include an animated picture here since the screenshots don't capture their full, er, splendor.  Behold!</p>
+  </div>
+  <h3>&bull; Tricks</h3>
+  <p>Titans is a pretty straightforward construction.  About the only nonobvious functionality occurs in the surface parameters for some of the shaders:</p>
+  <p>&bull; Most vertical or angled surfaces outside of the normal playing field have &quot;surfaceparm slick&quot;, to prevent players from standing (hiding) there.  (Lost Colossus did this too.)</p>
+  <p>&bull; The outer walls of the base area, rarely seen by any player unless you manage to fling yourself over the wall, use &quot;surfaceparm nolightmap&quot;.  No need for fancy shadows out there, so no need to have them eat into the limited space available for lightmaps.  Ditto for the very dark stone surface of the courtyard roof and pylons.</p>
+  <p>&bull; Several surfaces also use &quot;surfaceparm nograpple&quot;, to indicate that you can't grapple to them; this is another mechanism for trying to prevent hiding in lame places.  That's not actually a standard surfaceparm; I had my local map compiler set up to translate &quot;nograpple&quot; to a particular value, and I tried to convince various CTF mod authors to have their code interpret that value appropriately.  At one point I had most mod authors on board with this, but mods change and die and merge, and features like this get lost in the shuffle.  I know that it's not supported in the last version of Threewave Classic CTF, for example.  The bottom line, probably, is that Titans was not designed well for mods that use grapple.  Can't please everyone!</p>
+  <h3>&bull; Useless Trivia</h3>
+  <p>In the original release, the door in the Titans throne would open so far that quite a bit of the top of the door would stick up through the Titan's lap.  I'm sure that I originally had the door's travel amount set correctly, then later forgot why I didn't have the door opening all the way and &quot;fixed&quot; it.</p>
+  <p>Since it's a one-way door, the only way you'd normally see the bug was to be standing outside the throne when someone else went through the door... this is the sort of thing you don't notice if most of your playtesting is alone or with bots.</p>
+  <p>It was nice to have a chance to re-release the map in UMP1 in order to merge the TA and non-TA versions together, but deep down I was most happy about getting a chance to fix that door.</p>
+  <br />
+  [centered_local_image('doorbug.gif', 'screenshot', 320)]

@@ -1,0 +1,4 @@
+#optional_popup <!-- no popup dialog -->
+#optional_sidebar <!-- no nav sidebar -->
+#optional_skiplinks <!-- no skiplinks -->
+#optional_skiplinks_support <!-- no skiplinks support needed -->

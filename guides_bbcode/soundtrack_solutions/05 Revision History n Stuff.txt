@@ -1,0 +1,41 @@
+[h1]Engine Versions[/h1]
+The most recent date that I checked out various Quake engines' features was April 13 2013.
+
+The latest stable version of each engine that supports soundtrack music file playback was:
+[list]
+[*]DarkPlaces: build 20130304 from March 2013
+[*]QuakeSpasm: version 0.85.9 from April 2013
+[*]Fitzquake Mark V: revision 9 from April 2013
+[*]DirectQ: version 1.9.0 from Feb 2012
+[/list]
+The latest stable version of each engine that supports external player control was:
+[list]
+[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]FTEQW: version 1.0 from Jun 2011
+[*]Fodquake: version 0.3 from Mar 2012
+[/list]
+Other engines examined:
+[list]
+[*]ProQuake: version 4.93 from Oct 2012
+[*]Qrack: version 2.011.3467 from Aug 2011
+[/list]
+[list]
+[/list]
+[h1]Guide Change History[/h1]
+
+[b]2013[/b]
+[list]
+[*]Aug 14: linked to more soundtrack file sources: quakeone.com and quaddicted
+[*]Aug 10: added note that ProQuake doesn't have soundtrack support
+[*]Aug 10: linked to Steam forums thread for soundtrack CD image
+[*]Jul 14: fixes in reaction to the changes in Steam Guide markup behavior
+[*]Jun 02: replaced broken Quake Epsilon link w/ link to ModDB; also replaced Quake HD link w/ ModDB link
+[*]Apr 13: checked Fitzquake Mark V revision 9 and QuakeSpasm version 0.85.9
+[*]Mar 10: checked Fitzquake Mark V revision 8 and DarkPlaces build 20130304
+[*]Jan 20: info about the Quake HD bundle
+[*]Jan 15: added spectral analysis images (fancy!) to the discussion of pre-emphasis
+[*]Jan 14: link back to the Quake Owner's Manual guide for info on command-line options
+[*]Jan 13: removed comment about QuakeSpasm playback quality... morphed it into a large section about sample rate
+[*]Jan 13: added warning comment about QuakeSpasm playback quality
+[*]Jan 12: added information about the Fodquake engine, the Quake Epsilon bundle, and a few more comments about external Winamp player use.
+[/list]

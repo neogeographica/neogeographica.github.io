@@ -1,0 +1,61 @@
+[previewimg=266047;sizeThumb,floatLeft;Aerowalk.jpg][/previewimg] [previewimg=266050;sizeThumb,floatRight;Ztndm6.jpg][/previewimg]
+[previewimg=266060;sizeThumb,floatLeft;Ztndm3.jpg][/previewimg] [previewimg=266048;sizeThumb,floatRight;Cmt3.jpg][/previewimg]
+(deathmatch map images from wiki.quakeworld.nu)
+
+
+If you want to play bots on maps beyond the basic deathmatch map set, then you need to download and install a bit more stuff.  Different mods require different downloads.
+
+Any additional waypoint files that you download will typically end up in the "maps" subfolder of your mod folder.
+
+The same applies to any map files (".bsp" files) that are modified to contain waypoint info.
+
+Any [i]un[/i]modified map files can also be placed in the "maps" subfolder of your mod folder, if you only want the maps to be seen by that mod.  Or you can place them in the "maps" subfolder of "id1" if you want them to be available every time you run Quake, regardless of mod.
+
+A ".pak" or ".pk3" file that contains maps should be placed directly in the mod folder.  Or in the "id1" folder if you want it to always be available to any Quake run.
+
+These are the general rules, but check the instructions that come with the various downloads.
+[list]
+[/list]
+[h1]Omicron[/h1]
+The Omicron bot can learn to play any map, so you don't absolutely need to download anything to play on a new map.  But if the bots have to learn a map then they are starting from scratch at the beginning of each game, and it can take them some time to get in the groove.
+
+On Rocket Arena maps I don't think the bots are much handicapped by this.  So if you want to play Omicron in its Rocket Arena mode you can just download a [url=http://eclecticmenagerie.com/jl/quake/bots/ramaps.zip]pack of collected Rocket Arena maps[/url] and go to town.  Note that these maps [i]must[/i] be played using the Rocket Arena mode of Omicron (or some other mod that has specific Rocket Arena support); they won't work as "normal" deathmatch Quake maps.
+
+When you're playing Omicron with normal deathmatch modes and maps, the story is different.  For deathmatch on maps other than dm1-dm6, Omicron will play noticeably better if the map is modified to include waypoint information.  So let's see what's involved there.
+
+The "OBOTS.HTM" page that comes with the Omicron download describes how to create waypoint information.  Or you can download Omicron waypoint files ("routes") that other folks have created.  There's not a single big bundle of route files, but the archive of [url=http://www.gamers.org/pub/idgames2/planetquake/skorpion/routes/]Skorpion's Omibot Page[/url] has a bunch of routes you can download (don't overlook the subdirectory of [url=http://www.gamers.org/pub/idgames2/planetquake/skorpion/routes/paks/]route packs[/url]).
+
+Once you have an Omicron waypoint file that you have created or downloaded, you need to run through this process:
+[list]
+[*]Make a copy of the map file you want to modify.
+[*]Use the [url=http://eclecticmenagerie.com/jl/quake/bots/QBSP.zip]qbsp[/url] utility to shove your waypoint information into that new version of the map file, as described in the Omicron docs.
+[*]Put the modified map into the "maps" subfolder of your Omicron mod folder.
+[/list]
+
+I'm sure that this process is not real attractive to the casual bot-user. Rather than go into more detail about it here, I'll just note that it exists if you want to take advantage of it.  But if you want to play on a lot of non-standard deathmatch maps, and you don't think that Omicron learns fast enough on-the-fly, then you might want to try one of the other bot mods instead.
+[list]
+[/list]
+[h1]FBX++[/h1]
+FBX++ supports a few ways to add more map support, but the easiest is to download FrikBot waypoint files and drop them into the "maps" subfolder of your FBX++ mod folder.
+
+For enough map support to keep you busy for a while (506 maps) you should grab these things:
+
+1) Get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2]Definitive Frikbot Mappack (version 2)[/url] collected by "LightningHunter".  This package contains several folders which should be placed in your FBX++ mod folder.  It also includes a version of FrikBot (FBX+) but you should throw that away (because you are using FBX++ instead, right?).    Finally it contains a maps.cfg file, but you can throw that away too, because:
+
+2) The maps.cfg file from the map pack is too large to be used by some Quake engines.  You'll probably need to split it into around three pieces, so I've gone ahead and done that for you... [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]download the split-up files[/url] and put them in your FBX++ mod folder.  (The "Map Cycle" section below will describe what this is for.)
+
+3) And get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotWaypackV2.zip]Definitive Frikbot Waypack (version 2)[/url] also by "LightningHunter".  Follow the included instructions carefully, since this involves not only getting the waypoint files but also "fixing" some of the maps.
+[list]
+[/list]
+[h1]FBCA with nQuake[/h1]
+The version of FBCA included with nQuake already includes support for 375 maps.  Compared to the standalone downloadable version of FBCA, it is only missing support for these maps: br20m, end, oktest1, strafin3.  If those 4 missing maps [i]really bother you[/i] then you can switch over to the "FBCA without nQuake" style of doing things.
+
+Otherwise just download the  [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url] that I collected.  This contains [i]almost[/i] all of the maps that the nQuake FBCA code supports.  The folders in that package can go under "id1" or "qw" since you don't have an FBCA mod folder to put them in.
+[list]
+[/list]
+[h1]FBCA without nQuake[/h1]
+Adding maps to FBCA involves changing the mod's code, but luckily for you someone else has already done this in a big way.
+
+1) Get [url=http://eclecticmenagerie.com/jl/quake/bots/trinca-fbca-qwprogs.zip]an update to the FBCA code (build 379)[/url] by "Trinca".  This is a "qwprogs.dat" file that you should put into your FBCA mod folder, replacing the "qwprogs.dat" that was originally there.  Your new mod code now supports 379 maps.
+
+2) And get the [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url] that I collected.  This contains [i]almost[/i] all of the maps that Trinca's FBCA code supports.

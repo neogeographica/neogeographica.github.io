@@ -1,0 +1,60 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem qsmack
+[qsmack_archive_fyi]
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Special Characters</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+Quake has a whole bunch of weird looking characters that you can't ordinarily type on a regular keyboard. QSmack has a special syntax which allows you to enter these weird characters for the purpose of naming QSmack or for the purpose of specifying a name to ban. Here is graphic which shows all the Quake characters and their associated decimal value:
+</P>
+<P>
+<CENTER>
+<A HREF="[local_images_path()]qascii.gif"><IMG ALIGN=CENTER SRC="[local_images_path()]qascii.gif"></A>
+</CENTER>
+</P>
+<P>
+To enter one of these characters use either \d followed by a decimal number from 1 to 255 or use \x followed by a hexadecimal number from 1 to ff. Probably the decimal version will be easier since the graphic shows the decimal values. You don't want to use the value zero '0' since that's just the null character and it will prematurely terminate your string.
+</P>
+<P>
+For example to put cool brackets around your name, do this:
+</P>
+<BLOCKQUOTE>
+<PRE>
+player_name    \d144AutoAdmin\d145
+</PRE>
+</BLOCKQUOTE>
+<P>
+Also note that since whitespace is ignored in the config file, the only way to currently get spaces into the player's name or a name ban is with the code \d32, like this:
+</P>
+<BLOCKQUOTE>
+<PRE>
+player_name    C9\d32AutoAdmin
+</PRE>
+</BLOCKQUOTE>
+<P>
+In general, QSmack supports the following special escape sequences:
+</P>
+<BLOCKQUOTE>
+<PRE>
+\n    newline
+\r    carriage return
+\t    horizontal tab               
+\f    formfeed
+\b    backspace
+\a    bell character              
+\d<I>ddd</I> decimal value from 1 to 255
+\x<I>hh</I>  hex value from 1 to ff
+</PRE>
+</BLOCKQUOTE>
+<P>
+Any other escaped character will have no effect and the backslash is simply removed.
+</P>
+<BR/>
+[qsmack_archive_fyi]

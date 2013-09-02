@@ -1,0 +1,111 @@
+[previewimg=266028;sizeFull,inline;bot_choice.png][/previewimg]
+
+[list]
+[/list]
+[h1]Multiplayer Type[/h1]
+Let's tackle the NetQuake/QuakeWorld distinction first.
+
+Omicron and FBX++ are NetQuake mods.
+
+FBCA is a QuakeWorld mod.
+
+(Note: there is also a version of FBCA available for NetQuake. It'll take me some time to work those details into this guide; for now, just see the description for NetQuake FBCA in the "Alternatives" section near the end of the guide.)
+
+Among the original four Quake engines provided by Steam, Quake and GLQuake are the only ones that can be used as listen servers, and they are NetQuake engines.  The QuakeWorld and GLQuakeWorld programs are (surprise!) QuakeWorld clients.
+
+[quote]
+[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The engine that Steam just calls "Quake" is more usually known as "WinQuake", because it is a version of Quake rewritten to use the Windows operating system rather than DOS. Just FYI in case you see references to WinQuake elsewhere.
+
+Steam doesn't give you the original DOS Quake engine, but there's not really any reason to use the DOS version these days.
+[/quote]
+
+Modern Quake engines act as NetQuake and/or QuakeWorld clients and/or servers as described in the Quake Engines guide linked above.
+
+To make things as clear as possible, here's a table that shows which engine can be used as a listen server for which mod.  Note that for most of these engine/mod combos I've only done a very quick test, so if anyone has more experience that contradicts this table let me know.
+
+[table]
+  [tr]
+    [th]Engine[/th]
+    [th]Omicron[/th]
+    [th]FBX++[/th]
+    [th]FBCA[/th]
+  [/tr]
+  [tr]
+    [td](GL)Quake[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td](GL)QuakeWorld[/td]
+    [td][/td]
+    [td][/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]ezQuake[/td]
+    [td][/td]
+    [td][/td]
+    [td]*[/td]
+  [/tr]
+  [tr]
+    [td]FTEQW[/td]
+    [td][/td]
+    [td][/td]
+    [td]*[/td]
+  [/tr]
+  [tr]
+    [td]Fodquake[/td]
+    [td][/td]
+    [td][/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]DarkPlaces[/td]
+    [td]?[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]QuakeSpasm[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]Fitzquake Mark V[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]DirectQ[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]ProQuake[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]Qrack[/td]
+    [td]*[/td]
+    [td]*[/td]
+    [td][/td]
+  [/tr]
+[/table]
+
+(The question mark for DarkPlaces+Omicron means that when I tested Omicron with DarkPlaces builds 20121222 and 20130304, the bots were stuck and didn't move.)
+[list]
+[/list]
+[h1]Features[/h1]
+Besides the NetQuake/QuakeWorld distinction, there are a few other criteria that can affect your bot choice.
+
+First, there's just the basic fact that each bot plays a little differently.  FBX++ and FBCA have also had more work put into them over the years, compared to Omicron which was last modified in 1998.
+
+All of these bot mods support playing deathmatch with its original 3 varieties of item rules (modes), and as teamplay/duel/FFA.  Omicron also supports duel Rocket Arena, and deathmatch mode 4.  FBCA also supports Clan Arena, and a few other deathmatch modes.
+
+And finally: all these bots know how to play at least some of the original deathmatch maps, but the mods differ in how they support additional maps.  There are various time-intensive methods of creating bot support for a map, but these three mods each have ways to let you take advantage of the hard work that someone else has already done.  The "Extra Map Support" section below covers the details.

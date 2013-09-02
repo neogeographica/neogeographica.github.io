@@ -1,0 +1,22 @@
+#.choice_active_template_code#
+def choice_active_template(pagename):
+  return '<li class="active"><strong>' + pagename + '</strong></li>'
+#.choice_inactive_template_code#
+def choice_inactive_template(path,pagename):
+  return '<li><a href="' + path + '"><b>' + pagename + '</b></a></li>'
+#choice_key#
+home
+q3maps
+tools
+guides
+#choice_active#
+[choice_active_template('Home')]
+[choice_active_template('Maps')]
+[choice_active_template('Tools')]
+[choice_active_template('Guides')]
+#choice_inactive#
+[choice_inactive_template('[docs_home_path]index.html','Home')]
+[choice_inactive_template('[docs_q3maps_home_path]index.html','Maps')]
+[choice_inactive_template('[docs_tools_home_path]index.html','Tools')]
+[choice_inactive_template('[docs_guides_home_path]index.html','Guides')]
+#

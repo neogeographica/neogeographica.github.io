@@ -1,0 +1,47 @@
+[h1]Opening the console[/h1]
+By using the Quake console -- which is essentially just a large box for text entry and message display -- you can check and change the values of console variables.  Think of console variables as "settings"; in fact many of them are directly used for storing settings that you choose from the in-game menus, such as sound volume or the name of your multiplayer character.
+
+The console also allows you to execute some commands.  A command isn't necessarily setting a value that you can read back, but it does something to change the state of the game.  One of the simpler commands, for example, is "quit" to exit the game.
+
+(Note that lots of documents will just use the term "console commands" to refer to both the variables and the commands.)
+
+How you access the console depends on the current state of the game.  Some modern Quake engines will dump you directly into the console when they start up, and you have to press ESC to get the main menu.  Or vice-versa.  Most of the time however you will be seeing the "attract reel" demo on startup, or playing a game, or maybe watching a game recording.  In these situations you have to press the "console key" to open the console.  (And press the same key to close it again.)
+
+The console key is on the upper left of your keyboard.  On US keyboards this is the key that has the backtick "`" and tilde "~" characters on it.  On some international keyboards it may be the caret "^" key.  In any case it should be that key in the upper left, below the ESC key and left of the number keys.
+
+[quote]
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you are using the Qrack engine, you don't have a "console key".
+
+Instead, if you want to get to the console when you are in-game with the Qrack engine, you will need to press ESC to get the main menu, choose "Options", then choose "Go To Console".  Once you're done, press ESC to close the console.
+[/quote]
+
+The image below shows an open console while the "attract reel" is running in GLQuake.  The prompt and cursor at the bottom of the box is where you can type in settings and commands; the rest of the box shows a history of messages from the engine, and of what you have typed (in this image, nothing yet).
+
+[previewimg=237201;sizeFull,inline;console.jpg][/previewimg]
+
+[list]
+[/list]
+[h1]Why use the console?[/h1]
+For one thing, it may be faster to use the console to enter commands or change settings, compared to using the graphical menus.  If for example you're in the middle of a game and you want to fiddle with the sound volume, one way to do this is of course to press ESC to bring up the menu, navigate to the options menu, find the volume setting and drag the slider.  But alternatively you could use the console.  Open the console, type
+[code]volume[/code]
+and press Enter.  (Note that you could actually just type "vol" and press Tab, rather than typing out "volume", because the console supports tab-completion.)  This will ask Quake to show you the current value of that variable.  For example you might see this message in response:
+[code]"volume" is "0.7"[/code]
+If you want to change the value, you could type something like
+[code]volume 0.4[/code]
+and press Enter.  Then close the console and continue playing.
+
+More importantly many of the commands and console variables are just not available at all through the graphical menus, especially in older Quake engines.  For example you can use the "map" command to load a different map in singleplayer, or "changelevel" to switch to a different level while preserving your current inventory.  Are you in the middle of e1m1 and you'd rather skip straight ahead to e1m2?  Open the console, type
+[code]changelevel e1m2[/code]
+and press Enter.  There you go.
+
+The available console variables and commands differ between Quake engines, but many of the most important ones are the same.  For modern engines, the final authority is the documentation that you downloaded with the engine or that is online at the engine's website.  For the original Quake engines you can dig up the necessary info by searching the web for Quake console information (and almost all of that will still apply to modern engines).
+
+As an example of some of that original documentation, see the "Console Commands" section of the [url=http://www.inside3d.com/qip/home.shtml]Quake Info Pool[/url], or the "Console Commands List" section of this [url=http://www.quakewiki.net/archives/console/commands/quake.html]archived info from PlanetQuake[/url].
+[list]
+[/list]
+[h1]Console vs. menu[/h1]
+In the cases where a console variable is just storing the setting for some menu option, it doesn't matter whether you change it through the console or through the menu.  The results are the same.
+
+Most of the settings covered in this guide are described in terms of console variables.  Some of the modern Quake engines -- the ones with really extensive menus -- will have menu options that handle some of these settings too.  To keep things as straightforward as possible, for now I'm just going to cover the console variables.  (I might add notes about the menu options in various engines later, if I can think of a way to do that without making this guide longer and messier.)
+
+The bottom line is that if you come across a menu option that has the same effect as one of these console variables, feel free to use it.

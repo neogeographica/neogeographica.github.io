@@ -1,0 +1,41 @@
+#.navlist_code#
+def navlist():
+  if type(active_navitem) == type(list()):
+    active_navitem_key = active_navitem[0].rstrip()
+  else:
+    active_navitem_key = active_navitem.rstrip()
+  keyindex = choice_key.index(active_navitem_key)
+  result = ''
+  for i in range(len(choice_active)):
+    if i == keyindex:
+      result = result + '    ' + choice_active[i].rstrip() + '\n'
+    else:
+      result = result + '    ' + choice_inactive[i].rstrip() + '\n'
+  return result.rstrip()
+#
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+[navlist()]
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->

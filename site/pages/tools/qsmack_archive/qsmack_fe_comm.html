@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-US">
+<meta name="author" content="Joel Baxter">
+<meta name="description" content="game content and tools for Quake and Quake 3">
+<title>neogeographica</title>
+<link href="../../../css/common.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="../../../css/patches/ie_6_7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="../../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="../../../js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../../../js/common.min.js"></script>
+</head>
+<body>
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="../index.html"><img src="../../../images/common/map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="../../../images/common/neogeographica_palatino.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+    <li><a href="../../../pages/index.html"><b>Home</b></a></li>
+    <li><a href="../../../pages/q3maps/index.html"><b>Maps</b></a></li>
+    <li class="active"><strong>Tools</strong></li>
+    <li><a href="../../../pages/guides/index.html"><b>Guides</b></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->
+<!-- no popup dialog -->
+<!-- begin: main content area (#main) -->
+<div id="main">
+<div class="page_margins">
+<div class="page">
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+    <li><a href="../meshtex.html"><img src="../../../images/tools/qsmack_archive/../common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
+    <li><a href="../birdseye.html"><img src="../../../images/tools/qsmack_archive/../common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
+    <li><a href="../server_scripts.html"><img src="../../../images/tools/qsmack_archive/../common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
+    <li class=active><img src="../../../images/tools/qsmack_archive/../common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->
+<!-- begin: main column (#main_maincol) -->
+<div id="main_maincol" class="maincol" role="main">
+<div class="maincol_content clearfix">
+<p class="info_banner center">This page is part of an archive of the original QSmack website.<br/>Most external links and a few download links don't work anymore.<br/>To exit this archive, use the top/side navbars or <a href="..\qsmack.html">return to the QSmack page</a>.</p>
+<CENTER>
+<H1><FONT SIZE=+4>Q</FONT>Smack Frontend Commands</H1>
+<HR>
+<BR>
+</CENTER>
+<P>
+When the frontend is in command mode (switch between command mode and the smack modes with Ctrl-T), you can enter as a command any built-in frontend commands, any alias that the server has stuffed to you, or any alias that you have created yourself (using the &quot;<A HREF="qsmack_fe_comm.html#alias">alias</A>&quot; built-in command).  This page describes the built-in commands.  Remember that you can use TAB for command completion, and double-tap TAB to get a list of all possible command completions.  That means that a double-tap TAB at a blank entry line will show all commands.
+</P>
+<P>
+Each command description below shows the command word followed by arguments (if any).  Only the command word is to be taken literally; the arguments represent other things.  For example, the &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot; command is shown as &quot;stagename <I>yourname</I>&quot;.  If you want a name of &quot;ServerGod&quot;, then you would <B>not</B> literally type &quot;stagename yourname&quot;; instead you would of course type &quot;stagename ServerGod&quot;.  Any optional arguments are contained in square brackets.
+</P>
+<BR>
+<CENTER>
+<TABLE CELLPADDING=4>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#alias">alias</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#disconnect">disconnect</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#nslookup">nslookup</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#say">say</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#ban">ban</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#exec">exec</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#pause">pause</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#say_team">say_team</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#ban_color">ban_color</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#exit">exit</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#ping">ping</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#servername">servername</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#fire">fire</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#qsmack_connect">qsmack_connect</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#stagename">stagename</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#impulse">impulse</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#qsmack_disconnect">qsmack_disconnect</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#status">status</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#ban_name">ban_name</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#jump">jump</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#qsmack_quit">qsmack_quit</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#tell">tell</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#clear">clear</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#kick">kick</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#quake">quake</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#unalias">unalias</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#color">color</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#lockban">lockban</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#quit">quit</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#unban">unban</A></TT></TD>
+</TR>
+<TR>
+<TD><TT><A HREF="qsmack_fe_comm.html#connect">connect</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#name">name</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#reread_banfile">reread_banfile</A></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#unlockban">unlockban</A></TT></TD>
+</TR>
+<TR>
+<TD><TT></TT></TD>
+<TD><TT></TT></TD>
+<TD><TT></TT></TD>
+<TD><TT><A HREF="qsmack_fe_comm.html#who">who</A></TT></TD>
+</TR>
+</TABLE>
+</CENTER>
+<BR>
+<P>
+<TT><A NAME="alias">alias</A> [<I>command</I>] [<I>what</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Create an arbitrary alias, like the Quake console command.  If the second argument (the stuff the alias should invoke) is multiple words, enclose it in quotes.  If you use &quot;alias&quot; with no arguments, all the currently defined aliases and their values are printed.  With one argument, the value (if any) of that alias is printed.  With two arguments, it creates or replaces an alias.  See also &quot;<A HREF="qsmack_fe_comm.html#unalias">unalias</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ban">ban</A> [<I>playerid</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Ban a player.  The single argument is the playerid, as with the &quot;<A HREF="qsmack_fe_comm.html#kick">kick</A>&quot; command or the QSmack in-game ban command.  That player's IP address is banned.  With no arguments, &quot;ban&quot; displays all current ban information.  See also &quot;<A HREF="qsmack_fe_comm.html#ban_color">ban_color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_name">ban_name</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#unban">unban</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ban_color">ban_color</A> <I>shirtcolor</I> [<I>pantscolor</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Ban a color combination, e.g. &quot;crossdressing&quot;.  The color is described as in the Quake &quot;color&quot; console command.  With no arguments, &quot;ban_color&quot; displays all current ban information.  See also &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_name">ban_name</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#unban">unban</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ban_exclude">ban_exclude</A> [<I>ipaddr</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Specify an IP address (or addresses) to <B>not</B> ban.  The IP address is described as in the ban_ip command.  Any excluded IP will be safe from any IP bans.  However, it will still be affected by name and color bans.  With no arguments, &quot;ban_exclude&quot; displays all current ban information.  See also &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_color">ban_color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_name">ban_name</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#unban">unban</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ban_ip">ban_ip</A> [<I>ipaddr</I> <I>why</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Ban an IP address.  The first argument is a IP address, perhaps wildcarded, as in the <A HREF="qsmack_banfile.html">QSmack ban file</A>.  The second is a text string explaining who or why this IP address is banned.  With no arguments, &quot;ban_ip&quot; displays all current ban information.  See also &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_color">ban_color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_name">ban_name</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#unban">unban</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ban_name">ban_name</A> [<I>regex</I> <I>why</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Ban a name.  The first argument is a regular expression desribing the kinds of names to ban, as in the <A HREF="qsmack_banfile.html">QSmack ban file</A>.  The second argument describes why this name is banned.  With no arguments, &quot;ban_name&quot; displays all current ban information.  See also &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_color">ban_color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#unban">unban</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="clear">clear</A> [<I>windowname</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Clear the text from a particular output window.  The choices are &quot;server&quot;, &quot;smack&quot;, or &quot;command&quot;.  With no arguments, the text in all three windows is cleared.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="color">color</A> <I>shirtcolor</I> [<I>pantscolor</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Sets the color of the QSmack player on the Quake server.  This acts exactly like the &quot;color&quot; command at the Quake console.  The current QSmack color is displayed at the top of the frontend display, next to the current servername.  See also &quot;<A HREF="qsmack_fe_comm.html#servername">servername</A>&quot;
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="connect">connect</A> <I>qsmack_machine:port</I></TT>
+</P>
+<BLOCKQUOTE>
+Connects to a QSmack, <B>not</B> to a Quake server.  Many QSmack frontend commands will do nothing until you are connected.  The argument must include the port number; there is no assumed port.  Up to 10 QSmack frontends can be connected to any QSmack (an arbitrary number we picked).  See also &quot;<A HREF="qsmack_fe_comm.html#disconnect">disconnect</A>&quot;
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="disconnect">disconnect</A></TT>
+</P>
+<BLOCKQUOTE>
+Disconnects you from QSmack. This does <B>not</B> disconnect QSmack from the Quake server.  If you want to do that, use the &quot;<A HREF="qsmack_fe_comm.html#qsmack_disconnect">qsmack_disconnect</A>&quot; command instead.  See also &quot;<A HREF="qsmack_fe_comm.html#connect">connect</A>&quot;
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="exec">exec</A> <I>file</I></TT>
+</P>
+<BLOCKQUOTE>
+Execute the commands in &quot;file&quot; as if they had been typed in the console.  Note that most .cfg files will have many undefined commands since the QSmack frontend doesn&quot;t support all graphics oriented commands (ie. gamma, +mlook).  Also note that commands like &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, if they are in a .cfg file, must be &quot;exec&quot;ed while connected to a QSmack or else they have no effect.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="exit">exit</A></TT>
+</P>
+<BLOCKQUOTE>
+Quit out of the frontend.  Same as &quot;<A HREF="qsmack_fe_comm.html#quit">quit</A>&quot;.  This will of course disconnect you from QSmack, but it does not affect QSmack otherwise.  If for some reason you actually want to cause QSmack itself to quit, use the &quot;<A HREF="qsmack_fe_comm.html#qsmack_quit">qsmack_quit</A>&quot; command instead.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="fire">fire</A></TT>
+</P>
+<BLOCKQUOTE>
+Makes the QSmack player on the server actually do an attack.  Not much good for anything except goofing around.  Be aware that this may bring the QSmack player out of observer mode.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="impulse">impulse</A> <I>number</I></TT>
+</P>
+<BLOCKQUOTE>
+Send an impulse to the Quake server.  The number must be between 0 and 255.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="jump">jump</A></TT>
+</P>
+<BLOCKQUOTE>
+Makes the QSmack player on the server jump.  Not much good for anything except goofing around.  Be aware that this may bring the QSmack player out of observer mode.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="kick">kick</A> <I>playerid</I></TT>
+</P>
+<BLOCKQUOTE>
+Kicks the player given by playerid.  The playerid is from the status display at the top.  Typing in the playername instead of the playerid does <B>not</B> work.  Note: this is directly using the QSmack kick impulse that QSmack uses for banning, so it has the same safeguards for not accidentally kicking the wrong player.  This means that there is a small chance that the kick will not occur, if the server thinks that the player list changed just before you pressed return.  If this happens, just try the kick again (use the up arrow key to get the command back quickly).
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="lockban">lockban</A></TT>
+</P>
+<BLOCKQUOTE>
+Tells QSmack to resume its business.  See &quot;<A HREF="qsmack_fe_comm.html#unlockban">unlockban</A>&quot; for details.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="name">name</A> <I>yourname</I></TT>
+</P>
+<BLOCKQUOTE>
+Sets your personal name.  This is the name that people will see when you &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot; something.  The default name is nothing (&quot;&quot;).  This command is identical to the &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot; command.  You must be connected to use this command.  See also &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#say_team">say_team</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#tell">tell</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="nslookup">nslookup</A> <I>playerid</I></TT>
+</P>
+<BLOCKQUOTE>
+Tries to find the DNS name of the computer that player #playerid is connected from.  If you use the word &quot;all&quot; instead of a playerid, the frontend will perform an nslookup on all currently connected players.  &quot;nslookup&quot; is enabled in the Windows version of the frontend, if you have placed libtcl_qsmackfe.dll in the same directory as the frontend script; otherwise it will not work.  For non-Windows platforms you must have compiled this extension yourself, or nslookup will not be enabled.  Even if nslookup is enabled, sometimes the lookup fails.  That's DNS for ya.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="pause">pause</A></TT>
+</P>
+<BLOCKQUOTE>
+Pauses the game, if the server was set up to be pausable.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="ping">ping</A></TT>
+</P>
+<BLOCKQUOTE>
+List player ping times.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="qsmack_connect">qsmack_connect</A> <I>quakeserver:port</I></TT>
+</P>
+<BLOCKQUOTE>
+This command causes QSmack to connect to the named Quake server, disconnecting from the current Quake server if necessary.  You might need to do this one twice for it to take effect.  We're not real fired up about finding out why you sometimes need to do it twice, because we never use this command, and you probably won't either.  See also &quot;<A HREF="qsmack_fe_comm.html#qsmack_disconnect">qsmack_disconnect</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#qsmack_quit">qsmack_quit</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="qsmack_disconnect">qsmack_disconnect</A></TT>
+</P>
+<BLOCKQUOTE>
+This command causes QSmack to disconnect from the Quake server.  Are you sure that you really mean to do this command and not just &quot;<A HREF="qsmack_fe_comm.html#disconnect">disconnect</A>&quot;?  Anyway, this is currently kind of a useless command because the recent versions of QSmack automatically try to reconnect to a server when they get disconnected by any means.  If you're really desperate to remove QSmack from your server and you can't think of any other way to do it, use &quot;<A HREF="qsmack_fe_comm.html#qsmack_connect">qsmack_connect</A>&quot; and tell it to connect to some other, perhaps non-existent, server.  As you perhaps can tell, we <B>never</B> have occasion to use this command.  See also &quot;<A HREF="qsmack_fe_comm.html#qsmack_connect">qsmack_connect</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#qsmack_quit">qsmack_quit</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="qsmack_quit">qsmack_quit</A></TT>
+</P>
+<BLOCKQUOTE>
+This command causes QSmack to disconnect all frontends, disconnect from the Quake server, and quit.  Make sure you know what you're doing before you invoke this command!  Are you sure that you really mean to do this command and not just &quot;<A HREF="qsmack_fe_comm.html#quit">quit</A>&quot;?  See also &quot;<A HREF="qsmack_fe_comm.html#qsmack_connect">qsmack_connect</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#qsmack_disconnect">qsmack_disconnect</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="quake">quake</A> <I>command</I></TT>
+</P>
+<BLOCKQUOTE>
+The &quot;quake&quot; command can be used to send arbitrary commands directly to the Quake server.  QSmack simply passes the command along to the Quake server.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="quit">quit</A></TT>
+</P>
+<BLOCKQUOTE>
+Quit out of the frontend.  Same as &quot;<A HREF="qsmack_fe_comm.html#exit">exit</A>&quot;.  This will of course disconnect you from QSmack, but it does not affect QSmack otherwise.  If for some reason you actually want to cause QSmack itself to quit, use the &quot;<A HREF="qsmack_fe_comm.html#qsmack_quit">qsmack_quit</A>&quot; command instead.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="reread_banfile">reread_banfile</A></TT>
+</P>
+<BLOCKQUOTE>
+Exactly the same as doing an in-game reread_banfile command.  Not much utility to this command when you're using the frontend.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="say">say</A> <I>what</I></TT>
+</P>
+<BLOCKQUOTE>
+Say something to all players.  See also &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#say_team">say_team</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#tell">tell</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="say_team">say_team</A> <I>what</I></TT>
+</P>
+<BLOCKQUOTE>
+Say something to all players with the same pantscolor as QSmack.  See also &quot;<A HREF="qsmack_fe_comm.html#color">color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#tell">tell</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="servername">servername</A> <I>name</I></TT>
+</P>
+<BLOCKQUOTE>
+Sets the &quot;real&quot; name of the QSmack you are connected to. This is the name that people will see when they check the playerlist of the Quake server.  This command is not used very often.  If you are wanting to set the name used when you talk to people, use the &quot;<A HREF="qsmack_fe_comm.html#name">name</A>&quot; or the &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot; (they are identical) command instead.  See also &quot;<A HREF="qsmack_fe_comm.html#color">color</A>&quot;
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="stagename">stagename</A> <I>yourname</I></TT>
+</P>
+<BLOCKQUOTE>
+Sets your personal name. this is the name that people will see when you &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot; something.  The default stagename is nothing (&quot;&quot;).  This command is identical to the &quot;<A HREF="qsmack_fe_comm.html#name">name</A>&quot; command.  You must be connected to use this command.  See also &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#say_team">say_team</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#tell">tell</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="status">status</A></TT>
+</P>
+<BLOCKQUOTE>
+Prints all the information about all the players in the game.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="tell">tell</A> <I>playerid</I> <I>what</I></TT>
+</P>
+<BLOCKQUOTE>
+Say something to just one player.  This is different from the Quake console command in that you use the playerid, not the name.  Also unlike the Quake command, this will actually work if the player has special characters in his/her name.  A side effect of this robustness, though, is that each &quot;tell&quot; message will start out with 2 bogus characters.  (Not something we can fix; it's part of the Quake engine itself.)  If you're trying to &quot;tell&quot; something to yourself, maybe to communicate only with other frontends connected to this QSmack, your stagename must be the same as the servername.  See also &quot;<A HREF="qsmack_fe_comm.html#stagename">stagename</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#say">say</A>&quot; and &quot;<A HREF="qsmack_fe_comm.html#say_team">say_team</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="unalias">unalias</A> [<I>command</I>]</TT>
+</P>
+<BLOCKQUOTE>
+Delete the alias given in the first argument.  With no arguments, all the current aliases are deleted.  See also &quot;<A HREF="qsmack_fe_comm.html#alias">alias</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="unban">unban</A> <I>number</I></TT>
+</P>
+<BLOCKQUOTE>
+Removes an entry from the ban information.  Use the number next to the entry in the ban information list, which you can see by using any of the ban commands without arguments.  See also &quot;<A HREF="qsmack_fe_comm.html#ban">ban</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_color">ban_color</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_exclude">ban_exclude</A>&quot;, &quot;<A HREF="qsmack_fe_comm.html#ban_ip">ban_ip</A>&quot;, and &quot;<A HREF="qsmack_fe_comm.html#ban_name">ban_name</A>&quot;.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="unlockban">unlockban</A></TT>
+</P>
+<BLOCKQUOTE>
+QSmack sends impulses to the Quake server very frequently.  Occasionally this can get in your way, for example if you are manually trying to send a sequence of impulses to the Quake server.  To tell QSmack to stop sending impulses, use the unlockban command.  Of course, since QSmack is not communicating with the Quake server while it is &quot;unlocked&quot;, it cannot do any banning.  So when you are finished with your business, use the &quot;<A HREF="qsmack_fe_comm.html#lockban">lockban</A>&quot; command to tell QSmack that it can resume sending impulses.
+</BLOCKQUOTE>
+
+<BR>
+<P>
+<TT><A NAME="who">who</A></TT>
+</P>
+<BLOCKQUOTE>
+Lists all the people (including you) that are currently connected to the QSmack. It will list who they actually are (username@hostname) and what their stagename is as well.
+</BLOCKQUOTE>
+<BR/>
+<p class="info_banner center">This page is part of an archive of the original QSmack website.<br/>Most external links and a few download links don't work anymore.<br/>To exit this archive, use the top/side navbars or <a href="..\qsmack.html">return to the QSmack page</a>.</p>
+</div>
+<div id="ie_clearing">&nbsp;</div>
+</div>
+<!-- end: main column -->
+</div>
+</div>
+</div>
+<!-- end: main content area -->
+<!-- begin: footer (#footer) -->
+<div id="footer" role="contentinfo">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<!--<div class="sidebar_content clearfix">&nbsp;<br />&nbsp;<br />&nbsp;</div>-->
+<div class="sidebar_content clearfix"><img src="../../../images/common/bgbar_red_footer.png" style="margin-bottom: 0; margin-top: auto;"></img></div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">copyright &copy; Joel Baxter (<img class="intext" alt="contact address (nospam)" src="../../../images/common/contact.png" />) except where indicated otherwise<br />site constructed with <a href="http://www.yaml.de/">YAML</a>+<a href="http://jquery.com/">jQuery</a>+<a href="http://dev.iceburg.net/jquery/jqModal/">jqModal</a>+<a href="http://devkick.com/lab/galleria/">Galleria</a>+<a href="http://www.nthwave.net/elements/">Elements</a>+<a href="https://code.google.com/p/postmarkup/">Postmarkup</a>, hosted by <a href="https://github.com/">GitHub</a> and <a href="http://www.megapath.com/">MegaPath</a><br />have a nice day</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: footer -->
+
+<!-- full skiplink functionality in all browsers -->
+<script src="../../../js/yaml-focusfix.min.js" type="text/javascript"></script>
+</body>
+</html>

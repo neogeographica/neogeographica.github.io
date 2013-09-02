@@ -1,0 +1,3 @@
+#contentExtensions .html,.css
+#markerStart [
+#markerEnd ]

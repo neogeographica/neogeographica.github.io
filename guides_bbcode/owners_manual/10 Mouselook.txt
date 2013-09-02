@@ -1,0 +1,44 @@
+[h1]Enable[/h1]
+If you are using ezQuake, FTEQW, Fodquake, DarkPlaces, DirectQ, ProQuake, or Qrack then you already have mouselook enabled.  Good for you!
+
+If you don't have mouselook enabled, then you need this line in your autoexec.cfg file:
+[code]+mlook[/code]
+If you are using QuakeSpasm or Fitzquake Mark V, you could also just enter "+mlook" in the console, and it will be saved to your config file.  The original Quake engines however do not save it to the config file, and you must put it in autoexec.cfg.
+
+Note that you [b]do not[/b] want to enable "lookspring" or "lookstrafe".  Those behaviors get in the way of mouselook.
+[list]
+[/list]
+[h1]Invert[/h1]
+You can choose to invert the mouse Y-axis using the in-game menu, but you can also set this behavior through the "m_pitch" console variable.  Non-inverted mouse behavior is
+[code]m_pitch 0.022[/code]
+and inverted mouse is
+[code]m_pitch -0.022[/code]
+This setting is saved in the config file.
+[list]
+[/list]
+[h1]Sensitivity[/h1]
+The in-game menu gives you a way to change your mouse sensitivity, but it's faster to use the console if you want to experiment with different values.  The name of the console variable is "sensitivity".  This setting is saved in the config file.
+[list]
+[/list]
+[h1]Vertical auto-aim[/h1]
+Some engines (QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, and the original Quake engines) enable some degree of vertical auto-aim by default.  This can be really frustrating when using mouselook.  To completely disable vertical auto-aim in singleplayer, have this line in your autoexec.cfg file:
+[code]sv_aim 1[/code]
+You may see guides that recommend "sv_aim 2", and that's also fine.  All values of 1 or more will disable auto-aim.
+
+When "sv_aim" is set to 1 (or more) on a server, it will disable auto-aim for all clients.
+
+QuakeWorld servers have an "sv_aim" value of 2 by default, but if for some weird reason you are playing on a QuakeWorld server that has some degree of autoaim enabled (using an "sv_aim" value less than 1), you can opt out of that with this setting in your own configuration:
+[code]noaim 1[/code]
+(Using "noaim 1" will also slightly reduce the amount of processing the server does when you fire a projectile, although that doesn't really matter these days.)  In modern QuakeWorld clients "noaim" will be 1 by default.
+
+In NetQuake the "noaim" setting doesn't exist, so you're at the mercy of the server settings.  But in practice any well-configured NetQuake or QuakeWorld server is going to have auto-aim disabled and you won't have to worry about this in multiplayer.
+[list]
+[/list]
+[h1]Mouse "feel"[/h1]
+If you're picky about mouse input you may want to experiment with putting "-dinput" on the command line to enable DirectInput mouse processing.
+
+If you prefer mouse smoothing, you can enable it with
+[code]m_filter 1[/code]
+If your engine of choice doesn't save that to its config file, then place it in autoexec.cfg.  (Note that QuakeSpasm and DirectQ don't support this variable at all.)
+
+Different Quake engines also can provide different mouse feel.

@@ -1,0 +1,17 @@
+#sidebar_choice_key#
+meshtex
+birdseye
+server_scripts
+qsmack
+none
+#sidebar_choice_active#
+[sidebar_choice_active_template('meshtex','MeshTex GtkRadiant Plugin')]
+[sidebar_choice_active_template('birdseye','Birdseye Map Overviews')]
+[sidebar_choice_active_template('server_scripts','Gameserver Scripts')]
+[sidebar_choice_active_template('qsmack','QSmack Quake Admin')]
+#sidebar_choice_inactive#
+[sidebar_choice_inactive_template('meshtex','MeshTex GtkRadiant Plugin')]
+[sidebar_choice_inactive_template('birdseye','Birdseye Map Overviews')]
+[sidebar_choice_inactive_template('server_scripts','Gameserver Scripts')]
+[sidebar_choice_inactive_template('qsmack','QSmack Quake Admin')]
+#

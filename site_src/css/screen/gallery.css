@@ -1,0 +1,89 @@
+/* Styles used for JS-controlled in-page image gallery. */
+
+@media screen, projection
+{
+  /* Style for gallery-header area shown when JS is deactivated */
+  .gallery_noscript {
+    color: [noscript_banner_text_color];
+    background-color: [noscript_banner_bg_color];
+    margin-top: 0;
+    margin-bottom: 0;
+    width: [gallery_width()]px;
+    padding: [gallery_padding]px 0 0 0;
+    border-top-left-radius: [gallery_corner_radius]px;
+    border-top-right-radius: [gallery_corner_radius]px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  /* Base style for gallery area */
+  .gallery {
+    background-color: [gallery_bg_color];
+    margin-top: 0;
+    margin-bottom: 0;
+    width: [gallery_width()]px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: [gallery_corner_radius]px;
+    border-bottom-right-radius: [gallery_corner_radius]px;
+  }
+  .gallery_1rowthumbs {
+    height: [gallery_thumb_height(1)]px;
+  }
+  .gallery_2rowthumbs {
+    height: [gallery_thumb_height(2)]px;
+  }
+  /* Style override for gallery area when JS is activated */
+  .gallery_galleria {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-top-left-radius: [gallery_corner_radius]px;
+    border-top-right-radius: [gallery_corner_radius]px;
+  }
+  .gallery_1rowthumbs_galleria {
+    height: [gallery_height(1)]px;
+  }
+  .gallery_2rowthumbs_galleria {
+    height: [gallery_height(2)]px;
+  }
+  /**
+   * Base style for main display area
+   * Some shenanigans here to deal with any browsers that don't like
+   * zero-height divs (*cough* IE6)
+   */
+  .gallery_display {
+    font-size: 1px;
+    height: 3px;
+    margin: -3px auto 0 auto;
+    width: [gallery_main_image_width]px;
+    padding: [gallery_padding]px 0 0 0;
+  }
+  /* Style override for main display area when JS is activated */
+  .gallery_display_galleria {
+    height: [gallery_main_image_height]px;
+    margin: 0 auto;
+    padding: [gallery_padding]px 0;
+  }
+  /* Style for image thumb list */
+  .thumbnail_picker {
+    list-style: none;
+    width: [gallery_main_image_width]px;
+    margin: 0 auto;
+    padding: 0 0 [gallery_padding]px 0;
+  }
+  .thumbnail_picker li {
+    display: block;
+    width: [gallery_thumb_image_width]px;
+    height: [gallery_thumb_image_height]px;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  .thumbnail_picker li img.thumb {
+    cursor: pointer;
+    top: auto;
+    left: auto;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}

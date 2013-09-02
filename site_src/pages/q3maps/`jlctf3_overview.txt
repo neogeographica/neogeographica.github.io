@@ -1,0 +1,113 @@
+<!-- begin: item placement overview dialog -->
+<div class="jqmWindow" id="overview">
+<div id="mapview" class="jqmWindowContent overview" style="z-index: 1"><img src="../../images/q3maps/jlctf3/birdseye.jpg" class="jqmWindowContent overview" alt="" id="mapviewImg"></div>
+<div id="p0" style="position: absolute; left: 388px; top: 216px; z-index: 3; display: none"><img id="p0Img" name="16" src="[local_common_images_path()]/entity_icons/kamikaze.gif" width=25 height=25 alt="KAMI" /></div>
+<div id="p1" style="position: absolute; left: 388px; top: 216px; z-index: 4; display: none"><img id="p1Img" name="44" src="[local_common_images_path()]/entity_icons/invulnerability.gif" width=25 height=25 alt="INVUL" /></div>
+<div id="p2" style="position: absolute; left: 388px; top: 216px; z-index: 5; display: none"><img id="p2Img" name="3" src="[local_common_images_path()]/entity_icons/medkit.gif" width=25 height=25 alt="MED" /></div>
+<div id="r0" style="position: absolute; left: 258px; top: 226px; z-index: 6; display: none"><img id="r0Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="s0" style="position: absolute; left: 258px; top: 226px; z-index: 7; display: none"><img id="s0Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s1" style="position: absolute; left: 524px; top: 229px; z-index: 8; display: none"><img id="s1Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r1" style="position: absolute; left: 524px; top: 229px; z-index: 9; display: none"><img id="r1Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s2" style="position: absolute; left: 160px; top: 305px; z-index: 10; display: none"><img id="s2Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s3" style="position: absolute; left: 622px; top: 308px; z-index: 11; display: none"><img id="s3Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="p3" style="position: absolute; left: 194px; top: 232px; z-index: 12; display: none"><img id="p3Img" name="60" src="[local_common_images_path()]/entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="w0" style="position: absolute; left: 647px; top: 289px; z-index: 13; display: none"><img id="w0Img" name="60" src="[local_common_images_path()]/entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="a0" style="position: absolute; left: 581px; top: 232px; z-index: 14; display: none"><img id="a0Img" name="3" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="w1" style="position: absolute; left: 647px; top: 289px; z-index: 15; display: none"><img id="w1Img" name="3" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w2" style="position: absolute; left: 250px; top: 387px; z-index: 16; display: none"><img id="w2Img" name="60" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="p4" style="position: absolute; left: 581px; top: 232px; z-index: 17; display: none"><img id="p4Img" name="60" src="[local_common_images_path()]/entity_icons/ammo_regen.gif" width=25 height=25 alt="AMMO" /></div>
+<div id="w3" style="position: absolute; left: 525px; top: 387px; z-index: 18; display: none"><img id="w3Img" name="60" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w4" style="position: absolute; left: 128px; top: 289px; z-index: 19; display: none"><img id="w4Img" name="60" src="[local_common_images_path()]/entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="w5" style="position: absolute; left: 524px; top: 278px; z-index: 20; display: none"><img id="w5Img" name="60" src="[local_common_images_path()]/entity_icons/chaingun128.gif" width=25 height=25 alt="CG" /></div>
+<div id="w6" style="position: absolute; left: 524px; top: 278px; z-index: 21; display: none"><img id="w6Img" name="2" src="[local_common_images_path()]/entity_icons/iconw_railgun.gif" width=25 height=25 alt="RG" /></div>
+<div id="w7" style="position: absolute; left: 446px; top: 291px; z-index: 22; display: none"><img id="w7Img" name="63" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="w8" style="position: absolute; left: 524px; top: 278px; z-index: 23; display: none"><img id="w8Img" name="1" src="[local_common_images_path()]/entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="w9" style="position: absolute; left: 251px; top: 278px; z-index: 24; display: none"><img id="w9Img" name="60" src="[local_common_images_path()]/entity_icons/chaingun128.gif" width=25 height=25 alt="CG" /></div>
+<div id="w10" style="position: absolute; left: 251px; top: 278px; z-index: 25; display: none"><img id="w10Img" name="2" src="[local_common_images_path()]/entity_icons/iconw_railgun.gif" width=25 height=25 alt="RG" /></div>
+<div id="w11" style="position: absolute; left: 251px; top: 278px; z-index: 26; display: none"><img id="w11Img" name="1" src="[local_common_images_path()]/entity_icons/iconw_plasma.gif" width=25 height=25 alt="PG" /></div>
+<div id="w12" style="position: absolute; left: 128px; top: 289px; z-index: 27; display: none"><img id="w12Img" name="3" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="a1" style="position: absolute; left: 194px; top: 232px; z-index: 28; display: none"><img id="a1Img" name="3" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="w13" style="position: absolute; left: 329px; top: 291px; z-index: 29; display: none"><img id="w13Img" name="63" src="[local_common_images_path()]/entity_icons/iconw_shotgun.gif" width=25 height=25 alt="SG" /></div>
+<div id="r2" style="position: absolute; left: 426px; top: 295px; z-index: 30; display: none"><img id="r2Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s4" style="position: absolute; left: 626px; top: 226px; z-index: 31; display: none"><img id="s4Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s5" style="position: absolute; left: 529px; top: 325px; z-index: 32; display: none"><img id="s5Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r3" style="position: absolute; left: 252px; top: 355px; z-index: 33; display: none"><img id="r3Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r4" style="position: absolute; left: 530px; top: 358px; z-index: 34; display: none"><img id="r4Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r5" style="position: absolute; left: 156px; top: 223px; z-index: 35; display: none"><img id="r5Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r6" style="position: absolute; left: 626px; top: 226px; z-index: 36; display: none"><img id="r6Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="r7" style="position: absolute; left: 356px; top: 292px; z-index: 37; display: none"><img id="r7Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="r8" style="position: absolute; left: 161px; top: 347px; z-index: 38; display: none"><img id="r8Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="s6" style="position: absolute; left: 156px; top: 223px; z-index: 39; display: none"><img id="s6Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s7" style="position: absolute; left: 253px; top: 322px; z-index: 40; display: none"><img id="s7Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="r9" style="position: absolute; left: 621px; top: 350px; z-index: 41; display: none"><img id="r9Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="a2" style="position: absolute; left: 338px; top: 271px; z-index: 42; display: none"><img id="a2Img" name="60" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="a3" style="position: absolute; left: 338px; top: 271px; z-index: 43; display: none"><img id="a3Img" name="2" src="[local_common_images_path()]/entity_icons/iconr_green.gif" width=25 height=25 alt="GA" /></div>
+<div id="w14" style="position: absolute; left: 564px; top: 353px; z-index: 44; display: none"><img id="w14Img" name="63" src="[local_common_images_path()]/entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="a4" style="position: absolute; left: 437px; top: 271px; z-index: 45; display: none"><img id="a4Img" name="2" src="[local_common_images_path()]/entity_icons/iconr_green.gif" width=25 height=25 alt="GA" /></div>
+<div id="p5" style="position: absolute; left: 538px; top: 346px; z-index: 46; display: none"><img id="p5Img" name="60" src="[local_common_images_path()]/entity_icons/doubler.gif" width=25 height=25 alt="DBLR" /></div>
+<div id="a5" style="position: absolute; left: 338px; top: 271px; z-index: 47; display: none"><img id="a5Img" name="1" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="w15" style="position: absolute; left: 211px; top: 353px; z-index: 48; display: none"><img id="w15Img" name="63" src="[local_common_images_path()]/entity_icons/iconw_rocket.gif" width=25 height=25 alt="RL" /></div>
+<div id="p6" style="position: absolute; left: 237px; top: 346px; z-index: 49; display: none"><img id="p6Img" name="60" src="[local_common_images_path()]/entity_icons/doubler.gif" width=25 height=25 alt="DBLR" /></div>
+<div id="a6" style="position: absolute; left: 437px; top: 271px; z-index: 50; display: none"><img id="a6Img" name="1" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="a7" style="position: absolute; left: 100px; top: 50px; z-index: 51; display: none; background-color: white"><img src="[local_common_images_path()]/entity_icons/transpixel.gif" width=1 height=1 alt="" id="a7Img" name="1">Only 1 of the 2 center YAs spawns at a time.<img src="[local_common_images_path()]/entity_icons/transpixel.gif" width=1 height=1 alt="" /></div>
+<div id="a8" style="position: absolute; left: 437px; top: 271px; z-index: 52; display: none"><img id="a8Img" name="60" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="s8" style="position: absolute; left: 593px; top: 343px; z-index: 53; display: none"><img id="s8Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s9" style="position: absolute; left: 551px; top: 326px; z-index: 54; display: none"><img id="s9Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r10" style="position: absolute; left: 390px; top: 260px; z-index: 55; display: none"><img id="r10Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="s10" style="position: absolute; left: 666px; top: 348px; z-index: 56; display: none"><img id="s10Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s11" style="position: absolute; left: 116px; top: 345px; z-index: 57; display: none"><img id="s11Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s12" style="position: absolute; left: 231px; top: 323px; z-index: 58; display: none"><img id="s12Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s13" style="position: absolute; left: 189px; top: 340px; z-index: 59; display: none"><img id="s13Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="r11" style="position: absolute; left: 393px; top: 263px; z-index: 60; display: none"><img id="r11Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="w16" style="position: absolute; left: 388px; top: 217px; z-index: 61; display: none"><img id="w16Img" name="63" src="[local_common_images_path()]/entity_icons/iconw_lightning.gif" width=25 height=25 alt="LG" /></div>
+<div id="s14" style="position: absolute; left: 170px; top: 374px; z-index: 62; display: none"><img id="s14Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s15" style="position: absolute; left: 612px; top: 377px; z-index: 63; display: none"><img id="s15Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s16" style="position: absolute; left: 630px; top: 210px; z-index: 64; display: none"><img id="s16Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="f0" style="position: absolute; left: 388px; top: 261px; z-index: 65; display: none"><img id="f0Img" name="32" src="[local_common_images_path()]/entity_icons/iconf_neutral1.gif" width=25 height=25 alt="GEN" /></div>
+<div id="r12" style="position: absolute; left: 559px; top: 210px; z-index: 66; display: none"><img id="r12Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s17" style="position: absolute; left: 152px; top: 207px; z-index: 67; display: none"><img id="s17Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="r13" style="position: absolute; left: 223px; top: 207px; z-index: 68; display: none"><img id="r13Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="p7" style="position: absolute; left: 614px; top: 250px; z-index: 69; display: none"><img id="p7Img" name="1" src="[local_common_images_path()]/entity_icons/regen.gif" width=25 height=25 alt="REGEN" /></div>
+<div id="p8" style="position: absolute; left: 388px; top: 261px; z-index: 70; display: none"><img id="p8Img" name="23" src="[local_common_images_path()]/entity_icons/quad.gif" width=25 height=25 alt="QUAD" /></div>
+<div id="p9" style="position: absolute; left: 161px; top: 250px; z-index: 71; display: none"><img id="p9Img" name="1" src="[local_common_images_path()]/entity_icons/regen.gif" width=25 height=25 alt="REGEN" /></div>
+<div id="w17" style="position: absolute; left: 161px; top: 250px; z-index: 72; display: none"><img id="w17Img" name="2" src="[local_common_images_path()]/entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="p10" style="position: absolute; left: 614px; top: 250px; z-index: 73; display: none"><img id="p10Img" name="60" src="[local_common_images_path()]/entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="f1" style="position: absolute; left: 388px; top: 261px; z-index: 74; display: none"><img id="f1Img" name="8" src="[local_common_images_path()]/entity_icons/iconf_neutral1.gif" width=25 height=25 alt="NEUTFLAG" /></div>
+<div id="w18" style="position: absolute; left: 646px; top: 246px; z-index: 75; display: none"><img id="w18Img" name="61" src="[local_common_images_path()]/entity_icons/iconw_grenade.gif" width=25 height=25 alt="GL" /></div>
+<div id="w19" style="position: absolute; left: 129px; top: 246px; z-index: 76; display: none"><img id="w19Img" name="61" src="[local_common_images_path()]/entity_icons/iconw_grenade.gif" width=25 height=25 alt="GL" /></div>
+<div id="a9" style="position: absolute; left: 159px; top: 342px; z-index: 77; display: none"><img id="a9Img" name="63" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="w20" style="position: absolute; left: 614px; top: 250px; z-index: 78; display: none"><img id="w20Img" name="2" src="[local_common_images_path()]/entity_icons/nailgun128.gif" width=25 height=25 alt="NG" /></div>
+<div id="a10" style="position: absolute; left: 616px; top: 342px; z-index: 79; display: none"><img id="a10Img" name="63" src="[local_common_images_path()]/entity_icons/iconr_yellow.gif" width=25 height=25 alt="YA" /></div>
+<div id="p11" style="position: absolute; left: 161px; top: 250px; z-index: 80; display: none"><img id="p11Img" name="60" src="[local_common_images_path()]/entity_icons/guard.gif" width=25 height=25 alt="GUARD" /></div>
+<div id="r14" style="position: absolute; left: 173px; top: 280px; z-index: 81; display: none"><img id="r14Img" name="63" src="[local_common_images_path()]/entity_icons/b_respawn.gif" width=21 height=21 alt="RESPAWNBLUE" /></div>
+<div id="s18" style="position: absolute; left: 609px; top: 283px; z-index: 82; display: none"><img id="s18Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="r15" style="position: absolute; left: 609px; top: 283px; z-index: 83; display: none"><img id="r15Img" name="63" src="[local_common_images_path()]/entity_icons/r_respawn.gif" width=15 height=15 alt="RESPAWNRED" /></div>
+<div id="s19" style="position: absolute; left: 161px; top: 328px; z-index: 84; display: none"><img id="s19Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s20" style="position: absolute; left: 121px; top: 283px; z-index: 85; display: none"><img id="s20Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s21" style="position: absolute; left: 173px; top: 280px; z-index: 86; display: none"><img id="s21Img" name="63" src="[local_common_images_path()]/entity_icons/b_spawn.gif" width=21 height=21 alt="SPAWNBLUE" /></div>
+<div id="s22" style="position: absolute; left: 621px; top: 331px; z-index: 87; display: none"><img id="s22Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="s23" style="position: absolute; left: 661px; top: 286px; z-index: 88; display: none"><img id="s23Img" name="63" src="[local_common_images_path()]/entity_icons/r_spawn.gif" width=15 height=15 alt="SPAWNRED" /></div>
+<div id="f2" style="position: absolute; left: 569px; top: 316px; z-index: 89; display: none"><img id="f2Img" name="48" src="[local_common_images_path()]/entity_icons/iconf_redflag.gif" width=50 height=50 alt="REDBASE" /></div>
+<div id="f3" style="position: absolute; left: 133px; top: 316px; z-index: 90; display: none"><img id="f3Img" name="48" src="[local_common_images_path()]/entity_icons/iconf_blueflag.gif" width=50 height=50 alt="BLUEBASE" /></div>
+<div id="f4" style="position: absolute; left: 569px; top: 316px; z-index: 91; display: none"><img id="f4Img" name="15" src="[local_common_images_path()]/entity_icons/iconf_redflag.gif" width=50 height=50 alt="REDFLAG" /></div>
+<div id="f5" style="position: absolute; left: 133px; top: 316px; z-index: 92; display: none"><img id="f5Img" name="15" src="[local_common_images_path()]/entity_icons/iconf_blueflag.gif" width=50 height=50 alt="BLUEFLAG" /></div>
+<div id="iconSel" class="jqmWindowContent overviewForm">
+<form class="center jqmForm" id="iconSelForm" action="">
+<input type="checkbox" id="mapCheck" name="map" onClick="toggleMap()" checked />Map
+<input type="checkbox" id="armorCheck" name="armor" onClick="toggleType('#a')" />Armor
+<input type="checkbox" id="weaponsCheck" name="weapons" onClick="toggleType('#w')" />Weapons
+<input type="checkbox" id="powerupsCheck" name="powerups" onClick="toggleType('#p')" />Powerups
+<input type="checkbox" id="spawnsCheck" name="spawns" onClick="toggleType('#s')" />Spawns
+<input type="checkbox" id="respawnsCheck" name="respawns" onClick="toggleType('#r')" />Respawns<br />
+<input type="radio" id="setGametypesRadio0" name="setGametypes" onClick="setGametype(0)" checked />CTF
+<input type="radio" id="setGametypesRadio1" name="setGametypes" onClick="setGametype(1)" />CCTF
+<input type="radio" id="setGametypesRadio2" name="setGametypes" onClick="setGametype(2)" />TA CTF
+<input type="radio" id="setGametypesRadio3" name="setGametypes" onClick="setGametype(3)" />TA Oneflag
+<input type="radio" id="setGametypesRadio4" name="setGametypes" onClick="setGametype(4)" />TA Overload
+<input type="radio" id="setGametypesRadio5" name="setGametypes" onClick="setGametype(5)" />TA Harvester<br />
+<br />
+<input type="submit" class="jqmClose" value="Exit" />
+</form>
+</div>
+</div>
+<!-- end: item placement overview dialog -->

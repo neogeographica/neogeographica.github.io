@@ -1,0 +1,14 @@
+Forum questions about Quake configuration have covered a lot of different ground in the past, so there's a lot of different topics to cover.
+
+If you're not familiar with the available varieties of Quake engines -- or even what "Quake engines" means -- then you might want to take a look at this other guide first: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
+When you see a reference to ezQuake, FTEQW, Fodquake, DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, or Qrack... all those odd words are names of other programs that can be used to play Quake.  Read the Quake Engines guide if you want to learn more about them.
+
+As for [i]this[/i] guide, we lead off with a necessary warning about Windows issues and then go straight to a quickstart... an efficient way to start Quaking.  If you're new to Quake then you should probably just follow the quickstart, and come back to the rest of the guide later as a reference if you have problems.
+
+The next few sections get into general descriptions of how the Quake menus, config file, console, and command line work.  If you're familiar with those ideas then you could skim or skip those sections.
+
+The middle sections, from "Mouselook" through "Limits", describe how to deal with some of the more fundamental bits of Quake configuration that aren't always easily handled through the menus.
+
+The sections near the end contain cut-and-paste-able examples of command lines and config files for each Quake engine.  But keep in mind that these examples are tuned specifically for my own tastes.  You may want to do something different!
+
+Finally the "More Info" section is a link dump in case you're not tired of reading about Quake.

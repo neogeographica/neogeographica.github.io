@@ -1,0 +1,16 @@
+The web is full of Quake stuff old and new.  I can't try to be comprehensive but here's a few good links.  First here are the two sets of console and command-line documentation already referenced throughout this guide:
+[list]
+[*][url=http://www.inside3d.com/qip/home.shtml]Quake Info Pool[/url]
+[*][url=http://www.quakewiki.net/archives/console/commands/quake.html]archived  info from PlanetQuake[/url]
+[/list]
+Also some general Quake information:
+[list]
+[*][url=https://www.quaddicted.com/]quaddicted.com[/url]
+[*][url=http://quakeone.com/]quakeone.com[/url]
+[*][url=http://www.quakeworld.nu/]quakeworld.nu[/url]
+[*][url=http://quakewiki.org/]quakewiki.org[/url] (focus on mapping, modding, and engine coding)
+[*][url=http://www.quakewiki.net/]quakewiki.net[/url] (focus on archiving old Quake pages)
+[*][url=http://wiki.quakeworld.nu/]QuakeWorld wiki[/url]
+[*][url=http://www.celephais.net/board/]func_msgboard[/url]
+[/list]
+And you can use your config and command-line skillz to investigate new maps and mods, as described in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=166554615

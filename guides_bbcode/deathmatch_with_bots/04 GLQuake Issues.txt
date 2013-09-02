@@ -1,0 +1,3 @@
+The original GLQuake engine has a bug that can occur when switching maps.  If the new map uses a texture that has the same name as one of the current map's textures, but has different pixel content, then GLQuake will crash with a "GL_LoadTexture: cache mismatch" error dialog.
+
+This bug doesn't have anything to do with bots specifically, and it doesn't happen often.  But it becomes a little more likely to happen if you are randomly playing through a lot of maps.  If you absolutely can't deal with the occasional crash in a sequence of bot matches, then use some other Quake engine.
