@@ -17,7 +17,7 @@ def popup_image_half_width():
 #small_video_width 320
 #.small_video_height_code#
 def small_video_height():
-  return str(((int(small_video_width)*9)/16) + 10)
+  return str((int(small_video_width)*9)/16)
 #overview_height 600
 #gallery_main_image_width 640
 #gallery_main_image_height 400
