@@ -44,7 +44,7 @@ def ie_6_main_margin_right():
 #guide_thumb_half_gutter 4
 #.guide_full_video_height_code#
 def guide_full_video_height():
-  return str(((int(guide_full_image_width)*9)/16) + 25)
+  return str((int(guide_full_image_width)*9)/16)
 #.guide_max_page_width_code#
 def guide_max_page_width():
   return str(int(guide_full_image_width) + int(right_content_margin) + int(sidebar_image_width))
