@@ -9,7 +9,8 @@ this_dir = sys.path[0]
 guides_src_dir = os.path.join(this_dir, 'guides_bbcode')
 guides_dest_dir = os.path.join(this_dir, 'guides_html')
 src_dir = os.path.join(this_dir, 'site_src')
-dest_dir = os.path.join(this_dir, 'site')
+dest_subdir = 'site'
+dest_dir = os.path.join(this_dir, dest_subdir)
 guides_ref_file = os.path.join(src_dir, 'pages', 'guides',
                                '`guide_sections_dir.txt')
 
@@ -352,3 +353,10 @@ if html:
         min_refs(dest_dir, 'pages', 'html', css_href_pattern, css_min_href_fun)
     if minimize_js:
         min_refs(dest_dir, 'pages', 'html', js_src_pattern, js_min_src_fun)
+    # Copy munged index.html to top level.
+    in_path = os.path.join(dest_dir, 'pages', 'index.html')
+    with open(in_path, 'r') as in_fd:
+        orig_index = in_fd.read()
+    top_index = orig_index.replace('="../', '="%s/' % dest_subdir)
+    with open('index.html', 'w') as out_fd:
+        out_fd.write(top_index)
