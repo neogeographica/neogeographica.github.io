@@ -7,13 +7,16 @@ def local_image(img,imgclass):
 #.local_id_image_code#
 def local_id_image(img,imgid,imgclass):
   return '<img src="' + local_images_path() + img + '" id="' + imgid + '" class="' + imgclass + '" />'
-#.listitem_local_download_code#
-def listitem_local_download(file,name,comment=None):
+#.listitem_download_code#
+def listitem_download(url,name,comment=None):
   if comment is None:
     comment_suffix = ''
   else:
     comment_suffix = ' ' + comment
-  return '<li><a href="' + local_downloads_path() + file + '"><b>' + name + '</b></a>' + comment_suffix + '</li>'
+  return '<li><a href="' + url + '"><b>' + name + '</b></a>' + comment_suffix + '</li>'
+#.listitem_local_download_code#
+def listitem_local_download(file,name,comment=None):
+  return listitem_download(local_downloads_path() + file, name, comment)
 #gallery_noscript#
 <p class="gallery_noscript center noprint"><em>(activate JavaScript for in-page image gallery)</em></p>
 #gallery_preamble#
