@@ -36,10 +36,6 @@ css_min_href_fun = lambda match: ''.join(['href="', match.group(1), '.min.css"']
 js_src_pattern = re.compile('src="([^h][^"]*/[^/"]*)\.js"')
 js_min_src_fun = lambda match: ''.join(['src="', match.group(1), '.min.js"'])
 
-# Parameters for embedded YouTube video.
-yt_params = ('showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&'
-             'showsearch=0&wmode=direct')
-
 # Replacements for contents of links to Steam Guides.
 link_xlate = {
     'http://steamcommunity.com/sharedfiles/filedetails/?id=113166739' :
@@ -112,9 +108,7 @@ class PreviewYouTubeTag(postmarkup.TagBase):
         self.skip_contents(parser)
         [video_id, video_props_list] = self.params.split(';')
         video_props = 'guideVid ' + video_props_list.replace(',', ' ')
-        return (u'<iframe class="%s" src="http://www.youtube.com/embed/%s?%s" '
-                'frameborder="0" allowfullscreen="1"></iframe>' %
-                (video_props, video_id, yt_params))
+        return (u'[controls_video(\'%s\',\'%s\')]' % (video_id, video_props))
 
 # How to stick a bullet point in front of an element's content.
 class BulletedTag(postmarkup.SimpleTag):
