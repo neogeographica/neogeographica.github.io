@@ -253,7 +253,10 @@ def copy_files(src_dir, dest_dir, sub_dir, file_ext, xform=None, dir_func=None):
             return
     else:
         # If not in-place, nuke the destination directory tree.
-        shutil.rmtree(os.path.join(dest_dir, sub_dir), ignore_errors=True)
+        dest_tree = os.path.join(dest_dir, sub_dir)
+        if dest_tree.endswith("/."): # Make OS X happy with "." subdir.
+            dest_tree = dest_tree[:-2]
+        shutil.rmtree(dest_tree, ignore_errors=True)
     # Traverse the source directory tree.
     dot_ext = '.' + file_ext
     with visit_dir(src_dir):
