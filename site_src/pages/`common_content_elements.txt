@@ -12,7 +12,7 @@ def controls_video(ytid,vidclass):
   return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct" frameborder="0" allowfullscreen="1"></iframe>'
 #.nocontrols_video_code#
 def nocontrols_video(ytid,vidclass):
-  return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?vq=medium&showinfo=0&autohide=1&fs=0&modestbranding=1&rel=0&controls=0&autoplay=1&loop=1&playlist=EeJABA8N-bM" frameborder="0" allowfullscreen="0"></iframe>'
+  return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?vq=medium&showinfo=0&autohide=1&fs=0&modestbranding=1&rel=0&controls=0&autoplay=1&loop=1&playlist=' + ytid + '" frameborder="0" allowfullscreen="0"></iframe>'
 #.listitem_download_code#
 def listitem_download(url,name,comment=None):
   if comment is None:
