@@ -1,0 +1,11 @@
+#sidebar_choice_key#
+fbxpp
+moremaps
+none
+#sidebar_choice_active#
+[sidebar_choice_active_template('fbxpp','FrikBot X++ (Quake)')]
+[sidebar_choice_active_template('moremaps','More Maps (Quake 3)')]
+#sidebar_choice_inactive#
+[sidebar_choice_inactive_template('fbxpp','FrikBot X++ (Quake)')]
+[sidebar_choice_inactive_template('moremaps','More Maps (Quake 3)')]
+#

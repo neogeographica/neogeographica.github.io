@@ -22,5 +22,6 @@ def local_downloads_path():
 #scripts_path [pathToTop]js/
 #docs_home_path [pathToTop]pages/
 #docs_q3maps_home_path [pathToTop]pages/q3maps/
+#docs_mods_home_path [pathToTop]pages/mods/
 #docs_tools_home_path [pathToTop]pages/tools/
 #docs_guides_home_path [pathToTop]pages/guides/

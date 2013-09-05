@@ -60,8 +60,8 @@
   <ul>
     <li><a href="../../pages/index.html"><b>Home</b></a></li>
     <li><a href="../../pages/q3maps/index.html"><b>Maps</b></a></li>
-    <li><a href="../../pages/mods/index.html"><b>Mods</b></a></li>
-    <li class="active"><strong>Tools</strong></li>
+    <li class="active"><strong>Mods</strong></li>
+    <li><a href="../../pages/tools/index.html"><b>Tools</b></a></li>
     <li><a href="../../pages/guides/index.html"><b>Guides</b></a></li>
   </ul>
 </div>
@@ -81,10 +81,8 @@
 <div class="sidebar_content clearfix">
 <div class="navthumbs">
   <ul>
-    <li><a href="meshtex.html"><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
-    <li class=active><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></li>
-    <li><a href="server_scripts.html"><img src="../../images/tools/common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
-    <li><a href="qsmack.html"><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></a></li>
+    <li><a href="fbxpp.html"><img src="../../images/mods/common/fbxpp_nav_thumb.png" /><strong>FrikBot X++ (Quake)</strong></a></li>
+    <li class=active><img src="../../images/mods/common/moremaps_nav_thumb.png" /><strong>More Maps (Quake 3)</strong></li>
   </ul>
 </div>
 </div>
@@ -93,15 +91,21 @@
 <!-- begin: main column (#main_maincol) -->
 <div id="main_maincol" class="maincol" role="main">
 <div class="maincol_content clearfix">
-<h1>Birdseye Map Overviews</h1>
+<h1>More Maps</h1>
   <ul>
-  	<li>Quake 3 map interactive overview generator</li>
-    <li>down for retooling</li>
+  	<li>Skirmish map selection UI fix for Quake 3</li>
+    <li>support more maps per screen and more total maps</li>
+    <li>released July 2000 (original), September 2013 (recompiled for current Q3 version)</li>
   </ul>
-  <p>Birdseye is/was a combination Quake 3 mod and Perl script to generate the interactive map overviews seen in the Threewave Q3CTF manual and on some of the maps pages of this site.</p>
-  <p>Authoring web pages has changed a lot since Birdseye was originally written &mdash; for example, there was no jQuery back then. Equally importantly, my tolerance for releasing spaghetti code and documentation has decreased since then too (and hopefully I'm better now at not doing that). Birdseye was a big ball of impenetrability to begin with, and the current hacked-up version that I've used for the pages here is even worse, so I've decided to just take the public download offline while I think of what to do with it. I have big ambitions for a rewrite but my day job does kind of hoover up all of my programming juice at the moment.</p>
-  <p>If by any chance you'd like an overview page generated for a Quake 3 map, drop me a line.</p>
-
+  <p>It's usually almost adorable how chunky the Quake 3 UI is, but if you try to use its &quot;Skirmish&quot; menu to play on a map against bots then it's just bad. That menu only displays 4 maps per screen and 64 total maps per gametype. Fortunately it was pretty straightforward to create a tiny UI mod that increases that to 12 maps per screen and 256 maps per gametype. (And honestly with RAM sizes these days, maps-per-gametype could have been much larger still... the old README file uses 128 MB of RAM as an example, which is cute.)</p>
+  <p>If you're using the <a href="http://www.playmorepromode.org/">CPMA mod</a> then FYI that mod already has incorporated these changes, but otherwise a lightweight mod to improve this part of the UI may still be useful for you. I've recompiled the changes with the final Quake 3 game code to bring it up to date.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/mods/moremaps/moremaps.png" /></div>
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="http://files.neogeographica.com/downloads/mods/moremaps/moremaps.zip"><b>More Maps</b></a></li>
+    <li><a href="http://files.neogeographica.com/downloads/mods/moremaps/moremaps.txt"><b>readme</b></a> (included in mod package)</li>
+  </ul>
+  
 </div>
 <div id="ie_clearing">&nbsp;</div>
 </div>
