@@ -1,8 +1,8 @@
 <body>
 [optional_skiplinks]
+[optional_popup]
 [banner]
 [navigation]
-[optional_popup]
 [main]
 [footer]
 [optional_skiplinks_support]

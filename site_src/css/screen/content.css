@@ -370,6 +370,7 @@
   .jqmWindow {
     position: fixed;
     width: 100%;
+    margin-top: [top_content_margin]px;
     margin-left: -[popup_image_half_width()]px;
     margin-right: auto;
     left: 50%;
