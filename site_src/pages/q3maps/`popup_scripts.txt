@@ -1,0 +1,2 @@
+<script type="text/javascript" src="[scripts_path]jqModal.js"></script>
+<script type="text/javascript" src="[scripts_path]popup.js"></script>

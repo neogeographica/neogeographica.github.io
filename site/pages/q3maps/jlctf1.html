@@ -18,6 +18,9 @@
 <script type="text/javascript" src="../../js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="../../js/common.min.js"></script>
 <script type="text/javascript" src="../../js/gallery.min.js"></script>
+<script type="text/javascript" src="../../js/jqModal.min.js"></script>
+<script type="text/javascript" src="../../js/popup.min.js"></script>
+
 </head>
 <body>
 <!-- begin: skip link navigation -->
@@ -25,7 +28,10 @@
   <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
 </ul>
 <!-- end: skip link navigation -->
-<!-- no popup dialog -->
+<!-- begin: image popups -->
+<div class="jqmWindow" id="popup1"><img src="../../images/q3maps/jlctf1/elevations_2.gif" class="jqmClose jqmWindowContent" /></div>
+<!-- end: image popups -->
+
 <!-- begin: banner (#header) -->
 <div id="header" role="banner">
 <div class="page_margins">
@@ -125,7 +131,7 @@
   <h2>Overview</h2>
   <p>Each team has an underground base area, with the flag, and a tower that overlooks the center.  The center contains a multilevel dome and surrounding path.  Underground halls connect the dome and base; from the tower you can drop down to the path, and then either drop down again into the underground or else rocketjump into the dome.</p>
   <p>Since much of the map is beneath a textured surface (the top/outer &quot;ground&quot; layer), it's impossible to get a good view of the layout by flying out of the map and taking a screenshot.  For what it's worth, here's a bird's-eye view that shows the center section and towers... a lot is still hidden in this screenshot, but I just like the picture.  More rambling about the layout is in the Notes section below.</p>
-  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/q3maps/jlctf1/birdseye.png" /></div>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/q3maps/jlctf1/birdseye.png" style="width:640px"/></div>
   <h2>Notes</h2>
   <h3>&bull; Genesis</h3>
   <p>This was my first piece of content creation for any game, and a moderately early release as Q3CTF maps in general go.  Under those conditions I think it was a pretty good map.  But from a modern standpoint this is certainly not one of the great Q3CTF maps; it's possible to deviate <em>too much</em> from the formula.  As a first map, though, I'm happy with it.  Its technical aspects could be improved in many ways, but probably the only thing that embarrasses me about it is the chattiness of the readme.</p>
@@ -133,7 +139,7 @@
   <h3>&bull; Design</h3>
   <p>Aside from the urge to commit felony gimmickry, I didn't have much of a plan when I started the map.  I began with the red flag platform, doing complete geometry+texturing+lighting as I went along.  Dropping in the first spotlights around the unfinished platform and loading it up in-game for the first time... that was a thrill!  I was happy just puttering around in the flagroom for quite a while, but I eventually decided I'd better get on with the rest of the map, thinking that I could adapt some Team Fortress &quot;2fort&quot; flavor to a Q3CTF style.</p>
   <p>The resulting layout is nice and weird.  At the very least I avoided the &quot;figure eight&quot; clich&eacute; in symmetrical CTF design.  Here's my best attempt at drawing the topology:</p>
-  <div class="diagram center floatbox" style="width:484px"><img src="../../images/q3maps/jlctf1/layout.png" /></div>
+  <div class="diagram center floatbox" style="width:484px"><img src="../../images/q3maps/jlctf1/layout.png" style="width:484px"/></div>
   <p>It almost looks like a guiding plan was at work!</p>
   <ul>
     <li>strong one-way cycle in areas near the flagroom</li>
@@ -164,8 +170,10 @@
   <p>The shader for the topmost layer is slightly different: it doesn't have the blendFunc, so it acts as a visual backstop.  Viewed from above (through the trapdoor), all these surfaces are completely transparent.  From below, each one dims the area above it a little bit more, until total blackness is reached.  Since the overall lighting in the top of the room is already dim, the effect is pretty good for a hack.</p>
   <h3>&bull; Useless Trivia</h3>
   <p>A few FPS-standard lava pits make an appearance in this map.  It offended me that they were basically just open-topped stone boxes filled with lava... how does that setup happen?  So in every lava pit, at least one of the sidewalls opens at the bottom into a lava-filled crawlspace, to explain where the stuff is coming from.  You'll never see this while playing the map unless you die in the lava and your remains drift to the floor right next to, and facing, one of those openings.</p>
+  <p>Also: I came across the image below while cleaning out an old hard drive, and I think it's something I used when first posting the completed map to the Quake3World forums. At first glance it's just another way of showing the layout and bones of the map; the group &quot;makes/plays custom maps&quot; overlaps a lot with the group &quot;thinks that things reminiscent of blueprints and architectural drawings are cool&quot;. But the insertion of that little Quake Ranger dude makes it extra-clear what had first grabbed me about mapping: Look, there you are! Inside this place that I made!</p>
+  <div class="diagram center floatbox" style="width:640px"><img src="../../images/q3maps/jlctf1/elevations_2.gif" id="trigger-popup1" style="width:640px"/></div>
   <h3>&bull; Variants</h3>
-  <p>You may come across some other versions of this map around the web, as I was asked to allow variants of this map for use with some mods.  In a couple of cases, the mod authors requested that I make a few specific changes and then pass the resulting map to them, but the end result wasn't a big hit with the players as far as I know.  In another case, I handed the source over to the mod's mappers for final changes and build; they then released the map without running it by me first, and it has a monumentally prominent error that they introduced.  That still bugs me, since that version of the map is still floating around the internet with my name on it.<p>
+  <p>You may come across some other versions of this map around the web, as I was asked to allow variants of this map for use with some mods.  In a couple of cases, the mod authors requested that I make a few specific changes and then pass the resulting map to them, but the end result wasn't a big hit with the players as far as I know.  In another case, I handed the source over to the mod's mappers for final changes and build; they then released the map without running it by me first, and it has a monumentally prominent error that they introduced.  That still bugs me, since that version of the map is still floating around the internet with my name on it. I'm sure there's a moral to that story in there somewhere.<p>
 
 </div>
 <div id="ie_clearing">&nbsp;</div>

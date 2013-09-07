@@ -1,0 +1,3 @@
+<!-- begin: image popups -->
+<div class="jqmWindow" id="popup1">[local_image('elevations_2.gif', 'jqmClose jqmWindowContent')]</div>
+<!-- end: image popups -->
