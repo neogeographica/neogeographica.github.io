@@ -107,7 +107,7 @@ class PreviewYouTubeTag(postmarkup.TagBase):
     def render_open(self, parser, node_index):
         self.skip_contents(parser)
         [video_id, video_props_list] = self.params.split(';')
-        video_props = 'guideVid ' + video_props_list.replace(',', ' ')
+        video_props = 'guideWidescreenVid ' + video_props_list.replace(',', ' ')
         return (u'[controls_video(\'%s\',\'%s\')]' % (video_id, video_props))
 
 # How to stick a bullet point in front of an element's content.

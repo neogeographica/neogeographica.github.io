@@ -419,10 +419,10 @@
   {
     padding: 4px;
   }
-  .smallVid {
+  .smallWidescreenVid {
     display: block;
     width: [small_video_width]px;
-    height: [small_video_height()]px;
+    height: [video_widescreen_height(small_video_width)]px;
     /* position: relative; */
   }
 }

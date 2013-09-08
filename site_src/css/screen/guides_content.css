@@ -69,10 +69,10 @@
     margin-bottom: [guide_thumb_half_gutter]px;
     margin-left: [guide_thumb_half_gutter]px;
   }
-  .guideVid {
+  .guideWidescreenVid {
     display: block;
     width: [guide_full_image_width]px;
-    height: [guide_full_video_height()]px;
+    height: [video_widescreen_height(guide_full_image_width)]px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
