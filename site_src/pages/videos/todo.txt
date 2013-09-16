@@ -1,0 +1,4 @@
+When/if this becomes a section:
+
+- Add a videos section to top-level `navitems_choices.txt
+- Change the content of `active_navitem.txt here to videos

@@ -10,16 +10,22 @@ q3maps
 mods
 tools
 guides
+videos
+attic
 #choice_active#
 [choice_active_template('Home')]
 [choice_active_template('Maps')]
 [choice_active_template('Mods')]
 [choice_active_template('Tools')]
 [choice_active_template('Guides')]
+[choice_active_template('Videos')]
+[choice_active_template('The Attic')]
 #choice_inactive#
 [choice_inactive_template('[docs_home_path]index.html','Home')]
 [choice_inactive_template('[docs_q3maps_home_path]index.html','Maps')]
 [choice_inactive_template('[docs_mods_home_path]index.html','Mods')]
 [choice_inactive_template('[docs_tools_home_path]index.html','Tools')]
 [choice_inactive_template('[docs_guides_home_path]index.html','Guides')]
+[choice_inactive_template('[docs_videos_home_path]index.html','Videos')]
+[choice_inactive_template('[docs_attic_home_path]index.html','The Attic')]
 #

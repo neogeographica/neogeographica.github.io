@@ -1,0 +1,11 @@
+#sidebar_choice_key#
+qintro
+t3finals
+none
+#sidebar_choice_active#
+[sidebar_choice_active_template('qintro','Alternate Intro for Quake')]
+[sidebar_choice_active_template('t3finals','ClanRing T3 Finals Game')]
+#sidebar_choice_inactive#
+[sidebar_choice_inactive_template('qintro','Alternate Intro for Quake')]
+[sidebar_choice_inactive_template('t3finals','ClanRing T3 Finals Game')]
+#

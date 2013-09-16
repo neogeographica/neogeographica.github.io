@@ -25,3 +25,5 @@ def local_downloads_path():
 #docs_mods_home_path [pathToTop]pages/mods/
 #docs_tools_home_path [pathToTop]pages/tools/
 #docs_guides_home_path [pathToTop]pages/guides/
+#docs_videos_home_path [pathToTop]pages/videos/
+#docs_attic_home_path [pathToTop]pages/attic/

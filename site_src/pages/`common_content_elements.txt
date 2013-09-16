@@ -10,6 +10,28 @@ def local_image(img,imgclass):
 #.local_id_image_code#
 def local_id_image(img,imgid,imgclass):
   return '<img src="' + local_images_path() + img + '" id="' + imgid + '" class="' + imgclass + '" />'
+#.centered_image_row_common_code#
+def centered_image_row_common(imgwidth, images, captions):
+  num_images = len(images)
+  total_width = str((int(imgwidth) * num_images) + (int(table_cell_padding) * num_images * 2))
+  header = ('  <div class="center floatbox" style="width:' + total_width + 'px">\n'
+            '    <table class="imgrow">\n'
+            '      <tr>\n')
+  footer = ('    </table>\n'
+            '  </div>')
+  retval = header
+  for img, caption in zip(images, captions):
+      retval += '        <td>' + local_image(img, 'rawpic') + '<br/><strong>' + caption + '</strong></td>\n'
+  return retval + footer
+#.centered_image_row2_code#
+def centered_image_row2(imgwidth, img1, caption1, img2, caption2):
+  return centered_image_row_common(imgwidth, [img1, img2], [caption1, caption2])
+#.centered_image_row3_code#
+def centered_image_row3(imgwidth, img1, caption1, img2, caption2, img3, caption3):
+  return centered_image_row_common(imgwidth, [img1, img2, img3], [caption1, caption2, caption3])
+#.centered_image_row4_code#
+def centered_image_row4(imgwidth, img1, caption1, img2, caption2, img3, caption3, img4, caption4):
+  return centered_image_row_common(imgwidth, [img1, img2, img3, img4], [caption1, caption2, caption3, caption4])
 #.controls_video_code#
 def controls_video(ytid,vidclass):
   return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?showinfo=0&autohide=1&fs=1&modestbranding=1&rel=0&showsearch=0" frameborder="0" allowfullscreen="1"></iframe>'

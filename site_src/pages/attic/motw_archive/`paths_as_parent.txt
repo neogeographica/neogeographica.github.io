@@ -1,0 +1,2 @@
+#rel_path_level 1
+#local_files_dir kitty1
