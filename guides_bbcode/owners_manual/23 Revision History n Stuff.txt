@@ -19,6 +19,7 @@ The latest stable version of each engine was:
 
 [b]2013[/b]
 [list]
+[*]Sep 21: edited GLQuake Version Issues to remove some possible confusion
 [*]Aug 10: added link to GLQuake 0.98
 [*]Aug 10: added link to negke's guide for playing third-party maps/mods
 [*]Jul 14: fixes in reaction to the changes in Steam Guide markup behavior
