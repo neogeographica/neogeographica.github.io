@@ -26,8 +26,8 @@
 
 #h2_separator_color #bbb
 
-#link_color #bd2b2b
-#visited_link_color #551A8B
+#link_color #ac1919
+#visited_link_color #82a8c8
 #focus_link_color [header_image_bg_color]
 
 #topnav_text_color #ddd
