@@ -9,7 +9,7 @@
 </div>
 <div class="maincol">
 <div class="maincol_content clearfix">
-  <img src="[global_common_images_path]neogeographica_palatino.png" />
+  <img src="[global_common_images_path]neogeographica_palladio.png" />
 </div>
 </div>
 </div>
