@@ -1,15 +1,18 @@
 #sidebar_choice_key#
+7zippk3
 meshtex
 birdseye
 server_scripts
 qsmack
 none
 #sidebar_choice_active#
+[sidebar_choice_active_template('7zippk3','QL pk3 Support in 7-Zip')]
 [sidebar_choice_active_template('meshtex','MeshTex GtkRadiant Plugin')]
 [sidebar_choice_active_template('birdseye','Birdseye Map Overviews')]
 [sidebar_choice_active_template('server_scripts','Gameserver Scripts')]
 [sidebar_choice_active_template('qsmack','QSmack Quake Admin')]
 #sidebar_choice_inactive#
+[sidebar_choice_inactive_template('7zippk3','QL pk3 Support in 7-Zip')]
 [sidebar_choice_inactive_template('meshtex','MeshTex GtkRadiant Plugin')]
 [sidebar_choice_inactive_template('birdseye','Birdseye Map Overviews')]
 [sidebar_choice_inactive_template('server_scripts','Gameserver Scripts')]

@@ -87,10 +87,10 @@
 <div class="navthumbs">
   <ul>
     <li><a href="7zippk3.html"><img src="../../images/tools/common/7zippk3_nav_thumb.png" /><strong>QL pk3 Support in 7-Zip</strong></a></li>
-    <li><a href="meshtex.html"><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
+    <li class=active><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></li>
     <li><a href="birdseye.html"><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
     <li><a href="server_scripts.html"><img src="../../images/tools/common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
-    <li class=active><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></li>
+    <li><a href="qsmack.html"><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></a></li>
   </ul>
 </div>
 </div>
@@ -99,22 +99,35 @@
 <!-- begin: main column (#main_maincol) -->
 <div id="main_maincol" class="maincol" role="main">
 <div class="maincol_content clearfix">
-<h1>QSmack Quake Admin</h1>
+<h1>Quake Live pk3 Support in 7-Zip</h1>
   <ul>
-  	<li>Quake (not QuakeWorld) server administration tool</li>
-    <li>final version 3.0 &amp; source code released April 2000</li>
-    <li>blast from the past</li>
+  	<li>full support for QuakeLive pk3 files in 7-Zip tools (Windows only)</li>
+    <li>version 9.20-pk3-1 released October 2013</li>
   </ul>
-  <p>A link to &quot;get stuff&quot; is at the bottom of this page, but I need to set the context first.</p>
-  <p>As mentioned in the <a href="../../pages/attic/index.html">Attic section</a>, I spent some time as the admin of a high-traffic Quake server. After a few too many incidents with misbehavers, a friend and I developed QSmack to address the lack of administrative tools available for monitoring a Quake server and laying down the law. It provided a way to observe and interact with the server chat, to preserve logs of all chat and game events, and to ban players by their IP, subnet, name, or colors. It even had a GUI client, written in Tcl/Tk of all things:</p>
-  <div class="rawpic center floatbox" style="width:640px"><img src="../../images/tools/qsmack/qsmack2_squeezed.jpg" style="width:640px"/></div>
-  <p>QSmack was the brainchild of Jeff "Ahnuld" Solomon, my classmate and <a href="../../pages/attic/c9fos.html">C9FOS</a> clanmate. He wrote the QSmack server and GUI. I contributed the docs/website and the Quake-server-side code in Quake C (and evangelized getting those changes into various mods). Our friends in the Stanford Graphics Quake Project, particularly Kekoa Proudfoot, contributed a library for working with the Quake network protocol.</p>
-  <p>The end product turned out great &mdash; a very useful tool &mdash; but I don't imagine that there would be any demand for using it these days, even among the remaining NetQuake multiplayer community. (Although I guess I could be surprised!) The QSmack docs and downloads are still hanging around the web, but I'm archiving them here too for completeness and nostalgia. QSmack might also be interesting as an early implementation of a Quake network protocol client.</p>
-  <p>If you want to dig into the archived QSmack site through the link below, keep in mind that there are a lot of broken links in the archive: email addresses, almost all external links, and some internal links to files that I couldn't find. But the documentation and main downloads are intact.</p>
-  <p>Final caveats: Some of the archived instructions about using Tcl/Tk may no longer apply with the most recent version of that language &amp; toolkit. And I don't know for sure that the QSmack server will be able to talk to modern Quake engines. And QSmack definitely won't be able to perform admin actions with any Quake mod that is in use these days unless and until that mod is customized as described in the docs. Other than that it should work like a charm!</p>
-  <br/>
-  <p class="info_banner center">&nbsp;<br/><strong>&gt;&gt;&gt; <a href="qsmack_archive/qsmack.html">Enter the QSmack site archive.</a> &lt;&lt;&lt;</strong><br/>&nbsp;</p>
-  <br/>&nbsp;
+  <p>This set of utilities is based on 7-Zip 9.20. It has all of the functionality of the 7-Zip toolset; additionally, it supports operations on pk3 files. Generally speaking anything that can be done to a zip file (except encryption) can now be done to a pk3 file.</p>
+  <p>More specifically: 7-Zip could previously manage reading and updating Quake 3 pk3 files, and you could create a Quake 3 pk3 file by making a zip archive and then changing its extension. That is still possible with this version of 7-Zip. However now you can also read, update, and create Quake Live pk3 files. All of the features that were available for zip archives (like optional file association and Windows Explorer context menu integration) now also apply to pk3 files.</p>
+  <h2>Downloads</h2>
+  <h3>&bull; Current Version</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/7-zip-pk3/releases/tag/v1.0"><b>installer choices</b></a></li>
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/7-zip-pk3"><b>GitHub repository</b></a></li>
+  </ul>
+  <h2>Background</h2>
+  <p>Quake 3 assets are contained in &quot;.pk3&quot; files, which are actually just zip archives with a different file extension. Quake Live assets are also in pk3 files, but in this case the zip archive is mangled and can't be manipulated using normal zip utilities.</p>
+  <p>The ability to work with Quake Live pk3s was solved by Luigi Auriemma's <a href="http://aluigi.altervista.org/papers.htm#q3">quakelivedec</a> utility, which can make a zip-archive copy of a Quake Live pk3 file (or vice-versa). This utility is super-useful, but dealing with QL pk3 files that way is still a little annoying and requires extra steps in your process.</p>
+  <p>My tool of choice for working with zip archives and Quake 3 pk3 files is Igor Pavlov's 7-Zip File Manager. Since it is LGPL'ed open-source software, I modified it to fully support Quake Live pk3 files. This includes support for QuakeLive pk3s in any of the existing 7-Zip tools that supported zip archives, but the main attraction is the File Manager. Below is a short loop captured from my desktop, showing one approach to creating a Quake Live pk3 and then opening it up for inspection, using the Windows Explorer integration:</p>
+  <div class="rawpic center floatbox" style="width:640px"><img src="../../images/tools/7zippk3/pk3demo.gif" style="width:640px"/></div>
+  <p>Keep in mind that what is being created and viewed there is not a &quot;vanilla&quot; Quake 3 pk3; it is a Quake Live pk3. Right after creation you can dump it into the Quake Live baseq3 folder and use it.</p>
+  <h2>Notes</h2>
+  <ul>
+    <li>Please do read the release notes on the download page for the installers! There's some necessary info in there about using the installers and about the 7-Zip File Manager.</li>
+    <li>It's worth saying again: you can use these tools to read or update either Quake 3 or Quake Live pk3s. However if you create a pk3 &quot;from scratch&quot;, it will be a Quake Live pk3. If you want to create a Quake 3 pk3, just create a zip archive, then change its extension to pk3.</li>
+    <li>These utilities will let you create a pk3 archive using any of the compression options available for normal zip archives. It's possible that some combinations of options might not be understood by Quake 3 or Quake Live, but I haven't run across that issue myself.</li>
+  </ul>
+
 </div>
 <div id="ie_clearing">&nbsp;</div>
 </div>
