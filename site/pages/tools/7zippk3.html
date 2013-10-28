@@ -119,7 +119,7 @@
   <p>Quake 3 assets are contained in &quot;.pk3&quot; files, which are actually just zip archives with a different file extension. Quake Live assets are also in pk3 files, but in this case the zip archive is mangled and can't be manipulated using normal zip utilities.</p>
   <p>The ability to work with Quake Live pk3s was solved by Luigi Auriemma's <a href="http://aluigi.altervista.org/papers.htm#q3">quakelivedec</a> utility, which can make a zip-archive copy of a Quake Live pk3 file (or vice-versa). This utility is super-useful, but dealing with QL pk3 files that way is still a little annoying and requires extra steps in your process.</p>
   <p>My tool of choice for working with zip archives and Quake 3 pk3 files is Igor Pavlov's 7-Zip File Manager. Since it is LGPL'ed open-source software, I modified it to fully support Quake Live pk3 files. This includes support for QuakeLive pk3s in any of the existing 7-Zip tools that supported zip archives, but the main attraction is the File Manager. Below is a short loop captured from my desktop, showing one approach to creating a Quake Live pk3 and then opening it up for inspection, using the Windows Explorer integration:</p>
-  <div class="rawpic center floatbox" style="width:640px"><img src="../../images/tools/7zippk3/pk3demo.gif" style="width:640px"/></div>
+  <div class="rawpic center floatbox" style="width:630px"><img src="../../images/tools/7zippk3/pk3demo.gif" style="width:630px"/></div>
   <p>Keep in mind that what is being created and viewed there is not a &quot;vanilla&quot; Quake 3 pk3; it is a Quake Live pk3. Right after creation you can dump it into the Quake Live baseq3 folder and use it.</p>
   <h2>Notes</h2>
   <ul>
