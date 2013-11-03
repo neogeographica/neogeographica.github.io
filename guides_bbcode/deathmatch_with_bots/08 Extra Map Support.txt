@@ -40,7 +40,7 @@ FBX++ supports a few ways to add more map support, but the easiest is to downloa
 
 For enough map support to keep you busy for a while (506 maps) you should grab these things:
 
-1) Get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2]Definitive Frikbot Mappack (version 2)[/url] collected by "LightningHunter".  This package contains several folders which should be placed in your FBX++ mod folder.  It also includes a version of FrikBot (FBX+) but you should throw that away (because you are using FBX++ instead, right?).    Finally it contains a maps.cfg file, but you can throw that away too, because:
+1) Get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2.zip]Definitive Frikbot Mappack (version 2)[/url] collected by "LightningHunter".  This package contains several folders which should be placed in your FBX++ mod folder.  It also includes a version of FrikBot (FBX+) but you should throw that away (because you are using FBX++ instead, right?).    Finally it contains a maps.cfg file, but you can throw that away too, because:
 
 2) The maps.cfg file from the map pack is too large to be used by some Quake engines.  You'll probably need to split it into around three pieces, so I've gone ahead and done that for you... [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]download the split-up files[/url] and put them in your FBX++ mod folder.  (The "Map Cycle" section below will describe what this is for.)
 

@@ -51,7 +51,7 @@ For convenience here's a collection of all the files (and outside links) in this
 [*]Omicron: [url=http://eclecticmenagerie.com/jl/quake/bots/ramaps.zip]Rocket Arena maps[/url], [url=http://www.gamers.org/pub/idgames2/planetquake/skorpion/routes/]route files from Skorpion's Omibot Page[/url]
 [/list]
 [list]
-[*]FBX++: [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2]Definitive Frikbot Mappack (version 2)[/url], [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]split map cycle config[/url], [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotWaypackV2.zip]Definitive Frikbot Waypack (version 2)[/url]
+[*]FBX++: [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2.zip]Definitive Frikbot Mappack (version 2)[/url], [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]split map cycle config[/url], [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotWaypackV2.zip]Definitive Frikbot Waypack (version 2)[/url]
 [/list]
 [list]
 [*]FBCA: [url=http://eclecticmenagerie.com/jl/quake/bots/trinca-fbca-qwprogs.zip]Trinca's modified FBCA code build 379[/url], [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url]
