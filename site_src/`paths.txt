@@ -14,7 +14,7 @@ def local_common_images_path():
 #.local_images_path_code#
 def local_images_path():
   return images_path + '/'.join(pathNames[1:-1]) + '/' + rel_path_segment() + local_files_dir + '/'
-#downloads_path http://files.neogeographica.com/downloads/
+#downloads_path http://eclecticmenagerie.com/downloads/
 #.local_downloads_path_code#
 def local_downloads_path():
   return downloads_path + '/'.join(pathNames[1:-1]) + '/' + rel_path_segment() + local_files_dir + '/'
