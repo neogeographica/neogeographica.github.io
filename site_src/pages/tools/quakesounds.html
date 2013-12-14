@@ -1,0 +1,38 @@
+#styles#
+[common_styles]
+#scripts#
+[common_scripts]
+#optional_skiplinks [skiplinks]
+#optional_skiplinks_support [skiplinks_support]
+#sidebar_active_navitem quakesounds
+<h1>quakesounds</h1>
+  <ul>
+    <li>audio processing pipeline for Quake sound samples</li>
+    <li>version 1.0 released December 2013</li>
+  </ul>
+  <p>quakesounds is a utility for easily ripping sounds out of Quake pak files and pushing them through a sequence of audio processing effects. The motivation and still the main intended usecase for it is generating phone ringtone/alert sounds; however it's data-driven to the extent where you could use it to apply an arbitrary processing pipeline, using any external utilities that you like, to anything contained in a pak file.</p>
+  <h2>Downloads</h2>
+  <h3>&bull; Current Version</h3>
+  <ul>
+    [listitem_download('https://github.com/neogeographica/quakesounds/releases/tag/v1.0','application bundle')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/blob/master/README.md','readme','(included in application bundle)')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/blob/master/LAUNCHING.md','more about launching the application','(included in application bundle)')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/blob/master/CONFIGURING.md','more details about configuration','(included in application bundle)')]
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    [listitem_download('https://github.com/neogeographica/quakesounds','GitHub repository')]
+  </ul>
+  <h2>Background</h2>
+  <p>quakesounds was originally put together to fill a slot in the 2013 &quot;Quake Advent Calendar&quot; at <a href="https://www.quaddicted.com/">quaddicted.com</a>. I'll just copy the blurb here:</p>
+  <div class="floatbox">
+    [local_image('qphone.png', 'rawpic_left')]
+    <blockquote>
+      <br/>
+      <p>I often don't pay enough attention to a game's sound design while playing it. But particular sound effects can really stick with me… showing up as surprise nostalgia years later when I hear an HEV suit charging, the chunk of an 8-ball launcher, or even &quot;wort wort wort&quot;.</p>
+      <p>Of course the classic Quake sound effects from McGee/Romero/Reznor are high on that list. So for a while now I'd thought it would be nerdycool to set a few Quake sound effects as phone alert sounds. When I actually bit the bullet though, it was a surprising amount of work to find good alert-sound candidates and then extract, rename, noise-reduce, format-convert, and gain-normalize them.</p>
+      <p>I decided it would be neat, in a small way, if I could make a shortcut for that process – a utility that you could throw your pak files at, and have processed sounds pop out the other end. Having a Quake Advent Calendar slot to fill seemed like a good excuse to get off my butt and do it.</p>
+    </blockquote>
+  </div>
+  <p>The docs linked above go into much more detail about exactly what quakesounds can do. Note that while it's a good little framework for running sound-processing utilities like SoX and ffmpeg, I'm not an expert at the best options to give to those utilities. The default/example configuration that comes with quakesounds is fine (to my ears) for generating phone notification sounds, but I'm sure that it could be better, especially when it comes to proper noise reduction. If you have suggestions for improving it please let me know.</p>
+  <p>One other thing to note is that quakesounds uses the <a href="https://github.com/neogeographica/expak">expak</a> Python module to extract the sounds from the pak files. If you need to programmatically get stuff out of Quake pak files then that module might be useful to you too.</p>

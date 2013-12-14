@@ -86,10 +86,10 @@
 <div class="sidebar_content clearfix">
 <div class="navthumbs">
   <ul>
-    <li><a href="quakesounds.html"><img src="../../images/tools/common/quakesounds_nav_thumb.png" /><strong>quakesounds</strong></a></li>
+    <li class=active><img src="../../images/tools/common/quakesounds_nav_thumb.png" /><strong>quakesounds</strong></li>
     <li><a href="7zippk3.html"><img src="../../images/tools/common/7zippk3_nav_thumb.png" /><strong>QL pk3 Support in 7-Zip</strong></a></li>
     <li><a href="meshtex.html"><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
-    <li class=active><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></li>
+    <li><a href="birdseye.html"><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
     <li><a href="server_scripts.html"><img src="../../images/tools/common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
     <li><a href="qsmack.html"><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></a></li>
   </ul>
@@ -100,14 +100,37 @@
 <!-- begin: main column (#main_maincol) -->
 <div id="main_maincol" class="maincol" role="main">
 <div class="maincol_content clearfix">
-<h1>Birdseye Map Overviews</h1>
+<h1>quakesounds</h1>
   <ul>
-  	<li>Quake 3 map interactive overview generator</li>
-    <li>down for retooling</li>
+    <li>audio processing pipeline for Quake sound samples</li>
+    <li>version 1.0 released December 2013</li>
   </ul>
-  <p>Birdseye is/was a combination Quake 3 mod and Perl script to generate the interactive map overviews seen in the Threewave Q3CTF manual (cf. <a href="../../pages/q3maps/jlctf3.html">jlctf3</a>), the docs for Unofficial Map Pack #1 (cf. <a href="../../pages/q3maps/jlctf2.html">jlctf2</a>), and on some of the maps pages of this site.</p>
-  <p>Authoring web pages has changed a lot since Birdseye was originally written &mdash; for example, there was no jQuery back then. Equally importantly, my tolerance for releasing spaghetti code and documentation has decreased since then too (and hopefully I'm better now at not doing that). Birdseye was a big ball of impenetrability to begin with, and the current hacked-up version that I've used for the pages here is even worse, so I've decided to just take the public download offline while I think of what to do with it. I have big ambitions for a rewrite but my day job does kind of hoover up all of my programming juice at the moment.</p>
-  <p>If by any chance you'd like an overview page generated for a Quake 3 map, drop me a line.</p>
+  <p>quakesounds is a utility for easily ripping sounds out of Quake pak files and pushing them through a sequence of audio processing effects. The motivation and still the main intended usecase for it is generating phone ringtone/alert sounds; however it's data-driven to the extent where you could use it to apply an arbitrary processing pipeline, using any external utilities that you like, to anything contained in a pak file.</p>
+  <h2>Downloads</h2>
+  <h3>&bull; Current Version</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/quakesounds/releases/tag/v1.0"><b>application bundle</b></a></li>
+    <li><a href="https://github.com/neogeographica/quakesounds/blob/master/README.md"><b>readme</b></a> (included in application bundle)</li>
+    <li><a href="https://github.com/neogeographica/quakesounds/blob/master/LAUNCHING.md"><b>more about launching the application</b></a> (included in application bundle)</li>
+    <li><a href="https://github.com/neogeographica/quakesounds/blob/master/CONFIGURING.md"><b>more details about configuration</b></a> (included in application bundle)</li>
+  </ul>
+  <h3>&bull; Source (not required)</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/quakesounds"><b>GitHub repository</b></a></li>
+  </ul>
+  <h2>Background</h2>
+  <p>quakesounds was originally put together to fill a slot in the 2013 &quot;Quake Advent Calendar&quot; at <a href="https://www.quaddicted.com/">quaddicted.com</a>. I'll just copy the blurb here:</p>
+  <div class="floatbox">
+    <img src="../../images/tools/quakesounds/qphone.png" class="rawpic_left" />
+    <blockquote>
+      <br/>
+      <p>I often don't pay enough attention to a game's sound design while playing it. But particular sound effects can really stick with me… showing up as surprise nostalgia years later when I hear an HEV suit charging, the chunk of an 8-ball launcher, or even &quot;wort wort wort&quot;.</p>
+      <p>Of course the classic Quake sound effects from McGee/Romero/Reznor are high on that list. So for a while now I'd thought it would be nerdycool to set a few Quake sound effects as phone alert sounds. When I actually bit the bullet though, it was a surprising amount of work to find good alert-sound candidates and then extract, rename, noise-reduce, format-convert, and gain-normalize them.</p>
+      <p>I decided it would be neat, in a small way, if I could make a shortcut for that process – a utility that you could throw your pak files at, and have processed sounds pop out the other end. Having a Quake Advent Calendar slot to fill seemed like a good excuse to get off my butt and do it.</p>
+    </blockquote>
+  </div>
+  <p>The docs linked above go into much more detail about exactly what quakesounds can do. Note that while it's a good little framework for running sound-processing utilities like SoX and ffmpeg, I'm not an expert at the best options to give to those utilities. The default/example configuration that comes with quakesounds is fine (to my ears) for generating phone notification sounds, but I'm sure that it could be better, especially when it comes to proper noise reduction. If you have suggestions for improving it please let me know.</p>
+  <p>One other thing to note is that quakesounds uses the <a href="https://github.com/neogeographica/expak">expak</a> Python module to extract the sounds from the pak files. If you need to programmatically get stuff out of Quake pak files then that module might be useful to you too.</p>
 
 </div>
 <div id="ie_clearing">&nbsp;</div>
