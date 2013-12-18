@@ -218,7 +218,8 @@ def bbc_xform(in_path, file_name, dot_ext, out_dir):
     # Fix up some presentation issues that I don't think I can handle with
     # postmarkup options.
     final_html_out = html_out.replace(
-        '</h3><br/>', '</h3>').replace(
+        '<p><h3>', '<h3>').replace(
+        '</h3><br/>', '</h3><p>').replace(
         '<td>_</td>', '<td>&nbsp;</td>').replace(
         '<br/><ul>', '</p><p><ul>')
     # And write the results.
