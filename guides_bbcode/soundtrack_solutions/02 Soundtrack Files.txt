@@ -1,7 +1,7 @@
 For any of these solutions to work, you do first have to get either a Quake CD image or ripped music tracks from somewhere.  If you don't have a physical Quake CD then there are all sorts of ways to buy or borrow one, and likewise there are various ways to get a CD image or the ripped tracks.  For example:
 [list]
-[*]The Steam forums provide a [url=http://steamcommunity.com/app/2310/discussions/0/882966056497559791/]CD image of the music only[/url] (no game files).
-[*]The quakeone.com forums provide [url=http://quakeone.com/forums/quake-mod-releases/finished-works/7337-high-quality-music-packs.html]soundtrack files in OGG (Ogg Vorbis) format[/url].
+[*][url=http://steamcommunity.com/app/2310/discussions/0/882966056497559791/]A thread on the Steam forums[/url] provides download links for CD images of the music tracks, and also for ripped soundtrack files in OGG (Ogg Vorbis) format.
+[*]The quakeone.com forums provide [url=http://quakeone.com/forums/quake-mod-releases/finished-works/7337-high-quality-music-packs.html]soundtrack files in OGG format[/url].
 [*]Quaddicted also provides [url=https://www.quaddicted.com/files/music/]soundtrack files in OGG format[/url].
 [/list]
 And if you're using a bundle package of Quake stuff that has been assembled by someone else, it may already include a soundtrack:
