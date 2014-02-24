@@ -17,6 +17,10 @@ The latest stable version of each engine was:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2014[/b]
+[list]
+[*]Feb 23: added DarkPlaces notes about SDL and about the bugginess of the version included in the UQP
+[/list]
 [b]2013[/b]
 [list]
 [*]Aug 10: added link to negke's guide for playing third-party maps/mods
