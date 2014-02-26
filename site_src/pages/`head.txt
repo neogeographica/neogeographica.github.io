@@ -4,4 +4,5 @@
 <title>[title]</title>
 [styles]
 [scripts]
+[analytics]
 </head>
