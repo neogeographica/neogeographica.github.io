@@ -20,7 +20,7 @@ Now, you could just mount the CD image and then let Quake play music from it as 
 
 Instead we're going to go with solutions that play music files from your hard disk, one file for each of the music tracks from the CD.  If you don't already have the Quake soundtrack in this form, then you should take either the physical CD or mounted CD image and rip the tracks from it into music files.  Once you have those files, you no longer need the CD or image.
 
-The format that you rip to does matter, as the various solutions below support different music file formats.  Generally speaking though, MP3 files are widely supported, and if you have both MP3 and Ogg Vorbis versions then you'll be covered for sure.
+The format that you rip to does matter, as the various solutions below support different music file formats.  Generally speaking though, OGG files are widely supported.
 
 [quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Audio buffs may want to take note that the music on the Quake CD is "pre-emphasized".  The hydrogenaudio wiki has a [url=http://wiki.hydrogenaudio.org/index.php?title=Pre-emphasis]summary of pre-emphasis[/url] that is worth a look.  The upshot is that to make the playback sound exactly correct, the ripped files need to have been processed with a specific equalization curve to get rid of the pre-emphasis.
 

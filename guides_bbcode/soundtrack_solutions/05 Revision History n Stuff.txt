@@ -23,6 +23,10 @@ Other engines examined:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2014[/b]
+[list]
+[*]Mar 02: updates about QuakeSpasm (MP3 support probably only in Windows) and DirectQ (can play OGG if external support installed)
+[/list]
 [b]2013[/b]
 [list]
 [*]Aug 14: linked to more soundtrack file sources: quakeone.com and quaddicted

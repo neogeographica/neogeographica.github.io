@@ -16,10 +16,13 @@ Several modern Quake engines will play soundtrack music files at the appropriate
 Among the choices listed in the "Quake Engines" guide, the following engines support playing these formats of music files:
 [list]
 [*][url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url]: OGG, WAV
-[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url]: OGG, MP3, WAV
+[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url]: OGG, MP3[b]*[/b], WAV
 [*][url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url]: MP3
-[*][url=http://directq.codeplex.com/]DirectQ[/url]: MP3, WMA, WAV
+[*][url=http://directq.codeplex.com/]DirectQ[/url]: OGG[b]**[/b], MP3, WMA, WAV
 [/list]
+[b]*[/b] I assume that QuakeSpasm only supports MP3 in its Windows version. If you know differently, let me know.
+[b]**[/b] For OGG support, DirectQ requires that you have also installed the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+
 The engine will look for music files with basenames in a specific form: track02 for the file ripped from the second CD track (which is the first piece of soundtrack music), track03 for the third track, and so forth.  So if they are MP3 files they should be named track02.mp3, track03.mp3, etc.  Ogg Vorbis files should be named track02.ogg, track03.ogg, etc.  You get the picture.
 
 Quake engines can handle different placements for these files, but one place that they all currently agree on is the "music" subfolder inside the appropriate game directory.  So music files for the original Quake soundtrack should be placed in the "id1\music" folder (which you will need to create).  Music files for the Mission Pack 1 soundtrack should go in "hipnotic\music"; music files for Mission Pack 2 in "rogue\music".
