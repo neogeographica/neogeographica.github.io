@@ -25,6 +25,7 @@ Other engines examined:
 
 [b]2014[/b]
 [list]
+[*]Mar 15: a few more edits about DirectQ's OGG support
 [*]Mar 02: updates about QuakeSpasm (MP3 support probably only in Windows) and DirectQ (can play OGG if external support installed)
 [/list]
 [b]2013[/b]
