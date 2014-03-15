@@ -1,4 +1,4 @@
-There are multiple approaches to using Quake soundtrack files.  What's the right one for you?  It depends on which Quake engine you are using.  If that sentence confuses you, then first have a look at this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
+There are multiple approaches to using Quake soundtrack files.  What's the right one for you?  It depends on which Quake engine you are using.  If that sentence confuses you, then have a look at this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
 [list]
 [/list]
 [h1]Engines that don't have soundtrack support[/h1]
@@ -6,26 +6,43 @@ The ProQuake engine as of version 4.91beta no longer supports any kind of soundt
 [list]
 [/list]
 [h1]Engines that only support CD audio[/h1]
-The original Quake engines (the ones that Steam downloads for you) only support CD audio.  If you want to get them to play music files instead, then you will have to modify them.  I haven't tried this approach myself, but Dragonsbrethren has posted a guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113399618
-Most modern Quake engines also still support CD audio, so there is a good chance that any such modification would also work on them.  However if the engine can manage one of the other solutions below, then it would probably be better to use that other solution.  It's just generally nicer not to need to binary-patch your Quake executable (and then have to do it again if you ever download an updated version).
+The original Quake engines (the ones provided through Steam) only support CD audio.  If you want to get them to play music files instead, then you will have to modify them.  I haven't tried this approach myself, but Dragonsbrethren has posted a guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113399618
+Most modern Quake engines also still support CD audio, so there is a good chance that any such modification would also work on them.  However if the engine can manage one of the other solutions below, then it would probably be better to use that other solution.  It's generally nicer not to need to binary-patch your Quake executable (and then have to do it again if you ever download an updated version).
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Several modern Quake engines will play soundtrack music files at the appropriate times as long as you 1) name the files in a certain way and 2) put the files in a certain place.
+Several modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=http://directq.codeplex.com/]DirectQ[/url].
 
-Among the choices listed in the "Quake Engines" guide, the following engines support playing these formats of music files:
+For soundtrack file playback to work, a few things have to be handled correctly:
 [list]
-[*][url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url]: OGG, WAV
-[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url]: OGG, MP3[b]*[/b], WAV
-[*][url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url]: MP3
-[*][url=http://directq.codeplex.com/]DirectQ[/url]: OGG[b]**[/b], MP3, WMA, WAV
+[*]whether the music files are "loose files", or inside pak/pk3 archives
+[*]where the files are placed
+[*]what the files are named
+[*]what audio format the files are in
+[/list]
+
+Different Quake engines can support different answers for those four questions. However for the first three questions, there's a common set of answers that will work for all four engines mentioned above.
+
+If you already have an arrangement that works for the engine you're currently using, that's great! I'm not saying you should change it. This is just a description of a common arrangement that works for multiple engines:
+[list]
+[*]The music files are loose files, [b]NOT[/b] inside a pak or pk3 archive.
+[/list]
+[list]
+[*]The files are placed inside a "music" subfolder of the "id1" folder. For missionpack or mod soundtracks, the files are placed in a "music" subfolder of the appropriate game folder. So the original Quake soundtrack files go inside "id1\music", the Mission Pack 1 soundtrack files go inside "hipnotic\music", and the Mission Pack 2 soundtrack files go inside "rogue\music".
+[/list]
+[list]
+[*]The files are named in the pattern "track[i]nn[/i]", where "[i]nn[/i]" is the CD track number that the file was ripped from. Since the soundtrack starts at the second CD track, MP3 soundtrack files are named "track02.mp3", "track03.mp3", etc. Or as another example: OGG soundtrack files are named "track02.ogg", "track03.ogg", etc.
+[/list]
+As for the audio format: most of the distributions of the Quake soundtrack are in OGG format, and OGG files can be played by most of these Quake engines. But here's the specifics about which formats are supported by which engines:
+[list]
+[*]DarkPlaces: OGG, WAV
+[*]QuakeSpasm: OGG, MP3[b]*[/b], WAV
+[*]FitzQuake Mark V: MP3
+[*]DirectQ: OGG[b]**[/b], MP3, WMA, WAV
 [/list]
 [b]*[/b] I assume that QuakeSpasm only supports MP3 in its Windows version. If you know differently, let me know.
 [b]**[/b] For OGG support, DirectQ requires that you have also installed the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
 
-The engine will look for music files with basenames in a specific form: track02 for the file ripped from the second CD track (which is the first piece of soundtrack music), track03 for the third track, and so forth.  So if they are MP3 files they should be named track02.mp3, track03.mp3, etc.  Ogg Vorbis files should be named track02.ogg, track03.ogg, etc.  You get the picture.
-
-Quake engines can handle different placements for these files, but one place that they all currently agree on is the "music" subfolder inside the appropriate game directory.  So music files for the original Quake soundtrack should be placed in the "id1\music" folder (which you will need to create).  Music files for the Mission Pack 1 soundtrack should go in "hipnotic\music"; music files for Mission Pack 2 in "rogue\music".
 
 [quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you have installed [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] or the [url=http://forums.steampowered.com/forums/showthread.php?t=1756923]"Ultimate Quake Patch"[/url], then you will get Ogg Vorbis files for the main campaign soundtrack placed in the "id1\sound\cdtracks" folder.  Also files in "hipnotic\sound\cdtracks" and "rogue\sound\cdtracks" for the mission pack soundtracks.
 
