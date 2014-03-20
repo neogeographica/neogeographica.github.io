@@ -40,7 +40,7 @@ As for the audio format: most of the distributions of the Quake soundtrack are i
 [*]FitzQuake Mark V: MP3
 [*]DirectQ: OGG[b]**[/b], MP3, WMA, WAV
 [/list]
-[b]*[/b] I assume that QuakeSpasm only supports MP3 in its Windows version. If you know differently, let me know.
+[b]*[/b] I assume that QuakeSpasm supports MP3 only in its Windows version. If you know differently, let me know.
 [b]**[/b] For OGG support, DirectQ requires that you have also installed the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
 
 
