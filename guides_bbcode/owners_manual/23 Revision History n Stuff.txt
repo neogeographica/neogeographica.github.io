@@ -17,6 +17,10 @@ The latest stable version of each engine was:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2014[/b]
+[list]
+[*]Apr 03: a few more words about command-line options when using Steam's Quake engines
+[/list]
 [b]2013[/b]
 [list]
 [*]Sep 21: edited GLQuake Version Issues to remove some possible confusion
