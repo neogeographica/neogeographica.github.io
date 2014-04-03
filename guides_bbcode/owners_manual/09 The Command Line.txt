@@ -40,7 +40,7 @@ like so:
 [previewimg=238594;sizeFull,inline;launchopts_trimmed.jpg][/previewimg]
 
 
-Note that if you have not replaced the Quake programs that were downloaded by Steam, [b]this is the only way to specify command-line options[/b]. If you try to start up of those Quake programs from a shell or shortcut or whatever means outside of Steam, it will still launch through Steam, and Quake will use the options (or lack of options) defined here in Steam's "launch options" dialog.
+Note that if you have not replaced the Quake programs that were downloaded by Steam, [b]this is the only way to specify command-line options[/b]. If you try to start up one of those Quake programs from a shell or shortcut or whatever means outside of Steam, it will still launch through Steam, and Quake will use the options (or lack of options) defined here in Steam's "launch options" dialog.
 
 The potential issue with defining command-line options through Steam is that Steam only lets you specify one set of "launch options" for Quake.  But when you launch Quake you could be choosing to run Quake, GLQuake, QuakeWorld, or GLQuakeWorld.  The same set of launch options would be used with any of those.
 
