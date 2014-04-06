@@ -25,6 +25,7 @@ Other engines examined:
 
 [b]2014[/b]
 [list]
+[*]Apr 05: brief description of using Spek
 [*]Apr 05: better info about soundtrack format support on OS X and Linux
 [*]Mar 15: rewrite of "Engines that play soundtrack music files" section
 [*]Mar 15: a few more edits about DirectQ's OGG support

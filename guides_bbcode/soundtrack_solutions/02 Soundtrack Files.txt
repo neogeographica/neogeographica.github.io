@@ -32,6 +32,6 @@ The difference between Quake tracks that have been properly de-emphasized and th
 
 The general effect of de-emphasis is to have more of a contrast in volume between the low and high frequencies.
 
-If you didn't rip the tracks yourself and you don't know whether or not they have been de-emphasized... well, they probably haven't been, but you might not want to lose sleep over it.  Just something to keep in mind.
+If you are using a soundtrack that you downloaded instead of ripping it yourself, and you don't know whether or not the tracks have been de-emphasized... well, they probably haven't been, but you might not want to lose sleep over it.  Just something to keep in mind. If you want to test it, you can get the free [url=http://spek.cc/]Spek[/url] tool, use it to open up your track02.ogg or track02.mp3 file, and compare the image you get to the images above.
 
 The music files included in [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] and in the [url=http://forums.steampowered.com/forums/showthread.php?t=1756923]"Ultimate Quake Patch"[/url] have [i]not[/i] been de-emphasized. I haven't checked the other sources mentioned above.[/quote]
