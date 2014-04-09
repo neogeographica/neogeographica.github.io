@@ -7,7 +7,7 @@ Each engine mentioned below has a long development history and many features, bu
 
 As a first pass for engine selection, keep these criteria in mind:
 [list]
-[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=http://directq.codeplex.com/]DirectQ[/url], and [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] are the most popular engines for playing singleplayer.  The first three are intended to provide a "classic" look, while DarkPlaces is more about a modified/updated look.  All of the engines described in this guide (except [url=http://www.fodquake.net/]Fodquake[/url]) have some amount of support for singleplayer.
+[*][url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], and [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] are the most popular engines for playing singleplayer.  The first three are intended to provide a "classic" look, while DarkPlaces is more about a modified/updated look.  All of the engines described in this guide (except [url=http://www.fodquake.net/]Fodquake[/url]) have some amount of support for singleplayer.
 [/list]
 [list]
 [*][url=http://ezquake.sourceforge.net/]ezQuake[/url], [url=http://www.fteqw.com/]FTEQW[/url], and [url=http://www.fodquake.net/]Fodquake[/url] are the most popular engines for playing QuakeWorld multiplayer.  [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] also provides QuakeWorld support.

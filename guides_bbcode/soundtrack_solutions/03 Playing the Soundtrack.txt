@@ -11,7 +11,7 @@ Most modern Quake engines also still support CD audio, so there is a good chance
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Several modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=http://directq.codeplex.com/]DirectQ[/url].
+Several modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url].
 
 For soundtrack file playback to work, a few things have to be handled correctly:
 [list]
