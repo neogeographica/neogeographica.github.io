@@ -1,16 +1,16 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out various Quake engines' features was April 13 2013.
+The most recent date that I checked out various Quake engines' features was April 13 2014.
 
 The latest stable version of each engine that supports soundtrack music file playback was:
 [list]
 [*]DarkPlaces: build 20130304 from March 2013
 [*]QuakeSpasm: version 0.85.9 from April 2013
-[*]Fitzquake Mark V: revision 9 from April 2013
+[*]Fitzquake Mark V: "final" from Oct 2013
 [*]DirectQ: version 1.9.0 from Feb 2012
 [/list]
 The latest stable version of each engine that supports external player control was:
 [list]
-[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]ezQuake: version 2.2 from Dec 2013
 [*]FTEQW: version 1.0 from Jun 2011
 [*]Fodquake: version 0.3 from Mar 2012
 [/list]
@@ -18,6 +18,7 @@ Other engines examined:
 [list]
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
+[*]Engoo: version 2.77 from Dec 2013
 [/list]
 [list]
 [/list]
@@ -25,6 +26,7 @@ Other engines examined:
 
 [b]2014[/b]
 [list]
+[*]Apr 13: added info about the Engoo engine
 [*]Apr 09: replace link to (vanished) DirectQ website
 [*]Apr 05: brief description of using Spek
 [*]Apr 05: better info about soundtrack format support on OS X and Linux
