@@ -1,0 +1,25 @@
+[previewimg=234248;sizeOriginal,floatLeft;DarkPlaces32.png][/previewimg] [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url] (Windows, OS X, Linux) is the most popular engine for changing the look 'n feel of singleplayer Quake. Organizationally-speaking it probably belongs in the "Singleplayer Focus" section below, but for various reasons it requires some extra commentary that comes up against Steam's limits on section sizes. So let's tackle it here in its own section:
+
+DarkPlaces uses an OpenGL renderer.  It adds many optional visual effects, as well as support for several other mapfile and 3D model formats.  While it is most popular for singleplayer use, it also supports NetQuake and its own multiplayer protocol (client or server), and QuakeWorld (client only).
+
+The downloads for the Windows and Linux versions of DarkPlaces provide both an executable that uses [url=http://www.libsdl.org/]SDL[/url] and also one that doesn't use SDL. Either or both may work well for you. According to [url=http://quakeone.com/95085-post22.html]a post on quakeone.com[/url], the SDL variety is better-tested.
+
+The "Ultimate Quake Patch" (UQP) bundle collected by MenaceInc incorporates the DarkPlaces engine.  That download is described in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113166739
+The UQP is a Windows installer that replaces two of the Quake engine executables that were provided by Steam. After installation, if you run "Quake" or "GLQuake" from Steam, you will now be running DarkPlaces instead of the original engines. The UQP has been popular in the Steam forums, but keep in mind these issues:
+[list]
+[*]It's been a while since the contents of the UQP bundle were updated. Its included version of DarkPlaces is an old one from April 2010. At least one of the known bugs in that version is a potential game-breaker, although you may be able to [url=http://steamcommunity.com/app/2310/discussions/0/810939351089311439/]work around it[/url].
+[*]That old version of DarkPlaces can, on some computers, refuse to cooperate with the Steam community overlay. Successfully launching that version of DarkPlaces through Steam may require going into Steam's properties for Quake and disabling the overlay.
+[*]There is no dedicated uninstaller. If you want to remove the installed files, you will have to manually delete them. Steam's "Delete Local Content" feature will remove the DarkPlaces engine but will not clean up some other files like libraries or music tracks. Fortunately it's pretty easy to just delete everything and then redownload from Steam.
+[*]The installed library files will cause issues if you also want to use the "QuakeSpasm for Steam" or "ProQuake for Steam" installers, as described below in the sections about QuakeSpasm and ProQuake.
+[/list]
+If you are interested in using DarkPlaces, and you are comfortable with "computer tasks" like opening zip archives and moving/copying files, you should consider [i]not[/i] using the UQP. Instead you could [url=http://icculus.org/twilight/darkplaces/download.html]get the DarkPlaces engine yourself[/url]. If you want to launch DarkPlaces through Steam, just put the various DarkPlaces files into the Steam Quake folder, and replace Steam's Winquake.exe and/or Glquake.exe files with copies of darkplaces-sdl.exe (or darkplaces.exe if that works better for you). You can also download and install the soundtrack files as described in the "Quake Soundtrack Solutions" guide linked above.
+
+(Note that you should download the DarkPlaces [i]engine[/i], not the "DarkPlaces mod". The mod is a different thing from the engine, and it [url=http://steamcommunity.com/app/2310/discussions/0/864979008357730841/]changes gameplay[/url] in various ways... you can try it later if you want, once you have the engine working.)
+
+If you have already installed the UQP and you would like to upgrade to the most recent version of DarkPlaces, there's a [url=http://steamcommunity.com/app/2310/discussions/0/864974467272832720/]forum thread[/url] that can help.
+
+The [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] and [url=http://www.moddb.com/mods/quake-epsilon-build]Quake Epsilon[/url] bundles also each include the DarkPlaces engine (more up-to-date than DarkPlaces in the UQP, but not necessarily the most recent version) and a great deal of new media.  Those two bundles are probably the most extensive collections of replacement textures, models, music, and effects for Quake.
+[previewimg=249892;sizeThumb,floatLeft;qhd1.jpg][/previewimg] [previewimg=249893;sizeThumb,floatRight;qhd2.jpg][/previewimg]
+[previewimg=237159;sizeThumb,floatLeft;id1_screenshot2_large.jpg][/previewimg] [previewimg=237160;sizeThumb,floatRight;mp1_screenshot2_large.jpg][/previewimg]
+
+(top: images from Quake HD on Mod DB; bottom: images from the old Quake Epsilon website)
