@@ -7,11 +7,11 @@ The ProQuake engine as of version 4.91beta no longer supports any kind of soundt
 [/list]
 [h1]Engines that only support CD audio[/h1]
 The original Quake engines (the ones provided through Steam) only support CD audio.  If you want to get them to play music files instead, then you will have to modify them.  I haven't tried this approach myself, but Dragonsbrethren has posted a guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113399618
-Most modern Quake engines also still support CD audio, so there is a good chance that any such modification would also work on them.  However if the engine can manage one of the other solutions below, then it would probably be better to use that other solution.  It's generally nicer not to need to binary-patch your Quake executable.
+Most modern Quake engines also still support CD audio, so there is a good chance that this modification would also work on them.  However if an engine can manage one of the other solutions below, then it would probably be better to use that other solution.  It's nicer not to need to binary-patch your Quake executable.
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Several modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=http://directq.codeplex.com/]DirectQ[/url].
+Several modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url].
 
 For soundtrack file playback to work, a few things have to be handled correctly:
 [list]
@@ -21,7 +21,7 @@ For soundtrack file playback to work, a few things have to be handled correctly:
 [*]what audio format the files are in
 [/list]
 
-Different Quake engines can support different answers for those four questions. However for the first three questions, there's a common set of answers that will work for all four engines mentioned above.
+Different Quake engines can support different answers for those questions. However for the first three questions, there's a common set of answers that will work for all engines mentioned above.
 
 If you already have an arrangement that works for the engine you're currently using, that's great! I'm not saying you should change it. This is just a description of a common arrangement that works for multiple engines:
 [list]
@@ -40,7 +40,7 @@ As for the audio format: most of the distributions of the Quake soundtrack are i
 [*]FitzQuake Mark V: MP3
 [*]DirectQ: OGG, MP3, WMA, WAV
 [/list]
-The Windows or OS X version of a Quake engine will inherently support whatever sound formats are listed above for that engine. One exception is DirectQ (on Windows), which for OGG support requires that you also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+The Windows or OS X version of a Quake engine will inherently support the sound formats listed above for that engine. One exception is DirectQ (on Windows), which for OGG support requires that you also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
 
 The Linux version of QuakeSpasm requires external libraries: libogg or libvorbis for OGG support, and libmad or libmpg123 for MP3. I'm not sure if DarkPlaces' OGG support on Linux has the same requirement, but I suspect it does.
 
@@ -69,4 +69,4 @@ If a Quake engine has a feature that allows it to control an external player app
 
 For the [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine, Pirate-X posted a [url=http://forums.steampowered.com/forums/showpost.php?p=27018156&postcount=32]scripting solution for controlling Winamp[/url] on the old Steam forums.
 
-[url=http://fodquake.net/]Fodquake[/url] and [url=http://www.fteqw.com/]FTEQW[/url] also include some amount of support for controlling an external Winamp process, but I'm not aware of how to script them for perfect soundtrack playback.
+[url=http://fodquake.net/]Fodquake[/url] and [url=http://www.fteqw.com/]FTEQW[/url] also include some amount of support for controlling an external Winamp process, but I'm not aware of how to script them for soundtrack play.

@@ -22,6 +22,7 @@ The latest stable version of each engine was:
 [list]
 [*]Apr 13: a bit more about launching a modern Quake engine through Steam
 [*]Apr 13: added info about the Engoo engine
+[*]Apr 09: replace link to (vanished) DirectQ website
 [*]Apr 03: mention old DarkPlaces problem with Steam overlay; discuss manual DarkPlaces install
 [*]Feb 23: added DarkPlaces notes about SDL and about the bugginess of the version included in the UQP
 [/list]
