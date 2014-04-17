@@ -10,6 +10,7 @@ The latest stable version of each engine was:
 [*]QuakeSpasm: version 0.85.9 from Apr 2013
 [*]Fitzquake Mark V: "final" from Oct 2013
 [*]DirectQ: version 1.9.0 from Feb 2012
+[*]Engoo: version 2.77 from Dec 2013
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
@@ -19,6 +20,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Apr 17: added info about Engoo
 [*]Apr 16: rewrite of display configuration info
 [*]Apr 03: a few more words about command-line options when using Steam's Quake engines
 [/list]

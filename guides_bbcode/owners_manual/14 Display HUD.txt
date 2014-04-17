@@ -35,9 +35,19 @@ Notes:
 [/list]
 [list]
 [/list]
-[h1]QuakeSpasm, Fitzquake Mark V, DirectQ, and ProQuake[/h1]
-These four engines always provide the correct shape for HUD elements and console text.
+[h1]QuakeSpasm, Fitzquake Mark V, and DirectQ[/h1]
+These engines always provide the correct shape for HUD elements and console text.
 
-If you want to change the size of the console text, all of these engines except ProQuake support the "scr_conscale" console variable.
+If you want to change the size of the console text, use the "scr_conscale" console variable.
 
-If you want to change the size of the status bar, all of these engines except ProQuake support the "scr_sbarscale" console variable. You may also want to try using the video options menu and/or the "scr_sbaralpha" console variable to affect the statusbar transparency.
+If you want to change the size of the status bar, use the "scr_sbarscale" console variable. You may also want to try using the video options menu and/or the "scr_sbaralpha" console variable to affect the statusbar transparency. DirectQ has more menu options for statusbar styling.
+[list]
+[/list]
+[h1]Engoo[/h1]
+HUD elements and console text will have the correct shape in Engoo.
+
+If you want to change the statusbar size, you will need to disable "automatic scaling" in the view options menu, and then change the "graphics scale" slider. (These menu options correspond to the "scr_retroscale" and "scr_scale" console variables.) These options will also change the scale of on-screen menus, but not of the console text.
+[list]
+[/list]
+[h1]ProQuake[/h1]
+HUD elements and console text will have the correct shape in ProQuake. I'm not aware of a way to change their size.

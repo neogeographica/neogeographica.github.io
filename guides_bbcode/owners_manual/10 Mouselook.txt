@@ -5,7 +5,9 @@ If you don't have mouselook enabled, then you need this line in your autoexec.cf
 [code]+mlook[/code]
 If you are using QuakeSpasm or Fitzquake Mark V, you could also just enter "+mlook" in the console, and it will be saved to your config file.  The original Quake engines however do not save it to the config file, and you must put it in autoexec.cfg.
 
-Note that you [b]do not[/b] want to enable "lookspring" or "lookstrafe".  Those behaviors get in the way of mouselook.
+The Engoo engine has a menu option to enable mouselook; this will set an "m_look" variable to 1 in Engoo's "config.rc" file. If you're used to dealing with other engines by putting "+mlook" in autoexec.cfg as above, this new setting might confuse you, because it essentially flips the sense of "+mlook". In Engoo you will have mouselook enabled if one of these is true: "m_look" is 1, or "+mlook" is active. If both or neither of those are true, then mouselook will be disabled.
+
+Note that regardless of which engine you use, you [b]do not[/b] want to enable "lookspring" or "lookstrafe".  Those behaviors get in the way of mouselook.
 [list]
 [/list]
 [h1]Invert[/h1]
@@ -21,7 +23,7 @@ The in-game menu gives you a way to change your mouse sensitivity, but it's fast
 [list]
 [/list]
 [h1]Vertical auto-aim[/h1]
-Some engines (QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, and the original Quake engines) enable some degree of vertical auto-aim by default.  This can be really frustrating when using mouselook.  To completely disable vertical auto-aim in singleplayer, have this line in your autoexec.cfg file:
+Some engines (QuakeSpasm, Fitzquake Mark V, DirectQ, Engoo, ProQuake, and the original Quake engines) enable some degree of vertical auto-aim by default.  This can be really frustrating when using mouselook.  To completely disable vertical auto-aim in singleplayer, have this line in your autoexec.cfg file:
 [code]sv_aim 1[/code]
 You may see guides that recommend "sv_aim 2", and that's also fine.  All values of 1 or more will disable auto-aim.
 

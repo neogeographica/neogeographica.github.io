@@ -11,3 +11,5 @@ For the original GLQuake or GLQuakeWorld engines, you have to use the command-li
 [/list]
 [h1]Modern Quake engines[/h1]
 For all of the other Quake engines discussed in these guides, you'll be able to choose video resolutions using in-game menus. Widescreen resolutions should be available if your current video monitor/card/driver supports them.
+
+If you're using Engoo, note that the current Engoo version as of this writing (2.77) has a bug where it will not remember your resolution, even if you choose a default resolution. You'll have to re-set your video resolution each time you start up Engoo.
