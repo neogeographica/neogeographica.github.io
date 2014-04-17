@@ -1,0 +1,43 @@
+[h1]Quake (WinQuake) and QuakeWorld[/h1]
+In these two original Quake engines, you cannot change the shape or size of HUD elements.
+[list]
+[/list]
+[h1]GLQuake and GLQuakeWorld[/h1]
+GLQuake and GLQuakeWorld have the HUD shape behavior described in the "Display" section above. So if you want to change the size of the statusbar and console text, or if you are using a widescreen resolution and need to fix the shape of the HUD elements, you'll need to specify the console width and height.
+
+For GLQuake (version 0.97 or 0.98) and GLQuakeWorld, console width and height are specified using the command-line options "-conwidth" and "-conheight". So these would be good GLQuake/GLQuakeWorld command-line options for a 16:9 resolution:
+[code]-conwidth 864 -conheight 486[/code]
+or for a 16:10 resolution:
+[code]-conwidth 768 -conheight 480[/code]
+Note:
+[list]
+[*]The original GLQuake engine does not support"-conwidth" and "-conheight" unless you have downloaded GLQuake version 0.97 or 0.98. See the "GLQuake Version Issues" section.
+[/list]
+[list]
+[/list]
+[h1]ezQuake, FTEQW, Fodquake, DarkPlaces, and Qrack[/h1]
+These engines support setting console dimensions using the "vid_conwidth" and "vid_conheight" console variables, which will save to the config file. So for a 16:9 resolution you could use
+[code]
+vid_conwidth 864
+vid_conheight 486
+[/code]
+or for 16:10 you could use
+[code]
+vid_conwidth 768
+vid_conheight 480
+[/code]
+Notes:
+[list]
+[*]You may need to set these values [i]after[/i] choosing a screen resolution using the in-game menu, in case that action resets them.
+[*]The ezQuake engine has a menu option "Wide Aspect". When enabled, this option will decrease the console height so that the console aspect ratio is 16:10. When disabled, it will increase the console height. If you are not using a 16:10 display, or you want more direct control over the size/shape of HUD elements, you should leave the "Wide Aspect" option disabled and just set the "vid_conwidth"/"vid_conheight" values yourself.
+[*]FTEQW and Qrack will automatically pick "vid_conwidth"/"vid_conheight" values of the correct aspect ratio when setting a video resolution. (They also expose these values in the video options menu.) If you want to change the size of the statusbar and console text then you can manually set the "vid_conwidth"/"vid_conheight" values.
+[*]Fodquake defaults to values of 0 for "vid_conwidth" and "vid_conheight", which in this engine means "pick the correct aspect ratio". As with the other engines, if you want to change the size of the statusbar and console text then you can manually set different values for "vid_conwidth"/"vid_conheight".
+[/list]
+[list]
+[/list]
+[h1]QuakeSpasm, Fitzquake Mark V, DirectQ, and ProQuake[/h1]
+These four engines always provide the correct shape for HUD elements and console text.
+
+If you want to change the size of the console text, all of these engines except ProQuake support the "scr_conscale" console variable.
+
+If you want to change the size of the status bar, all of these engines except ProQuake support the "scr_sbarscale" console variable. You may also want to try using the video options menu and/or the "scr_sbaralpha" console variable to affect the statusbar transparency.

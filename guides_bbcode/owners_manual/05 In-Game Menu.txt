@@ -14,9 +14,7 @@ Modern Quake engines can have a ton of menu options.  It can be a little intimid
 [quote]
 [previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Most Quake engines will automatically save any options changes that you make.  But ezQuake, FTEQW, and Fodquake do not.  In those engines, any changes that you make using the menus will be discarded when you quit Quake unless you explicitly save your changes.  Look for a menu item labelled "Save Settings" or "Save Configuration".
 
-In ezQuake you can also enable an option to "Auto Save on Quit" which makes it unnecessary to explicitly save your settings.  At first it might seem like a no-brainer to turn this on.  But it can be nice to be able to freely experiment with settings, while knowing that if you totally screw things up you can just quit the game and everything will revert.
-
-Quick update: looks like if you set things up using the latest version of the [url=http://www.nquake.com/]nQuake package[/url], then ezQuake will have "Auto Save on Quit" enabled by default.
+In ezQuake you can also enable an option to "Auto Save on Quit" which makes it unnecessary to explicitly save your settings.  At first it might seem like a no-brainer to turn this on.  But it can be nice to be able to freely experiment with settings, while knowing that if you totally screw things up you can just quit the game and everything will revert. If you're using the [url=http://www.nquake.com/]nQuake package[/url], this setting might or might not be enabled (depending on which version of nQuake you installed), so it's good to check it.
 [/quote]
 
 You'll almost certainly want to adjust settings beyond those provided in the in-game menus, so that's what the rest of the guide will be about.  Before we get to talking about those specific settings, we'll first cover [i]how[/i] you can really get under the hood to reach them.

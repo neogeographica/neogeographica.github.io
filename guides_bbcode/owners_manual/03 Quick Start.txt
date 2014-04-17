@@ -16,7 +16,7 @@ The [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine is a good choice.
 
 If you want to get ezQuake along with a collection of new textures, HUDs, etc. then you can use the [url=http://www.nquake.com/]nQuake[/url] package. See the ezQuake section of the Quake Engines guide for more details.
 
-When you're using ezQuake you can set up just about everything through the menus.  It's probably worth taking a look at the "Widescreen" section later in this guide if you want to get everything just right though.
+When you're using ezQuake you can set up just about everything through the menus.  It's probably worth taking a look at the "Display" sections later in this guide if you want to get everything just right though.
 
 Although it's primarily for multiplayer, ezQuake can also play the original Quake campaign.  But for singleplayer beyond that -- mods, mission packs, many recent custom maps --  you'll want to use some other engine, which brings us to:
 [list]
@@ -28,7 +28,7 @@ First let me say that for maximum ease of use the pick should be [url=http://icc
 
 Check the DarkPlaces section of the QuakeEngines guide for a little more info about some installers and bundles you might be interested in. (If you want to get DarkPlaces along with a [i]large[/i] collection of new media then I recommend [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url].)
 
-DarkPlaces has good in-game menus, but again I would recommend at least taking a look at the "Widescreen" section below in order to finish up your configuration.
+DarkPlaces has good in-game menus, but again I would recommend at least taking a look at the "Display" sections below in order to finish up your configuration.
 
 OK that aside... inconveniently for DarkPlaces fans, some custom maps are not really tested against DarkPlaces.  If you want to make sure that you can play recent map releases, especially the more experimental stuff, then you will probably want to use [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], and you'll benefit from digging into this guide a bit more.  QuakeSpasm (or some other "faithful graphics" engine like DirectQ or Fitzquake Mark V) is also a better choice than DarkPlaces if you prefer your Quake graphics oldschool.
 

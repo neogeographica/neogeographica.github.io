@@ -53,7 +53,7 @@ sv_aim 1
 [/code]
 (or "fov 100" for a 16:10 resolution like 1920x1200)
 
-I could get away with just throwing those into autoexec.cfg.  Some are redundant or unnecessary for some modern Quake engines.  And for DarkPlaces I'd also want to fix "vid_conwidth" and "vid_conheight".  But that's the general idea.
+I could get away with just throwing those into autoexec.cfg.  Some are redundant or unnecessary for some modern Quake engines.  And for DarkPlaces and Qrack I'd also want to fix "vid_conwidth" and "vid_conheight".  But that's the general idea.
 
 If you want specifics about which of those settings are needed for which engines, and which are saved to the config, then I've captured below the way it looked to me when I tested each engine.
 [list]
@@ -158,9 +158,10 @@ These settings will be saved to the config file:
 [code]
 cl_backspeed 400
 cl_forwardspeed 400
-m_filter 0
+vid_conwidth 864
+vid_conheight 486
 [/code]
-(Qrack defaults to "m_filter 1", which I don't prefer.)
+(or "vid_conwidth 768" and "vid_conheight 480" for a 16:10 resolution like 1920x1200)
 
 These settings are not saved in the config file (must be in autoexec.cfg):
 [code]

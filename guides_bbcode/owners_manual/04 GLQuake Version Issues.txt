@@ -1,4 +1,4 @@
-The version of GLQuake distributed with Steam (0.95) is not the latest version for some reason, and it is a bit crashy. It also does not understand some of the options described in the "Widescreen" section of this guide.
+The version of GLQuake distributed with Steam (0.95) is not the latest version for some reason, and it is a bit crashy. It also does not understand some of the options described in the "Display" section of this guide.
 
 You can get a more recent version of GLQuake (0.97) from the official id software FTP site and elsewhere. This version is better, but still doesn't support FOV changes.
 [list]

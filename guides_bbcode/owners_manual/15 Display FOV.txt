@@ -1,0 +1,21 @@
+[h1]Manual FOV control[/h1]
+For the majority of the engines discussed in these guides (WinQuake, QuakeWorld, GLQuake, GLQuakeWorld, ezQuake, FTEQW, DarkPlaces, DirectQ, ProQuake, and Qrack) the horizontal field-of-view is directly set through the "fov" console variable.
+
+Notes:
+[list]
+[*]The value for "fov" may or may not be saved to the config file; if not, it needs to be placed in your autoexec.cfg file. See the examples at the end of this guide for engine-by-engine specifics.
+[*]The original GLQuake engine does not support setting "fov" unless you have downloaded GLQuake version 0.98. See the "GLQuake Version Issues" section.
+[*]The ezQuake engine has a menu option "Wide Aspect". When enabled, this option will interpret the current "fov" value as your desired 4:3 FOV and then increase the "fov" value to be suitable for a 16:10 aspect ratio. When disabled, it will do the decrease the FOV. If you are not using a 16:10 display, or you want more direct control over the FOV, you should leave the "Wide Aspect" option disabled and just set the "fov" value yourself.
+[/list]
+[list]
+[/list]
+[h1]Automatic FOV[/h1]
+Fodquake, QuakeSpasm, and Fitzquake Mark V have a different interpretation of the "fov" console variable. In these engines, "fov" specifies your desired horizontal field-of-view for a 4:3 aspect ratio. The actual horizontal FOV you see on your screen will be adjusted depending on the current aspect ratio of your video resolution.
+
+In practice this means that you can just leave "fov" set to a value of 90 in these engines and not worry about it. If you do want to make some adjustments to your FOV you can try increasing or decreasing the value of "fov", but keep in mind that you are not directly setting your field-of-view except in the case where you are using a 4:3 display.
+
+Notes:
+[list]
+[*]QuakeSpasm versions 0.85.8 and earlier do not have this auto-adjustment feature. For these older versions of QuakeSpasm, the "fov" variable has its original meaning, as in the majority of the other Quake engines described above.
+[*]In QuakeSpasm version 0.85.9 and later, you can also choose to disable auto-adjustment by setting "fov_adapt" to 0. When auto-adjustment is disabled, the "fov" variable again behaves as in the majority of the other Quake engines.
+[/list]
