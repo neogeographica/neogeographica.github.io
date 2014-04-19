@@ -1,0 +1,47 @@
+The original engines are consistent in saving "cl_backspeed", "cl_forwardspeed", "crosshair", and (in the QuakeWorld case) "noaim" to the config file.  Anything else among the settings below must be placed in autoexec.cfg if you want them to take effect every time you play.
+
+For the original (non-GL) Quake and QuakeWorld engines, widescreen is not supported, so I wouldn't change the FOV.  These settings would be useful for Quake:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+scr_conspeed 9999
+sv_aim 1
++mlook
+[/code]
+
+And these for QuakeWorld:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+noaim 1
+scr_conspeed 9999
++mlook
+[/code]
+
+For GLQuake I would use these settings (the "fov" setting only works with GLQuake 0.98):
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+scr_conspeed 9999
+sv_aim 1
++mlook
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+
+And these for GLQuakeWorld:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+crosshair 1
+fov 106
+gl_texturemode GL_NEAREST_MIPMAP_LINEAR
+noaim 1
+scr_conspeed 9999
++mlook
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
