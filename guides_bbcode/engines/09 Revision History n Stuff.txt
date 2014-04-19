@@ -20,6 +20,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Apr 19: link to Inside3D forums & the Quaddicted "engines dump"
 [*]Apr 13: a bit more about launching a modern Quake engine through Steam
 [*]Apr 13: added info about the Engoo engine
 [*]Apr 09: replace link to (vanished) DirectQ website
