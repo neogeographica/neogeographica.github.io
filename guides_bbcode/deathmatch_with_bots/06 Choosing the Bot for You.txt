@@ -62,7 +62,7 @@ To make things as clear as possible, here's a table that shows which engine can 
   [/tr]
   [tr]
     [td]DarkPlaces[/td]
-    [td]?[/td]
+    [td][/td]
     [td]*[/td]
     [td][/td]
   [/tr]
@@ -84,6 +84,12 @@ To make things as clear as possible, here's a table that shows which engine can 
     [td]*[/td]
     [td][/td]
   [/tr]
+    [tr]
+    [td]Engoo[/td]
+    [td][/td]
+    [td][/td]
+    [td][/td]
+  [/tr]
   [tr]
     [td]ProQuake[/td]
     [td]*[/td]
@@ -98,7 +104,11 @@ To make things as clear as possible, here's a table that shows which engine can 
   [/tr]
 [/table]
 
-(The question mark for DarkPlaces+Omicron means that when I tested Omicron with DarkPlaces builds 20121222 and 20130304, the bots were stuck and didn't move.)
+Notes:
+[list]
+[*]Since DarkPlaces supports NetQuake multiplayer, it should be a candidate for using Omicron bots. However when I've tested Omicron with multiple versions of DarkPlaces, the bots were always stuck in place unable to move.
+[*]When using Engoo, both Omicron and FBX++ bots have moderate-to-severe difficulties navigating correctly. This isn't entirely a surprise since Engoo's multiplayer support is described as "COMPLETELY UNTESTED".
+[/list]
 [list]
 [/list]
 [h1]Features[/h1]

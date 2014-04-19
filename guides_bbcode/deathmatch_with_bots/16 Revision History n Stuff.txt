@@ -1,32 +1,37 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out the features of these engines and mods was April 13 2013.
+The most recent date that I checked out the features of these engines and mods was April 18 2014.
 
 The latest stable version of each engine was:
 [list]
-[*]ezQuake: version 2.1.1 from Dec 2011 (Windows) and version 2.1 from Apr 2011 (non-Windows)
+[*]ezQuake: version 2.2 from Dec 2013
 [*]FTEQW: version 1.0 from Jun 2011
 [*]Fodquake: version 0.3 from Mar 2012
-[*]DarkPlaces: build 20130304 from March 2013
-[*]QuakeSpasm: version 0.85.9 from April 2013
-[*]Fitzquake Mark V: revision 9 from April 2013
+[*]DarkPlaces: build 20130304 from Mar 2013
+[*]QuakeSpasm: version 0.85.9 from Apr 2013
+[*]Fitzquake Mark V: "final" from Oct 2013
 [*]DirectQ: version 1.9.0 from Feb 2012
+[*]Engoo: version 2.77 from Dec 2013
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
-
 The latest version of each mod was:
 [list]
 [*]Omicron: version 1.02
 [*]FBX++ (my tweak to FBX+)
 [*]FBCA standalone: version 1.02kt beta
 [*]FBCA modified by Trinca: build 379
-[*]nQuake: Feb 2013
+[*]nQuake: Mar 2014
 [*]FBCA included in nQuake: 1.01kt (modified by Vegetous?)
 [/list]
 [list]
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2014[/b]
+[list]
+[*]Apr 18: checked more recent nQuake version; removed description of a fixed problem
+[*]Apr 18: added info about the Engoo engine
+[/list]
 [b]2013[/b]
 [list]
 [*]Aug 10: added link to negke's guide for playing third-party maps/mods
