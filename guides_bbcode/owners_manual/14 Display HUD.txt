@@ -49,5 +49,11 @@ HUD elements and console text will have the correct shape in Engoo.
 If you want to change the statusbar size, you will need to disable "automatic scaling" in the view options menu, and then change the "graphics scale" slider. (These menu options correspond to the "scr_retroscale" and "scr_scale" console variables.) These options will also change the scale of on-screen menus, but not of the console text.
 [list]
 [/list]
+[h1]qbism Super8[/h1]
+HUD elements and console text will have the correct shape in qbism Super8.
+
+If you want to change the statusbar size, you can change the "status bar scale" slider in the video options menu. (This option corresponds to the "sbar_scale" console variables.) I'm not aware of a way to change the console text size.
+[list]
+[/list]
 [h1]ProQuake[/h1]
 HUD elements and console text will have the correct shape in ProQuake. I'm not aware of a way to change their size.

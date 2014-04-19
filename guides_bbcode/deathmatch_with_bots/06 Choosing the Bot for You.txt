@@ -84,10 +84,16 @@ To make things as clear as possible, here's a table that shows which engine can 
     [td]*[/td]
     [td][/td]
   [/tr]
-    [tr]
+  [tr]
     [td]Engoo[/td]
     [td][/td]
     [td][/td]
+    [td][/td]
+  [/tr]
+  [tr]
+    [td]qbism Super8[/td]
+    [td]*[/td]
+    [td]*[/td]
     [td][/td]
   [/tr]
   [tr]
@@ -108,6 +114,7 @@ Notes:
 [list]
 [*]Since DarkPlaces supports NetQuake multiplayer, it should be a candidate for using Omicron bots. However when I've tested Omicron with multiple versions of DarkPlaces, the bots were always stuck in place unable to move.
 [*]When using Engoo, both Omicron and FBX++ bots have moderate-to-severe difficulties navigating correctly. This isn't entirely a surprise since Engoo's multiplayer support is described as "COMPLETELY UNTESTED".
+[*]In qbism Super8, the scores display doesn't properly show player names and fragcounts. This is a general multiplayer issue with Super8 that will probably be addressed in its future releases.
 [/list]
 [list]
 [/list]

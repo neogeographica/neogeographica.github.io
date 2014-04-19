@@ -6,7 +6,7 @@ See the included quickstart readme file for more details.  You can also look at 
 [list]
 [/list]
 [h1]For most Quake engines...[/h1]
-If you like to play Quake using the original Quake (WinQuake) or GLQuake programs, then the FBX++ mod is a good choice. (But see the "GLQuake Issues" section below.) This mod will also work if you use many of the modern Quake engines: DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, ProQuake, or Qrack. 
+If you like to play Quake using the original Quake (WinQuake) or GLQuake programs, then the FBX++ mod is a good choice. (But see the "GLQuake Issues" section below.) This mod will also work if you use many of the modern Quake engines: DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, qbism Super8, ProQuake, or Qrack. 
 
 Grab the [url=http://eclecticmenagerie.com/jl/quake/bots/frikbot_quickstart.zip]FBX++ quickstart[/url] bundle.  This contains the FBX++ downloads from throughout this guide, ready to go in a mod folder named "frikbot".  Just put the "frikbot" folder next to your "id1" folder.
 

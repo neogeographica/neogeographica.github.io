@@ -14,3 +14,5 @@ This same console variable is also available in DirectQ and the Direct3D version
 I'm not aware of how to do this for the Direct3D mode of FTEQW.
 
 Engoo has a somewhat similar option through the "r_filter" console variable, which can be used to enable or disable texture filtering. By default it is disabled, but some of Engoo's available graphics presets will enable it.
+
+qbism Super8 specifically does [i]not[/i] support GLQuake-ish texture filtering, so it's a non-issue there.

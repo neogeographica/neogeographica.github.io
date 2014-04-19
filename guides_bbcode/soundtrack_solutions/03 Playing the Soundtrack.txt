@@ -13,7 +13,7 @@ Most modern Quake engines also still support CD audio, so there is a good chance
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Some modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], and [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url].
+Some modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], and [url=http://super8.qbism.com/]qbism Super8[/url].
 
 For soundtrack file playback to work, a few things have to be handled correctly:
 [list]
@@ -35,12 +35,13 @@ If you already have a setup that works for the engine you're currently using, I'
 [list]
 [*]The files are named in the pattern "track[i]nn[/i]", where "[i]nn[/i]" is the CD track number that the file was ripped from. Since the soundtrack starts at the second CD track, MP3 soundtrack files are named "track02.mp3", "track03.mp3", etc. OGG soundtrack files are named "track02.ogg", "track03.ogg", etc.
 [/list]
-As for the audio format: most of the distributions of the Quake soundtrack are in OGG format, and OGG files can be played by most of these Quake engines. Specifically, the four Quake engines discussed here support the following formats:
+As for the audio format: most of the distributions of the Quake soundtrack are in OGG format, and OGG files can be played by most of these Quake engines. Specifically, the five Quake engines discussed here support the following formats:
 [list]
 [*]DarkPlaces: OGG, WAV
 [*]QuakeSpasm: OGG, MP3, WAV
 [*]FitzQuake Mark V: MP3
 [*]DirectQ: OGG, MP3, WMA, WAV
+[*]qbism Super8: OGG, MP3
 [/list]
 The Windows or OS X version of a Quake engine will inherently support the sound formats listed above for that engine. One exception is DirectQ, which for OGG support requires that you also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
 
@@ -62,12 +63,12 @@ If you want to also use these files with the QuakeSpasm or DirectQ engines, you 
 
 Each of these zipfiles contain OGG tracks.  If you were to extract the tracks from the zipfile you'd see that they're located in the "sound\cdtracks" path.  As mentioned above, DarkPlaces is OK with music files at that location.
 
-You can delete those pk3 files if you want to disable or replace this alternative soundtrack.  On the other hand, if you like it enough to want to listen to it with the QuakeSpasm or DirectQ engines, you need to extract the music files and move the extracted files to the appropriate "music" folder(s): "id1\music", "hipnotic\music", and/or "rogue\music".  DarkPlaces will still be able to find them there.
+You can delete those pk3 files if you want to remove this alternative soundtrack.  On the other hand, if you like it enough to want to listen to it with the QuakeSpasm or DirectQ engines, you need to extract the music files and move the extracted files to the appropriate "music" folder(s): "id1\music", "hipnotic\music", and/or "rogue\music".  DarkPlaces will still be able to find them there.
 [/quote]
 [list]
 [/list]
 [h1]Engines that control external players[/h1]
-If a Quake engine has a feature that allows it to control an external player application, it may be possible to play the soundtrack that way.  The tricky part is to get the right music to automatically play at the right times, rather than just running through a playlist or requiring manual input.
+If a Quake engine has a feature that allows it to control an external player application, it may be possible to play the soundtrack that way.  The tricky part is to get the right music to automatically play at the right times.
 
 For the [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine, Pirate-X posted a [url=http://forums.steampowered.com/forums/showpost.php?p=27018156&postcount=32]scripting solution for controlling Winamp[/url] on the old Steam forums.
 

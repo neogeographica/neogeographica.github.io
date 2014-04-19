@@ -1,5 +1,5 @@
 [h1]Manual FOV control[/h1]
-For the majority of the engines discussed in these guides (WinQuake, QuakeWorld, GLQuake, GLQuakeWorld, ezQuake, FTEQW, DarkPlaces, DirectQ, ProQuake, and Qrack) the horizontal field-of-view is directly set through the "fov" console variable.
+For the majority of the engines discussed in these guides (WinQuake, QuakeWorld, GLQuake, GLQuakeWorld, ezQuake, FTEQW, DarkPlaces, DirectQ, qbism Super8, ProQuake, and Qrack) the horizontal field-of-view is directly set through the "fov" console variable.
 
 Notes:
 [list]

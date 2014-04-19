@@ -117,6 +117,22 @@ I'd leave "fov" at its default value of 90 since Engoo internally takes care of 
 Also note that while I'm using "+mlook" to enable mouselook (for consistency), there's also another way to handle that with Engoo; see the "Mouselook" section for details.
 [list]
 [/list]
+[previewimg=1306313;sizeOriginal,inline;qbismS832.png][/previewimg] qbism Super8
+
+These settings will be saved to the "super8.cfg" config file:
+[code]
+cl_backspeed 400
+cl_forwardspeed 400
+[/code]
+
+These settings are not saved in the config file (must be in autoexec.cfg):
+[code]
+fov 106
+scr_conspeed 9999
+[/code]
+(or "fov 100" for a 16:10 resolution like 1920x1200)
+[list]
+[/list]
 [previewimg=237065;sizeOriginal,inline;ProQuake32.png][/previewimg] ProQuake
 
 These settings will be saved to the config file:

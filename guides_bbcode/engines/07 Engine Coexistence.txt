@@ -1,4 +1,4 @@
-Any modern Quake engine has its own instructions for installation (which you should definitely read!) but they all share a few things in common. It's useful to know that each engine follows the same general rules for working with config files, pak files, and other "loose" files not contained in pak files -- which could be maps, 3D models, sounds, etc.
+Any modern Quake engine has its own instructions for installation, but they all share a few things in common. It's useful to know that each engine follows the same general rules for working with config files, pak files, and other "loose" files not contained in pak files -- which could be maps, 3D models, sounds, etc.
 [list]
 [/list]
 [h1]File Structure Rules[/h1]
@@ -10,9 +10,9 @@ Any modern Quake engine has its own instructions for installation (which you sho
 [quote]
 [previewimg=233476;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The original QuakeWorld and GLQuakeWorld engines always store configuration in the file "config.cfg" in the "qw" subfolder.
 
-DarkPlaces, DirectQ, FitzQuake Mark V, ProQuake, QuakeSpasm, and Engoo will by default use "config.cfg" in the "id1" subfolder (Engoo also uses "config.rc"), but if you specify a folder using the "-game" command-line option then they will store the configuration in that folder instead.  The original Quake and GLQuake engines also have this behavior.
+DarkPlaces, DirectQ, FitzQuake Mark V, ProQuake, QuakeSpasm, and Engoo will by default use "config.cfg" in the "id1" subfolder (Engoo also uses "config.rc").  If you specify a folder using the "-game" command-line option then they will store the configuration in that folder instead.  The original Quake and GLQuake engines also have this behavior.
 
-Qrack will by default store its "config.cfg" in the "qrack" subfolder, but if you specify a folder using the "-game" command-line option then it will store the configuration in that folder instead.
+Qrack stores its "config.cfg" in the "qrack" subfolder, and qbism Super8 stores its configuration in the file "super8.cfg" in the "super8" subfolder.  If you specify a folder using the "-game" command-line option though, both of these engines behave like the ones above and store configuration in the indicated folder.
 
 The other engines mentioned in this guide each have their own special place for stashing configuration, which is [i]not[/i] affected by the "-game" option:
 [list]
@@ -42,14 +42,14 @@ Some Quake engines consist of a single executable, but others include various dy
 
 So if you have two Quake engines that are distributed with different versions of the same library -- for example, some Windows engines have conflicting versions of "zlib1.dll" -- then you won't be able to dump all their files into the same directory and expect both engines to work.
 
-This problem can (usually) be solved, while still allowing shared content, with use of the "-basedir" command-line option.  The "-basedir" option allows you to explicitly specify the directory that contains "id1" and any other data folders mentioned above, rather than just assuming that they are located with the engine executable.
+This problem can (sometimes) be solved, while still allowing shared content, with use of the "-basedir" command-line option.  The "-basedir" option allows you to explicitly specify the directory that contains "id1" and any other data folders mentioned above, rather than just assuming that they are located with the engine executable.
 
 For example you could stash all DarkPlaces engine files in a "C:\Games\QuakeEngines\DarkPlaces" folder and QuakeSpasm files in "C:\Games\QuakeEngines\QuakeSpasm", then put your game data under "C:\Games\QuakeData" -- i.e. your "id1" folder would be at "C:\Games\QuakeData\id1".  If you always launched DarkPlaces or QuakeSpasm using the "-basedir C:\Games\QuakeData" option then they would run correctly.
 
 [quote]
 [previewimg=233476;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The "-basedir" option ideally would be something that any Quake engine supports.
 
-However, just experimenting with this option shows that it seems to not currently work for at least the Windows versions of Fodquake, DirectQ, or Qrack.  And for Fitzquake Mark V or Engoo, "-basedir" will only work if the specified path has no spaces in it.
+However, just experimenting with this option shows that it seems to not currently work for at least the Windows versions of Fodquake, DirectQ, or Qrack.  And for Fitzquake Mark V, Engoo, and qbism Super8, "-basedir" will only work if the specified path has no spaces in it.
 
 The saving grace for Fodquake, DirectQ, Fitzquake Mark V, and Engoo is that they are just single-file executables without any library baggage, so use of "-basedir" is less likely to be necessary.
 [/quote]
@@ -60,9 +60,9 @@ Command-line options can be passed to a Quake engine executable by various metho
 [h1]Managing Config Files[/h1]
 Sharing maps and other content between engines can be great, but sharing config files is... less great.
 
-With the original Quake engines, both Quake and GLQuake read/write "id1\config.cfg", and both QuakeWorld and GLQuakeWorld read/write "qw\config.cfg".  This is fine because Quake/GLQuake use the same set of config options, and QuakeWorld/GLQuakeWorld use the same set of config options.  Just don't get confused about which is which if you do any manual editing of those files.
+With the original Quake engines, both Quake and GLQuake read/write "id1\config.cfg", and both QuakeWorld and GLQuakeWorld read/write "qw\config.cfg".  This is fine because Quake/GLQuake use the same set of config options, and QuakeWorld/GLQuakeWorld use the same set of config options.
 
-When you start using modern Quake engines however, each one can have its own special config options -- or even worse, its own interpretation of common config options.  This is perfectly fine if the engine stores its configuration in its own special directory that no other engine will see.  However many of the engines will just tend to dump their config.cfg file into "id1" as described in the File Structure Rules section above.
+When you start using modern Quake engines however, each one can have its own special config options -- or worse, its own interpretation of common config options.  This is perfectly fine if the engine stores its configuration in its own special directory that no other engine will see.  However many of the engines will just tend to dump their config.cfg file into "id1" as described in the File Structure Rules section above.
 
 If you are using two or more engines that want to put their config file in the same place, then you may just need to create completely separate Quake installation directories for them -- don't share any files at all.
 

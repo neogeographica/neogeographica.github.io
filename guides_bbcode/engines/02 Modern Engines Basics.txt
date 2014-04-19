@@ -10,7 +10,7 @@ Each engine mentioned below has a long development history and many features, bu
 [h1]Which Engines for What[/h1]
 As a first pass for engine selection, keep these criteria in mind:
 [list]
-[*]QuakeSpasm, Fitzquake Mark V, DirectQ, and DarkPlaces are the most popular engines for playing singleplayer.  The first three are intended to provide a "classic" look, while DarkPlaces is more about a modified/updated look.  Engoo is another singleplayer engine that supports a range of looks from faithful to highly modified. All of the engines described in this guide (except Fodquake) have some amount of support for singleplayer.
+[*]QuakeSpasm, Fitzquake Mark V, DirectQ, and DarkPlaces are the most popular engines for playing singleplayer.  The first three are intended to provide a "classic" look, while DarkPlaces is more about a modified/updated look.  Engoo is another singleplayer engine that supports a range of looks from faithful to highly modified.  qbism Super8 is an engine dedicated to a specific low-fi look.  All of the engines described in this guide (except Fodquake) have some amount of support for singleplayer.
 [/list]
 [list]
 [*]ezQuake, FTEQW, and Fodquake are the most popular engines for playing QuakeWorld multiplayer.  DarkPlaces also provides QuakeWorld support.
