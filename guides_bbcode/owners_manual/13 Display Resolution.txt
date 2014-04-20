@@ -1,11 +1,11 @@
 [h1]Quake (WinQuake) and QuakeWorld[/h1]
 In these two original Quake engines, you can set your desired video resolution using in-game menus, although you will not be able to choose widescreen resolutions.
 
-Note that the in-game menus allow you to pick a resolution as the "default". For these two engines, you need to select a default resolution if you want Quake to use that resolution the next time you start it up.
+Note that the in-game menus also allow you to mark your current resolution as the "default".  Once you have chosen a resolution, remember to mark it as default, so that Quake will start up with that resolution in the future.  (For other Quake engines this is not an issue.)
 [list]
 [/list]
 [h1]GLQuake and GLQuakeWorld[/h1]
-For the original GLQuake or GLQuakeWorld engines, you have to use the command-line options "-width" and "-height" to specify your desired resolution, for example
+For the original GLQuake or GLQuakeWorld engines, you have to use the command-line options "-width" and "-height" ([b]not[/b] console variables) to specify your desired resolution.  For example:
 [code]-width 1920 -height 1080[/code]
 [list]
 [/list]

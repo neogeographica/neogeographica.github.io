@@ -5,7 +5,7 @@ In these two original Quake engines, you cannot change the shape or size of HUD 
 [h1]GLQuake and GLQuakeWorld[/h1]
 GLQuake and GLQuakeWorld have the HUD shape behavior described in the "Display" section above. So if you want to change the size of the statusbar and console text, or if you are using a widescreen resolution and need to fix the shape of the HUD elements, you'll need to specify the console width and height.
 
-For GLQuake (version 0.97 or 0.98) and GLQuakeWorld, console width and height are specified using the command-line options "-conwidth" and "-conheight". So these would be good GLQuake/GLQuakeWorld command-line options for a 16:9 resolution:
+For GLQuake (version 0.97 or 0.98) and GLQuakeWorld, console width and height are specified using the command-line options "-conwidth" and "-conheight". ([b]Not[/b] console variables.)  So these would be good GLQuake/GLQuakeWorld command-line options for a 16:9 resolution:
 [code]-conwidth 864 -conheight 486[/code]
 or for a 16:10 resolution:
 [code]-conwidth 768 -conheight 480[/code]

@@ -24,7 +24,7 @@ In the Quake engines that have this issue, it turns out that the shapes of all t
 [/list]
 To get the right shape for HUD elements, you want the console width/height to have the same ratio as your screen resolution's width/height. Personally I like to keep the console height as close to 480 as possible to match the original WinQuake design, where the console dimensions were 640x480. So for 16:10 resolutions I use 768x480 for the console dimensions; for 16:9 I use 864x486.
 
-You may also want to adjust your viewsize. Viewsize can be increased/decreased by different methods which can include: a "viewsize" console variable, a menu option, or the "+" and "-" keys. Decreasing the viewsize will just shrink the area of the screen that shows the gameworld, and this isn't too useful on modern systems. Increasing the viewsize can have interesting effects if you continue to increase it even after the screen is filled; increases past this point will typically start removing HUD elements.
+You may also want to adjust your viewsize. Viewsize can be increased/decreased by different methods which can include: a "viewsize" console variable, a menu option, or the "+" and "-" keys. Decreasing the viewsize will just shrink the area of the screen that shows the gameworld, and this isn't too useful on modern systems. Increasing the viewsize can have interesting effects if you continue to increase it even after the screen is filled; increases past this point will typically start removing HUD elements. (A corollary: if you seem to be missing HUD elements, trying shrinking the viewsize.)
 [list]
 [/list]
 [h1]Field of view[/h1]
