@@ -2,6 +2,6 @@ As originally released, Quake played its soundtrack music using CD audio.  Each 
 
 The problem with that now is that if you get Quake through digital distribution, you don't get a CD.  So no music.
 
-Of course, if you have an original Quake CD from back in the day, and it's still readable, then you might be good to go.  Or you might not be -- the original Quake engines, and some (or all?) modern Quake engines, will not properly loop the music tracks when used under Windows Vista or Windows 7.  And there are plenty of other reasons you might not want to mess with a physical CD anyway.
+Of course, if you have an original Quake CD from back in the day, and it's still readable, then you might be good to go.  Or you might not be -- the original Quake engines, and some (or all?) modern Quake engines, will not properly loop the music tracks when used in versions of Windows after Windows XP.  And there are plenty of other reasons you might not want to mess with a physical CD anyway.
 
 Fortunately there are several ways to manage without a physical CD and still hear the good old creepy Quake music while you play.
