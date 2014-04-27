@@ -3,7 +3,7 @@
 
 Once you have Quake running your mod, you need to set the rules of the game.
 
-Some of these rules can be set through the Multiplayer menu if you are creating a game that way, but all of them can be accessed through console variables.  Which means that you can either set them manually using the console, or set them on the command line, or put them in a configuration script that you execute.  If you're not familiar with the Quake console, check out the section on "The Console and autoexec.cfg" in the Quake Owner's Manual guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+Some of these rules can be set through the Multiplayer menu if you are creating a game that way, but all of them can be accessed through console variables.  Which means that you can either set them manually using the console, or set them on the command line, or put them in a configuration script that you execute.  If you're not familiar with the Quake console, check out the sections on "The Console" and "Saving Console Changes" in the Quake Owner's Manual guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
 
 The basic settings are shared among all mods, so we'll cover those first before getting into the mod-specific stuff.
 
