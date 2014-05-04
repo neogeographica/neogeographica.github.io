@@ -6,21 +6,7 @@ Any modern Quake engine has its own instructions for installation, but they all 
 [list][*]An engine that supports QuakeWorld multiplayer will also examine the "qw" subfolder for additional files.[/list]
 [list][*]An engine will also examine any subfolder named using the "-game" command-line option; this is the typical way that a mod is enabled (the mod files are inside that subfolder).[/list]
 [list][*]Finally, a modern Quake engine may also have its own specially-named subfolder that it will examine for content, perhaps according to its own unique rules.  For example, ezQuake will load content out of the "ezquake" subfolder.[/list]
-[list][*]When Quake loads or saves its configuration, it will use one of those folders; the behavior varies from engine to engine.[/list]
-[quote]
-[previewimg=233476;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The original QuakeWorld and GLQuakeWorld engines always store configuration in the file "config.cfg" in the "qw" subfolder.
-
-DarkPlaces, DirectQ, FitzQuake Mark V, ProQuake, QuakeSpasm, and Engoo will by default use "config.cfg" in the "id1" subfolder (Engoo also uses "config.rc").  If you specify a folder using the "-game" command-line option then they will store the configuration in that folder instead.  The original Quake and GLQuake engines also have this behavior.
-
-Qrack stores its "config.cfg" in the "qrack" subfolder, and qbism Super8 stores its configuration in the file "super8.cfg" in the "super8" subfolder.  If you specify a folder using the "-game" command-line option though, both of these engines behave like the ones above and store configuration in the indicated folder.
-
-The other engines mentioned in this guide each have their own special place for stashing configuration, which is [i]not[/i] affected by the "-game" option:
-[list]
-[*]ezQuake: "config.cfg" in the "ezQuake\configs" subfolder
-[*]FTEQW: "fte.cfg" somewhere under your user directory; on Windows for example this config file is stored in "My Games\FTE QuakeWorld\fte" under your personal documents folder
-[*]Fodquake: "default.cfg" somewhere under your user directory; on Windows for example this config file is stored in "Fodquake\fodquake\configs" under your personal documents folder
-[/list]
-[/quote]
+[list][*]When Quake loads or saves its configuration, it will use one of those folders; the behavior varies from engine to engine as described in the section about "The Config File" in the Quake Owner's Manual guide (linked below).[/list]
 
 Why do we care about this behavior?
 
@@ -62,7 +48,7 @@ Sharing maps and other content between engines can be great, but sharing config 
 
 With the original Quake engines, both Quake and GLQuake read/write "id1\config.cfg", and both QuakeWorld and GLQuakeWorld read/write "qw\config.cfg".  This is fine because Quake/GLQuake use the same set of config options, and QuakeWorld/GLQuakeWorld use the same set of config options.
 
-When you start using modern Quake engines however, each one can have its own special config options -- or worse, its own interpretation of common config options.  This is perfectly fine if the engine stores its configuration in its own special directory that no other engine will see.  However many of the engines will just tend to dump their config.cfg file into "id1" as described in the File Structure Rules section above.
+When you start using modern Quake engines however, each one can have its own special config options -- or worse, its own interpretation of common config options.  This is perfectly fine if the engine stores its configuration in its own special directory that no other engine will see.  However many of the engines will just tend to dump their config.cfg file into "id1".
 
 If you are using two or more engines that want to put their config file in the same place, then you may just need to create completely separate Quake installation directories for them -- don't share any files at all.
 

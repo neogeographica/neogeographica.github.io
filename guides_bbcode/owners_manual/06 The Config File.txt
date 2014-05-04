@@ -1,16 +1,24 @@
 [h1]Basic Configuration[/h1]
 Changes that you make using the in-game menu, and some other changes that we'll get to in a minute, are stored in a file.
 
-The name and location of this file depends on which Quake engine you are using.  The Quake Engines guide (linked at the top of this guide) covers this, but if you're in too much of a hurry for that, then here's the short form:
+The name and location of this file depends on which Quake engine you are using.  For the original Quake engines, the rules are simple:
 [list]
-[*]If you run "Quake" or "GLQuake" from Steam, configuration will be stored in a file named "config.cfg" in the "id1" folder of your Quake installation.
+[*]If you run Quake (WinQuake) or GLQuake, configuration will be stored in a file named "config.cfg" in the "id1" folder of your Quake installation.
 [/list]
 [list]
-[*]If you run "QuakeWorld" or "GLQuakeWorld" from Steam, configuration will be stored in a file named "config.cfg" in the "qw" folder of your Quake installation.
+[*]If you run QuakeWorld or GLQuakeWorld, configuration will be stored in a file named "config.cfg" in the "qw" folder of your Quake installation.
 [/list]
-Steam will normally install Quake in the "steamapps\common\quake" folder under your Steam folder.
+For example, Steam will normally install Quake in the "steamapps\common\quake" folder under your Steam folder, so in that case the config files will be placed in the "steamapps\common\quake\id1" folder or the "steamapps\common\quake\qw" folder.
 
-Modern Quake engines may have different ideas about where to store their configuration, and if you want more specifics about that then you'll have to hop over to the "Engine Coexistence" section of the Quake Engines guide.
+Modern Quake engines may have different ideas about where to store their configuration. Many engines still just use "id1\config.cfg", but some engines use different files:
+[list]
+[*]Engoo: "id1\config.cfg" (for original Quake settings) and also "id1\config.rc" (for Engoo-specific settings)
+[*]Qrack: "qrack\config.cfg"
+[*]qbism Super8: "super8\super8.cfg"
+[*]ezQuake: "ezQuake\configs\config.cfg"
+[*]FTEQW: "fte.cfg" somewhere under your user directory; on Windows for example this config file is stored in "My Games\FTE QuakeWorld\fte" under your personal documents folder
+[*]Fodquake: "default.cfg" somewhere under your user directory; on Windows for example this config file is stored in "Fodquake\fodquake\configs" under your personal documents folder
+[/list]
 [list]
 [/list]
 [h1]Missionpacks and Mods[/h1]
@@ -22,8 +30,8 @@ But just as a quick example, if you have a mod stored in the "travail" folder, t
 
 We'll ignore QuakeWorld, GLQuakeWorld, and Fodquake for this section; those engines don't support singleplayer.
 
-For ezQuake and FTEQW, the "-game" option doesn't affect the config file -- possibly because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
+For ezQuake and FTEQW, the "-game" option doesn't affect the location of the config file -- probably because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
 
-For all other Quake engines though, when you use the "-game" option to specify a folder, your configuration will be stored in that folder.  If no config file exists there, then it will first be copied over from its original location (which is usually in the "id1" folder, or the "qrack" folder in the case of the Qrack engine).  So when you first start up a mod, you should see your familiar configuration.
+For all other Quake engines, when you use the "-game" option to specify a folder, your configuration will be stored in that folder.  If no config file exists there, then it will first be copied over from its original location.  So when you first start up a mod, you should see your familiar configuration.
 
 While running a mod, you may want to make changes specific to that mod, such as binding a key to a new weapon.  Any changes you make to your configuration while using a particular "-game" folder will only affect the config file in that folder.

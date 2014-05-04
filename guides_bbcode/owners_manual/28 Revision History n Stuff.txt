@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]May 03: moved config-location info from Engines guide to Owner's Manual guide
 [*]May 03: checked new versions of qbism Super8 and DarkPlaces; moved DarkPlaces to the "auto FOV" engines
 [*]Apr 19: added info about the qbism Super8 engine
 [*]Apr 17: added info about the Engoo engine
