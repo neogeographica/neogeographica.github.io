@@ -1,17 +1,17 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out these engines' features was April 19 2014.
+The most recent date that I checked out these engines' features was May 3 2014.
 
 The latest stable version of each engine was:
 [list]
 [*]ezQuake: version 2.2 from Dec 2013
 [*]FTEQW: version 1.0 from Jun 2011
 [*]Fodquake: version 0.3 from Mar 2012
-[*]DarkPlaces: build 20130304 from Mar 2013
+[*]DarkPlaces: build 20140430 from May 2014
 [*]QuakeSpasm: version 0.85.9 from Apr 2013
 [*]Fitzquake Mark V: "final" from Oct 2013
 [*]DirectQ: version 1.9.0 from Feb 2012
 [*]Engoo: version 2.77 from Dec 2013
-[*]qbism Super8: version 183 from Jan 2014
+[*]qbism Super8: version 185 from Apr 2014
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]May 03: checked new versions of qbism Super8 and DarkPlaces; moved DarkPlaces to the "auto FOV" engines
 [*]Apr 19: added info about the qbism Super8 engine
 [*]Apr 17: added info about the Engoo engine
 [*]Apr 16: rewrite of display configuration info

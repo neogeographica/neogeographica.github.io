@@ -7,15 +7,14 @@ So generally speaking these are the settings that I like:
 cl_backspeed 400
 cl_forwardspeed 400
 crosshair 1
-fov 106
 gl_texturemode GL_NEAREST_MIPMAP_LINEAR
 scr_conspeed 9999
 sv_aim 1
 +mlook
 [/code]
-(or "fov 100" for a 16:10 resolution like 1920x1200)
+If the engine doesn't automatically adapt FOV for widescreen, I'd want to use "fov 106" for a 16:9 resolution (like 1920x1080) or "fov 100" for a 16:10 resolution (like 1920x1200).
 
-I could get away with just throwing those into autoexec.cfg.  Some are redundant or unnecessary for some modern Quake engines.  And for DarkPlaces and Qrack I'd also want to fix "vid_conwidth" and "vid_conheight".  But that's the general idea.
+I could get away with just throwing all of these settings into autoexec.cfg.  Some are redundant or unnecessary for some modern Quake engines.  And for DarkPlaces and Qrack I'd also want to fix "vid_conwidth" and "vid_conheight".  But that's the general idea.
 
 If you want specifics about which of those settings are needed for which engines, and which are saved to the config, then I've captured below the way it looked to me when I tested each engine.
 [list]
@@ -26,11 +25,10 @@ These settings will be saved to the config file:
 [code]
 cl_backspeed 400
 cl_forwardspeed 400
-fov 106
 vid_conwidth 864
 vid_conheight 486
 [/code]
-(or "fov 100", "vid_conwidth 768", and "vid_conheight 480" for a 16:10 resolution like 1920x1200)
+(or "vid_conwidth 768" and "vid_conheight 480" for a 16:10 resolution like 1920x1200)
 
 You can also experiment with different values for the "crosshair" variable.
 
@@ -38,6 +36,7 @@ This setting is not saved in the config file (must be in autoexec.cfg):
 [code]
 gl_texturemode GL_NEAREST_MIPMAP_LINEAR
 [/code]
+I'd leave "fov" at its default value of 90 since DarkPlaces internally takes care of increasing the field of view for widescreen resolutions.
 [list]
 [/list]
 [previewimg=237067;sizeOriginal,inline;QuakeSpasm32.png][/previewimg] QuakeSpasm

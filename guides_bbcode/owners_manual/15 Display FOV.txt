@@ -1,5 +1,5 @@
 [h1]Manual FOV control[/h1]
-For the majority of the engines discussed in these guides (WinQuake, QuakeWorld, GLQuake, GLQuakeWorld, ezQuake, FTEQW, DarkPlaces, DirectQ, qbism Super8, ProQuake, and Qrack) the horizontal field-of-view is directly set through the "fov" console variable.
+For the majority of the engines discussed in these guides (WinQuake, QuakeWorld, GLQuake, GLQuakeWorld, ezQuake, FTEQW, DirectQ, qbism Super8, ProQuake, and Qrack) the horizontal field-of-view is directly set through the "fov" console variable.
 
 Notes:
 [list]
@@ -10,7 +10,7 @@ Notes:
 [list]
 [/list]
 [h1]Automatic FOV[/h1]
-Fodquake, QuakeSpasm, Fitzquake Mark V, and Engoo have a different interpretation of the "fov" console variable. In these engines, "fov" specifies your desired horizontal field-of-view for a 4:3 aspect ratio. The actual horizontal FOV you see on your screen will be adjusted depending on the current aspect ratio of your video resolution.
+DarkPlaces, Fodquake, QuakeSpasm, Fitzquake Mark V, and Engoo have a different interpretation of the "fov" console variable. In these engines, "fov" specifies your desired horizontal field-of-view for a 4:3 aspect ratio. The actual horizontal FOV you see on your screen will be adjusted depending on the current aspect ratio of your video resolution.
 
 In practice this means that you can just leave "fov" set to a value of 90 in these engines and not worry about it. If you do want to make some adjustments to your FOV you can try increasing or decreasing the value of "fov", but keep in mind that you are not directly setting your field-of-view except in the case where you are using a 4:3 display.
 
