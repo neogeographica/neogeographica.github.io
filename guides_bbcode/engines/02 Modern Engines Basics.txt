@@ -19,7 +19,7 @@ As a first pass for engine selection, keep these criteria in mind:
 [*]ProQuake, Qrack, and DarkPlaces are the most popular engines for playing NetQuake multiplayer.  All of the engines described below, except ezQuake and Fodquake, have some amount of support for NetQuake multiplayer.
 [/list]
 [list]
-[*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. ezQuake and FTEQW can host QuakeWorld games; all of the remaining engines (except Fodquake) can host NetQuake games.
+[*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. ezQuake and FTEQW can host QuakeWorld games; all of the remaining engines (except Fodquake) can host NetQuake games.
 [/list]
 [list]
 [/list]
