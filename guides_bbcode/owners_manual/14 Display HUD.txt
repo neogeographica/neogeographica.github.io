@@ -11,7 +11,7 @@ or for a 16:10 resolution:
 [code]-conwidth 768 -conheight 480[/code]
 Note:
 [list]
-[*]The original GLQuake engine does not support"-conwidth" and "-conheight" unless you have downloaded GLQuake version 0.97 or 0.98. See the "GLQuake Version Issues" section.
+[*]The original GLQuake engine does not support "-conwidth" and "-conheight" unless you have downloaded GLQuake version 0.97 or 0.98. See the "GLQuake Version Issues" section.
 [/list]
 [list]
 [/list]
