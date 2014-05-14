@@ -1,0 +1,13 @@
+Most Quake engines don't significantly (or at all) change the behavior of Quake game objects.
+
+DarkPlaces however is an exception; it makes quite a few changes. Most of these changes are intended to fix bugs, but sometimes fixes can have unintended consequences.
+
+You can individually enable or disable those changes using special DarkPlaces console variables that begin with the prefix "sv_gameplayfix_". When one of those variables is set to 1, it enables a particular change/fix/feature; a value of 0 disables. Some of these may be enabled by default. The default values depend on which version of DarkPlaces you're using.
+
+The [url=http://icculus.org/twilight/darkplaces/readme.html#ConsoleVariables]DarkPlaces readme[/url] lists what each of these variables controls, if you're curious.
+
+A generally safe approach is to set all of the DarkPlaces "sv_gameplayfix_" variables to 0 except for "sv_gameplayfix_droptofloorstartsolid", which you probably want to have set to 1. If "sv_gameplayfix_droptofloorstartsolid" is set to 0 then some items may immediately fall through the floor and vanish when a level begins. Having a 0 value for that variable is the usual cause of maps appearing to have fewer items when played using DarkPlaces.
+
+If you're having problems with a particular map then the first thing you should do is check the readme file that came with the map. The readme will usually indicate which Quake engines were used to build and test the map, and the most problem-free approach is to use one of those engines to play it.
+
+It's worth mentioning that almost all custom singleplayer maps are tested against the QuakeSpasm engine or its predecessor Fitzquake. QuakeSpasm is a good bet for getting the intended behavior from a singleplayer map, unless the map's readme specifically says otherwise.
