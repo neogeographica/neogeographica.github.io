@@ -9,6 +9,8 @@ nQuake will install to its own folder on your computer, separate from your Steam
 More info about the AI bots included in nQuake can be found in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=123626484
 
 [previewimg=234252;sizeOriginal,floatLeft;FTEQW32.png][/previewimg] [url=http://www.fteqw.com/]FTEQW[/url] (Windows, Linux) is another QuakeWorld client currently in use; it can also act as a server to host QuakeWorld games.  Along with an OpenGL renderer, its Windows version also supports Direct3D 9; the Direct3D renderer may perform better on Windows systems that have weak OpenGL support.  FTEQW is something of a "swiss army knife" client that also provides support for NetQuake multiplayer (client only), singleplayer, mapfile formats from other games, and even Quake 2/3 multiplayer (client only).
+
+Unlike the other Quake engines in this list, FTEQW has not had a build blessed as "stable" since 2011 even though it is still undergoing development. If you're interested in using FTEQW, you may want to try out the [url=http://fteqw.com/ftedownloads/30-downloads/75-maintrunk]current experimental build[/url]; the downside of course is that if some major change has happened recently, things might be broken.
 [list]
 [/list]
 [previewimg=235114;sizeOriginal,floatLeft;Fodquake32.png][/previewimg] [url=http://www.fodquake.net/]Fodquake[/url] (Windows, OS X, Linux, FreeBSD) completes the trifecta of currently-popular QuakeWorld clients; it uses an OpenGL renderer.  It's less feature-stuffed than ezQuake or FTEQW, with a focus on technical improvements in areas like rendering and network protocol.  It does not support singleplayer, and also cannot host multiplayer games.
