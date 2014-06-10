@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Jun 09: mentioned Qrack experimental builds
 [*]May 26: mentioned FTEQW experimental builds
 [*]May 03: moved config-location info from Engines guide to Owner's Manual guide
 [*]May 03: checked new versions of qbism Super8 and DarkPlaces

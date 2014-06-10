@@ -9,4 +9,6 @@ The "ProQuake for Steam" installer can however co-exist happily with the "QuakeS
 [/list]
 [previewimg=234254;sizeOriginal,floatLeft;Qrack32.png][/previewimg] [url=http://quakeone.com/qrack/]Qrack[/url] (Windows) is another OpenGL client that some prefer as a NetQuake multiplayer client.  It also supports playing singleplayer content and can act as a server to host NetQuake games.
 
+Unlike most of the Quake engines in this list, Qrack has not had a build blessed as "stable" since 2011 even though it is still undergoing development. If you're interested in using Qrack, you may want to try out the post-2011 builds, but it can be hard to track down the current build; your best chance is to go to the [url=http://quakeone.com/forums/quake-help/quake-clients/]Quake Clients[/url] forum at quakeone.com and look for threads discussing Qrack.
+
 The NetQuake multiplayer scene is probably the one I am least familiar with, so any contributions about the unique features of ProQuake or Qrack are welcome.
