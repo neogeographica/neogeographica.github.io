@@ -6,6 +6,8 @@ You can learn more about it at the ezQuake site; however to install it I would r
 
 nQuake will install to its own folder on your computer, separate from your Steam files. After installation you should manually copy the pak1.pak file from your Steam copy of Quake into the id1 folder of nQuake.
 
+If you don't like the solid-color player skins that nQuake configures, a [url=http://steamcommunity.com/app/2310/discussions/0/648817378248383503/]forum thread[/url] has solutions for you.
+
 More info about the AI bots included in nQuake can be found in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=123626484
 
 [previewimg=234252;sizeOriginal,floatLeft;FTEQW32.png][/previewimg] [url=http://www.fteqw.com/]FTEQW[/url] (Windows, Linux) is another QuakeWorld client currently in use; it can also act as a server to host QuakeWorld games.  Along with an OpenGL renderer, its Windows version also supports Direct3D 9; the Direct3D renderer may perform better on Windows systems that have weak OpenGL support.  FTEQW is something of a "swiss army knife" client that also provides support for NetQuake multiplayer (client only), singleplayer, mapfile formats from other games, and even Quake 2/3 multiplayer (client only).
