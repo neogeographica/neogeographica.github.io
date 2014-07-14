@@ -49,3 +49,4 @@ So, steps for making Steam launch the engine of your choice when playing Quake:
 [*]Decide which of Steam's Quake engines you want to replace. Delete its executable, or move it somewhere else for safekeeping.
 [*]Rename the executable of your modern Quake engine, to replace the file you removed.
 [/list]
+Finally: you may need to disable the Steam community overlay. Don't do that right away, but if launching Quake through Steam fails, then the first thing you should try as a fix is to open Steam's properties dialog for Quake and disable the overlay.

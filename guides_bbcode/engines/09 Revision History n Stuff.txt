@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Jul 14: also mention Steam community overlay issues in the "Launching through Steam" section
 [*]Jul 14: checked DarkPlaces build 20140513 and qbism Super8 version 194
 [*]Jul 14: checked Fitzquake Mark V revision 15; basedir with spaces now works
 [*]Jul 14: added QuakeSpasm video and more Fitzquake Mark V comments
