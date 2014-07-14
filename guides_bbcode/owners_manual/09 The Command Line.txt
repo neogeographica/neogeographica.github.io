@@ -9,7 +9,7 @@ If for example you want to make sure that Quake doesn't try to play music from t
 [code]GLquake.exe -nocdaudio[/code]
 You can specify as many command-line options as you like, as long as you separate them with spaces.
 
-Of course usually you don't start Quake by manually typing in a command shell.  Instead you usually launch it by clicking an icon or some other sort of UI action.  In these cases it might not be obvious how to send command-line options to the engine, but it's still possible as described in the sections below.
+Of course usually you don't start Quake from a command shell.  Instead you usually launch it by clicking an icon or button.  In these cases it might not be obvious how to send command-line options to the engine, but it's still possible as described in the sections below.
 
 The available command-line options differ between Quake engines, but many of the most important ones are the same.  For modern engines, the final authority is the documentation that you downloaded with the engine or that is online at the engine's website.  For the original Quake engines you can dig up the necessary info by searching the web for Quake command line information (and much of that will still apply to modern engines).
 
@@ -24,7 +24,7 @@ If you have a long series of console settings/commands that you want to execute 
 [list]
 [/list]
 [h1]Steam "launch options"[/h1]
-You may be launching Quake using Steam, especially considering which website you're on right now!  Obviously you need to use Steam if you're running the Quake executables that Steam provides.  Also some folks replace those old executables with modern Quake engines but still launch them through Steam to take advantage of the Steam overlay, time-tracking, and just the convenience of having a unified launcher for all their games.  (This works fine if you rename the modern engine executable to have the same filename as the old executable that you're replacing.)
+You may be launching Quake using Steam, especially considering which website you're on right now!  You need to use Steam if you're running the Quake executables that Steam provides.  Also some folks replace those old executables with modern Quake engines but still launch them through Steam to take advantage of the Steam overlay, time-tracking, and the convenience of having a unified launcher for all their games.  (This works fine if you rename the modern engine executable to have the same filename as the old executable that you're replacing.)
 
 To set up command-line options for a Steam-launched Quake engine:
 [list]
@@ -34,17 +34,13 @@ To set up command-line options for a Steam-launched Quake engine:
 [*]Click the "Set launch options" button.  This opens a Launch Options dialog with a text box.
 [*]Type any command-line options you want into this text box, and click OK.
 [/list]
-The "launch options" that you set through Steam should make up all of the command line except the name of the program itself.  So to continue with our example of disabling CD audio, the text that you would enter into the "launch options" box would be
+The "launch options" that you set through Steam should make up all of the command line except the name of the program itself.  So to re-use the example of disabling CD audio, the text that you would enter into the "launch options" box for that purpose would be
 [code]-nocdaudio[/code]
 like so:
 [previewimg=238594;sizeFull,inline;launchopts_trimmed.jpg][/previewimg]
 
 
-Note that if you have not replaced the Quake programs that were downloaded by Steam, [b]this is the only way to specify command-line options[/b]. If you try to start up one of those Quake programs from a shell or shortcut or whatever means outside of Steam, it will still launch through Steam, and Quake will use the options (or lack of options) defined here in Steam's "launch options" dialog.
-
-The potential issue with defining command-line options through Steam is that Steam only lets you specify one set of "launch options" for Quake.  But when you launch Quake you could be choosing to run Quake, GLQuake, QuakeWorld, or GLQuakeWorld.  The same set of launch options would be used with any of those.
-
-In practice this isn't a problem because engines do share many common command-line options, and typically an engine will just ignore any options that it doesn't understand.  So for example if you have an option in "launch options" that only applies to GLQuake, and then you use Steam to launch GLQuakeWorld, you'll be sending a "bad" option to GLQuakeWorld... but it will probably ignore it and you'll be fine.  Just something to keep in mind.
+If you have not replaced the Quake programs that were downloaded by Steam, [b]this is the only way to specify command-line options[/b]. If you try to start up of one those Quake programs from a shell or shortcut or whatever means outside of Steam, it will still launch through Steam, and Quake will use the options (or lack of options) defined here in Steam's "launch options" dialog.
 [list]
 [/list]
 [h1]OS mechanisms[/h1]
@@ -64,5 +60,19 @@ On Windows one way to provide command-line options is by using a shortcut:
 [/list]
 
 Now whenever you open/execute this shortcut, just as if it were a program, you will launch Quake with your desired set of command-line options.
+[list]
+[/list]
+[h1]Launcher programs[/h1]
+Non-Steam Quake engines can also be run with command-line options by using a launcher program.
+
+For Windows users, [url=http://runtimelegend.com/rep/miniql/home]MiniQL[/url] is a great tool. It helps you select mod, map, and a few other common options, while also letting you add any other command-line options you need:
+[previewimg=1694020;sizeFull,inline;miniql.png][/previewimg]
+
+
+Another nice Quake launcher is [url=https://www.quaddicted.com/tools/quake_injector]Quake Injector[/url], which works on Windows, OS X, and Linux. Quake Injector is dedicated to running singleplayer maps, and it can automatically download/install/launch SP maps from the vast Quaddicted map archive:
+[previewimg=1694021;sizeFull,inline;quakeinjector.png][/previewimg]
+
+
+negke's guide to running singleplayer maps has more details about Quake Injector: http://steamcommunity.com/sharedfiles/filedetails/?id=166554615
 
 And that's about it for talking about the general ways to muck about with Quake configuration.  Now we'll cover some of the specifics.
