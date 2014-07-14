@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Jul 14: added QuakeSpasm video and more Fitzquake Mark V comments
 [*]Jun 14: linked to thread on changing nQuake skin settings
 [*]Jun 09: mentioned Qrack experimental builds
 [*]May 26: mentioned FTEQW experimental builds
