@@ -30,6 +30,7 @@ The latest version of each mod was:
 
 [b]2014[/b]
 [list]
+[*]Jul 14: added links to original bot-mod websites
 [*]Jul 14: checked Fitzquake Mark V revision 15, DarkPlaces build 20140513, and qbism Super8 version 194
 [*]May 03: checked new version of DarkPlaces
 [*]Apr 28: checked new version of qbism Super8; removed description of a fixed problem
