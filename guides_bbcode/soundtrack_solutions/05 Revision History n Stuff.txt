@@ -1,13 +1,13 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out various Quake engines' features was May 3 2014.
+The most recent date that I checked out various Quake engines' features was July 14 2014.
 
 The latest stable version of each engine that supports soundtrack music file playback was:
 [list]
-[*]DarkPlaces: build 20140430 from May 2014
+[*]DarkPlaces: build 20140513 from May 2014
 [*]QuakeSpasm: version 0.85.9 from April 2013
-[*]Fitzquake Mark V: "final" from Oct 2013
+[*]Fitzquake Mark V: revision 15 from Jul 2014
 [*]DirectQ: version 1.9.0 from Feb 2012
-[*]qbism Super8: version 185 from Apr 2014
+[*]qbism Super8: version 194 from Jul 2014
 [/list]
 The latest stable version of each engine that supports external player control was:
 [list]
@@ -27,6 +27,7 @@ Other engines examined:
 
 [b]2014[/b]
 [list]
+[*]Jul 14: checked Fitzquake Mark V revision 15, DarkPlaces build 20140513, and qbism Super8 version 194
 [*]May 03: checked new versions of qbism Super8 and DarkPlaces
 [*]Apr 19: added info about the qbism Super8 engine
 [*]Apr 13: added info about the Engoo engine

@@ -65,7 +65,6 @@ These settings will be saved to the config file:
 cl_backspeed 400
 cl_forwardspeed 400
 crosshair 1
-+mlook
 [/code]
 
 These settings are not saved in the config file (must be in autoexec.cfg):

@@ -35,9 +35,9 @@ For example you could stash all DarkPlaces engine files in a "C:\Games\QuakeEngi
 [quote]
 [previewimg=233476;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The "-basedir" option ideally would be something that any Quake engine supports.
 
-However, just experimenting with this option shows that it seems to not currently work for at least the Windows versions of Fodquake, DirectQ, or Qrack.  And for Fitzquake Mark V, Engoo, and qbism Super8, "-basedir" will only work if the specified path has no spaces in it.
+However, just experimenting with this option shows that it seems to not currently work for at least the Windows versions of Fodquake, DirectQ, or Qrack.  And for Engoo and qbism Super8, "-basedir" will only work if the specified path has no spaces in it.
 
-The saving grace for Fodquake, DirectQ, Fitzquake Mark V, and Engoo is that they are just single-file executables without any library baggage, so use of "-basedir" is less likely to be necessary.
+The saving grace for Fodquake, DirectQ, and Engoo is that they are just single-file executables without any library baggage, so use of "-basedir" is less likely to be necessary.
 [/quote]
 
 Command-line options can be passed to a Quake engine executable by various methods.  See the "Command Line" section of the Quake Owner's Manual guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
