@@ -56,4 +56,6 @@ If you want to change the statusbar size, you can change the "status bar scale" 
 [list]
 [/list]
 [h1]ProQuake[/h1]
-HUD elements and console text will have the correct shape in ProQuake. I'm not aware of a way to change their size.
+HUD elements and console text will have the correct shape in ProQuake.
+
+If you want to change the size of those things, change the "console width" setting in the Advanced Settings part of the options menu. (This option corresponds to the "vid_consize" console variable).
