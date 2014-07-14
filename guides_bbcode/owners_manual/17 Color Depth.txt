@@ -1,0 +1,6 @@
+Quake originally supported using either 16-bit color or 32-bit color, since early graphics cards and drivers might perform poorly or not at all with 32-bit color.
+
+These days however, 32-bit color is probably what you want. (Unless you are using the qbism Super8 engine.) In fact your Quake engine and/or graphics card/driver may not even support 16-bit color, or will at least default to 32-bit color.
+
+But if you want to make sure that 32-bit color is being used, it's not a bad idea to be explicit about that with a command-line option:
+[code]-bpp 32[/code]
