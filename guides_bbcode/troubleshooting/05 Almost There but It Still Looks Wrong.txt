@@ -1,0 +1,20 @@
+[h1]Can't see the statusbar[/h1]
+Probably your "viewsize" is too big. Hit the minus key to see if that helps. Maybe hit it again a few times if necessary. :-)
+
+The "Display" section of the Quake Owner's Manual guide has a bit more about viewsize.
+[list]
+[/list]
+[h1]Statusbar is "stretched"[/h1]
+Several Quake engines will have this problem when using a widescreen resolution. The fix depends on which engine you're using. See the "Display" and "Display: HUD" sections of the Quake Owner's Manual guide, as well as the "Console Settings Examples" at the end of the guide.
+[list]
+[/list]
+[h1]Field of view is cramped[/h1]
+This is another common issue when trying to use widescreen resolutions. See the "Display" and "Display: FOV" sections of the Quake Owner's Manual guide, as well as the "Console Settings Examples" at the end of the guide.
+[list]
+[/list]
+[h1]Where's my crosshair?[/h1]
+If you don't have a crosshair (and you want one), and you're using a modern Quake engine, then you might be able to find an option to turn on the crosshair in the options menus. Otherwise you can use a console variable to enable it; see the "More HUD Tweaks" section of the Quake Owner's Manual guide.
+[list]
+[/list]
+[h1]Fog has color banding[/h1]
+You might be running with a 16-bit color depth instead of 32-bit. See the "Color Depth" section of the Quake Owner's Manual guide.

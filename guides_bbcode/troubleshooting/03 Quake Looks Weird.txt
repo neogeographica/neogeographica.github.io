@@ -1,0 +1,26 @@
+[h1]Wacky colors in WinQuake/QuakeWorld[/h1]
+You may see a technicolor mess when launching Quake (WinQuake) or QuakeWorld. These two original Quake engines use DirectDraw in a way that is not well-supported in modern Windows.
+
+The problem may fix itself when the first "screen flash" effect happens. This is my experience when running WinQuake; the colors correct themselves during the opening attract reel.
+
+QuakeWorld doesn't have an attract reel and launches straight into the console. You can type "bf" (without the quotes) and press Enter to force a screen flash which, for me, fixes the colors.
+
+Also the PC Gaming Wiki [url=http://pcgamingwiki.com/wiki/Rainbow_color_problems_in_older_games]describes a way to fix common DirectDraw color issues in old games[/url] which may be helpful for Quake, but I haven't tried that myself. A [url=http://steamcommunity.com/app/2310/discussions/0/828938532947217168/]forum thread[/url] has other possible solutions.
+
+If you use GLQuake or GLQuakeWorld, you won't have this issue. Modern Quake engines, which you can read about in the Quake Engines guide, also don't have this issue.
+
+If you feel that you don't want to use a modern Quake engine because you are really attached to the original look of software-rendered Quake, here's a couple of things to consider:
+[list]
+[*]Some modern engines can be configured to look a lot like software-rendered Quake. Look for the "faithful rendering" engines mentioned in the Quake Engines guide; also, see the "Oldschool Texturing" section of the Quake Owner's Manual guide.
+[*]Engoo, a modern software-renderer Quake engine, has a mode that explicitly attempts to look exactly like the original Quake.
+[/list]
+[list]
+[/list]
+[h1]Wacky colors in other Quake engines[/h1]
+This is a bit of a long shot, but if you see a screen full of corrupted/glitchy graphics, it could be because you need to force 32-bit color depth to make your graphics drivers happy. See the "Color Depth" section of the Quake Owner's Manual guide.
+[list]
+[/list]
+[h1]It only takes up one quarter of the screen[/h1]
+This is a surprising one, but if you're on Windows 8 then it's a specific problem with an easy fix.
+
+The answer is to disable "display scaling on high DPI settings". You don't have to globally disable it; you can disable it just in the properties for the Quake program that you're running. A [url=http://steamcommunity.com/app/2310/discussions/0/540744936581297336/]forum thread[/url] has more discussion and details.

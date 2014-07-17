@@ -1,0 +1,14 @@
+[h1]Can't look around[/h1]
+If you want to use the mouse to look around -- and you probably do! -- then that means you want to enable "mouselook". You probably do NOT want to enable "lookspring" or "lookstrafe".
+
+The Quake options menu allows you to set up your key controls so that you have mouselook while a key is pressed down, but more likely you just want to have mouselook enabled all the time. Many modern Quake engines have mouselook already enabled, and/or have menu options that allow you to permanently enable it. However some Quake engines require using the console and the config files to set this up. See the "Mouselook" section of the Quake Owner's Manual guide, as well as the "Console Settings Examples" at the end of the guide.
+[list]
+[/list]
+[h1]Up and down are backwards[/h1]
+If you have mouselook enabled, but down is up and up is down, then you need to invert mouselook. You should be able to find this setting in the options menus.
+[list]
+[/list]
+[h1]Rockets don't go where they're aimed[/h1]
+Originally Quake had a small amount of vertical auto-aim enabled by default. This can make it easier to use some of the weapons, but rockets in particular can be a little frustrating if you combine mouselook and auto-aim.
+
+Some Quake engines now disable auto-aim by default. But if you're using one that doesn't, you can disable it. See the "Mouselook" section of the Quake Owner's Manual guide and scroll down to the part about "Vertical auto-aim". The "Console Settings Examples" at the end of the guide may also be useful.

@@ -1,0 +1,28 @@
+[h1]Beat all the episodes but can't finish the game[/h1]
+When you beat an episode in Quake, you collect a "rune". Once you have all four runes, the central floor of the hub area should open up and allow you to go to the final map.
+
+Some Quake engines have a bug where you may lose a rune. When this happens, the episode for that rune will still have an open entrance in the hub, and the central floor will never open.
+
+The easiest way to get around this problem is to use the "noclip" console command so that you can walk through solid objects. Move through the closed floor and into the ramp that leads down to the final map. Once you are through into an open area, use "noclip" again to revert to normal behavior, and continue playing.
+
+Alternately you can try using the "impulse 11" console command to give yourself a rune. If you have multiple missing runes, you should be able to use "impulse 11" multiple times to get multiple runes, as long as you close and re-open the console between each command. This approach is discussed [url=http://quake.wikia.com/wiki/Rune]on a Quake wiki[/url], [url=http://quakeone.com/forums/quake-help/general-help/6699-bad-sp-quake-bug-darkplaces-cant-beat-game.html]on the quakeone.com forums[/url], and [url=http://forums.steampowered.com/forums/showthread.php?t=1087166]on the old Steam forums[/url].
+[list]
+[/list]
+[h1]Can't get 100% kills[/h1]
+Maybe you didn't kill all the monsters! :-)
+
+Actually there are a couple of other things that might be going on:
+
+Some monsters are hidden in secret areas. And in a couple of cases, there are secret areas that aren't "officially" marked as secrets, so you may not have found them even if the end-of-map screen shows that you found all the secrets. A [url=http://quakeone.com/forums/quake-help/general-help/10791-missing-enemies.html]thread on the quakeone.com forums[/url] talks about this.
+
+And if the map has fishes on it, you will never get 100% kills, at least not with the original Quake and without mods. Originally Quake had a bug where each fish counted twice toward the monster total, but still only gave you one kill for it.
+
+A few modern Quake engines fix the fish-count bug, as do some Quake mods. In fact a mod exists [url=https://www.quaddicted.com/files/mods/q106fishfix.zip]purely to fix just the fish-count bug[/url], if you really care about getting 100% kills on the end-of-map screen.
+[list]
+[/list]
+[h1]Some items or monsters are missing[/h1]
+This is a subtle one that you probably wouldn't notice unless you are very familiar with the Quake campaign. But if you're using DarkPlaces, it's possible that some things can "fall out of the map", depending on how you have DarkPlaces configured. See the "Compatibility" section of the Quake Owner's Manual guide.
+[list]
+[/list]
+[h1]Can't load map 2 of episode 4[/h1]
+This problem is a bug with an old version of DarkPlaces. The only reason to specifically mention here is that it affects the version of DarkPlaces in the "Ultimate Quake Patch" bundle. See the relevant [url=http://steamcommunity.com/app/2310/discussions/0/810939351089311439/]forum thread[/url] for details and workarounds.

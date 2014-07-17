@@ -1,0 +1,6 @@
+[h1]No music at all[/h1]
+The Quake Soundtrack Solutions guide is entirely dedicated to this problem: http://steamcommunity.com/sharedfiles/filedetails/?id=119489135
+[list]
+[/list]
+[h1]Music sounds "tinny"[/h1]
+Depending on how sensitive your ears are, you may want to fiddle with the sample rate of the music (and sound effects). See the "Sample Rate" section of the Quake Soundtrack Solutions guide.

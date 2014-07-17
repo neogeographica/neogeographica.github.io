@@ -1,0 +1,6 @@
+[h1]No video options menu[/h1]
+GLQuake, GLQuakeWorld, and some GLQuake-based engines don't have an in-game video options menu. You have to use command-line arguments to set your resolution for these engines. See the "Display: Resolution" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide.
+[list]
+[/list]
+[h1]Video options menu doesn't have widescreen choices[/h1]
+The original Quake (WinQuake) and QuakeWorld engines each have a video options menu, but don't support widescreen settings. If you really want widescreen you'll have to use some other Quake engine.

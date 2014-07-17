@@ -1,0 +1,28 @@
+[h1]Crashes when launched through Steam[/h1]
+The most common cause for this problem is that the Quake engine you're using doesn't play nicely with the Steam community overlay.
+
+If you're trying to launch the original Quake (WinQuake) or QuakeWorld program, this probably isn't the issue, since they don't support the overlay anyway. But for GLQuake or GLQuakeWorld, or a modern Quake engine, the overlay could be the problem. In your Steam client, open the properties dialog for Quake and disable the overlay. See if that fixes things.
+
+Note that most of the time it's quite possible to use the Steam community overlay with a Quake engine, it's just that sometimes it causes problems on some systems.
+
+Most commonly it seems to be an old version of DarkPlaces that experiences this issue. If you are using the "Ultimate Quake Patch", then you have an old version of DarkPlaces, and you should probably consider updating to a more recent version. See the section on the DarkPlaces engine in the Quake Engines guide.
+[list]
+[/list]
+[h1]Startup fails with an error dialog about "Hunk_Alloc" or "Z_Malloc"[/h1]
+If you're running a mod or an addon map, or you're using large custom config scripts, some Quake engines (including the original ones) may need command-line arguments telling them to reserve more memory. See the "Limits" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide.
+
+Whenever you run downloaded content, be sure to check the readme file to see if it requires special command-line arguments or other settings.
+[list]
+[/list]
+[h1]Startup fails with an error dialog about "gfx.wad"[/h1]
+If you get an error that specifically says "W_LoadWadFile: couldn't load gfx.wad : can't find pak0.pak", this means that something is wrong with the way your Quake files are arranged. Specifically, the Quake engine can't find the "pak0.pak" file.
+
+The pak0.pak and pak1.pak files are in the "id1" folder. A Quake engine will look for the id1 folder in the current working directory, which normally will be the place where the Quake engine program is located. If id1 isn't there, or the pak files aren't inside id1, you'll get this error message.
+
+If you need to make the Quake engine look for the id1 folder somewhere else, you can use the "-basedir" command-line argument as described in the Quake Engines guide.
+[list]
+[/list]
+[h1]GLQuake crashes (and disabling the overlay doesn't help)[/h1]
+The version of GLQuake distributed through Steam, version 0.95, is a little crashier than later versions. This can be fixed (sometimes) by making sure you have exactly the right command-line arguments for your video settings, but a better solution is to get GLQuake version 0.98 (Windows users only). See the "GLQuake Version Issues" section of the Quake Owner's Manual guide.
+
+An even better solution is to use a modern Quake engine instead of the original GLQuake. The Quake Engines guide is the starting place for that decision.

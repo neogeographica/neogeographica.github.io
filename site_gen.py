@@ -44,6 +44,8 @@ link_xlate = {
     (None, 'How to fix CD audio looping on Windows Vista/7'),
     'http://steamcommunity.com/sharedfiles/filedetails/?id=118401000' :
     ('engines.html', 'Quake Engines, Old and New'),
+    'http://steamcommunity.com/sharedfiles/filedetails/?id=287224659' :
+    ('troubleshooting.html', 'Troubleshooting'),
     'http://steamcommunity.com/sharedfiles/filedetails/?id=119489135' :
     ('soundtrack_solutions.html', 'Quake Soundtrack Solutions'),
     'http://steamcommunity.com/sharedfiles/filedetails/?id=120426294' :
