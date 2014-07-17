@@ -1,5 +1,5 @@
 [h1]Can't see the statusbar[/h1]
-Probably your "viewsize" is too big. Hit the minus key to see if that helps. Maybe hit it again a few times if necessary. :-)
+Probably your "viewsize" is too big. Hit the minus key to see if that makes the statusbar appear. Maybe hit it again a few times if necessary. :-) If you go too far and start actually reducing the size of the rendered screen area, you can use the plus key to go back.
 
 The "Display" section of the Quake Owner's Manual guide has a bit more about viewsize.
 [list]
