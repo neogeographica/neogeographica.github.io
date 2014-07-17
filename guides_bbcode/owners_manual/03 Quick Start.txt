@@ -36,4 +36,6 @@ If you're playing on Windows, you may want to use the [url=http://quakeone.com/p
 [list]
 [/list]
 [h1]Go forth and Quake[/h1]
-That's it, quickstart done!  You can just treat the rest of this guide as a reference for when you have problems or want to learn more.  It will be especially useful for some of the other Quake engines, and double-especially if you are trying to get the original Quake engines to behave.
+That's it, quickstart done!  If you have problems you might want to first check in at the Troubleshooting guide: http://steamcommunity.com/sharedfiles/filedetails/?id=287224659
+
+You can treat the rest of this guide as a reference for when you want to learn more.  It will be especially useful for some of the other Quake engines, and double-especially if you are trying to get the original Quake engines to behave.
