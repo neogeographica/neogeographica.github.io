@@ -17,7 +17,7 @@ Whenever you run downloaded content, be sure to check the readme file to see if 
 [h1]Startup fails with an error dialog about "gfx.wad"[/h1]
 If you get an error that specifically says "W_LoadWadFile: couldn't load gfx.wad : can't find pak0.pak", this means that something is wrong with the way your Quake files are arranged. Specifically, the Quake engine can't find the "pak0.pak" file.
 
-The pak0.pak and pak1.pak files are in the "id1" folder. A Quake engine will look for the id1 folder in the current working directory, which normally will be the place where the Quake engine program is located. If id1 isn't there, or the pak files aren't inside id1, you'll get this error message.
+The pak0.pak and pak1.pak files are in the "id1" folder. A Quake engine will look for the id1 folder in the current working directory. That directory will normally will be the place where the Quake engine program is located, especially if you are launching Quake by clicking on an icon or button; so, normally you want the id1 folder to be located next to your Quake program. If id1 isn't the right directory, or the pak files aren't inside id1, you'll get this error message.
 
 If you need to make the Quake engine look for the id1 folder somewhere else, you can use the "-basedir" command-line argument as described in the Quake Engines guide.
 [list]
