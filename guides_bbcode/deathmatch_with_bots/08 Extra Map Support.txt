@@ -38,13 +38,9 @@ I'm sure that this process is not real attractive to the casual bot-user. Rather
 [h1]FBX++[/h1]
 FBX++ supports a few ways to add more map support, but the easiest is to download FrikBot waypoint files and drop them into the "maps" subfolder of your FBX++ mod folder.
 
-For enough map support to keep you busy for a while (506 maps) you should grab these things:
+For enough map support to keep you busy for a while (506 maps) you should get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2b.zip]Definitive Frikbot Mappack (version 2b)[/url] collected by "LightningHunter" and modified a bit by me.  This package contains several folders which should be placed in your FBX++ mod folder.  It also includes FBX++ in case you didn't get that separately.
 
-1) Get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotMappackV2.zip]Definitive Frikbot Mappack (version 2)[/url] collected by "LightningHunter".  This package contains several folders which should be placed in your FBX++ mod folder.  It also includes a version of FrikBot (FBX+) but you should throw that away (because you are using FBX++ instead, right?).    Finally it contains a maps.cfg file, but you can throw that away too, because:
-
-2) The maps.cfg file from the map pack is too large to be used by some Quake engines.  You'll probably need to split it into around three pieces, so I've gone ahead and done that for you... [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]download the split-up files[/url] and put them in your FBX++ mod folder.  (The "Map Cycle" section below will describe what this is for.)
-
-3) And get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotWaypackV2.zip]Definitive Frikbot Waypack (version 2)[/url] also by "LightningHunter".  Follow the included instructions carefully, since this involves not only getting the waypoint files but also "fixing" some of the maps.
+Then get the [url=http://eclecticmenagerie.com/jl/quake/bots/DefinitiveFrikbotWaypackV2.zip]Definitive Frikbot Waypack (version 2)[/url] also by "LightningHunter".  Follow the included instructions carefully, since this involves not only getting the waypoint files but also "fixing" some of the maps.
 [list]
 [/list]
 [h1]FBCA with nQuake[/h1]
@@ -56,6 +52,6 @@ Otherwise just download the  [url=http://eclecticmenagerie.com/jl/quake/bots/Fro
 [h1]FBCA without nQuake[/h1]
 Adding maps to FBCA involves changing the mod's code, but luckily for you someone else has already done this in a big way.
 
-1) Get [url=http://eclecticmenagerie.com/jl/quake/bots/trinca-fbca-qwprogs.zip]an update to the FBCA code (build 379)[/url] by "Trinca".  This is a "qwprogs.dat" file that you should put into your FBCA mod folder, replacing the "qwprogs.dat" that was originally there.  Your new mod code now supports 379 maps.
+Get [url=http://eclecticmenagerie.com/jl/quake/bots/trinca-fbca-qwprogs.zip]an update to the FBCA code (build 379)[/url] by "Trinca".  This is a "qwprogs.dat" file that you should put into your FBCA mod folder, replacing the "qwprogs.dat" that was originally there.  Your new mod code now supports 379 maps.
 
-2) And get the [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url] that I collected.  This contains [i]almost[/i] all of the maps that Trinca's FBCA code supports.
+Then get the [url=http://eclecticmenagerie.com/jl/quake/bots/FrogbotMapPack.zip]Frogbot Map Pack[/url] that I collected.  This contains [i]almost[/i] all of the maps that Trinca's FBCA code supports.

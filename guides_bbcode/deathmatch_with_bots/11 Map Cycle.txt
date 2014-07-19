@@ -35,7 +35,7 @@ I don't have any pre-configured Omicron map cycles to provide for download.  Be 
 [h1]FBX++[/h1]
 The FBX++ readme describes map cycles in the "Playing" section under the "Map cycling" heading.  It uses the same sort of cycle configuration as Omicron.  But instead of a 64-map limit, FBX++ supports an extremely large map cycle that is limited only by the storage available for aliases (which is affected by the "-zone" command-line option) and by the maximum size for config files.  As a (slight) downside, a random map cycle in FBX++ doesn't provide any guarantee against getting the same map twice in a row.
 
-If you downloaded all of the extra map support for FBX++, including the [url=http://eclecticmenagerie.com/jl/quake/bots/FrikbotMapCycleSplit.zip]split-up config files[/url], then you have the materials to set up a map cycle that is 506 maps long.  Just enter
+If you downloaded all of the extra map support for FBX++, then you have the materials to set up a map cycle that is 506 maps long.  Just enter
 [code]exec maps.cfg[/code]
 in the console.  This will execute the other config files that begin with "maps-part"; together these config files define one big map cycle, and it's broken up into multiple files just to avoid exceeding the config file size limit.
 
