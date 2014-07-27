@@ -1,5 +1,5 @@
-[h1]Can't look around[/h1]
-If you want to use the mouse to look around -- and you probably do! -- then that means you want to enable "mouselook". You probably do NOT want to enable "lookspring" or "lookstrafe".
+[h1]Can't look up and down[/h1]
+If you want to use the mouse to look up and down -- and you probably do! -- then that means you want to enable "mouselook". You probably do NOT want to enable "lookspring" or "lookstrafe".
 
 The Quake options menu allows you to set up your key controls so that you have mouselook while a key is pressed down, but more likely you just want to have mouselook enabled all the time. Many modern Quake engines have mouselook already enabled, and/or have menu options that allow you to permanently enable it. However some Quake engines require using the console and the config files to set this up. See the "Mouselook" section of the Quake Owner's Manual guide, as well as the "Console Settings Examples" at the end of the guide.
 [list]

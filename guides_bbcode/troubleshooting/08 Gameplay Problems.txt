@@ -26,3 +26,9 @@ This is a subtle one that you probably wouldn't notice unless you are very famil
 [/list]
 [h1]Can't load map 2 of episode 4[/h1]
 This problem is a bug with an old version of DarkPlaces. The only reason to specifically mention here is that it affects the version of DarkPlaces in the "Ultimate Quake Patch" bundle. See the relevant [url=http://steamcommunity.com/app/2310/discussions/0/810939351089311439/]forum thread[/url] for details and workarounds.
+[list]
+[/list]
+[h1]Crash on map change, with "GL_LoadTexture" error[/h1]
+The original GLQuake/GLQuakeWorld engines can crash on map change and show an error dialog that says "GL_LoadTexture: cache mismatch". More specifically, this happens if you're changing between map A and map B, and map A has a texture with a different size from a texture of the same name in map B. The [url=http://www.inside3d.com/qip/q1/bugsmap.htm]Quake Info Pool[/url] has a list of the specific map combos that have this problem. In the original Quake maps, DM4 is a problem child that will conflict with either E2M5 or E4M6.
+
+If you use a modern Quake engine then you won't have to worry about this bug.

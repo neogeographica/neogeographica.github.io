@@ -16,5 +16,13 @@ This is another common issue when trying to use widescreen resolutions. See the 
 If you don't have a crosshair (and you want one), and you're using a modern Quake engine, then you might be able to find an option to turn on the crosshair in the options menus. Otherwise you can use a console variable to enable it; see the "More HUD Tweaks" section of the Quake Owner's Manual guide.
 [list]
 [/list]
+[h1]Where's my weapon?[/h1]
+If your weapon isn't being shown on-screen, it's probably for one of two reasons:
+[list]
+[*]If you're using the original non-GL versions of Quake (WinQuake) or QuakeWorld, your weapon will disappear if you change the "fov" console variable to have any value other than 90. If you want to have a different FOV and still see your gun model, you'll need to use some other Quake engine.
+[*]If that's not it, then check the value of the "r_drawviewmodel" console variable. A value of "0" for that variable will hide the gun model, and value of "1" will show it.
+[/list]
+[list]
+[/list]
 [h1]Fog has color banding[/h1]
 You might be running with a 16-bit color depth instead of 32-bit. See the "Color Depth" section of the Quake Owner's Manual guide.

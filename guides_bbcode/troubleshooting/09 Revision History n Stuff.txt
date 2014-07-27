@@ -1,0 +1,4 @@
+[b]2014[/b]
+[list]
+[*]Jul 26: some editing; new sections on missing weapon and on GL_LoadTexture crash
+[/list]

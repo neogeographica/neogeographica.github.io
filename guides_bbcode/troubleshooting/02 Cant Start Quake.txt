@@ -9,7 +9,7 @@ Most commonly it seems to be an old version of DarkPlaces that experiences this 
 [list]
 [/list]
 [h1]Startup fails with an error dialog about "Hunk_Alloc" or "Z_Malloc"[/h1]
-If you're running a mod or an addon map, or you're using large custom config scripts, some Quake engines (including the original ones) may need command-line arguments telling them to reserve more memory. See the "Limits" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide.
+If you're running a mod or an addon map, or you're using large custom config scripts, some Quake engines (including the original ones) may need command-line arguments telling them to reserve more memory. See the "Limits" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide. ("Hunk_Alloc" errors mean you need a larger heapsize value, and "Z_Malloc" errors mean you need a larger zone value.)
 
 Whenever you run downloaded content, be sure to check the readme file to see if it requires special command-line arguments or other settings.
 [list]
@@ -22,7 +22,7 @@ The pak0.pak and pak1.pak files are in the "id1" folder. A Quake engine will loo
 If you need to make the Quake engine look for the id1 folder somewhere else, you can use the "-basedir" command-line argument as described in the Quake Engines guide.
 [list]
 [/list]
-[h1]GLQuake crashes (and disabling the overlay doesn't help)[/h1]
+[h1]GLQuake crashes on startup (and disabling the overlay doesn't help)[/h1]
 The version of GLQuake distributed through Steam, version 0.95, is a little crashier than later versions. This can be fixed (sometimes) by making sure you have exactly the right command-line arguments for your video settings, but a better solution is to get GLQuake version 0.98 (Windows users only). See the "GLQuake Version Issues" section of the Quake Owner's Manual guide.
 
 An even better solution is to use a modern Quake engine instead of the original GLQuake. The Quake Engines guide is the starting place for that decision.

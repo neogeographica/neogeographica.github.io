@@ -21,6 +21,4 @@ This is a bit of a long shot, but if you see a screen full of corrupted/glitchy 
 [list]
 [/list]
 [h1]It only takes up one quarter of the screen[/h1]
-This is a surprising one, but if you're on Windows 8 then it's a specific problem with an easy fix.
-
-The answer is to disable "display scaling on high DPI settings". You don't have to globally disable it; you can disable it just in the properties for the Quake program that you're running. A [url=http://steamcommunity.com/app/2310/discussions/0/540744936581297336/]forum thread[/url] has more discussion and details.
+This is a surprising one, but if you're on Windows 8 then it's a specific problem with an easy fix. The answer is to disable "display scaling on high DPI settings". You don't have to globally disable it; you can disable it just in the properties for the Quake program that you're running. A [url=http://steamcommunity.com/app/2310/discussions/0/540744936581297336/]forum thread[/url] has more discussion and details.
