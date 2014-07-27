@@ -5,6 +5,7 @@ Notes:
 [list]
 [*]The value for "fov" may or may not be saved to the config file; if not, it needs to be placed in your autoexec.cfg file. See the examples at the end of this guide for engine-by-engine specifics.
 [*]The original GLQuake engine does not support setting "fov" unless you have downloaded GLQuake version 0.98. See the "GLQuake Version Issues" section.
+[*]The original non-GL versions of Quake (WinQuake) or QuakeWorld will only show your weapon on-screen when "fov" has its original value of 90.
 [*]The ezQuake engine has a menu option "Wide Aspect". When enabled, this option will interpret the current "fov" value as your desired 4:3 FOV and then increase the "fov" value to be suitable for a 16:10 aspect ratio. When disabled, it will decrease the FOV. If you are not using a 16:10 display, or you want more direct control over the FOV, you should leave the "Wide Aspect" option disabled and just set the "fov" value yourself.
 [/list]
 [list]

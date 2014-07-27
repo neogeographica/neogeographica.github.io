@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2014[/b]
 [list]
+[*]Jul 26: mention that changing FOV in WinQuake/QuakeWorld hides the gun model
 [*]Jul 16: linked to the Troubleshooting guide
 [*]Jul 14: added "Color Depth" section
 [*]Jul 14: added info about statusbar/console sizing for ProQuake
