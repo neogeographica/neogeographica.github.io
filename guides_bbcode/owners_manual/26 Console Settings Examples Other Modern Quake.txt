@@ -73,7 +73,7 @@ gl_texturemode GL_NEAREST_MIPMAP_LINEAR
 scr_conspeed 9999
 sv_aim 1
 [/code]
-I'd leave "fov" at its default value of 90 since Fitzquake Mark V internally takes care of increasing the field of view for widescreen resolutions.  If you do need to change "fov" then you must put it in autoexec.cfg.
+I'd leave "fov" at its default value of 90 since Fitzquake Mark V internally takes care of increasing the field of view for widescreen resolutions.  (Except in revision 15; see the note in the "Display: FOV" section.)  If you do need to change "fov" then you must put it in autoexec.cfg.
 [list]
 [/list]
 [previewimg=237063;sizeOriginal,inline;DirectQ32.png][/previewimg] DirectQ
