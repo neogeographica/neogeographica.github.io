@@ -1,16 +1,28 @@
-One potential "gotcha" with playing soundtrack music files through Quake is the prospect of losing some of the higher frequencies in CD-quality audio, when Quake goes through the process of mixing and (possibly) downsampling the audio before outputting it.  Quake engines do provide some control over the output rate, but it's not completely clear (to me) exactly what such a setting does internally to achieve that output rate.  Also FYI the setting will affect all sound effects, not just the music.
+First a bit of history:
 
-The typical way to control the sound output's sample rate is with the "-sndspeed" command-line option.  Specifying "-sndspeed 44100" on the command line when launching a Quake engine is essentially asking for CD-quality output.
+The Quake sound effects come from WAV files with a sample rate of 11025 Hz, and that was the quality/rate at which they were played. However some sound cards at the time were picky about the sample rate that they would accept, and so the original Quake engines introduced a command-line option ("-sspeed" and then later "-sndspeed") that could be used to change the output rate for the sound effects.
+
+Setting "-sndspeed 44100" for example -- to represent a 44100 Hz output sample rate -- might have been necessary to get some sound card to work, but it did not actually improve the quality of the sounds. It did change the tone of the sounds, as a result of the upsampling, making effects sound "brighter". Although this changed the character of the original sounds, some players preferred or at least got accustomed to a higher sndspeed setting.
 
 Command-line options can be passed to a Quake engine executable by various methods. See the "Command Line" section of this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
-Because of my uncertainty about the effects this has on the mixing process and other sound effects, and in what way any upsampling would be handled, I wouldn't say that you should always use this option.  Try it out if you want to hear the difference though.
+The soundtrack music is of higher quality than the sound effects: "CD quality", 44100 Hz. In the original Quake, the soundtrack music was played back through a separate system than the sound effects, and the "-sndspeed" command-line option did not affect the music.
 
-In my experience on the Windows versions of these engines, just listening through headphones:
+When Quake engines first added support for playing soundtrack music files, the "-sndspeed" option [b]did[/b] affect that music playback, at least in some cases. If you preferred the original character of the Quake sound effects, that could mean that you were stuck with muffled/fuzzy-sounding music. Fortunately, you don't have to make that choice these days; if you're using the latest version of one of the engines described here, the music playback should again be handled independently of the sound effect sample rate. (Particularly, if you're using the QuakeSpasm engine, make sure that you're at version 0.85.10 or later.)
+
+So you should always have CD-quality soundtrack music playback now. If you were previously using the "-sndspeed" option just to improve the music, you should reconsider that.
+
+As for the sound effects, here's a summary of how sndspeed settings behave for each of these engines.
 [list]
-[*]DarkPlaces is outputting at 48 kHz by default.  It sounds fine to me without any sndspeed changes.
-[*]QuakeSpasm is outputting at 11.025 kHz by default.  It sounds somewhat fuzzy to me.  Using "-sndspeed 44100" with QuakeSpasm does improve it for my tastes.
-[*]FitzQuake Mark V also outputs at 11.025 kHz by default, as far as I know, but it sounds clearer than the QuakeSpasm default.  I can take or leave any sndspeed adjustment here.
-[*]DirectQ mixes internally at CD quality.  It sounds fine to me without any sndspeed changes.
+[*]DarkPlaces defaults to a sndspeed of 48000, but it plays sound effects similarly to the original Quake; they don't sound brighter to my ears. I would guess that its sndspeed value is the sample rate for its final mix, but I can't actually detect any change to the sound effects or music if I specify different sndspeed values.
+[/list]
+[list]
+[*]QuakeSpasm defaults to a sndspeed of 11025. At that sndspeed, it also provides a new console variable "snd_filterquality" that more exactly controls how the sound effects are played; see its README for more details. If you prefer the brighter sound effects, you can use "-sndspeed 44100".
+[/list]
+[list]
+[*]FitzQuake Mark V and DirectQ default to a sndspeed of 11025. If you prefer the brighter sound effects, you can use "-sndspeed 44100".
+[/list]
+[list]
+[*]qbism Super8, like DarkPlaces, defaults to a sndspeed of 48000. Also like DarkPlaces, I don't hear a difference when using different sndspeed values. Unlike DarkPlaces, the sound effects in qbism Super8 have the brighter, upsampled tone.
 [/list]
 
-This is completely a matter of taste.  If you're using one of the high-default-output-rate engines and are really attached to the original DOS Quake sound, you might even want to use "-sndspeed 11025" on the command line to try to re-create that.  It's also quite possible that playing this audio over a good set of speakers, rather than headphones, would lead to different decisions.
+Most of these engines also provide a console variable for the sndspeed setting, either named "sndspeed" or "snd_speed", which may or may not be saved to the config file; check the engine's README or other docs.

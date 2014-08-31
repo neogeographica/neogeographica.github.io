@@ -1,8 +1,6 @@
 [h1]Modern Quake engines[/h1]
 For modern Quake engines, my command line options tend to be
 [code]-dinput -heapsize 192000 -bpp 32[/code]
-Or sometimes (see the Quake Soundtrack Solutions guide for more info) I use
-[code]-dinput -heapsize 192000 -sndspeed 44100 -bpp 32[/code]
 
 (When using the qbism Super8 engine, I omit the "-bpp 32" option.)
 
