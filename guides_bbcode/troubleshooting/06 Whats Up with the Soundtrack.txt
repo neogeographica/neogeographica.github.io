@@ -3,4 +3,4 @@ The Quake Soundtrack Solutions guide is entirely dedicated to this problem: http
 [list]
 [/list]
 [h1]Music sounds muffled[/h1]
-Depending on how sensitive your ears are, you may want to fiddle with the sample rate of the music (and sound effects). See the "Sample Rate" section of the Quake Soundtrack Solutions guide.
+If you're using a Quake engine that plays the soundtrack music from files, check that you're using the latest version of that engine. Particularly, if you're using QuakeSpasm, make sure that you have version 0.85.10 or later. The "Sample Rate" section of the Quake Soundtrack Solutions guide has more discussion.

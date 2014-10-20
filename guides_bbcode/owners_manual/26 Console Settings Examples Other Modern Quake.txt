@@ -51,10 +51,6 @@ scr_conspeed 9999
 +mlook
 [/code]
 
-These settings are not saved in the config file (must be in autoexec.cfg):
-[code]
-sv_aim 1
-[/code]
 I'd leave "fov" at its default value of 90 since QuakeSpasm 0.85.9 and later versions internally take care of increasing the field of view for widescreen resolutions.  If you do need to change "fov" then you must put it in autoexec.cfg.
 [list]
 [/list]
