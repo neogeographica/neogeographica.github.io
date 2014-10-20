@@ -1,4 +1,5 @@
 [b]2014[/b]
 [list]
+[*]Oct 20: different soundtrack behavior for the new QuakeSpasm version 0.90.0
 [*]Jul 26: some editing; new sections on missing weapon and on GL_LoadTexture crash
 [/list]
