@@ -19,6 +19,10 @@ The latest stable version of each engine was:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2015[/b]
+[list]
+[*]Feb 04: more details about SW vs. GL rendering
+[/list]
 [b]2014[/b]
 [list]
 [*]Oct 20: checked QuakeSpasm version 0.90.0
