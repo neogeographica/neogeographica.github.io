@@ -22,7 +22,7 @@ Quake was originally released with a software renderer.  An OpenGL renderer was 
 
 The OpenGL versions of NetQuake and QuakeWorld were very popular, to the point of single-handedly boosting the adoption of addon video cards like the 3dfx Voodoo.  However they did change Quake's look: textures smoothed, lighting changed in certain ways, water and sky effects different, and rendered pixel colors (after applying texture filtering and lighting) no longer restricted to be exactly on the Quake palette.  Not everyone was a fan of these changes, so the use of the software renderer didn't die out.
 
-[url=http://www.quaddicted.com/engines/software_vs_glquake]Quaddicted.com demonstrates some of the issues with some OpenGL Quake engines.[/url]  As will be mentioned below, some of the modern engines make an effort to preserve the look of the original lighting/texturing.
+[url=http://www.quaddicted.com/engines/software_vs_glquake]Quaddicted demonstrates some of the issues with some OpenGL Quake engines.[/url]  As will be mentioned below, some of the modern engines make an effort to preserve the look of the original lighting/texturing.
 [list]
 [/list]
 [h1]Pick and Mix[/h1]
