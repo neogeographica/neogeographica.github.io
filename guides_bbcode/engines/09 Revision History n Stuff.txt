@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]Feb 04: alternate link for FTEQW builds
 [*]Feb 04: more details about SW vs. GL rendering
 [/list]
 [b]2014[/b]
