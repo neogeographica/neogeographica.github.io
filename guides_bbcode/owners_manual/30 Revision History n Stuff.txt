@@ -1,5 +1,5 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out these engines' features was Oct 20 2014.
+The most recent date that I checked out these engines' features was Feb 04 2015.
 
 The latest stable version of each engine was:
 [list]
@@ -11,7 +11,7 @@ The latest stable version of each engine was:
 [*]Fitzquake Mark V: revision 15 from Jul 2014
 [*]DirectQ: version 1.9.0 from Feb 2012
 [*]Engoo: version 2.77 from Dec 2013
-[*]qbism Super8: version 194 from Jul 2014
+[*]qbism Super8: version 231 from Feb 2015
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
@@ -19,6 +19,11 @@ The latest stable version of each engine was:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2015[/b]
+[list]
+[*]Feb 04: updated Quick Start recommendations
+[*]Feb 04: checked new version of qbism Super8
+[/list]
 [b]2014[/b]
 [list]
 [*]Oct 20: checked QuakeSpasm version 0.90.0; sv_aim is now 1 by default there
