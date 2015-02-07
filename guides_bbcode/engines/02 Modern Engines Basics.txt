@@ -22,7 +22,7 @@ As a first pass for engine selection, keep these criteria in mind:
 [*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. ezQuake and FTEQW can host QuakeWorld games; all of the remaining engines (except Fodquake) can host NetQuake games.
 [/list]
 [list]
-[*]A few recent large and/or complex addon singleplayer maps make use of the new "bsp2" map format for Quake. To play any map that is in the bsp2 format, you'll need to use an engine that supports bsp2. Among the engines described in this guide, that means using the most recent version of DarkPlaces, QuakeSpasm, Fitzquake Mark V, qbism Super8, or experiment build of FTEQW.
+[*]A few recent large and/or complex addon singleplayer maps make use of the new "bsp2" map format for Quake. (See [url=https://www.quaddicted.com/reviews/something_wicked.html]Something Wicked This Way Comes[/url], [url=https://www.quaddicted.com/reviews/nyarlathotep.html]Nyarlathotep[/url], and [url=https://www.quaddicted.com/reviews/rrp.html]Rubicon Rumble Pack[/url].) To play a map that is in the bsp2 format, you'll need to use an engine that supports bsp2. Among the engines described in this guide, that means using the most recent version of DarkPlaces, QuakeSpasm, Fitzquake Mark V, qbism Super8, or experiment build of FTEQW.
 [/list]
 [list]
 [/list]

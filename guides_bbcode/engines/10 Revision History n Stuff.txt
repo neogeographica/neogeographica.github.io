@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]Feb 07: added links to example bsp2 maps
 [*]Feb 07: added the Other Modern Engines section
 [*]Feb 04: bsp2 support survey; also other engine distinguishing features
 [*]Feb 04: checked new version of qbism Super8
