@@ -2,7 +2,7 @@ Here's a survey of a few more Quake engines currently in use. (This still isn't 
 
 The [url=http://user.tninet.se/~xir870k/]bjp engines[/url] (Windows), also called aguirRe's engines, are cleaned-up versions of glquake.exe and WinQuake.exe (NetQuake, OpenGL or software rendering) with some raised limits for supporting modern maps (but not bsp2). Good choice if you demand the exact original WinQuake or GLQuake experience, but want to play new maps.
 
-[url=http://disenchant.net/tyrquake/]TyrQuake[/url] (Windows, OS X, Linux) has NetQuake and QuakeWorld versions, using OpenGL or software rendering. This is another cleaned-up, raised-limits engine project. Looks like it has bsp2 support if built from latest source. Still under intermittent development.
+[url=http://disenchant.net/tyrquake/]TyrQuake[/url] (Windows, OS X, Linux) has NetQuake and QuakeWorld versions, using OpenGL or software rendering. This is another cleaned-up, raised-limits engine project. Has bsp2 support if you use one of its builds from 2013 or later.
 
 [url=http://joequake.runecentral.com/]JoeQuake[/url] (Windows, Linux) is a NetQuake engine using OpenGL. It has added visual effects, and a focus on capturing and watching gameplay demos. JoeQuake is still used by speedrunners.
 
