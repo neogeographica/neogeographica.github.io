@@ -3,7 +3,11 @@ When you beat an episode in Quake, you collect a "rune". Once you have all four 
 
 Some Quake engines have a bug where you may lose a rune. When this happens, the episode for that rune will still have an open entrance in the hub, and the central floor will never open.
 
-The easiest way to get around this problem is to use the "noclip" console command so that you can walk through solid objects. Move through the closed floor and into the ramp that leads down to the final map. Once you are through into an open area, use "noclip" again to revert to normal behavior, and continue playing.
+The easiest way to get around this problem is to use the console command "map end" to jump directly to the final level.
+
+The only thing you'll be missing by using "map end" is seeing a short ramp and the final slipgate. If you really want to experience that however, there's a couple of things you can try:
+
+One option is to use the "noclip" console command so that you can walk through solid objects. Move through the closed floor and into the ramp that leads down to the final map. Once you are through into an open area, use "noclip" again to revert to normal behavior, and continue playing.
 
 Alternately you can try using the "impulse 11" console command to give yourself a rune. If you have multiple missing runes, you should be able to use "impulse 11" multiple times to get multiple runes, as long as you close and re-open the console between each command. This approach is discussed [url=http://quake.wikia.com/wiki/Rune]on a Quake wiki[/url], [url=http://quakeone.com/forums/quake-help/general-help/6699-bad-sp-quake-bug-darkplaces-cant-beat-game.html]on the quakeone.com forums[/url], and [url=http://forums.steampowered.com/forums/showthread.php?t=1087166]on the old Steam forums[/url].
 [list]
