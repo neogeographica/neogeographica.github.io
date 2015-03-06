@@ -11,7 +11,7 @@ The latest stable version of each engine was:
 [*]Fitzquake Mark V: revision 15 from Jul 2014
 [*]DirectQ: version 1.9.0 from Feb 2012
 [*]Engoo: version 2.77 from Dec 2013
-[*]qbism Super8: version 231 from Feb 2015
+[*]qbism Super8: version 235 from Feb 2015
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
@@ -30,7 +30,8 @@ The latest version of each mod was:
 
 [b]2015[/b]
 [list]
-[*]Feb 04: checked new version of qbism Super8
+[*]Mar 05: checked qbism Super8 version 235
+[*]Feb 04: checked qbism Super8 version 231
 [/list]
 [b]2014[/b]
 [list]
