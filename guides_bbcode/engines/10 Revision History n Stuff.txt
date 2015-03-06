@@ -11,7 +11,7 @@ The latest stable version of each engine was:
 [*]Fitzquake Mark V: revision 15 from Jul 2014
 [*]DirectQ: version 1.9.0 from Feb 2012
 [*]Engoo: version 2.77 from Dec 2013
-[*]qbism Super8: version 231 from Feb 2015
+[*]qbism Super8: version 235 from Feb 2015
 [*]ProQuake: version 4.93 from Oct 2012
 [*]Qrack: version 2.011.3467 from Aug 2011
 [/list]
@@ -21,10 +21,12 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]Mar 05: mention DarkPlaces' 360 controller support
+[*]Mar 05: checked qbism Super8 version 235; described classic config
 [*]Feb 07: added links to example bsp2 maps
 [*]Feb 07: added the Other Modern Engines section
 [*]Feb 04: bsp2 support survey; also other engine distinguishing features
-[*]Feb 04: checked new version of qbism Super8
+[*]Feb 04: checked qbism Super8 version 231
 [*]Feb 04: alternate link for FTEQW builds
 [*]Feb 04: more details about SW vs. GL rendering
 [/list]
