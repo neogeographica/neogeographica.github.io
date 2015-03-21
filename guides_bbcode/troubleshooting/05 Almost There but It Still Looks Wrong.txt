@@ -25,4 +25,4 @@ If your weapon isn't being shown on-screen, it's probably for one of two reasons
 [list]
 [/list]
 [h1]Fog has color banding[/h1]
-You might be running with a 16-bit color depth instead of 32-bit. See the "Color Depth" section of the Quake Owner's Manual guide.
+You might be running with a 16-bit color depth instead of 32-bit. See the "Color Depth" section of the Quake Owner's Manual guide. Note that this doesn't apply if you're using an engine with a software renderer.

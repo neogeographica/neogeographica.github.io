@@ -7,6 +7,8 @@ When you run this program, it will look for an "id1" folder in some location. Us
 Quake requires two files inside the "id1" folder: "pak0.pak" and "pak1.pak". You can get those two pak files from your Steam copy of Quake, or any other Quake installation. Once you have moved or copied those files into your "id1" folder you can start playing.
 
 Below are my recommendations for popular, full-featured, menu-driven modern Quake engines that require a minimum of unintuitive tomfoolery to configure.  There are other fine choices though!  I don't want to start a holy war, just to give folks a quick way to get started.  Please read the Quake Engines guide if you want the complete picture.
+
+The Quake Engines guide also describes how you can launch a modern Quake engine through the Steam UI (and why you might want to).
 [list]
 [/list]
 [h1]Multiplayer[/h1]
@@ -14,7 +16,7 @@ If you're going to get into Quake multiplayer, you'll probably want to get famil
 
 For QuakeWorld, the [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine is a good choice.
 
-(Note that the non-Windows versions of ezQuake are not as well maintained as the Windows version.  If you intend to Quake on OS X or Linux, then you will probably need to check the Quake Engines guide to find some other engine that fits your needs.)
+(Note that the non-Windows versions of ezQuake are not as well maintained as the Windows version.  If you intend to play QuakeWorld on OS X or Linux, then you will probably need to check the Quake Engines guide to find some other engine that fits your needs.)
 
 If you want to get ezQuake along with a collection of new textures, HUDs, etc. then you can use the [url=http://www.nquake.com/]nQuake[/url] package. See the ezQuake section of the Quake Engines guide for more details.
 

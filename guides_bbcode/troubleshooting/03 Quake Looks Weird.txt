@@ -17,7 +17,7 @@ If you feel that you don't want to use a modern Quake engine because you are rea
 [list]
 [/list]
 [h1]Wacky colors in other Quake engines[/h1]
-This is a bit of a long shot, but if you see a screen full of corrupted/glitchy graphics, it could be because you need to force 32-bit color depth to make your graphics drivers happy. See the "Color Depth" section of the Quake Owner's Manual guide.
+This is a bit of a long shot, but if you see a screen full of corrupted/glitchy graphics, it could be because you need to force 32-bit color depth to make your graphics drivers happy. See the "Color Depth" section of the Quake Owner's Manual guide. Note that this doesn't apply if you're using an engine with a software renderer.
 [list]
 [/list]
 [h1]It only takes up one quarter of the screen[/h1]

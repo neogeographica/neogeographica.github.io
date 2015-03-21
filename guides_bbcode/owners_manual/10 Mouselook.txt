@@ -1,7 +1,7 @@
 [h1]Enable[/h1]
 If you are using the latest version of ezQuake, FTEQW, Fodquake, DarkPlaces, FitzQuake Mark V, DirectQ, qbism Super8, ProQuake, or Qrack then you already have mouselook enabled.  Good for you!
 
-If you don't have mouselook enabled, then you need this line in your autoexec.cfg file:
+If you don't have mouselook enabled, and you can't find a menu option to enable it, then you need this line in your autoexec.cfg file:
 [code]+mlook[/code]
 If you are using QuakeSpasm (or an old version of Fitzquake Mark V), you could also just enter "+mlook" in the console, and it will be saved to your config file.  The original Quake engines however do not save it to the config file, and you must put it in autoexec.cfg.
 
