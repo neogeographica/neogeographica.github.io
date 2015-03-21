@@ -24,8 +24,8 @@ And if the map has fishes on it, you will never get 100% kills, at least not wit
 A few modern Quake engines fix the fish-count bug, as do some Quake mods. In fact a mod exists [url=https://www.quaddicted.com/files/mods/q106fishfix.zip]purely to fix just the fish-count bug[/url], if you really care about getting 100% kills on the end-of-map screen.
 [list]
 [/list]
-[h1]Some items or monsters are missing[/h1]
-This is a subtle one that you probably wouldn't notice unless you are very familiar with the Quake campaign. But if you're using DarkPlaces, it's possible that some things can "fall out of the map", depending on how you have DarkPlaces configured. See the "Compatibility" section of the Quake Owner's Manual guide.
+[h1]Some items or monsters are missing/misbehaving[/h1]
+If you're using DarkPlaces, it's possible that some things can "fall out of the map" or otherwise not behave properly, depending on how you have DarkPlaces configured. See the "Compatibility" section of the Quake Owner's Manual guide.
 [list]
 [/list]
 [h1]Can't load map 2 of episode 4[/h1]
