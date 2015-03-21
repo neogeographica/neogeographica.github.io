@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]Mar 20: additional DarkPlaces compatibility fixes
 [*]Mar 20: cleanup to be clear that "-bpp 32" doesn't apply to SW renderer 
 [*]Mar 05: checked qbism Super8 version 235
 [*]Feb 04: updated Quick Start recommendations

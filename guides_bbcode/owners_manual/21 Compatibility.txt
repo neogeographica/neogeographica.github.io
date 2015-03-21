@@ -8,6 +8,9 @@ The [url=http://icculus.org/twilight/darkplaces/readme.html#ConsoleVariables]Dar
 
 A generally safe approach is to set all of the DarkPlaces "sv_gameplayfix_" variables to 0 except for "sv_gameplayfix_droptofloorstartsolid", which you probably want to have set to 1. If "sv_gameplayfix_droptofloorstartsolid" is set to 0 then some items may immediately fall through the floor and vanish when a level begins. Having a 0 value for that variable is the usual cause of maps appearing to have fewer items when played using DarkPlaces.
 
-If you're having problems with a particular map then the first thing you should do is check the readme file that came with the map. The readme will usually indicate which Quake engines were used to build and test the map, and the most problem-free approach is to use one of those engines to play it.
+If you're using DarkPlaces with the above fix and you still have problems with missing or misbehaving objects, also try setting the "sv_gameplayfix_upwardvelocityclearsongroundflag" and
+"sv_gameplayfix_setmodelrealbox" console variables to 1.
+
+In any case, if you're having problems with a particular map then the first thing you should do is check the readme file that came with the map. The readme will usually indicate which Quake engines were used to build and test the map, and the most problem-free approach is to use one of those engines to play it.
 
 It's worth mentioning that almost all custom singleplayer maps are tested against the QuakeSpasm engine or its predecessor Fitzquake. QuakeSpasm is a good bet for getting the intended behavior from a singleplayer map, unless the map's readme specifically says otherwise.
