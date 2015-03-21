@@ -14,6 +14,8 @@ In Quake multiplayer as it was first released, the client (the player's computer
 
 QuakeWorld was a dramatic revision of Quake that incorporated client-side prediction.  The client was allowed to immediately show the results of player action; if it happened to be mistaken, the server could correct it later, causing the client to "jump" to comply with the correct state of the world.  Client-side prediction makes QuakeWorld multiplayer feel more responsive, but the occasional correction from the server can make it seem more erratic or flaky than the original Quake (now sometimes called NetQuake, to differentiate it from QuakeWorld).
 
+QuakeWorld also introduced some changes to player movement, most significantly allowing you to reach higher sustained speeds when strafejumping.
+
 Over time many players eventually gravitated to QuakeWorld, but there are still multiplayer communities that prefer NetQuake.
 [list]
 [/list]
