@@ -24,7 +24,7 @@ If you have a long series of console settings/commands that you want to execute 
 [list]
 [/list]
 [h1]Steam "launch options"[/h1]
-You may be launching Quake using Steam, especially considering which website you're on right now!  You need to use Steam if you're running the Quake executables that Steam provides.  Also some folks replace those old executables with modern Quake engines but still launch them through Steam to take advantage of the Steam overlay, time-tracking, and the convenience of having a unified launcher for all their games.  (This works fine if you rename the modern engine executable to have the same filename as the old executable that you're replacing.)
+You may be launching Quake using Steam, especially considering which website you're on right now!  You need to use Steam if you're running the Quake executables that Steam provides.  Also some folks replace those old executables with modern Quake engines but still launch them through Steam to take advantage of the Steam overlay, Steam Cloud for config and savegames, time-tracking, and the convenience of having a unified launcher for all their games.  (This works fine if you rename the modern engine executable to have the same filename as the old executable that you're replacing.)
 
 To set up command-line options for a Steam-launched Quake engine:
 [list]

@@ -46,7 +46,7 @@ Command-line options can be passed to a Quake engine executable by various metho
 [h1]Managing Config Files[/h1]
 Sharing maps and other content between engines can be great, but sharing config files is... less great.
 
-With the original Quake engines, both Quake and GLQuake read/write "id1\config.cfg", and both QuakeWorld and GLQuakeWorld read/write "qw\config.cfg".  This is fine because Quake/GLQuake use the same set of config options, and QuakeWorld/GLQuakeWorld use the same set of config options.
+With the original Quake engines, both Quake and GLQuake read/write "id1\config.cfg" (note that this file is saved to the Steam Cloud if you launch Quake through Steam), and both QuakeWorld and GLQuakeWorld read/write "qw\config.cfg".  This is fine because Quake/GLQuake use the same set of config options, and QuakeWorld/GLQuakeWorld use the same set of config options.
 
 When you start using modern Quake engines however, each one can have its own special config options -- or worse, its own interpretation of common config options.  This is perfectly fine if the engine stores its configuration in its own special directory that no other engine will see.  However many of the engines will just tend to dump their config.cfg file into "id1".
 

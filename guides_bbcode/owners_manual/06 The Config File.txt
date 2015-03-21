@@ -3,7 +3,7 @@ Changes that you make using the in-game menu, and some other changes that we'll 
 
 The name and location of this file depends on which Quake engine you are using.  For the original Quake engines, the rules are simple:
 [list]
-[*]If you run Quake (WinQuake) or GLQuake, configuration will be stored in a file named "config.cfg" in the "id1" folder of your Quake installation.
+[*]If you run Quake (WinQuake) or GLQuake, configuration will be stored in a file named "config.cfg" in the "id1" folder of your Quake installation. (This is the only config file that will be saved in the Steam Cloud when launching through Steam.)
 [/list]
 [list]
 [*]If you run QuakeWorld or GLQuakeWorld, configuration will be stored in a file named "config.cfg" in the "qw" folder of your Quake installation.
@@ -24,14 +24,12 @@ Modern Quake engines may have different ideas about where to store their configu
 [h1]Missionpacks and Mods[/h1]
 Playing a mod or missionpack can have an effect on how your configuration is stored.
 
-A mod or missionpack consists of additional files that are placed in their own subfolder, parallel to "id1" and "qw".  When you want to play the mod/missionpack in singleplayer, you use the "-game" command-line option to select that folder, according to the instructions in the mod's readme file.  (Command-line options are covered in another section below.) negke's guide to custom maps/mods discusses that: http://steamcommunity.com/sharedfiles/filedetails/?id=166554615
-But just as a quick example, if you have a mod stored in the "travail" folder, then to activate it, one of your command-line options would need to be
-[code]-game travail[/code]
+A mod or missionpack consists of additional files that are placed in their own subfolder, parallel to "id1" and "qw".  When you want to play the mod/missionpack in singleplayer, you use a command-line option to select that folder, according to the instructions in the mod's readme file.  (Command-line options are covered in another section below.) negke's guide to custom maps/mods discusses that: http://steamcommunity.com/sharedfiles/filedetails/?id=166554615
 
 We'll ignore QuakeWorld, GLQuakeWorld, and Fodquake for this section; those engines don't support singleplayer.
 
-For ezQuake and FTEQW, the "-game" option doesn't affect the location of the config file -- probably because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
+For ezQuake and FTEQW, playing a mod doesn't affect the location of the config file -- probably because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
 
-For all other Quake engines, when you use the "-game" option to specify a folder, your configuration will be stored in that folder.  If no config file exists there, then it will first be copied over from its original location.  So when you first start up a mod, you should see your familiar configuration.
+For all other Quake engines, when you play a mod your configuration will be stored in that folder.  If no config file exists there, then it will first be copied over from its original location.  So when you first start up a mod, you should see your familiar configuration.
 
-While running a mod, you may want to make changes specific to that mod, such as binding a key to a new weapon.  Any changes you make to your configuration while using a particular "-game" folder will only affect the config file in that folder.
+While running a mod, you may want to make changes specific to that mod, such as binding a key to a new weapon.  Any changes you make to your configuration while using a particular mod will only affect the config file in that folder.
