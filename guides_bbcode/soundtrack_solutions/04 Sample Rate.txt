@@ -24,5 +24,8 @@ As for the sound effects, here's a summary of how sndspeed settings behave for e
 [list]
 [*]qbism Super8, like DarkPlaces, defaults to a sndspeed of 48000. Also like DarkPlaces, I don't hear a difference when using different sndspeed values. Unlike DarkPlaces, the sound effects in qbism Super8 have the brighter, upsampled tone.
 [/list]
+[list]
+[*]I haven't tested this for reQuiem or QuakeForge.
+[/list]
 
 Most of these engines also provide a console variable for the sndspeed setting, either named "sndspeed" or "snd_speed", which may or may not be saved to the config file; check the engine's README or other docs.

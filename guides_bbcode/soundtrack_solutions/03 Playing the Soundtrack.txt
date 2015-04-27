@@ -1,4 +1,4 @@
-There are multiple approaches to using Quake soundtrack files.  What's the right one for you?  It depends on which Quake engine you are using.  If that sentence confuses you, then have a look at this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
+There are multiple approaches to using Quake soundtrack files. What's the right one for you?  It depends on which Quake engine you are using. If that sentence confuses you, then have a look at this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
 [list]
 [/list]
 [h1]Engines that don't have soundtrack support[/h1]
@@ -8,14 +8,14 @@ Engoo does not officially support CD audio (although it might work for you). It 
 [list]
 [/list]
 [h1]Engines that only support CD audio[/h1]
-The original Quake engines (the ones provided by Steam) only support CD audio.  If you want to get them to play music files instead, then you will have to modify them.  I haven't tried this myself, but Dragonsbrethren has posted a guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113399618
-Most modern Quake engines also still support CD audio, so there is a good chance that this modification would also work on them.  However if an engine can manage one of the other solutions below, then it would probably be better to use that other solution.  It's nicer not to need to binary-patch your Quake executable.
+The original Quake engines (the ones provided by Steam) only support CD audio. If you want to get them to play music files, you will have to modify them. I haven't tried this myself, but Dragonsbrethren has posted a guide: http://steamcommunity.com/sharedfiles/filedetails/?id=113399618
+Most modern Quake engines also still support CD audio, so there is a good chance that this modification would also work on them. But if an engine can manage one of the other solutions below, it would probably be better to use that other solution.
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Some modern Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], and [url=http://super8.qbism.com/]qbism Super8[/url].
+Some Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]FitzQuake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], [url=http://super8.qbism.com/]qbism Super8[/url], [url=https://www.quaddicted.com/engines/requiem]reQuiem[/url], and [url=http://www.quakeforge.net/]QuakeForge[/url].
 
-For soundtrack file playback to work, a few things have to be handled correctly:
+For soundtrack file playback to work, a few things have to be considered:
 [list]
 [*]whether the music files are "loose files", or inside pak/pk3 archives
 [*]where the files are placed
@@ -35,40 +35,32 @@ If you already have a setup that works for the engine you're currently using, I'
 [list]
 [*]The files are named in the pattern "track[i]nn[/i]", where "[i]nn[/i]" is the CD track number that the file was ripped from. Since the soundtrack starts at the second CD track, MP3 soundtrack files are named "track02.mp3", "track03.mp3", etc. OGG soundtrack files are named "track02.ogg", "track03.ogg", etc.
 [/list]
-As for the audio format: most of the distributions of the Quake soundtrack are in OGG format, and OGG files can be played by most of these Quake engines. Specifically, the five Quake engines discussed here support the following formats:
+As for the audio format: most of the distributions of the Quake soundtrack are in OGG format, and OGG files can be played by most of these Quake engines. If you have both OGG and MP3 files then you are covered for sure. Specifically, the Quake engines discussed here support the following formats:
 [list]
 [*]DarkPlaces: OGG, WAV
 [*]QuakeSpasm: OGG, MP3, WAV
 [*]FitzQuake Mark V: MP3
 [*]DirectQ: OGG, MP3, WMA, WAV
 [*]qbism Super8: OGG, MP3
+[*]reQuiem: MP3
+[*]QuakeForge: OGG
 [/list]
-The Windows or OS X version of a Quake engine will inherently support the sound formats listed above for that engine. One exception is DirectQ, which for OGG support requires that you also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+Some quirks to be aware of:
+[list]
+[*]For OGG support in DirectQ, you must install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+[*]The Linux version of QuakeSpasm requires external libraries: libogg or libvorbis for OGG support, and libmad or libmpg123 for MP3. I'm not sure if DarkPlaces' OGG support on Linux has the same requirement, but I suspect it does.
+[*]QuakeForge needs a "tracklist.cfg" file that tells it where to find the music tracks. If you downloaded a soundtrack package linked at the top of this guide, then you'll get a tracklist.cfg and instructions on where to put it. Otherwise, see the QuakeForge documentation.
+[/list]
 
-The Linux version of QuakeSpasm requires external libraries: libogg or libvorbis for OGG support, and libmad or libmpg123 for MP3. I'm not sure if DarkPlaces' OGG support on Linux has the same requirement, but I suspect it does.
+[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Quake soundtrack files that you get from somewhere else may end up in the "sound\cdtracks" subfolder instead of the "music" subfolder. This is a location that DarkPlaces will look for soundtrack files, but most other Quake engines will not look there. You can move the files to the "music" subfolder to make them accessible to all Quake engines (including DarkPlaces).
 
-[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you have installed [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] or the [url=http://forums.steampowered.com/forums/showthread.php?t=1756923]"Ultimate Quake Patch"[/url], then you got OGG files for the main campaign soundtrack placed in the "id1\sound\cdtracks" folder.  Also files in "hipnotic\sound\cdtracks" and "rogue\sound\cdtracks" for the mission pack soundtracks.
-
-The DarkPlaces engine, which is included in these bundles, can find music files in "sound\cdtracks", so that's fine.  If you want to also use these files with QuakeSpasm or DirectQ -- the other engines that can handle OGG files -- you need to move them to the appropriate "music" folder(s) instead: "id1\music", "hipnotic\music", and "rogue\music".  DarkPlaces will still be able to find them there.
+Soundtrack files are also sometimes distributed inside a pk3 file. This works with some engines, but not with others. A pk3 file is just a zip archive, so if you want, you can open it up with any unzip utility, extract the tracks, and put the extracted tracks in the appropriate "music" subfolder.
 [/quote]
 
-[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you downloaded the soundtrack files from the [url=http://quakeone.com/forums/quake-mod-releases/finished-works/7337-high-quality-music-packs.html]quakeone.com forums[/url], they are packaged inside pk3 files (which are just zip archives). If you're using DarkPlaces then you can put the pk3 file for the Quake soundtrack inside the id1 folder and it will work; likewise the pk3 file for the mission pack soundtracks should be placed into the hipnotic and rogue folders respectively.
-
-Each of these zipfiles contain OGG tracks.  If you were to extract the tracks from the zipfile you'd see that they're located in the "sound\cdtracks" path.  As mentioned above, DarkPlaces is OK with music files at that location.
-
-If you want to also use these files with the QuakeSpasm or DirectQ engines, you need to extract them and move them to the appropriate "music" folder(s) instead: "id1\music", "hipnotic\music", and "rogue\music".  DarkPlaces will still be able to find them there.
-[/quote]
-
-[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you have installed [url=http://www.moddb.com/mods/quake-epsilon-build]Quake Epsilon[/url], then you will have pk3 files (which are just zip archives) that include alternative soundtrack music for Quake and the mission packs: "id1\quake1_music_diabolipak.pk3", "hipnotic\baz-pakwerk_soundtrack_greenwoodaudiomastered.pk3", and "rogue\sonic_mayhem-methods_of_destruction_mp2-xolveedit.pk3".
-
-Each of these zipfiles contain OGG tracks.  If you were to extract the tracks from the zipfile you'd see that they're located in the "sound\cdtracks" path.  As mentioned above, DarkPlaces is OK with music files at that location.
-
-You can delete those pk3 files if you want to remove this alternative soundtrack.  On the other hand, if you like it enough to want to listen to it with the QuakeSpasm or DirectQ engines, you need to extract the music files and move the extracted files to the appropriate "music" folder(s): "id1\music", "hipnotic\music", and/or "rogue\music".  DarkPlaces will still be able to find them there.
-[/quote]
 [list]
 [/list]
 [h1]Engines that control external players[/h1]
-If a Quake engine has a feature that allows it to control an external player application, it may be possible to play the soundtrack that way.  The tricky part is to get the right music to automatically play at the right times.
+If a Quake engine has a feature that allows it to control an external player application, it may be possible to play the soundtrack that way. The tricky part is to get the right music to automatically play at the right times.
 
 For the [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine, Pirate-X posted a [url=http://forums.steampowered.com/forums/showpost.php?p=27018156&postcount=32]scripting solution for controlling Winamp[/url] on the old Steam forums.
 

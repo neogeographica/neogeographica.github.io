@@ -8,6 +8,8 @@ The latest stable version of each engine that supports soundtrack music file pla
 [*]Fitzquake Mark V: revision 15 from Jul 2014
 [*]DirectQ: version 1.9.0 from Feb 2012
 [*]qbism Super8: version 235 from Feb 2015
+[*]reQuiem: version 0.95b2 from Dec 2013
+[*]QuakeForge: version 0.7.2 from Jan 2013
 [/list]
 The latest stable version of each engine that supports external player control was:
 [list]
@@ -27,6 +29,8 @@ Other engines examined:
 
 [b]2015[/b]
 [list]
+[*]Apr 26: info for reQuiem and QuakeForge; minor rewrite of pre-emphasis discussion
+[*]Apr 26: created and linked to recommended soundtrack packages
 [*]Mar 05: checked qbism Super8 version 235
 [*]Feb 04: checked qbism Super8 version 231
 [/list]

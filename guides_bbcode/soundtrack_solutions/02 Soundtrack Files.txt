@@ -1,37 +1,27 @@
-For any of these solutions to work, you do first have to get either a Quake CD image or ripped music tracks from somewhere.  If you don't have a physical Quake CD then there are all sorts of ways to buy or borrow one, and likewise there are various ways to get a CD image or the ripped tracks.  For example:
+For any of these solutions to work, you first have to get a set of music files that make up the Quake soundtrack: one file for every music track on the original CD. There are various places you can get these, but I recommend this set that I generated:
 [list]
-[*][url=http://steamcommunity.com/app/2310/discussions/0/882966056497559791/]A thread on the Steam forums[/url] provides download links for CD images of the music tracks, and also for ripped soundtrack files in OGG (Ogg Vorbis) format.
-[*]The quakeone.com forums provide [url=http://quakeone.com/forums/quake-mod-releases/finished-works/7337-high-quality-music-packs.html]soundtrack files in OGG format[/url].
-[*]Quaddicted also provides [url=https://www.quaddicted.com/files/music/]soundtrack files in OGG format[/url].
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_campaign_soundtrack.zip]original campaign soundtrack[/url]
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp1_soundtrack.zip]mission pack 1 soundtrack[/url]
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp2_soundtrack.zip]mission pack 2 soundtrack[/url]
 [/list]
-And if you're using a bundle package of Quake stuff that has been assembled by someone else, it may already include a soundtrack:
-[list]
-[*]The [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] bundle includes soundtrack files in OGG format, along with the DarkPlaces engine and a bunch of other new textures and sounds.
-[*]The [url=http://forums.steampowered.com/forums/showthread.php?t=1756923]"Ultimate Quake Patch"[/url] includes soundtrack files in OGG format, along with an older version of the DarkPlaces engine and a few other things.
-[*]The [url=http://www.moddb.com/mods/quake-epsilon-build]Quake Epsilon[/url] bundle also includes the DarkPlaces engine and OGG-format music, although in this case the music is a set of replacement/alternative selections rather than the original Quake soundtrack.
-[/list]
-(And the sources above also provide soundtracks for the Quake mission packs.)
+(Obviously, you only need the mission pack soundtracks if you have the mission packs.)
 
-So before going any further in this guide you should have either soundtrack files, a physical CD, or a CD image. If you have soundtrack files you can skip to the next section (although you may also want to check out the "More You Know" box below).
+Those soundtrack files work with all of the soundtrack-file-playing Quake engines described in this guide. All you need to do is follow the (easy) instructions included in each of the above download archives. Basically you'll just need to move a "music" folder to the correct location in your Quake installation.
 
-If you have a CD image then you need some sort of virtual CD software to "mount" the image, so that applications see it as a real CD.  [url=http://www.slysoft.com/en/virtual-clonedrive.html]Virtual Clone Drive[/url] is popular but there are lots of choices.
+You can find Quake soundtrack files at other spots around the web too. The reasons that I decided to make yet another package of soundtrack files are: other soundtrack files probably have not removed the CD pre-emphasis (none that I've tested have done this), and they may not work with your Quake engine of choice unless you rename, relocate, and/or reformat the files. Using the packages linked above will avoid all of those problems.
 
-Now, you could just mount the CD image and then let Quake play music from it as if it were a physical CD.  But that approach is a bit of a hassle and it suffers from the same no-looping problem as real CDs.  So let's not do that!
+[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The music on the Quake CD has "pre-emphasis". OK... what does that mean?
 
-Instead we're going to go with solutions that play music files from your hard disk, one file for each of the music tracks from the CD.  If you don't already have the Quake soundtrack in this form, then you should take either the physical CD or mounted CD image and rip the tracks from it into music files.  Once you have those files, you no longer need the CD or image.
+The hydrogenaudio wiki has a [url=http://wiki.hydrogenaudio.org/index.php?title=Pre-emphasis]summary of pre-emphasis[/url] that is worth a look if you want details. The upshot though is this: to make the playback sound correct, ripped files need to be processed with a specific equalization curve to get rid of the pre-emphasis. This matches what your CD player did when playing the physical CD.
 
-The format that you rip to does matter, as the various solutions below support different music file formats.  Generally speaking though, OGG files are widely supported.
+Ripping a CD with iTunes will handle such "de-emphasis" automatically. The hydrogenaudio wiki page has some tips about other ripping methods, and Google will also turn up good discussion about this.
 
-[quote][previewimg=233460;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Audio buffs may want to take note that the music on the Quake CD is "pre-emphasized".  The hydrogenaudio wiki has a [url=http://wiki.hydrogenaudio.org/index.php?title=Pre-emphasis]summary of pre-emphasis[/url] that is worth a look.  The upshot is that to make the playback sound exactly correct, the ripped files need to have been processed with a specific equalization curve to get rid of the pre-emphasis.
-
-Ripping a CD with iTunes will handle such "de-emphasis" automatically.  The hydrogenaudio wiki page has some tips about other ripping methods, and Google will also turn up good discussion about this.
-
-The difference between Quake tracks that have been properly de-emphasized and those that haven't is fairly subtle to my old ears.  If you are in the mood to decode a spectral analysis, here's a comparison of a ripped file of the first Quake track not de-emphasized (top) vs. de-emphasized (bottom):
+The difference between Quake tracks that have been properly de-emphasized and those that haven't is fairly subtle to hear. But a spectral analysis (showing the volume at different frequencies) can make what's going on a little clearer. Here's an example comparing the first Quake track not de-emphasized (top) vs. correctly de-emphasized (bottom):
 [previewimg=237579;sizeThumb,inline;track02-ogg.png][/previewimg]
 [previewimg=237578;sizeThumb,inline;track02-deemph-ogg.png][/previewimg]
 
-The general effect of de-emphasis is to have more of a contrast in volume between the low and high frequencies.
+Without de-emphasis, the higher frequencies will be too loud.
 
-If you are using a soundtrack that you downloaded instead of ripping it yourself, and you don't know whether or not the tracks have been de-emphasized... well, they probably haven't been, but you might not want to lose sleep over it.  Just something to keep in mind. If you want to test it, you can get the free [url=http://spek.cc/]Spek[/url] tool, use it to open up your track02.ogg or track02.mp3 file, and compare the image you get to the images above.
+If you are using soundtrack files that you downloaded from somewhere else, and you don't know whether or not they have been correctly de-emphasized... well, they probably haven't been, but you might not want to lose sleep over it. Just something to keep in mind. If you want to test it, you can get the free [url=http://spek.cc/]Spek[/url] tool, use it to open up your track02.ogg or track02.mp3 file, and compare the image you get to the images above.[/quote]
 
-The music files included in [url=http://www.moddb.com/mods/quake-hd-pack-guide]Quake HD[/url] and in the [url=http://forums.steampowered.com/forums/showthread.php?t=1756923]"Ultimate Quake Patch"[/url] have [i]not[/i] been de-emphasized. I haven't checked the other sources mentioned above.[/quote]
+If you would rather rip the tracks yourself, you'll need to start with a physical Quake CD or CD image. Then you'll need to make sure that the tracks are encoded to the right format, named correctly, and put in the correct location. This guide won't go into any details about the ripping process, but the sections below describe the necessary file format/naming/placing.

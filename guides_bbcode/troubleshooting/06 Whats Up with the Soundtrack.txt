@@ -1,6 +1,26 @@
-[h1]No music at all[/h1]
-The Quake Soundtrack Solutions guide is entirely dedicated to this problem: http://steamcommunity.com/sharedfiles/filedetails/?id=119489135
+[h1]Hearing the wrong music[/h1]
+If you're hearing mystery music when playing Quake, make sure you don't have a CD in your CD drive. Many Quake engines will play tracks from whichever CD you have in the drive. That might be what you want, but it might not. :-)
+
+If you don't have a CD in your drive and you are still hearing odd tunes, then you might have installed a mod that put music files somewhere under your Quake folder. They might be individual music files (like MP3 or OGG files) or they might be hidden inside an archive file with the .pak or .pk3 extension. You might want to try starting from a clean installation.
+[list]
+[/list]
+[h1]I don't hear any music at all[/h1]
+First, make sure the music volume in the options menu is not set to zero.
+[list]
+[/list]
+[h1]Music volume is turned up, but still no music[/h1]
+If you don't have the Quake CD in your CD drive then you will not have any soundtrack music. At least, not until you fix things! The Quake Soundtrack Solutions guide is entirely dedicated to solving that problem: http://steamcommunity.com/sharedfiles/filedetails/?id=119489135
+
+A few more specific problems are covered below.
+[list]
+[/list]
+[h1]No music when playing on Linux[/h1]
+Soundtrack file playback on Linux may require that you install additional external libraries for playing music files of these formats, such as libogg or libvorbis for OGG support, and libmad or libmpg123 for MP3. You can check the documentation for your Quake engine of choice to be sure.
+[list]
+[/list]
+[h1]No music when using the DirectQ engine[/h1]
+If you're using OGG format soundtrack files with DirectQ, you must also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
 [list]
 [/list]
 [h1]Music sounds muffled[/h1]
-If you're using a Quake engine that plays the soundtrack music from files, check that you're using the latest version of that engine. Particularly, if you're using QuakeSpasm, make sure that you have version 0.85.10 or later. The "Sample Rate" section of the Quake Soundtrack Solutions guide has more discussion.
+Check that you're using the latest version of your Quake engine. Particularly, if you're using QuakeSpasm, make sure that you have version 0.85.10 or later. The "Sample Rate" section of the Quake Soundtrack Solutions guide has more discussion.

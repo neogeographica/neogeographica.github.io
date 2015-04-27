@@ -1,6 +1,7 @@
 [b]2015[/b]
 [list]
-[*]Mar 20: cleanup to be clear that "-bpp 32" doesn't apply to SW renderer 
+[*]Apr 26: more soundtrack-related issues
+[*]Mar 20: cleanup to be clear that "-bpp 32" doesn't apply to SW renderer
 [*]Mar 05: tweaking comments about modern Quake engines under "Quake Looks Weird"
 [*]Mar 05: added the obvious "map end" solution for "can't finish the game"
 [/list]
