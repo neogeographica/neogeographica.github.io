@@ -30,6 +30,7 @@ Other engines examined:
 [b]2015[/b]
 [list]
 [*]Apr ??: info on latest FTE build
+[*]Apr 29: re-included some info about CD images
 [*]Apr 28: added Quaddicted links for soundtrack downloads
 [*]Apr 26: info for reQuiem and QuakeForge; minor rewrite of pre-emphasis discussion
 [*]Apr 26: created and linked to recommended soundtrack packages
