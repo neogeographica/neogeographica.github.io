@@ -4,7 +4,7 @@ The most recent date that I checked out these engines' features was Feb 04 2015.
 The latest stable version of each engine was:
 [list]
 [*]ezQuake: version 2.2 from Dec 2013
-[*]FTEQW: version 1.0 from Jun 2011
+[*]FTE: "latest build" from Apr 2015
 [*]Fodquake: version 0.3 from Mar 2012
 [*]DarkPlaces: build 20140513 from May 2014
 [*]QuakeSpasm: version 0.90.0 from Oct 2014
@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]Apr ??: some rewrite of FTE info
 [*]Mar 20: Steam Cloud also saves your config
 [*]Mar 20: mention QuakeWorld player movement changes
 [*]Mar 05: mention DarkPlaces' 360 controller support
@@ -29,7 +30,7 @@ The latest stable version of each engine was:
 [*]Feb 07: added the Other Modern Engines section
 [*]Feb 04: bsp2 support survey; also other engine distinguishing features
 [*]Feb 04: checked qbism Super8 version 231
-[*]Feb 04: alternate link for FTEQW builds
+[*]Feb 04: alternate link for FTE builds
 [*]Feb 04: more details about SW vs. GL rendering
 [/list]
 [b]2014[/b]
@@ -41,7 +42,7 @@ The latest stable version of each engine was:
 [*]Jul 14: added QuakeSpasm video and more Fitzquake Mark V comments
 [*]Jun 14: linked to thread on changing nQuake skin settings
 [*]Jun 09: mentioned Qrack experimental builds
-[*]May 26: mentioned FTEQW experimental builds
+[*]May 26: mentioned FTE experimental builds
 [*]May 03: moved config-location info from Engines guide to Owner's Manual guide
 [*]May 03: checked new versions of qbism Super8 and DarkPlaces
 [*]Apr 19: added info about the qbism Super8 engine
