@@ -19,7 +19,7 @@ As for the sound effects, here's a summary of how sndspeed settings behave for e
 [*]QuakeSpasm defaults to a sndspeed of 11025. At that sndspeed, it also provides a new console variable "snd_filterquality" that more exactly controls how the sound effects are played; see its README for more details. If you prefer the brighter sound effects, you can use "-sndspeed 44100".
 [/list]
 [list]
-[*]FitzQuake Mark V and DirectQ default to a sndspeed of 11025. If you prefer the brighter sound effects, you can use "-sndspeed 44100".
+[*]Fitzquake Mark V and DirectQ default to a sndspeed of 11025. If you prefer the brighter sound effects, you can use "-sndspeed 44100".
 [/list]
 [list]
 [*]qbism Super8, like DarkPlaces, defaults to a sndspeed of 48000. Also like DarkPlaces, I don't hear a difference when using different sndspeed values. Unlike DarkPlaces, the sound effects in qbism Super8 have the brighter, upsampled tone.
