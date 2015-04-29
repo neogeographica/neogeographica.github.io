@@ -95,7 +95,7 @@ class ScreenshotTag(postmarkup.TagBase):
         self.skip_contents(parser)
         [img_id, img_props_list, img_name] = self.params.split(';')
         img_id = 's' + img_id
-        img_url = 'http://' + img_name
+        img_url = 'http://' + img_name.replace('cloud-2.steampowered.com', 'images.akamai.steamusercontent.com')
         img_props = 'guidePic ' + img_props_list.replace(',', ' ')
         if img_props_list.find('sizeOriginal') == -1:
             popup_divs = '\n'.join([popup_divs, popup_div_sshot(img_id, img_url)])
