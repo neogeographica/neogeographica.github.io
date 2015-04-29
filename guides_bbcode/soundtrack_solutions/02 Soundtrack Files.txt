@@ -1,8 +1,8 @@
 For any of these solutions to work, you first have to get a set of music files that make up the Quake soundtrack: one file for every music track on the original CD. There are various places you can get these, but I recommend this set that I generated:
 [list]
-[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_campaign_soundtrack.zip]original campaign soundtrack[/url]
-[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp1_soundtrack.zip]mission pack 1 soundtrack[/url]
-[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp2_soundtrack.zip]mission pack 2 soundtrack[/url]
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_campaign_soundtrack.zip]original campaign soundtrack[/url] ([url=https://www.quaddicted.com/files/music/quake_campaign_soundtrack.zip]mirror[/url])
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp1_soundtrack.zip]mission pack 1 soundtrack[/url] ([url=https://www.quaddicted.com/files/music/quake_mp1_soundtrack.zip]mirror[/url])
+[*][url=http://www.eclecticmenagerie.com/jl/quake/quake_mp2_soundtrack.zip]mission pack 2 soundtrack[/url] ([url=https://www.quaddicted.com/files/music/quake_mp2_soundtrack.zip]mirror[/url])
 [/list]
 (Obviously, you only need the mission pack soundtracks if you have the mission packs.)
 
