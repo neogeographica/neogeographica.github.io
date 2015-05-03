@@ -6,7 +6,7 @@ When using a software-renderer engine, I omit the "-bpp 32" option.
 
 I don't bother with the "-zone" option since I don't have gigantic console scripts, and many of the modern Quake engines no longer use the "-zone" option anyway.
 
-The "-dinput" option is irrelevant for DirectQ, and "-heapsize" is ignored by a few engines (Fodquake, DarkPlaces, DirectQ), but it doesn't hurt to specify them.  So I'm lazy enough to just always use the same command line.
+The "-dinput" option is irrelevant for DirectQ, and "-heapsize" is ignored by a few engines (FTE, Fodquake, DarkPlaces, DirectQ), but it doesn't hurt to specify them.  So I'm lazy enough to just always use the same command line.
 [list]
 [/list]
 [h1]Original Quake engines[/h1]

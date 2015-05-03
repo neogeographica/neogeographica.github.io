@@ -13,16 +13,16 @@ As a first pass for engine selection, keep these criteria in mind:
 [*]QuakeSpasm, Fitzquake Mark V, DirectQ, and DarkPlaces are the most popular engines for playing singleplayer.  The first three are intended to provide a classic GLQuake look (with some renderer bugfixes), while DarkPlaces is more about a modified/updated look.  Engoo is another singleplayer engine that supports a range of looks from WinQuake-faithful to highly modified.  qbism Super8 is an engine dedicated to a specific low-fi look.  All of the engines described in this guide (except Fodquake) have some amount of support for singleplayer.
 [/list]
 [list]
-[*]ezQuake, FTEQW, and Fodquake are the most popular engines for playing QuakeWorld multiplayer.  DarkPlaces also provides QuakeWorld support.
+[*]ezQuake, FTE, and Fodquake are the most popular engines for playing QuakeWorld multiplayer.  DarkPlaces also provides QuakeWorld support.
 [/list]
 [list]
 [*]ProQuake, Qrack, and DarkPlaces are the most popular engines for playing NetQuake multiplayer.  All of the engines described below, except ezQuake and Fodquake, have some amount of support for NetQuake multiplayer.
 [/list]
 [list]
-[*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. ezQuake and FTEQW can host QuakeWorld games; all of the remaining engines (except Fodquake) can host NetQuake games.
+[*]If you intend to host your own multiplayer games, then preferably you should set up a dedicated server.  However, you can use these engines to do quick-and-dirty hosting (as a "listen server") that could be handy for casual LAN play. ezQuake and FTE can host QuakeWorld games; all of the remaining engines (except Fodquake) can host NetQuake games.
 [/list]
 [list]
-[*]A few recent large and/or complex singleplayer map releases make use of the new "bsp2" map format for Quake. See [url=https://www.quaddicted.com/reviews/something_wicked.html]Something Wicked This Way Comes[/url], [url=https://www.quaddicted.com/reviews/nyarlathotep.html]Nyarlathotep[/url], and [url=https://www.quaddicted.com/reviews/rrp.html]Rubicon Rumble Pack[/url] for example. Maps in bsp2 format aren't common (yet?), but bsp2 support may be something you'll want to have if you are interested in new singleplayer maps. That means using the most recent version of DarkPlaces, QuakeSpasm, Fitzquake Mark V, qbism Super8, or experimental build of FTEQW. (See also the Other Modern Engines section below.)
+[*]A few recent large and/or complex singleplayer map releases make use of the new "bsp2" map format for Quake. See [url=https://www.quaddicted.com/reviews/something_wicked.html]Something Wicked This Way Comes[/url], [url=https://www.quaddicted.com/reviews/nyarlathotep.html]Nyarlathotep[/url], and [url=https://www.quaddicted.com/reviews/rrp.html]Rubicon Rumble Pack[/url] for example. Maps in bsp2 format aren't common (yet?), but bsp2 support may be something you'll want to have if you are interested in new singleplayer maps. That means using the most recent version of DarkPlaces, QuakeSpasm, Fitzquake Mark V, qbism Super8, or latest automated build of FTE. (See also the Other Modern Engines section below.)
 [/list]
 [list]
 [/list]

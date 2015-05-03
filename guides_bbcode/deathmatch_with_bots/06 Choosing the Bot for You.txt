@@ -49,7 +49,7 @@ To make things as clear as possible, here's a table that shows which engine can 
     [td]*[/td]
   [/tr]
   [tr]
-    [td]FTEQW[/td]
+    [td]FTE[/td]
     [td][/td]
     [td][/td]
     [td]*[/td]

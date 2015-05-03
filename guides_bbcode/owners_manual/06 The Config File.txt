@@ -16,7 +16,7 @@ Modern Quake engines may have different ideas about where to store their configu
 [*]Qrack: "qrack\config.cfg"
 [*]qbism Super8: "super8\super8.cfg"
 [*]ezQuake: "ezQuake\configs\config.cfg"
-[*]FTEQW: "fte.cfg" somewhere under your user directory; on Windows for example this config file is stored in "My Games\FTE QuakeWorld\fte" under your personal documents folder
+[*]FTE: "fte.cfg" somewhere under your user directory; on Windows for example this config file is stored in "My Games\FTE QuakeWorld\fte" under your personal documents folder
 [*]Fodquake: "default.cfg" somewhere under your user directory; on Windows for example this config file is stored in "Fodquake\fodquake\configs" under your personal documents folder
 [/list]
 [list]
@@ -28,7 +28,7 @@ A mod or missionpack consists of additional files that are placed in their own s
 
 We'll ignore QuakeWorld, GLQuakeWorld, and Fodquake for this section; those engines don't support singleplayer.
 
-For ezQuake and FTEQW, playing a mod doesn't affect the location of the config file -- probably because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
+For ezQuake and FTE, playing a mod doesn't affect the location of the config file -- probably because even though these engines have some singleplayer support, they are primarily aimed at QuakeWorld multiplayer.
 
 For all other Quake engines, when you play a mod your configuration will be stored in that folder.  If no config file exists there, then it will first be copied over from its original location.  So when you first start up a mod, you should see your familiar configuration.
 

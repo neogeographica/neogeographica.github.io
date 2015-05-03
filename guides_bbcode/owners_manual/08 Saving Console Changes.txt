@@ -3,7 +3,7 @@ Some of the settings changes that you make through the console will be saved to 
 
 In this guide I'll try to be clear about which will be saved and which won't; but if you're ever unsure then it's easy enough just to check -- restart Quake and use the console to check the value of that variable.  Or quit Quake and use a text editor to search for the name of that variable in your config file.
 
-As a rule of thumb, modern QuakeWorld engines (ezQuake, Fodquake, FTEQW) should save every setting in the config file.  ([b]They may not save automatically though![/b]  See the info box in the "In-Game Menu" section for details.)
+As a rule of thumb, modern QuakeWorld engines (ezQuake, Fodquake, FTE) should save every setting in the config file.  ([b]They may not save automatically though![/b]  See the info box in the "In-Game Menu" section for details.)
 
 With other Quake engines, some of your preferred settings may not get saved to your config file.
 [list]
@@ -17,9 +17,9 @@ Most Quake engines also have a handy feature that will save you the trouble of u
 Once settings are in autoexec.cfg you can stop worrying about them; they will be automatically applied when Quake starts.  If you ever want to change any of those settings, edit the autoexec.cfg file.
 
 [quote]
-[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The FTEQW and Fodquake engines differ from other engines in that they do [i]not[/i] automatically execute autoexec.cfg on startup (at least in their Windows versions).  However, since they save every useful console setting to the config file, in simple Quake setups there's not much need for autoexec.cfg with those engines.
+[previewimg=236895;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] The FTE and Fodquake engines differ from other engines in that they do [i]not[/i] automatically execute autoexec.cfg on startup (at least in their Windows versions).  However, since they save every useful console setting to the config file, in simple Quake setups there's not much need for autoexec.cfg with those engines.
 
-If you do want FTEQW or Fodquake to use autoexec.cfg -- for example when playing a mod that has an autoexec.cfg file -- then you can use the "+exec" command-line option like so:
+If you do want FTE or Fodquake to use autoexec.cfg -- for example when playing a mod that has an autoexec.cfg file -- then you can use the "+exec" command-line option like so:
 [code]+exec autoexec.cfg[/code]
 
 See the section on "The Command Line" below if you're not familiar with using command-line options.

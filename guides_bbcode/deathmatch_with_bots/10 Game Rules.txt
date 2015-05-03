@@ -11,12 +11,6 @@ One of the most important console commands is "map", which starts a new game on 
 [code]map dm4[/code]
 will start a game on dm4.  If you already have a game underway when you use the "map" command, the current game will instantly be stopped and a new game started on the specified map.
 
-[quote]
-[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] Another gotcha about using the FTEQW engine to play the FBCA mod:
-
-FTEQW will experience an error on the very first attempt to start a bot match after you begin running Quake.  Just use the "map" command or the Multiplayer menu to try again, and things will go smoothly after that.
-[/quote]
-
 "fraglimit" and "timelimit" are console variables that set the conditions for ending the game.  If "fraglimit" is set to something nonzero, then the game will end when any player gets that many frags; if "timelimit" is set to something nonzero, then the game will end when that many minutes have elapsed.  You can set either or both of these limits.  Or neither, if you want the game to never end!  For example if you want the game to last until some player hits 25 frags, regardless of how long it takes, then you would enter this in the console:
 [code]
 fraglimit 25

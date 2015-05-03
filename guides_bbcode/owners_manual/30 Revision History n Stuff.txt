@@ -4,7 +4,7 @@ The most recent date that I checked out these engines' features was Feb 04 2015.
 The latest stable version of each engine was:
 [list]
 [*]ezQuake: version 2.2 from Dec 2013
-[*]FTEQW: version 1.0 from Jun 2011
+[*]FTE: "latest build" from Apr 2015
 [*]Fodquake: version 0.3 from Mar 2012
 [*]DarkPlaces: build 20140513 from May 2014
 [*]QuakeSpasm: version 0.90.0 from Oct 2014
@@ -21,6 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
+[*]May 03: updates for latest FTE build, notably in the Display sections
 [*]Mar 20: Steam Cloud also saves your config
 [*]Mar 20: changed "Missionpacks and Mods" section to be not-misleading about missionpacks
 [*]Mar 20: additional DarkPlaces compatibility fixes

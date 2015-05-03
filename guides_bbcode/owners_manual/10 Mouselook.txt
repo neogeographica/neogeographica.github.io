@@ -1,5 +1,5 @@
 [h1]Enable[/h1]
-If you are using the latest version of ezQuake, FTEQW, Fodquake, DarkPlaces, Fitzquake Mark V, DirectQ, qbism Super8, ProQuake, or Qrack then you already have mouselook enabled.  Good for you!
+If you are using the latest version of ezQuake, FTE, Fodquake, DarkPlaces, Fitzquake Mark V, DirectQ, qbism Super8, ProQuake, or Qrack then you already have mouselook enabled.  Good for you!
 
 If you don't have mouselook enabled, and you can't find a menu option to enable it, then you need this line in your autoexec.cfg file:
 [code]+mlook[/code]

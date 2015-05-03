@@ -30,13 +30,13 @@ Your Quake engine of choice may also provide an in-game menu option to choose a 
 If you're using the version of FBCA included with nQuake, you don't need to use the "-game" option.  In the nQuake setup, FBCA is the default code used for QuakeWorld multiplayer games, since "frogbot.pk3" is sitting in the "qw" folder.
 
 [quote]
-[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you happen to be using the FTEQW engine (instead of ezQuake) with the nQuake FBCA setup, there's a quirk you should keep in mind.  It's related to the fact that FTEQW also has some NetQuake support... so when you start a game using FTEQW it might get confused about whether you want NetQuake or QuakeWorld.
+[previewimg=261670;sizeOriginal,floatLeft;tmyk.jpg][/previewimg] If you happen to be using the FTE engine (instead of ezQuake) with the nQuake FBCA setup, there's a quirk you should keep in mind.  It's related to the fact that FTE also has some NetQuake support... so when you start a game using FTE it might get confused about whether you want NetQuake or QuakeWorld.
 
 This is [i]not[/i] an issue if you use the Multiplayer menu to start a game; that will start a QuakeWorld-style game.  It's also not an issue if you've activated a mod folder that only has one kind of code in it, like FBCA which only has QuakeWorld code in the "fbca" folder.
 
-But if you're a) using the console to start a map and b) trying to run QuakeWorld code that is sitting in the "id1" or "qw" folder (such as the FBCA code in "frogbot.pk3"), then you need to make sure to tell FTEQW what you are trying to do by setting this console variable:
+But if you're a) using the console to start a map and b) trying to run QuakeWorld code that is sitting in the "id1" or "qw" folder (such as the FBCA code in "frogbot.pk3"), then you need to make sure to tell FTE what you are trying to do by setting this console variable:
 [code]sv_progs qwprogs[/code]
-After that you can start a map using the "map" console command and FTEQW will correctly start a game using the available QuakeWorld code.
+After that you can start a map using the "map" console command and FTE will correctly start a game using the available QuakeWorld code.
 [/quote]
 [list]
 [/list]

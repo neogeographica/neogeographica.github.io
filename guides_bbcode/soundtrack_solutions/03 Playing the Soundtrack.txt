@@ -13,7 +13,7 @@ Most modern Quake engines also still support CD audio, so there is a good chance
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Some Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], [url=http://super8.qbism.com/]qbism Super8[/url], [url=https://www.quaddicted.com/engines/requiem]reQuiem[/url], and [url=http://www.quakeforge.net/]QuakeForge[/url].
+Some Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], [url=http://super8.qbism.com/]qbism Super8[/url], [url=http://triptohell.info/moodles/?C=M;O=D]FTE[/url], [url=https://www.quaddicted.com/engines/requiem]reQuiem[/url], and [url=http://www.quakeforge.net/]QuakeForge[/url].
 
 For soundtrack file playback to work, a few things have to be considered:
 [list]
@@ -42,6 +42,7 @@ As for the audio format: most of the distributions of the Quake soundtrack are i
 [*]Fitzquake Mark V: MP3
 [*]DirectQ: OGG, MP3, WMA, WAV
 [*]qbism Super8: OGG, MP3
+[*]FTE: OGG, MP3, WAV
 [*]reQuiem: MP3
 [*]QuakeForge: OGG
 [/list]
@@ -64,4 +65,4 @@ If a Quake engine has a feature that allows it to control an external player app
 
 For the [url=http://ezquake.sourceforge.net/]ezQuake[/url] engine, Pirate-X posted a [url=http://forums.steampowered.com/forums/showpost.php?p=27018156&postcount=32]scripting solution for controlling Winamp[/url] on the old Steam forums.
 
-[url=http://fodquake.net/]Fodquake[/url] and [url=http://www.fteqw.com/]FTEQW[/url] include support for controlling an external Winamp process, but I'm not aware of how to script them for soundtrack play.
+[url=http://fodquake.net/]Fodquake[/url] includes support for controlling an external Winamp process, but I'm not aware of how to script it for soundtrack play.
