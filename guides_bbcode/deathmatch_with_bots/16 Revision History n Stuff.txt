@@ -30,7 +30,7 @@ The latest version of each mod was:
 
 [b]2015[/b]
 [list]
-[*]May ??: recent builds of FTE have fixed any issues w/ FBCA
+[*]May 03: recent builds of FTE have fixed any issues w/ FBCA
 [*]Mar 05: checked qbism Super8 version 235
 [*]Feb 04: checked qbism Super8 version 231
 [/list]

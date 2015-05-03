@@ -21,7 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
-[*]May ??: some rewrite of FTE info
+[*]May 03: some rewrite of FTE info
 [*]Mar 20: Steam Cloud also saves your config
 [*]Mar 20: mention QuakeWorld player movement changes
 [*]Mar 05: mention DarkPlaces' 360 controller support

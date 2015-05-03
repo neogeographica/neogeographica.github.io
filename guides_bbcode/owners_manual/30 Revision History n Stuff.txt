@@ -21,7 +21,7 @@ The latest stable version of each engine was:
 
 [b]2015[/b]
 [list]
-[*]May ??: updates for latest FTE build, notably in the Display sections
+[*]May 03: updates for latest FTE build, notably in the Display sections
 [*]Mar 20: Steam Cloud also saves your config
 [*]Mar 20: changed "Missionpacks and Mods" section to be not-misleading about missionpacks
 [*]Mar 20: additional DarkPlaces compatibility fixes
