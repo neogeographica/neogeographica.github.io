@@ -34,7 +34,7 @@ There are two different ways to launch and play in a multiplayer game:
 
 There are various reasons to use a dedicated server, but most of them don't apply if you are playing by yourself and you are using a computer from the 21st century.  Two reasons that you may still care about:
 [list]
-[*]The original QuakeWorld and GLQuakeWorld programs cannot be used as listen servers -- they are only client programs.  If you insist on using either of those clients then you'll have to use a dedicated server to run the mod.  However, I would instead recommend using a modern Quake engine that can act as a QuakeWorld listen server (ezQuake or FTEQW).
+[*]The original QuakeWorld and GLQuakeWorld programs cannot be used as listen servers -- they are only client programs.  If you insist on using either of those clients then you'll have to use a dedicated server to run the mod.  However, I would instead recommend using a modern Quake engine that can act as a QuakeWorld listen server (ezQuake or FTE).
 [/list]
 [list]
 [*]Player movement physics can behave a little differently between dedicated server and listen server.  So if you're trying to perfect some difficult movement tricks that you want to use in "real" multiplayer games on some internet public server -- which will be a dedicated server -- then you could want to use a dedicated server in your practice.

@@ -24,6 +24,6 @@ Grab the [url=http://eclecticmenagerie.com/jl/quake/bots/fbca_quickstart.zip]FBC
 
 The "fbca_quickstart_readme.txt" file describes the command-line options that you should use to launch Quake in order to play against these bots.  The "ezquake-bots-ffa-cycle.bat" batch file can be used to launch the Windows version of ezQuake with the right options.
 
-The FTEQW engine can be used similarly to ezQuake but it has a few FBCA-related glitches, so for quickstart purposes ezQuake is better.
+(The FTE engine can be used similarly to ezQuake. If you have a recent build of FTE, you can edit the above batch file to make it launch the FTE executable instead, using the same command line options.)
 
 The original QuakeWorld and GLQuakeWorld programs are harder to use for playing bots; more about that in the "Multiplayer Info" section below.
