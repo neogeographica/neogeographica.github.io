@@ -1,7 +1,7 @@
 Forum questions about Quake configuration have covered a lot of different ground in the past, so there's a lot of different topics to cover.
 
 If you're not familiar with the available varieties of Quake engines -- or even what "Quake engines" means -- then you might want to take a look at this other guide first: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
-When you see a reference to ezQuake, FTEQW, Fodquake, DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, Engoo, qbism Super8, ProQuake, or Qrack... all those odd words are names of other programs that can be used to play Quake.  Read the Quake Engines guide if you want to learn more about them.
+When you see a reference to ezQuake, FTE, Fodquake, DarkPlaces, QuakeSpasm, Fitzquake Mark V, DirectQ, Engoo, qbism Super8, ProQuake, or Qrack... all those odd words are names of other programs that can be used to play Quake.  Read the Quake Engines guide if you want to learn more about them.
 
 As for [i]this[/i] guide, we lead off with a necessary warning about Windows issues and then go straight to a quickstart... an efficient way to start Quaking.  If you're new to Quake then you should probably just follow the quickstart, and come back to the rest of the guide later as a reference if you have problems.
 

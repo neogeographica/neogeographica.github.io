@@ -1,4 +1,4 @@
-The [url=http://steamcommunity.com/id/jlaw/screenshots/?appid=2310&sort=newestfirst&browsefilter=myfiles&view=imagewall]singleplayer Quake screenshots in my Steam account[/url] were all taken using some variety of Fitzquake -- either QuakeSpasm, Fitzquake Mark V, or the original Fitzquake.  Along with the basic settings described in this guide I typically use the following settings when I play singleplayer in those engines:
+The [url=http://steamcommunity.com/id/jlaw/screenshots/?appid=2310&sort=newestfirst&browsefilter=myfiles&view=imagewall]singleplayer Quake screenshots in my Steam account[/url] were almost all taken using some variety of Fitzquake -- either QuakeSpasm, Fitzquake Mark V, or the original Fitzquake.  Along with the basic settings described in this guide I typically use the following settings when I play singleplayer in those engines:
 [code]
 scr_sbaralpha "0.75"
 scr_sbarscale "1.5"
@@ -6,8 +6,6 @@ scr_crosshairscale "2"
 gl_texture_anisotropy "8.000000"
 [/code]
 ...and so I was probably using something like that when taking screenshots, but no guarantees. :-)
-
-(Any screenshots of "Something Wicked This Way Comes" used the Dec 2012 experimental build of FTEQW.)
 
 [screenshot=71192457;sizeThumb,floatLeft;cloud-2.steampowered.com/ugc/595844459738802262/C753344363900D8B511FA0AC326B5CD69922667D/][/screenshot] [screenshot=2386919;sizeThumb,floatRight;cloud-2.steampowered.com/ugc/596966794426164940/63196C2E15D7A435A1716D0B32E4795E96A8B7B3/][/screenshot]
 [screenshot=2387085;sizeThumb,floatLeft;cloud-2.steampowered.com/ugc/596942125434007093/1633882E5E4BDF4DA2C2BFE039E653B664E81582/][/screenshot] [screenshot=264779459;sizeThumb,floatRight;cloud-2.steampowered.com/ugc/3281183405698684077/F64E78EFD2EEC81DEDE665716A830ADB80B662B8/][/screenshot]

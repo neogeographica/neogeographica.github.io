@@ -15,7 +15,7 @@ Note:
 [/list]
 [list]
 [/list]
-[h1]ezQuake, FTEQW, Fodquake, DarkPlaces, and Qrack[/h1]
+[h1]ezQuake and DarkPlaces[/h1]
 These engines support setting console dimensions using the "vid_conwidth" and "vid_conheight" console variables, which will save to the config file. So for a 16:9 resolution you could use
 [code]
 vid_conwidth 864
@@ -30,8 +30,17 @@ Notes:
 [list]
 [*]You may need to set these values [i]after[/i] choosing a screen resolution using the in-game menu, in case that action resets them.
 [*]The ezQuake engine has a menu option "Wide Aspect". When enabled, this option will decrease the console height so that the console aspect ratio is 16:10. When disabled, it will increase the console height. If you are not using a 16:10 display, or you want more direct control over the size/shape of HUD elements, you should leave the "Wide Aspect" option disabled and just set the "vid_conwidth"/"vid_conheight" values yourself.
-[*]FTEQW and Qrack will automatically pick "vid_conwidth"/"vid_conheight" values of the correct aspect ratio when setting a video resolution. (They also expose these values in the video options menu.) If you want to change the size of the statusbar and console text then you can manually set the "vid_conwidth"/"vid_conheight" values.
-[*]Fodquake defaults to values of 0 for "vid_conwidth" and "vid_conheight", which in this engine means "pick the correct aspect ratio". As with the other engines, if you want to change the size of the statusbar and console text then you can manually set different values for "vid_conwidth"/"vid_conheight".
+[/list]
+[list]
+[/list]
+[h1]FTE, Fodquake, and Qrack[/h1]
+These engines always provide the correct shape for HUD elements and console text.
+
+If you do want to change the scaling of those elements, you can set the "vid_conwidth" and "vid_conheight" console variables as described above. Or you may have other options available through the console and/or the in-game menus:
+[list]
+[*]FTE defaults to values of 0 for "vid_conwidth" and "vid_conheight", which in this engine means "pick the correct aspect ratio". There is also a "vid_conautoscale" variable that can be set to 0 to pick a good scale, or set to some other number to change the scaling of HUD elements. Likely you will want to leave "vid_conwidth"/"vid_conheight" alone, and maybe adjust "vid_conautoscale". These values can also be changed through the "2D Mode" settings in the video options menu.
+[*]Fodquake defaults to values of 0 for "vid_conwidth" and "vid_conheight", which in this engine means "pick the correct aspect ratio". If you want to change the size of the statusbar and console text then you can manually set different values for "vid_conwidth"/"vid_conheight".
+[*]Qrack will automatically pick "vid_conwidth"/"vid_conheight" values of the correct aspect ratio when setting a video resolution. If you want to change the size of the statusbar and console text then you can manually set the "vid_conwidth"/"vid_conheight" values. These values can also be changed through the "Console Size" settings in the video options menu.
 [/list]
 [list]
 [/list]
