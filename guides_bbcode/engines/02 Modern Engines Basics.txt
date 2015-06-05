@@ -8,7 +8,8 @@ Each engine mentioned below has a long development history and many features, bu
 [list]
 [/list]
 [h1]Which Engines for What[/h1]
-As a first pass for engine selection, keep these criteria in mind:
+The Quick Start section of the Quake Owner's Manual guide has some recommendations: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+But if you want to really dig in and pick the best Quake engine for you, here's a few criteria to keep in mind:
 [list]
 [*]QuakeSpasm, Fitzquake Mark V, DirectQ, and DarkPlaces are the most popular engines for playing singleplayer.  The first three are intended to provide a classic GLQuake look (with some renderer bugfixes), while DarkPlaces is more about a modified/updated look.  Engoo is another singleplayer engine that supports a range of looks from WinQuake-faithful to highly modified.  qbism Super8 is an engine dedicated to a specific low-fi look.  All of the engines described in this guide (except Fodquake) have some amount of support for singleplayer.
 [/list]

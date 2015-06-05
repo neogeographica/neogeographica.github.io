@@ -13,7 +13,7 @@ Most modern Quake engines also still support CD audio, so there is a good chance
 [list]
 [/list]
 [h1]Engines that play soundtrack music files[/h1]
-Some Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], [url=http://super8.qbism.com/]qbism Super8[/url], [url=http://triptohell.info/moodles/?C=M;O=D]FTE[/url], [url=https://www.quaddicted.com/engines/requiem]reQuiem[/url], and [url=http://www.quakeforge.net/]QuakeForge[/url].
+Some Quake engines can play music files to give you a soundtrack during the game. Among the choices listed in the "Quake Engines" guide, soundtrack file playback is supported by [url=http://icculus.org/twilight/darkplaces/]DarkPlaces[/url], [url=http://quakespasm.sourceforge.net/]QuakeSpasm[/url], [url=http://celephais.net/board/view_thread.php?id=60831]Fitzquake Mark V[/url], [url=https://www.quaddicted.com/files/engines/directq/DirectQ%201.9.0%20Executable.zip]DirectQ[/url], [url=http://super8.qbism.com/]qbism Super8[/url], [url=http://fte.triptohell.info/ftedownloads/experimental]FTE[/url], [url=https://www.quaddicted.com/engines/requiem]reQuiem[/url], and [url=http://www.quakeforge.net/]QuakeForge[/url].
 
 For soundtrack file playback to work, a few things have to be considered:
 [list]
@@ -48,7 +48,7 @@ As for the audio format: most of the distributions of the Quake soundtrack are i
 [/list]
 Some quirks to be aware of:
 [list]
-[*]For OGG support in DirectQ, you must install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+[*]For OGG support in DirectQ, you must install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url]. You may have to reboot after installing that filter.
 [*]The Linux version of QuakeSpasm requires external libraries: libogg or libvorbis for OGG support, and libmad or libmpg123 for MP3. I'm not sure if DarkPlaces' OGG support on Linux has the same requirement, but I suspect it does.
 [*]QuakeForge needs a "tracklist.cfg" file that tells it where to find the music tracks. If you downloaded a soundtrack package linked at the top of this guide, then you'll get a tracklist.cfg and instructions on where to put it. Otherwise, see the QuakeForge documentation.
 [/list]

@@ -1,5 +1,5 @@
 [h1]Engine Versions[/h1]
-The most recent date that I checked out various Quake engines' features was Feb 04 2015.
+The most recent date that I checked out various Quake engines' features was May 03 2015.
 
 The latest stable version of each engine that supports soundtrack music file playback was:
 [list]
@@ -29,6 +29,7 @@ Other engines examined:
 
 [b]2015[/b]
 [list]
+[*]Jun 02: minor edits for clarity
 [*]May 03: info on latest FTE build
 [*]Apr 29: re-included some info about CD images
 [*]Apr 28: added Quaddicted links for soundtrack downloads

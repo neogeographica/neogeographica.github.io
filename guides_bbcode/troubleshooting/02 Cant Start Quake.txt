@@ -8,18 +8,28 @@ Note that most of the time it's quite possible to use the Steam community overla
 Most commonly it seems to be an old version of DarkPlaces that experiences this issue. If you are using the "Ultimate Quake Patch", then you have an old version of DarkPlaces, and you should probably consider updating to a more recent version. See the section on the DarkPlaces engine in the Quake Engines guide.
 [list]
 [/list]
-[h1]Startup fails with an error dialog about "Hunk_Alloc" or "Z_Malloc"[/h1]
-If you're running a mod or an addon map, or you're using large custom config scripts, some Quake engines (including the original ones) may need command-line arguments telling them to reserve more memory. See the "Limits" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide. ("Hunk_Alloc" errors mean you need a larger heapsize value, and "Z_Malloc" errors mean you need a larger zone value.)
-
-Whenever you run downloaded content, be sure to check the readme file to see if it requires special command-line arguments or other settings.
-[list]
-[/list]
 [h1]Startup fails with an error dialog about "gfx.wad"[/h1]
 If you get an error that specifically says "W_LoadWadFile: couldn't load gfx.wad : can't find pak0.pak", this means that something is wrong with the way your Quake files are arranged. Specifically, the Quake engine can't find the "pak0.pak" file.
 
 The pak0.pak and pak1.pak files are in the "id1" folder. A Quake engine will look for the id1 folder in the current working directory. That directory will normally will be the place where the Quake engine program is located, especially if you are launching Quake by clicking on an icon or button; so, normally you want the id1 folder to be located next to your Quake program. If id1 isn't the right directory, or the pak files aren't inside id1, you'll get this error message.
 
 If you need to make the Quake engine look for the id1 folder somewhere else, you can use the "-basedir" command-line argument as described in the Quake Engines guide.
+[list]
+[/list]
+[h1]Startup fails with an error dialog about "Hunk_Alloc" or "Z_Malloc"[/h1]
+If you're running a mod or an addon map, or you're using large custom config scripts, some Quake engines (including the original ones) may need command-line arguments telling them to reserve more memory. See the "Limits" section of the Quake Owner's Manual guide, as well as the "Command Line Examples" at the end of the guide. ("Hunk_Alloc" errors mean you need a larger heapsize value, and "Z_Malloc" errors mean you need a larger zone value.)
+
+Whenever you run downloaded content, be sure to check the readme file to see if it requires special command-line arguments or other settings.
+[list]
+[/list]
+[h1]Startup fails with an error dialog about "unrecognized protocol number"[/h1]
+An error like "Host_Error: CL_ParseServerInfo: Server is unrecognized protocol number" is a complaint from Quake client code that it is getting unexpected stuff from a Quake server... i.e. that the server is a different version or variety of Quake from the client. Somewhat surprisingly, this error can happen in singleplayer too. This is because the playback of demos (game recordings) is handled through the multiplayer client code.
+
+When you start Quake it may automatically begin to play some demos. Quake shipped with a few of these demos, which you're probably really familiar with. If you're trying to play a mod, then that mod may include some different demos to autoplay. And it may be the case that those demos were originally recorded in a way that is incompatible with the Quake engine that you're using.
+
+If this error happens when you're trying to launch Quake with a mod, the first thing to do is to check the mod's documentation (README file, or whatever) to see which Quake engine is recommended for playing the mod.
+
+If you're determined to use a non-recommended Quake engine -- or if you're using the right one and the error is still happening -- then you'll need to skip the autoplay demos. One practical way to do this is to use a command-line argument to launch Quake directly into a map. For example if the mod has a "start" map (start.bsp), you could use the command-line argument "+map start" to go directly to that map without playing the demos. The mod's documentation should tell you which map to start with.
 [list]
 [/list]
 [h1]GLQuake crashes on startup (and disabling the overlay doesn't help)[/h1]

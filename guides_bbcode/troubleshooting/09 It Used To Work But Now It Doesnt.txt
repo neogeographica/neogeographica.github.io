@@ -1,0 +1,19 @@
+One of the most frustrating kinds of problems is when you used to have a perfectly-working Quake setup, and now for some reason it is misbehaving.
+
+First, try running Quake without any command-line arguments for missionpacks or mods. No "-game" argument, and no "-hipnotic" or "-rogue". If this fixes things, then the problem was in the mod or missionpack you were using.
+
+If you made any other recent changes to your configs or command-line, try getting rid of those changes.
+
+If none of that fixes things, you can always break out the big hammer: the clean start.
+
+Make a new Quake folder somewhere, like on your desktop. Put a fresh copy of your Quake engine inside this new Quake folder -- and make sure you include any libraries or other files that your Quake engine uses. Also create a new empty "id1" folder in there.
+
+Copy "pak0.pak" and "pak1.pak" from your old "id1" folder into this new "id1" folder. You now have the minimal setup for running Quake.
+
+Try running your Quake engine, preferably with no unusual command-line arguments. Hopefully it works! If it does, then that means that some bit of configuration or content from your old setup was causing your problems.
+
+Now you can try copying config files/scripts from your old setup into this new setup. If things still work you can now try copying or moving other content -- maps, mods, textures, whatever. Eventually you may find what was giving you grief. Or if you don't care about all the old content you had installed, forget about all that and just enjoy your squeaky clean Quake.
+
+Once you have a working Quake setup inside this new folder you created, you can delete your old misbehaving Quake installation and move the new setup into its place.
+
+There are many different variations on this kind of problem-solving, but the general idea is always the same: try to get back to as clean and minimal a Quake setup as you can manage, and then build back up from there.
