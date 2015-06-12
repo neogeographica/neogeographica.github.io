@@ -6,7 +6,9 @@ For any of the solutions in this guide, you first have to get a set of music fil
 [/list]
 (Obviously, you only need the mission pack soundtracks if you have the mission packs.)
 
-Those soundtrack files work with all of the soundtrack-file-playing Quake engines described in this guide. All you need to do is follow the (easy) instructions included in each of the above download archives. Basically you'll just need to move a "music" folder to the correct location in your Quake installation.
+If you are using one of the modern "Quake engines" (programs for playing Quake) mentioned in this guide below as supporting soundtrack files, then all you need to do is follow the easy instructions included in each of the above download archives. Basically you'll just need to move a "music" folder to the correct location within your Quake installation.
+
+If on the other hand you're determined to use the original Quake programs, there are solutions described below for them as well, but it won't be quite so easy.
 
 You can find Quake soundtrack files at other spots around the web too. The reasons that I decided to make yet another package of soundtrack files are: other soundtrack files probably have not removed the CD pre-emphasis (none that I've tested have done this), and they may not work with your Quake engine of choice unless you rename, relocate, and/or reformat the files. Using the packages linked above will avoid all of those problems.
 

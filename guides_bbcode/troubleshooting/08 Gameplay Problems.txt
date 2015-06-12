@@ -36,3 +36,11 @@ This problem is a bug with an old version of DarkPlaces. The only reason to spec
 The original GLQuake/GLQuakeWorld engines can crash on map change and show an error dialog that says "GL_LoadTexture: cache mismatch". More specifically, this happens if you're changing between map A and map B, and map A has a texture with a different size from a texture of the same name in map B. The [url=http://www.inside3d.com/qip/q1/bugsmap.htm]Quake Info Pool[/url] has a list of the specific map combos that have this problem. In the original Quake maps, DM4 is a problem child that will conflict with either E2M5 or E4M6.
 
 If you use a modern Quake engine then you won't have to worry about this bug.
+[list]
+[/list]
+[h1]On Linux, some files aren't recognized[/h1]
+This item covers a grab-bag of mysterious problems on Linux, that all turn out to be caused by some file apparently being ignored -- whether it's a map, a sound, a script, or even a whole directory full of stuff.
+
+A common gotcha in Linux Quake installations is that the filesystem is case-sensitive. Over on Windows, where most Quake content was developed, it was not case-sensitive. So Quake content authors have been known to be a little careless about whether for example their mod's start map is named "start.bsp" or "START.BSP". On Windows, it doesn't matter. On Linux, it could matter a lot.
+
+If you're suffering from files being unrecognized in your Linux Quake installation, look for file or directory names that have any capital letters. The solution is almost always that you should rename everything to be all-lowercase.

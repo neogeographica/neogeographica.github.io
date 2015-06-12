@@ -19,7 +19,7 @@ Soundtrack file playback on Linux may require that you install additional extern
 [list]
 [/list]
 [h1]No music when using the DirectQ engine[/h1]
-If you're using OGG format soundtrack files with DirectQ, you must also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url].
+If you're using OGG format soundtrack files with DirectQ, you must also install the [url=http://xiph.org/dshow/]DirectShow filter for OGG[/url]. You may have to reboot after installing that filter.
 [list]
 [/list]
 [h1]Music sounds muffled[/h1]
