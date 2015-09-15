@@ -3,4 +3,8 @@ GLQuake, GLQuakeWorld, and some GLQuake-based engines don't have an in-game vide
 [list]
 [/list]
 [h1]Video options menu doesn't have widescreen choices[/h1]
-The original Quake (WinQuake) and QuakeWorld engines each have a video options menu, but don't support widescreen settings. If you really want widescreen you'll have to use some other Quake engine.
+The original Quake (WinQuake) and QuakeWorld engines each have a video options menu, but don't support widescreen settings.
+
+Some people have reported good results using [url=http://sol.gfxile.net/ddhack/]ddhack[/url] to enable widescreen options in WinQuake, and perhaps it would also be helpful for QuakeWorld. I haven't tried it myself in either case though.
+
+If you really want widescreen you may to use some other Quake engine.

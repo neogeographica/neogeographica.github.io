@@ -1,5 +1,9 @@
 [b]2015[/b]
 [list]
+[*]Sep 15: moved new-engine apologia to top of guide
+[*]Sep 15: autoexec.cfg problems
+[*]Sep 15: mention ddhack for DirectDraw & widescreen res issues
+[*]Sep 15: more "can't start GLQuake" issues: extension limit and opengl32.dll
 [*]Jun 11: new final section about trying a clean start
 [*]Jun 11: protocol error and Linux case sensitivity
 [*]Apr 26: more soundtrack-related issues

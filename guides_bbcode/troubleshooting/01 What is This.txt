@@ -2,14 +2,19 @@
 
 Other guides cover Quake configuration, but they're organized topically; if you're experiencing a problem it can be hard to find the solution. This guide is arranged according to the roadblocks you might hit when trying to get Quake up and running.
 
-For each symptom, this guide will tell you what the problem is and how to (hopefully) solve it. To keep things concise, usually you'll be redirected from here to the section of some other guide that describes the fix.
+For each symptom, this guide will tell you what the problem is and how to (hopefully) solve it. To keep things concise, you may be redirected from here to the section of some other guide that describes the fix.
 
 You'll need to be comfortable with a few concepts:
 
 First, you should know what a "Quake engine" is. If you don't, this guide should clear things up: http://steamcommunity.com/sharedfiles/filedetails/?id=118401000
+You'll notice that a lot of the problems mentioned in this guide are specific to the old, original Quake engines. The easiest way to avoid most problems is to use a modern Quake engine. If you feel that you don't want to use a new engine because you are attached to the original look of Quake, here's a couple of things to consider:
+[list]
+[*]If you're under the impression that modern Quake engines necessarily do things like replace textures and add visual effects -- that's not the case. Several modern engines stick to the original GLQuake look, although usually fixing some of its rendering bugs. The Quake Engines guide is a good reference for finding some candidates you can try; also see the "Oldschool Texturing" section of the Quake Owner's Manual guide for a way to tweak one of the more divisive GLQuake behaviors.
+[*]Several modern software-renderer engines are also mentioned in the Quake Engines guide. If you require the specific look of DOS Quake or WinQuake, you can almost certainly find a newer engine that still has the right stuff.
+[/list]
 
-Also, most of the fixes involve using "console variables" or "command-line arguments". If you aren't familiar with how to work with those things in Quake, see the sections from "The Config File" through "The Command Line" in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
+In any case, many of the fixes involve using "console variables" or "command-line arguments". If you aren't familiar with how to work with those things in Quake, see the sections from "The Config File" through "The Command Line" in this guide: http://steamcommunity.com/sharedfiles/filedetails/?id=120426294
 
-Those two guides will also be referenced a lot below. Guide links take up a lot of screen space, so I won't link to them again.
+The Quake Engines guide and Quake Owner's Manual guide will be referenced below from time to time. Guide links take up a lot of screen space in Steam community guides, so I won't link to them again.
 
-Let's get started. Each section below contains a few similar problems, so check the titles inside each section to look for the symptom that's bugging you.
+OK! Let's get started. Each section below contains a few similar problems, so check the titles inside each section to look for the symptom that's bugging you.
