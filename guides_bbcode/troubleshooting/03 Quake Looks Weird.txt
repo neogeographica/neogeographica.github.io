@@ -5,15 +5,7 @@ The problem may fix itself when the first "screen flash" effect happens. This is
 
 QuakeWorld doesn't have an attract reel and launches straight into the console. You can type "bf" (without the quotes) and press Enter to force a screen flash which, for me, fixes the colors.
 
-Also the PC Gaming Wiki [url=http://pcgamingwiki.com/wiki/Rainbow_color_problems_in_older_games]describes a way to fix common DirectDraw color issues in old games[/url] which may be helpful for Quake, but I haven't tried that myself. A [url=http://steamcommunity.com/app/2310/discussions/0/828938532947217168/]forum thread[/url] has other possible solutions.
-
-If you use GLQuake or GLQuakeWorld, you won't have this issue. Modern Quake engines, which you can read about in the Quake Engines guide, also don't have this issue.
-
-If you feel that you don't want to use a modern Quake engine because you are really attached to the original look of Quake, here's a couple of things to consider:
-[list]
-[*]Several modern software-renderer engines are mentioned in the Quake Engines guide, and you can almost certainly find one that works well for you.
-[*]If you're under the impression that modern OpenGL Quake engines necessarily do things like replace textures and add visual effects -- that's not the case. Several modern OpenGL engines stick to the original GLQuake look, and even fix some of GLQuake's rendering issues to get closer to the software renderer's original behavior. The Quake Engines guide is again a good reference for finding some candidates you can try; also see the "Oldschool Texturing" section of the Quake Owner's Manual guide.
-[/list]
+If your problems with this issue are more persistent, then [url=http://sol.gfxile.net/ddhack/]ddhack[/url] may help; also the PC Gaming Wiki [url=http://pcgamingwiki.com/wiki/Rainbow_color_problems_in_older_games]describes a way to fix common DirectDraw color issues in old games[/url] which may apply to WinQuake/QuakeWorld. However I haven't tried any of those solutions myself.
 [list]
 [/list]
 [h1]Wacky colors in other Quake engines[/h1]
@@ -21,4 +13,4 @@ This is a bit of a long shot, but if you see a screen full of corrupted/glitchy 
 [list]
 [/list]
 [h1]It only takes up one quarter of the screen[/h1]
-This is a surprising one, but if you're on Windows 8 then it's a specific problem with an easy fix. The answer is to disable "display scaling on high DPI settings". You don't have to globally disable it; you can disable it just in the properties for the Quake program that you're running. A [url=http://steamcommunity.com/app/2310/discussions/0/540744936581297336/]forum thread[/url] has more discussion and details.
+This is a surprising one, but if you're on Windows 8 (and perhaps later Windows versions) then it's a specific problem with an easy fix. The answer is to disable "display scaling on high DPI settings". You don't have to globally disable it; you can disable it just in the properties for the Quake program that you're running. A [url=http://steamcommunity.com/app/2310/discussions/0/540744936581297336/]forum thread[/url] has more discussion and details.

@@ -38,6 +38,12 @@ The original GLQuake/GLQuakeWorld engines can crash on map change and show an er
 If you use a modern Quake engine then you won't have to worry about this bug.
 [list]
 [/list]
+[h1]autoexec.cfg isn't working[/h1]
+If you've created an autoexec.cfg file but it doesn't seem to be used when Quake starts up, then the most common reason is that you currently have Windows set to "hide file name extensions". When you think you are creating a file named "autoexec.cfg", you may actually be creating a file named "autoexec.cfg.txt" or something else that Quake won't like. Do a web search to find info about how to show file extensions in the version of Windows that you are using.
+
+A less common problem (that can happen on any OS, not just Windows) is that you have multiple autoexec.cfg files in various folders or pak files. If Quake sees more than one autoexec.cfg file, it will only use one of them. See the section on "File precedence" in the Quake Owner's Manual guide.
+[list]
+[/list]
 [h1]On Linux, some files aren't recognized[/h1]
 This item covers a grab-bag of mysterious problems on Linux, that all turn out to be caused by some file apparently being ignored -- whether it's a map, a sound, a script, or even a whole directory full of stuff.
 

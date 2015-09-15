@@ -32,7 +32,13 @@ If this error happens when you're trying to launch Quake with a mod, the first t
 If you're determined to use a non-recommended Quake engine -- or if you're using the right one and the error is still happening -- then you'll need to skip the autoplay demos. One practical way to do this is to use a command-line argument to launch Quake directly into a map. For example if the mod has a "start" map (start.bsp), you could use the command-line argument "+map start" to go directly to that map without playing the demos. The mod's documentation should tell you which map to start with.
 [list]
 [/list]
-[h1]GLQuake crashes on startup (and disabling the overlay doesn't help)[/h1]
+[h1]GLQuake/GLQuakeWorld crashes on startup (and disabling the overlay doesn't help)[/h1]
 The version of GLQuake distributed through Steam, version 0.95, is a little crashier than later versions. This can be fixed (sometimes) by making sure you have exactly the right command-line arguments for your video settings, but a better solution is to get GLQuake version 0.98 (Windows users only). See the "GLQuake Version Issues" section of the Quake Owner's Manual guide.
 
-An even better solution is to use a modern Quake engine instead of the original GLQuake. The Quake Engines guide is the starting place for that decision.
+GLQuake/GLQuakeWorld also may crash if your video card driver is not configured to enable an "extension limit" (for OpenGL extensions) when running those programs. Sometimes this option is visible in the per-program settings in your driver's control panel; sometimes it isn't though, depending on the driver version. For example, at the time of writing this the NVIDIA control panel does not expose this setting, and you have to use some other tool like NVIDIA Inspector to access it.
+
+Fortunately modern driver software should enable this extension limit option for all the original Quake engines. However be aware that driver software uses the name of the program file to figure out whether to apply its pre-baked settings. So for example if you rename Glquake.exe to Foo.exe, the driver software will not apply the extension limit when you run Foo.exe.
+
+A final common problem (although less common with Steam Quake setups) is having an opengl32.dll file in the Quake folder. This library file enabled running GLQuake with old video cards from 3dfx, through the Glide API used by 3dfx drivers. Unless you are using actual 3dfx hardware or Glide emulation, then you don't want to have this library file getting in the way. It will prevent GLQuake/GLQuakeWorld from properly using modern video card drivers. For that matter, opengl32.dll will cause problems for [i]any[/i] 32-bit Quake program that uses OpenGL.
+
+(Note that if you are a user of the GOG distribution of Quake, its setup for GLQuake does use opengl32.dll along with Glide emulation via nGlide. Perhaps GOG was worried about the extension-limit issue. If you don't want to use Glide emulation for GLQuake or other 32-bit Quake programs, then remove that opengl32.dll file.)
