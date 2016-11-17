@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jbaxter
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://neogeographica.com
+  * I am jbaxter (https://keybase.io/jbaxter) on keybase.
+  * I have a public key ASB3wgfmOFieMB5i0hz9OjencX0GAkP5ADFVKXsEMOlr8wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012077c207e638589e301e62d21cfd3a37a7717d060243f9003155297b0430e96bf30a",
+            "host": "keybase.io",
+            "kid": "012077c207e638589e301e62d21cfd3a37a7717d060243f9003155297b0430e96bf30a",
+            "uid": "145da43a28e6e54674db45d54d566119",
+            "username": "jbaxter"
+        },
+        "service": {
+            "hostname": "neogeographica.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1479406025,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1479406011,
+        "hash": "1a3f4bc0dae36e6ce6a9ff630c26436ee807b3710f359ca3f520ff0257209800182175940015429c4c03bea38d8f90820cf089f172ef04cb3b45ca734fbe6c75",
+        "seqno": 719955
+    },
+    "prev": "1857974d7a6873ddf7d71b26a24a7f3d6e9a906326bde71ed2f2e8251a0b1da7",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgd8IH5jhYnjAeYtIc/To3p3F9BgJD+QAxVSl7BDDpa/MKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzdjMjA3ZTYzODU4OWUzMDFlNjJkMjFjZmQzYTM3YTc3MTdkMDYwMjQzZjkwMDMxNTUyOTdiMDQzMGU5NmJmMzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzdjMjA3ZTYzODU4OWUzMDFlNjJkMjFjZmQzYTM3YTc3MTdkMDYwMjQzZjkwMDMxNTUyOTdiMDQzMGU5NmJmMzBhIiwidWlkIjoiMTQ1ZGE0M2EyOGU2ZTU0Njc0ZGI0NWQ1NGQ1NjYxMTkiLCJ1c2VybmFtZSI6ImpiYXh0ZXIifSwic2VydmljZSI6eyJob3N0bmFtZSI6Im5lb2dlb2dyYXBoaWNhLmNvbSIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTgifSwiY3RpbWUiOjE0Nzk0MDYwMjUsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ3OTQwNjAxMSwiaGFzaCI6IjFhM2Y0YmMwZGFlMzZlNmNlNmE5ZmY2MzBjMjY0MzZlZTgwN2IzNzEwZjM1OWNhM2Y1MjBmZjAyNTcyMDk4MDAxODIxNzU5NDAwMTU0MjljNGMwM2JlYTM4ZDhmOTA4MjBjZjA4OWYxNzJlZjA0Y2IzYjQ1Y2E3MzRmYmU2Yzc1Iiwic2Vxbm8iOjcxOTk1NX0sInByZXYiOiIxODU3OTc0ZDdhNjg3M2RkZjdkNzFiMjZhMjRhN2YzZDZlOWE5MDYzMjZiZGU3MWVkMmYyZTgyNTFhMGIxZGE3Iiwic2Vxbm8iOjgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAlEoXUKjKU4LIFo2vS6gfC8R/rE/y8pP38pq5Wgt6mrKymgngQTz3yWAqrohZ7hEVEW6wpZ5uyP9cPyUZ0e5DAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICN2aDMAerF1gbJbZFshRWKj1N1XG9/f7tjzeBT3yD9eo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jbaxter
+
+==================================================================
