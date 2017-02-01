@@ -38,13 +38,16 @@ def controls_video(ytid,vidclass):
 #.nocontrols_video_code#
 def nocontrols_video(ytid,vidclass):
   return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?vq=medium&showinfo=0&autohide=1&fs=0&modestbranding=1&rel=0&controls=0&autoplay=1&loop=1&playlist=' + ytid + '" frameborder="0" allowfullscreen="0"></iframe>'
+#.listitem_code#
+def listitem(text):
+  return '<li>' + text + '</li>'
 #.listitem_download_code#
 def listitem_download(url,name,comment=None):
   if comment is None:
     comment_suffix = ''
   else:
     comment_suffix = ' ' + comment
-  return '<li><a href="' + url + '"><b>' + name + '</b></a>' + comment_suffix + '</li>'
+  return listitem('<a href="' + url + '"><b>' + name + '</b></a>' + comment_suffix)
 #.listitem_local_download_code#
 def listitem_local_download(file,name,comment=None):
   return listitem_download(local_downloads_path() + file, name, comment)
