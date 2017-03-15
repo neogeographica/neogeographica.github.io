@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en-US">
+<meta name="author" content="Joel Baxter">
+<meta name="description" content="game content and tools for Quake, Quake 3, and Quake Live">
+
+<title>neogeographica</title>
+<link href="../../../css/common.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="../../../css/patches/ie_6_7.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="../../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../js/common.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48442563-1', 'neogeographica.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
+<!-- no popup dialog -->
+<!-- begin: banner (#header) -->
+<div id="header" role="banner">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="sidebar_content clearfix">
+  <a href="../index.html"><img src="../../../images/common/map.png" /></a>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+  <img src="../../../images/common/neogeographica_palladio.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: banner -->
+
+<!-- begin: main navigation #nav -->
+<div id="nav" role="navigation">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<div class="clearfix sidebar_content">
+<div class="invis_hlist">
+  <ul>
+    <li><strong>&nbsp;</strong></li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">
+<div class="hlist">
+  <ul>
+    <li><a href="../../../pages/index.html"><b>Home</b></a></li>
+    <li><a href="../../../pages/q3maps/index.html"><b>Maps</b></a></li>
+    <li><a href="../../../pages/mods/index.html"><b>Mods</b></a></li>
+    <li class="active"><strong>Tools</strong></li>
+    <li><a href="../../../pages/guides/index.html"><b>Guides</b></a></li>
+    <li><a href="../../../pages/videos/index.html"><b>Videos</b></a></li>
+    <li><a href="../../../pages/attic/index.html"><b>The Attic</b></a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: main navigation -->
+<!-- begin: main content area (#main) -->
+<div id="main">
+<div class="page_margins">
+<div class="page">
+<!-- begin: nav sidebar -->
+<div class="sidebar" role="navigation">
+<div class="sidebar_content clearfix">
+<div class="navthumbs">
+  <ul>
+[sidebar_navlist()]
+  </ul>
+</div>
+</div>
+</div>
+<!-- end: nav sidebar -->
+<!-- begin: main column (#main_maincol) -->
+<div id="main_maincol" class="maincol" role="main">
+<div class="maincol_content clearfix">
+<p class="info_banner center">Steam Controller Quake links:<br/><a href="..\steamcontroller.html">Home</a> | <a href="overlay.html">Engines &amp; Overlay</a> | Quake Setup | <a href="steam_setup.html">Steam Setup</a></p>
+  <h2>Quake Setup</h2>
+  <h3>&bull; Keybinds</h3>
+  <p>This controller config assumes that the default Quake keybinds are in place. If you have additional keybinds that's fine, but the keys for the default controls are assumed to be doing the default actions. If you need the controller to use non-default keys for its various actions, then you'll have to edit the Steam Controller config (which we won't talk about here).</p>
+  <p>Usually you can clear all existing Quake keybinds and restore the defaults by using &quot;Reset to defaults&quot; (or some similarly-named option) in the in-game options menu. Although note that this will also reset your mouse sensitivity, game volume, and screen gamma settings.</p>
+  <p>Some modern Quake engines may change the defaults however. I haven't tried to check them all; I do know that Quakespasm for example still supports the original keybinds (with some additional ones) in its defaults, but Mark V has defaults that change some things compared to the originals.</p>
+  <p>A reliable way to get the necessary default keybinds is to download the <a href="http://eclecticmenagerie.com/downloads/tools/steamcontroller/../steamcontroller/sc.cfg">default keybinds config</a>, put it in the &quot;id1&quot; folder of your Quake installation, and then do &quot;exec sc.cfg&quot; from the Quake console.</p>
+  <p><strong>Note about missionpack 1:</strong> The &quot;MP1 WEAPONS&quot; button in the options touch menu changes the Steam Controller inputs to support the missionpack 1 weapon set. This does <strong>not</strong> create new keybinds in your Quake configuration. It simply assigns some inputs of the Steam Controller to press the 9 and 0 keys. You must have keybinds for the laser (bind 9 &quot;impulse 225&quot;) and the hammer (bind 0 &quot;impulse 226&quot;) in your Quake configuration. These are in the default keybinds for missionpack 1, so if you do &quot;Reset to defaults&quot; while that missionpack is active, you will get these binds set up. They are also in the &quot;sc.cfg&quot; file.</p>
+  <h3>&bull; Mouselook</h3>
+  <p>If you have mouselook permanently enabled in your Quake configuration, that's good! However, if you don't, there's also a selection in the options touch menu that can be used to toggle mouselook on/off. So even if you're using the original GLQuake you don't necessarily need to do any Quake config modifications to get permanent-on mouselook.</p>
+  <h3>&bull; Joystick Movement</h3>
+  <p>Ideally you'll want to use a Quake setup that has support for XInput gamepads (like the 360 controller). This provides a &quot;left joystick&quot; input that can be used for movement and for menu navigation. I'm not sure how common such support is; I do know that the latest <a href="http://quakespasm.sourceforge.net/download.htm">Quakespasm</a> has XInput gamepad support out-of-the-box with no extra configuration, if you use the &quot;quakespasm-sdl2.exe&quot; executable. DarkPlaces also has XInput support but I don't know the details. I wouldn't be surprised if there are ways to use XInput gamepads with other Quake engines, maybe even in the original GLQuake, but I haven't looked into that yet since Quakespasm works for me.</p>
+  <p>Anyway, if your Quake engine supports this, it means that you can use a slightly simpler Steam Controller configuration, and the in-game movement may be slightly smoother. If your Quake engine does not support this, no worries. There's a different Steam Controller configuration available that will work for you.</p>
+  <h3>&bull; UI Size</h3>
+  <p>If you're going to be streaming Quake to your TV screen then you probably want the status bar, menus, and console text to be bigger.</p>
+  <p>When using GLQuake 0.95 (the version that Steam installs), unfortunately you can't do much about the size of the UI beyond just reducing the overall video resolution.</p>
+  <p>However if you've replaced your Steam Quake executable with some other Quake engine, or if you've added another Quake engine to Steam as a &quot;non-Steam game&quot; to launch, then you can change the size of UI elements independently from the video resolution. The actual adjustment to make depends on the Quake engine you're using. If you're using a Quake engine among those in the drop-down menu below, you can use that widget to see the relevant setting(s) to use for that engine.</p>
+  <blockquote>
+  <select id="quakeengine">
+  <option value="glquake" selected>GLQuake 0.97/0.98</option>
+  <option value="quakespasm">Quakespasm</option>
+  <option value="markv">Mark V</option>
+  <option value="directq">DirectQ</option>
+  <option value="darkplaces">DarkPlaces</option>
+  <option value="fte">FTE</option>
+  <option value="qrack">Qrack</option>
+  <option value="engoo">Engoo</option>
+  <option value="qbism">qbism Super8</option>
+  </select>
+  <p class="uisettings" id="glquake">Add -conwidth and -conheight options to Steam's &quot;launch options&quot; when launching GLQuake. Values smaller than your video resolution will result in larger console text and menus/statusbar. Assuming you have a 16:9 aspect ratio TV (e.g. 1920x1080 resolution), try: -conwidth 480 -conheight 270, or maybe -conwidth 320 -conheight 180</p>
+  <p class="uisettings" id="quakespasm" hidden>Change the &quot;Scale&quot; setting in the Quakespasm options in-game menu.</p>
+  <p class="uisettings" id="markv" hidden>Experiment with settings for &quot;Autoscale&quot; in the Mark V options/preferences in-game menu.</p>
+  <p class="uisettings" id="directq" hidden>Change the &quot;Console Size&quot; setting in the DirectQ user interface options in-game menu. (This setting can only be changed if you are using a resolution above 640x480.)</p>
+  <p class="uisettings" id="darkplaces" hidden>You can set the vid_conwidth and vid_conheight console variables for DarkPlaces. Values smaller than your video resolution will result in larger console text and menus/statusbar. Assuming you have a 16:9 aspect ratio TV (e.g. 1920x1080 resolution), try vid_conwidth 480 and vid_conheight 270, or maybe vid_conwidth 320 and vid_conheight 180.</p>
+  <p class="uisettings" id="fte" hidden>Change the &quot;2D Mode&quot; settings in the FTE video options in-game menu.</p>
+  <p class="uisettings" id="qrack" hidden>Change the &quot;Console Size&quot; settings in the Qrack video options in-game menu.</p>
+  <p class="uisettings" id="engoo" hidden>Disable &quot;Automatic Scaling&quot; in the Engoo view options in-game menu, then change the &quot;Graphics Scale&quot;. (However this does not affect console text size.)</p>
+  <p class="uisettings" id="qbism" hidden>Change the &quot;Status Bar Scale&quot; in the Qbism super8 video options in-game menu. (However this does not affect console text size.)</p>
+  </blockquote>
+  <script>
+    $(document).ready(function () {
+        $("#quakeengine").change(function () {
+            var engine = $("#quakeengine").val();
+            $(".uisettings").attr("hidden", "true");
+            $("#" + engine).removeAttr("hidden");
+        });
+    });
+  </script>
+<p class="info_banner center">Steam Controller Quake links:<br/><a href="..\steamcontroller.html">Home</a> | <a href="overlay.html">Engines &amp; Overlay</a> | Quake Setup | <a href="steam_setup.html">Steam Setup</a></p>
+
+</div>
+<div id="ie_clearing">&nbsp;</div>
+</div>
+<!-- end: main column -->
+</div>
+</div>
+</div>
+<!-- end: main content area -->
+<!-- begin: footer (#footer) -->
+<div id="footer" role="contentinfo">
+<div class="page_margins">
+<div class="page">
+<div class="sidebar">
+<!--<div class="sidebar_content clearfix">&nbsp;<br />&nbsp;<br />&nbsp;</div>-->
+<div class="sidebar_content clearfix"><img src="../../../images/common/bgbar_red_footer.png" style="margin-bottom: 0; margin-top: auto;"></img></div>
+</div>
+<div class="maincol">
+<div class="maincol_content clearfix">copyright &copy; Joel Baxter (<img class="intext" alt="contact address (nospam)" src="../../../images/common/contact.png" />) except where indicated otherwise<br />site constructed with <a href="http://www.yaml.de/">YAML</a>+<a href="http://jquery.com/">jQuery</a>+<a href="http://dev.iceburg.net/jquery/jqModal/">jqModal</a>+<a href="http://devkick.com/lab/galleria/">Galleria</a>+<a href="http://www.nthwave.net/elements/">Elements</a>+<a href="https://code.google.com/p/postmarkup/">Postmarkup</a>, hosted by <a href="https://github.com/">GitHub</a> and <a href="http://www.dreamhost.com/">DreamHost</a><br />have a nice day</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end: footer -->
+
+<!-- full skiplink functionality in all browsers -->
+<script src="../../../js/yaml-focusfix.min.js" type="text/javascript"></script>
+</body>
+</html>
