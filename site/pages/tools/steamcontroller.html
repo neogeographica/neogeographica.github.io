@@ -99,7 +99,14 @@
 <div class="sidebar_content clearfix">
 <div class="navthumbs">
   <ul>
-[sidebar_navlist()]
+    <li class=active><img src="../../images/tools/common/steamcontroller_nav_thumb.png" /><strong>Steam Controller Quake</strong></li>
+    <li><a href="quakestarter.html"><img src="../../images/tools/common/quakestarter_nav_thumb.png" /><strong>Singleplayer Starter Pack</strong></a></li>
+    <li><a href="quakesounds.html"><img src="../../images/tools/common/quakesounds_nav_thumb.png" /><strong>quakesounds</strong></a></li>
+    <li><a href="7zippk3.html"><img src="../../images/tools/common/7zippk3_nav_thumb.png" /><strong>QL pk3 Support in 7-Zip</strong></a></li>
+    <li><a href="meshtex.html"><img src="../../images/tools/common/meshtex_nav_thumb.png" /><strong>MeshTex GtkRadiant Plugin</strong></a></li>
+    <li><a href="birdseye.html"><img src="../../images/tools/common/birdseye_nav_thumb.png" /><strong>Birdseye Map Overviews</strong></a></li>
+    <li><a href="server_scripts.html"><img src="../../images/tools/common/server_scripts_nav_thumb.png" /><strong>Gameserver Scripts</strong></a></li>
+    <li><a href="qsmack.html"><img src="../../images/tools/common/qsmack_nav_thumb.png" /><strong>QSmack Quake Admin</strong></a></li>
   </ul>
 </div>
 </div>
@@ -113,9 +120,9 @@
     <li>Quake from your couch</li>
     <li>released March 2017</li>
   </ul>
-  <p>This is the info page for my Steam Controller Quake configuration for singleplayer. When browsing the Steam Controller configurations for Quake, look for the <strong>Quake Singleplayer Complete</strong> configurations. There are four variants (described in more detail below). You'll need to grab the custom icons linked below; and, since Quake is an old game with no native Steam Controller support, it requires a little setup to get going.</p>
-  <p>The config's main goals are to let you keep your thumbs on the movement/aiming controls at all times, to allow instant selection of almost any weapon, and to minimize the need to use the virtual keyboard.</p>
-  <p>The controller is not mouse-precise, but the combination of touchpad+gyro makes for smooth and fast aiming once you get used to it, and it's not frustrating in the way that Quake with a normal gamepad can be. I do crank the difficulty down a notch but with that concession it works great for singleplayer, especially when I'm more interested in exploring environments than in testing the outer limits of my shooter reflexes.</p>
+  <p>This is the info page for the <strong>Quake Singleplayer Complete</strong> configurations that you can find by browsing the Steam Controller configurations for Quake.</p>
+  <p>There are four variants of the configuration (described in the <a href="steamcontroller/steam_setup.html">Steam Setup</a> section) so be sure to pick the one that will work for you. You'll also need to grab the custom icons linked below; and, since Quake is an old game with no native Steam Controller support, it requires a little setup to get going. I've had a lot of fun with this though, so for me the setup was worth it.</p>
+  <p>The config's main goals are to let you keep your thumbs on the movement/aiming controls at all times, to allow instant selection of almost any weapon, and to minimize the need to use the virtual keyboard. The controller is not mouse-precise, but the combination of touchpad+gyro makes for smooth and fast aiming once you get used to it, and to me it's not frustrating in the way that Quake with a normal gamepad can be. I do crank the difficulty down a notch but with that concession it works great for singleplayer, especially when I'm more interested in exploring environments than in testing the outer limits of my shooter reflexes.</p>
   <h2>Downloads</h2>
   <h3>&bull; Current Version</h3>
   <ul>
@@ -129,17 +136,21 @@
   <ul><li><a href="steamcontroller/steam_setup.html">Steam Setup</a>: Finally you'll need to install the custom icons, select the correct variant of the <strong>Quake Singleplayer Complete</strong> configuration in Steam, and perhaps edit that configuration to suit your own tastes.</li></ul>
   <h2>FYI</h2>
   <p>Take a look at the Config Description below, especially to see how the bumpers and left trigger control weapon selection.</p>
-  <p>If you find that a controller input is not doing what it is labelled as doing, you probably do not have the correct (default) binding for the associated key in your Quake config. As described in the <a href="steamcontroller/quake_setup.html">Quake Setup</a> section, you can use the options menu or the <a href="http://eclecticmenagerie.com/downloads/tools/steamcontroller/sc.cfg">default keybinds config</a> to apply the necessary keybinds.</p>
+  <p>If you find that a controller input is not doing what it is labelled as doing, you probably do not have the correct (default) binding for the associated key in your Quake config. As described in the <a href="steamcontroller/quake_setup.html">Quake Setup</a> section, you can use Quake's options menu or the <a href="http://eclecticmenagerie.com/downloads/tools/steamcontroller/sc.cfg">default keybinds config</a> to apply the necessary keybinds.</p>
+  <p>It is normal to sometimes see "no weapon" messages in the upper left corner of the screen when using some of the weapon-select controls.</p>
   <p>When in console mode, the right touchpad and several other controller inputs can be used to do special keypresses such as END or CTRL-V. Note that many of those only have effects in modern Quake engine consoles (not in the original GLQuake), and their effects may vary among Quake engines.</p>
-  <p>It is normal to sometimes see "no weapon" messages in the upper left corner of the screen while playing and selecting weapons.</p>
   <p>Sometimes Quake will present a dialog that asks you to press Y to confirm, such as when quitting or when starting a new game in the middle of the current game. In some cases when using Steam streaming, I haven't been able to see that dialog, so it looks as if Quake is sitting there not responding to my action. If this happens to you, you can still respond to the dialog even though you can't see it: squeeze the right grip and press the middle of the left touchpad to confirm, or press the &quot;B&quot; controller button to cancel.</p>
-  <p>If you're using the &quot;MP1 WEAPONS&quot; action set when playing missionpack 1, but the controls for selecting the laser and hammer weapons don't work, then your Quake configuration doesn't have those keybinds properly configured. More about this under &quot;Keybinds&quot; in the <a href="steamcontroller/quake_setup.html">Quake Setup</a> section.</p>
+  <p>If you're using the &quot;MP1 WEAPONS&quot; action set when playing missionpack 1, but the controls for selecting the laser and hammer weapons don't work, then your Quake configuration doesn't have those keybinds properly configured. More about this under &quot;Default Keybinds&quot; in the <a href="steamcontroller/quake_setup.html">Quake Setup</a> section.</p>
+  <p>Final note: This config was tested using a system that can run Quake at its framerate cap of 72 FPS. If your system runs Quake at a lower framerate, I can't guarantee that everything will work. In particular the left-stick movement in the non-joystick-move variant of the config, and the behavior of some of the weapon-select inputs, could be affected if your framerate is unusually low.</p>
   <h2>Config Description</h2>
+  <div class="diagram center floatbox" style="width:640px"><a href="../../images/tools/steamcontroller/gameplay_big.png"><img src="../../images/tools/steamcontroller/gameplay.png" style="width:640px"/></a></div>
+  <p>This is a screenshot of the main control inputs taken from Steam (click for big version). It doesn't show the radial menus, or explain how the weapon-select inputs and some of the other special buttons and modes work, so let's get into the details below.</p>
   <h3>&bull; Screenshot</h3>
   <p>You can take a Steam screenshot by holding the Steam button + right trigger (this is the usual Steam Controller behavior).</p>
   <p>This is different from the internal Quake screenshot feature, which is normally triggered by the F12 key. This controller configuration does not have an input assigned for that.</p>
   <h3>&bull; Virtual Keyboard</h3>
   <p>The virtual keyboard is accessible through the Start button (to the right of the Steam button). Generally you will only want to use it for typing in the Quake console.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/tools/steamcontroller/keyboard.png" style="width:640px"/></div>
   <p>The virtual keyboard has its own controller configuration while it is active. Use buttonpad X to cycle the keyboard to different screen positions. Use the right/left touchpads to select virtual keys and the right/left triggers (or pad clicks) to type the selected key. Bumpers and grips change the keyboard layout in various ways. Click the virtual Done key to dismiss the keyboard. All other controller inputs described below only apply when the virtual keyboard is <strong>not</strong> active.</p>
   <h3>&bull; Menu Navigation</h3>
   <ul>
@@ -158,21 +169,22 @@
     <li><strong>Gyroscope</strong> => <strong>aim fine-tuning</strong> (mouse)</li>
     <li><strong>Right Trigger (hair trigger)</strong> => <strong>attack</strong> (left mouse button)</li>
   </ul>
-  <p>If using a <strong>joystick move</strong> variant of the controller config, the stick is acting as an XInput joystick; if <strong>not</strong> using joystick move, then stick movement will activate the default movement keys in patterns determined by the Steam Controller's &quot;analog emulation&quot; input mode.<p>
+  <p>If using a <strong>joystick move</strong> variant of the controller config, the stick is acting as an XInput joystick; if <strong>not</strong> using joystick move, then stick movement will activate the default movement keys in patterns determined by the Steam Controller's &quot;analog emulation&quot; input mode. You shouldn't have to care about this difference, except to be aware that the joystick move variant will only work if your Quake program supports XInput gamepads.<p>
   <p>The speed key toggle is not terribly useful; the stick click is an awkward input, and everyone plays with Always Run enabled anyway (or using a config that permanently activates the speed key). It's mainly just included for completeness. If you do use it, note that switching to console keys mode or switching to/from the missionpack 1 weapon set will cancel a speed key that is toggled on.</p>
   <h3>&bull; Weapon Selection</h3>
   <ul>
     <li><strong>Right Grip + Right Touchpad</strong> => <strong>weapon wheel</strong> (see below for details)</li>
     <li><strong>Right Grip + buttonpad B</strong> => <strong>axe</strong> (1)</li>
-    <li><strong>Left Bumper (tap)</strong> => <strong>rocket launcher</strong> (7)</li>
+    <li><strong>Left Bumper (quick tap)</strong> => <strong>rocket launcher</strong> (7)</li>
     <li><strong>Left Bumper (press)</strong> => <strong>grenade launcher</strong> (6)</li>
-    <li><strong>Right Bumper (tap)</strong> => <strong>shotgun</strong> (2)</li>
+    <li><strong>Right Bumper (quick tap)</strong> => <strong>shotgun</strong> (2)</li>
     <li><strong>Right Bumper (press)</strong> => <strong>super shotgun</strong> (3)</li>
     <li><strong>Left Trigger (soft pull)</strong> => <strong>nailgun or super nailgun</strong> (4,5)</li>
     <li><strong>Left Trigger (full pull)</strong> => <strong>nailgun, super nailgun, or lightning</strong> (4,5,8)</li>
   </ul>
-  <p>The weapon wheel is a click-to-select radial menu of all weapons.</p>
   <p>For the left trigger pulls that can select multiple weapons, the weapons are listed in increasing order of priority.</p>
+  <p>The weapon wheel is a click-to-select radial menu of all weapons.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/tools/steamcontroller/weaponwheel.png" style="width:640px"/></div>
   <p>If the missionpack 1 weapon set has been selected in the Options touch menu (described below) then the laser and hammer weapons are included in the wheel. The missionpack 1 weapon set also adds two other inputs:</p>
   <ul>
     <li><strong>Right Grip + buttonpad Y</strong> => <strong>hammer</strong> (0)</li>
@@ -184,7 +196,9 @@
     <li><strong>buttonpad X</strong> => <strong>quicksave</strong> (F6)</li>
     <li><strong>buttonpad Y</strong> => <strong>quickload</strong> (F9)</li>
   </ul>
-  <p>This config also includes a touch menu of options. If using a <strong>joystick move</strong> variant of the controller config, this menu will always be available on the left touchpad. If <strong>not</strong> using a joystick move variant, you can make the menu available on the left touchpad by holding the right grip. These menu options are:</p>
+  <p>This config also includes a touch menu of options. If using a <strong>joystick move</strong> variant of the controller config, this menu will always be available on the left touchpad. If <strong>not</strong> using a joystick move variant, you can make the menu available on the left touchpad by holding the right grip.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/tools/steamcontroller/options.png" style="width:640px"/></div>
+  <p>These menu options are:</p>
   <ul>
     <li><strong>save game</strong></li>
     <li><strong>load game</strong></li>
@@ -199,7 +213,8 @@
   <p>Mouselook toggle is included mostly for completeness; it is better to modify your Quake configuration to permanently enable mouselook (or use a modern Quake engine that has a menu option for that). If you do use this toggle to enable mouselook, you'll have to turn it on each time you start up Quake; also note that switching to console keys mode or switching to/from the missionpack 1 weapon set will cancel it.</p>
   <p>The option to enable &quot;console keys mode&quot; without opening the console is provided because sometimes Quake will dump you into the console on its own initiative.</p>
   <h3>&bull; Console Keys Mode</h3>
-  <p>This mode can be entered through two of the menu options described above. It provides useful inputs for dealing with the Quake console. However, note that most of the special keys and key-combos only have effects in modern Quake engine consoles (not in the original GLQuake), and their effects may vary among Quake engines. You can also access the virtual keyboard (Start button) while in console keys mode.</p>
+  <div class="diagram center floatbox" style="width:640px"><a href="../../images/tools/steamcontroller/consolekeys_big.png"><img src="../../images/tools/steamcontroller/consolekeys.png" style="width:640px"/></a></div>
+  <p>This mode can be entered through the Options touch menu as described above. It provides useful inputs for dealing with the Quake console. However, note that most of the special keys and key-combos only have effects in modern Quake engine consoles (not in the original GLQuake), and their effects may vary among Quake engines. You can also access the virtual keyboard (Start button) while in console keys mode.</p>
   <ul>
     <li><strong>Stick</strong> => <strong>console history and cursor</strong> (UP/DOWN/LEFT/RIGHT arrows)</li>
     <li><strong>buttonpad A</strong> => <strong>ENTER</strong></li>
@@ -212,7 +227,8 @@
     <li><strong>Right Grip</strong> => <strong>SHIFT</strong></li>
     <li><strong>Right Touchpad</strong> => <strong>special keys radial menu</strong></li>
   </ul>
-  <p>The special keys radial menu also includes a center button that can be used to close the console and exit &quot;console keys&quot; mode.</p>
+  <p>The special keys radial menu provides a few other inputs and includes a center button that can be used to close the console and exit &quot;console keys&quot; mode.</p>
+  <div class="screenshot center floatbox" style="width:640px"><img src="../../images/tools/steamcontroller/consolemenu.png" style="width:640px"/></div>
 
 </div>
 <div id="ie_clearing">&nbsp;</div>

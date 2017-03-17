@@ -1,6 +1,9 @@
 #.centered_local_image_code#
 def centered_local_image(img,imgclass,width):
   return '<div class="' + imgclass + ' center floatbox" style="width:' + str(width) + 'px"><img src="' + local_images_path() + img + '" style="width:' + str(width) + 'px"/></div>'
+#.centered_local_image_link_code#
+def centered_local_image_link(img,imgclass,target,width):
+  return '<div class="' + imgclass + ' center floatbox" style="width:' + str(width) + 'px"><a href="' + target + '"><img src="' + local_images_path() + img + '" style="width:' + str(width) + 'px"/></a></div>'
 #.centered_local_id_image_code#
 def centered_local_id_image(img,imgid,imgclass,width):
   return '<div class="' + imgclass + ' center floatbox" style="width:' + str(width) + 'px"><img src="' + local_images_path() + img + '" id="' + imgid + '" style="width:' + str(width) + 'px"/></div>'
