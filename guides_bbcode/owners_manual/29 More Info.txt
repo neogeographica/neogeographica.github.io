@@ -1,6 +1,6 @@
 The web is full of Quake stuff old and new.  I can't try to be comprehensive but here's a few good links.  First here are the two sets of console and command-line documentation already referenced throughout this guide:
 [list]
-[*][url=http://www.inside3d.com/qip/home.shtml]Quake Info Pool[/url]
+[*][url=https://www.quake-info-pool.net/home.htm]Quake Info Pool[/url]
 [*][url=http://www.quakewiki.net/archives/console/commands/quake.html]archived  info from PlanetQuake[/url]
 [/list]
 Also some general Quake information:

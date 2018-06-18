@@ -14,4 +14,4 @@ The Reaper bot probably isn't what you would want to play with these days, so th
 [*]FrikBot X++ (FBX++)
 [*]Frogbot Clan Arena (FBCA)
 [/list]
-If you'd like to learn more about these bot mods (or their progenitors) you might be interested in the websites for [url=http://mrelusive.com/oldprojects/obots/obots.html]Omicron[/url], [url=http://www.inside3d.com/frikbot/fbx/]FrikBot X[/url], and [url=https://web.archive.org/web/20030908211402/prime.telefragged.com/metro/frogbot_intro.shtml]Frogbot[/url]. But I'd recommend not getting any downloads or following instructions from those sites; they're outdated in various ways. Follow the guide below!
+If you'd like to learn more about these bot mods (or their progenitors) you might be interested in the websites for [url=http://mrelusive.com/oldprojects/obots/obots.html]Omicron[/url], [url=http://www.insideqc.com/frikbot/fbx/]FrikBot X[/url], and [url=https://web.archive.org/web/20030908211402/prime.telefragged.com/metro/frogbot_intro.shtml]Frogbot[/url]. But I'd recommend not getting any downloads or following instructions from those sites; they're outdated in various ways. Follow the guide below!

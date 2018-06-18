@@ -6,7 +6,7 @@ For convenience here's a collection of all the files (and outside links) in this
 [*][url=http://mrelusive.com/oldprojects/obots/obots.html]Omicron[/url]
 [/list]
 [list]
-[*][url=http://www.inside3d.com/frikbot/fbx/]FrikBot X[/url]
+[*][url=http://www.insideqc.com/frikbot/fbx/]FrikBot X[/url]
 [/list]
 [list]
 [*][url=https://web.archive.org/web/20030908211402/prime.telefragged.com/metro/frogbot_intro.shtml]Frogbot[/url]

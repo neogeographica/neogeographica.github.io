@@ -2,5 +2,5 @@ If you have burning questions about a particular Quake engine and Google has fai
 [list][*][url=http://www.quakeworld.nu/]QuakeWorld.nu[/url] for QuakeWorld multiplayer, especially their [url=http://www.quakeworld.nu/forum/8/client-talk]Client Talk[/url] forum.[/list]
 [list][*][url=http://quakeone.com/]QuakeOne.com[/url] for NetQuake multiplayer, especially their [url=http://quakeone.com/forums/quake-help/quake-clients/]Quake Clients[/url] forum.  Also singleplayer discussion in the [url=http://quakeone.com/forums/quake-talk/single-player/]Single Player[/url] forum.[/list]
 [list][*][url=http://www.celephais.net/board/]FUNC_MSGBOARD[/url] for singleplayer.  Their [url=http://www.celephais.net/board/news.php]News[/url] section has announcements about engine releases/updates, and there may be active [url=http://www.celephais.net/board/view_all_threads.php]Forum[/url] threads for some engines.[/list]
-[list][*]One of the Inside3D Forums is [url=http://forums.inside3d.com/viewforum.php?f=3]dedicated to Quake engine coding[/url].[/list]
+[list][*]One of the InsideQC Forums is [url=http://forums.insideqc.com/viewforum.php?f=3]dedicated to Quake engine coding[/url].[/list]
 [list][*]quaddicted.com hosts a collection of [url=https://www.quaddicted.com/files/engines/](almost) every Quake engine ever released[/url].[/list]

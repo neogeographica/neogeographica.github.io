@@ -36,7 +36,7 @@ and press Enter.  There you go.
 
 The available console variables and commands differ between Quake engines, but many of the most important ones are the same.  For modern engines, the final authority is the documentation that you downloaded with the engine or that is online at the engine's website.  For the original Quake engines you can dig up the necessary info by searching the web for Quake console information (and almost all of that will still apply to modern engines).
 
-As an example of some of that original documentation, see the "Console Commands" section of the [url=http://www.inside3d.com/qip/home.shtml]Quake Info Pool[/url], or the "Console Commands List" section of this [url=http://www.quakewiki.net/archives/console/commands/quake.html]archived info from PlanetQuake[/url].
+As an example of some of that original documentation, see the "Console Commands" section of the [url=https://www.quake-info-pool.net/home.htm]Quake Info Pool[/url], or the "Console Commands List" section of this [url=http://www.quakewiki.net/archives/console/commands/quake.html]archived info from PlanetQuake[/url].
 [list]
 [/list]
 [h1]Console vs. menu[/h1]
