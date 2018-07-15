@@ -1,6 +1,6 @@
 <!-- Google Analytics -->
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+window.ga=window.ga||function(){(ga.q=ga.q||\[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-48442563-1', 'auto');
 ga('set', 'anonymizeIp', true);
 ga('send', 'pageview');
