@@ -21,13 +21,13 @@ Here's the files you would need for installing each bot mod:
 [list]
 [/list]
 [h1]Omicron[/h1]
-[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/obots102.zip]Omicron version 1.02[/url]
+[b]Download:[/b] [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/obots102.zip]Omicron version 1.02[/url]
 
 This is the Omicron bot created by Jan Paul van Waveren (who also worked on the Quake 2 Gladiator bot and was later hired by id software for Quake 3). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
 [list]
 [/list]
 [h1]FBX++[/h1]
-[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/fbx++.zip]FBX++[/url]
+[b]Download:[/b] [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/fbx++.zip]FBX++[/url]
 
 The FrikBot code was created by Ryan Smith.  FBX++ has a few additional changes by "Igor9" and a fix by me (see readme_tweaks.txt for details). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
 [list]
@@ -41,7 +41,7 @@ If you don't have nQuake, you can take a detour to check it out and see if you w
 
 The Frogbot code was created by Robert Field.  The version of FBCA included with nQuake is 1.01kt, a modification of the original Frogbot by "ParboiL" and several other credited folks.  The nQuake version also credits "Vegetous".  (I can't tell if extra map support was provided by "Trinca", but I would guess so.)
 
-The nQuake FBCA content is all contained inside the file "frogbot.pk3" in your "qw" folder.  You don't need to do anything to this file... it is ready for playing.  If you do want to look inside it, it's just a zip archive with a different-than-usual filename extension.  If you'd rather not bother extracting the documentation you can [url=http://eclecticmenagerie.com/jl/quake/bots/nquake-fbca-doc.zip]download the docs here[/url].
+The nQuake FBCA content is all contained inside the file "frogbot.pk3" in your "qw" folder.  You don't need to do anything to this file... it is ready for playing.  If you do want to look inside it, it's just a zip archive with a different-than-usual filename extension.  If you'd rather not bother extracting the documentation you can [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/nquake-fbca-doc.zip]download the docs here[/url].
 
 Unlike the other "bare" mods described in this section, the version of FBCA included with nQuake already has support for extra maps.  nQuake comes bundled with some but not (by a long shot) all of those maps; you can get all the maps in the Frogbot Map Pack linked in the "Extra Map Support" section below.
 
@@ -49,7 +49,7 @@ Note: The separate downloadable version of FBCA described below does have just a
 [list]
 [/list]
 [h1]FBCA without nQuake[/h1]
-[b]Download:[/b] [url=http://eclecticmenagerie.com/jl/quake/bots/fbca102kt.zip]FBCA version 1.02kt beta[/url]
+[b]Download:[/b] [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/fbca102kt.zip]FBCA version 1.02kt beta[/url]
 
 If you are an ezQuake user, you probably want to name the folder for this mod "fbca".  ezQuake has a somewhat handy in-game menu for launching bot matches, and it assumes that if you have a separately installed FBCA mod (as opposed to the one that comes with nQuake) that you have put it in a folder named "fbca".
 
