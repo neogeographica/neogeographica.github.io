@@ -32,7 +32,11 @@ ga('send', 'pageview');
 </head>
 
 <body>
-<!-- no skiplinks -->
+<!-- begin: skip link navigation -->
+<ul id="skiplinks">
+  <li><a class="skip" href="#main_maincol">Skip to main content (press Enter)</a></li>
+</ul>
+<!-- end: skip link navigation -->
 <!-- no popup dialog -->
 <!-- begin: banner (#header) -->
 <div id="header" role="banner">
@@ -94,7 +98,7 @@ ga('send', 'pageview');
 <div class="sidebar_content clearfix">
 <div class="navthumbs">
   <ul>
-    <li><a href="linuxdesktop.html"><img src="../../images/tools/common/linuxdesktop_nav_thumb.png" /><strong>Linux Desktop Integration</strong></a></li>
+    <li class=active><img src="../../images/tools/common/linuxdesktop_nav_thumb.png" /><strong>Linux Desktop Integration</strong></li>
     <li><a href="steamcontroller.html"><img src="../../images/tools/common/steamcontroller_nav_thumb.png" /><strong>Steam Controller Quake</strong></a></li>
     <li><a href="quakestarter.html"><img src="../../images/tools/common/quakestarter_nav_thumb.png" /><strong>Singleplayer Starter Pack</strong></a></li>
     <li><a href="quakesounds.html"><img src="../../images/tools/common/quakesounds_nav_thumb.png" /><strong>quakesounds</strong></a></li>
@@ -111,9 +115,44 @@ ga('send', 'pageview');
 <!-- begin: main column (#main_maincol) -->
 <div id="main_maincol" class="maincol" role="main">
 <div class="maincol_content clearfix">
-  <p>This section of the site is a collection of tools that I've fiddled with over the years for creating and using Quake, Quake 3, and Quake Live game content. They're not usually in super-user-friendly form, but there's enough of a trickle of interest in them that I think it's good to keep them around.</p>
-  <p>Use the right-hand navigation bar to investigate further. Let me know if you have any questions or problems, or if you're looking for something that I haven't made a page for here yet.</p>
-
+<h1>Linux Desktop Integration for Quake</h1>
+  <ul>
+    <li>click to auto-install a mod, play, resume from last save, etc.</li>
+    <li>for Ubuntu Linux and Ubuntu variants</li>
+  </ul>
+  <p>New custom Quake singleplayer releases appear pretty frequently on places like <a href="http://www.celephais.net/board/forum.php">func_msgboard</a> and the Quake Mapping Discord server. It would be nice to have a low-friction way to swim in this river of content &mdash; especially since many of the releases are collections of small maps, any time spent fiddling with files or in the Quake console seems like too much useless overhead.</p>
+  <p>I've customized my singleplayer Quake setup on Linux to tackle that idea. The goal is to use desktop integration to quickly handle common stuff I do with Quake singleplayer releases: install, start play, resume play from savegame, hop between maps in a mapjam/speedmap pack, and uninstall. The files and scripts to do this are collected in a GitHub repo. I currently use a variant of Ubuntu called elementary OS, so this customization should work on Ubuntu, elementary OS, or other Ubuntu variants.</p>
+  <h2>Downloads</h2>
+  <h3>&bull; Source</h3>
+  <ul>
+    <li><a href="https://github.com/neogeographica/singleplayer_scripts"><b>GitHub repository</b></a></li>
+  </ul>
+  <h2>Examples</h2>
+  <p class="center"><strong>Automatically install and launch a downloaded zip of a Quake mod or maps</strong></p>
+  <div class="screenshot center floatbox" style="width:665px"><img src="https://raw.githubusercontent.com/neogeographica/singleplayer_scripts/master/install.gif" style="width:665px"/></div>
+  <p class="center"><strong>Double-click shortcut to launch a gamedir and resume at most recent savegame</strong></p>
+  <div class="screenshot center floatbox" style="width:665px"><img src="https://raw.githubusercontent.com/neogeographica/singleplayer_scripts/master/shortcut.gif" style="width:665px"/></div>
+  <h2>Features</h2>
+  <h3>&bull; Auto install+play of downloaded archives</h3>
+  <p>Right-click on an archive (zip or rar or many other kinds) and select &quot;Open with Quake&quot;. The archive's files will be installed into a gamedir in your Quake directory and organized so that the content is ready to play. Optionally a &quot;.quake&quot; shortcut (described below) will be created in a directory of your choice. Finally the gamedir will be automatically be launched in the process described below.</p>
+  <h3>&bull; Launching Quake to play a gamedir</h3>
+  <p>Right-click on a gamedir in your Quake directory and select &quot;Open with Quake&quot;.</p>
+  <ul>
+    <li>Common capitalization errors that break Linux play will be fixed.</li>
+    <li>If there are savegames, the gamedir will be activated in Quake and its most recent savegame loaded.</li>
+    <li>If no savegames, the gamedir will be activated in Quake and its start map (or only map) will be loaded.</li>
+  </ul>
+  <h3>&bull; Optional &quot;.quake&quot; shortcuts for launching gamedirs</h3>
+  <p>Double-click on a &quot;.quake&quot; file to launch the related gamedir as above. E.g. double-clicking &quot;zendar1d.quake&quot; would have the same effect as right-clicking the &quot;zendar1d&quot; gamedir and choosing &quot;Open with Quake&quot;.</p>
+  <h3>&bull; Launching Quake to play a specific bsp</h3>
+  <p>Double-click on a bsp file (in some maps directory within a gamedir). The gamedir will be activated in Quake as above, with the difference that the selected bsp will be what is loaded as opposed to some startmap or savegame.</p>
+  <h3>&bull; Optional &quot;mapjam helper&quot;</h3>
+  <p>For a smoother trip through a mapjam or speedmap pack: an in-game keybind to load the next map that you haven't played yet.</p>
+  <h3>&bull; Uninstalling a gamedir</h3>
+  <p>(This is only helpful if you use &quot;.quake&quot; shortcuts.) Right-click on a gamedir and choose to open it with &quot;Quake mod cleanup&quot;. The gamedir and any &quot;.quake&quot; shortcut to it will be deleted. Similarly you can do this on a &quot;.quake&quot; shortcut, to delete both the shortcut and the gamedir it points to.</p>
+  <h2>Setup</h2>
+  <p>If you want to give this a whirl, you'll need to download the files from the GitHub repo, either by git-cloning them or just <a href="https://github.com/neogeographica/singleplayer_scripts/archive/master.zip">downloading a zip</a>.</p>
+  <p>The instructions are in a top-level readme and two sub-readmes; since they are in markdown format it's probably nicest to work through them online. The <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md">main readme</a> starts out with some of the material on this page, but then it gets into some important <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md#caveats">caveats</a> to be aware of before getting into the <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md#installationuninstallation">installation instructions</a>.</p>
 </div>
 <div id="ie_clearing">&nbsp;</div>
 </div>
@@ -138,6 +177,7 @@ ga('send', 'pageview');
 </div>
 <!-- end: footer -->
 
-<!-- no skiplinks support needed -->
+<!-- full skiplink functionality in all browsers -->
+<script src="../../js/yaml-focusfix.min.js" type="text/javascript"></script>
 </body>
 </html>
