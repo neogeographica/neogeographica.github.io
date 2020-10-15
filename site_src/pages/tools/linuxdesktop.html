@@ -9,13 +9,14 @@
   <ul>
     <li>click to auto-install a mod, play, resume from last save, etc.</li>
     <li>for Ubuntu Linux and Ubuntu variants</li>
+    <li>version 1.0.0 released October 2020</li>
   </ul>
   <p>New custom Quake singleplayer releases appear pretty frequently on places like <a href="http://www.celephais.net/board/forum.php">func_msgboard</a> and the Quake Mapping Discord server. It would be nice to have a low-friction way to swim in this river of content &mdash; especially since many of the releases are collections of small maps, any time spent fiddling with files or in the Quake console seems like too much useless overhead.</p>
   <p>I've customized my singleplayer Quake setup on Linux to tackle that idea. The goal is to use desktop integration to quickly handle common stuff I do with Quake singleplayer releases: install, start play, resume play from savegame, hop between maps in a mapjam/speedmap pack, and uninstall. The files and scripts to do this are collected in a GitHub repo. I currently use a variant of Ubuntu called elementary OS, so this customization should work on Ubuntu, elementary OS, or other Ubuntu variants.</p>
   <h2>Downloads</h2>
-  <h3>&bull; Source</h3>
+  <h3>&bull; Current Version</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/singleplayer_scripts','GitHub repository')]
+    [listitem_download('https://github.com/neogeographica/singleplayer_scripts/releases/latest','zip of scripts etc','(see below)')]
   </ul>
   <h2>Examples</h2>
   <p class="center"><strong>Automatically install and launch a downloaded zip of a Quake mod or maps</strong></p>
@@ -42,9 +43,10 @@
   <h3>&bull; Optional &quot;mapjam helper&quot;</h3>
   <p>For a smoother trip through a mapjam or speedmap pack: an in-game keybind to load the next map that you haven't played yet.</p>
   <h3>&bull; Uninstalling a gamedir</h3>
-  <p>(This is only helpful if you use &quot;.quake&quot; shortcuts.) Right-click on a gamedir and choose to open it with &quot;Quake mod cleanup&quot;. The gamedir and any &quot;.quake&quot; shortcut to it will be deleted. Similarly you can do this on a &quot;.quake&quot; shortcut, to delete both the shortcut and the gamedir it points to.</p>
+  <p>Right-click on a gamedir and choose to open it with &quot;Quake mod cleanup&quot;. The gamedir and any &quot;.quake&quot; shortcut to it will be deleted. Similarly you can do this on a &quot;.quake&quot; shortcut, to delete both the shortcut and the gamedir it points to. If your Quake engine makes use of a <a href="https://github.com/neogeographica/singleplayer_scripts/blob/v1.0.0/scripts/userdata.md">userdata directory</a> then the gamedir subdirectory there will be removed as well.</p>
+  <p>(If you don't use &quot;.quake&quot; shortcuts or have a userdata directory then you don't care about this feature.)</p>
   <h3>&bull; Optional Chrome browser integration</h3>
   <p>Right-click on a download link in a webpage and select &quot;Open with Quake&quot;; same features as described above for archive files.</p>
   <h2>Setup</h2>
-  <p>If you want to give this a whirl, you'll need to download the files from the GitHub repo, either by git-cloning them or just <a href="https://github.com/neogeographica/singleplayer_scripts/archive/master.zip">downloading a zip</a>.</p>
-  <p>The instructions are in a top-level readme and three sub-readmes; since they are in markdown format it's probably nicest to work through them online. The <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md">main readme</a> starts out with some of the material on this page, but then it covers some important <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md#caveats">caveats</a> to be aware of before getting into the <a href="https://github.com/neogeographica/singleplayer_scripts/blob/master/README.md#installationuninstallation">installation instructions</a>.</p>
+  <p>If you want to give this a whirl, you'll need to download the files from the GitHub repo. One recommended way is to download the bundle tagged as the <a href="https://github.com/neogeographica/singleplayer_scripts/releases/latest">latest release</a>.</p>
+  <p>The instructions are in a top-level readme and some sub-readmes; since they are in markdown format it's probably nicest to work through them online. The <a href="https://github.com/neogeographica/singleplayer_scripts/blob/v1.0.0/README.md">main readme</a> starts out with some of the material on this page, but then it covers some important <a href="https://github.com/neogeographica/singleplayer_scripts/blob/v1.0.0/README.md#caveats">caveats</a> to be aware of before getting into the <a href="https://github.com/neogeographica/singleplayer_scripts/blob/v1.0.0/README.md#installationuninstallation">installation instructions</a>.</p>
