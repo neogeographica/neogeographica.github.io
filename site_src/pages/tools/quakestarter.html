@@ -5,38 +5,42 @@
 #optional_skiplinks [skiplinks]
 #optional_skiplinks_support [skiplinks_support]
 #sidebar_active_navitem quakestarter
-<h1>Quake Singleplayer Starter Pack</h1>
+<h1>Quake Singleplayer Starter Pack (Quakestarter)</h1>
   <ul>
     <li>one way to bootstrap into Quake custom singleplayer content</li>
-    <li>version 1.10 released March 2020</li>
+    <li>version 2.0.0 released November 2020</li>
   </ul>
-  <p>This package is a quick way to get started with the "state of the art" in modern Quake singleplayer. It provides a streamlined and mostly automated process to set up a modern Quake engine, get the game data and soundtrack files installed correctly, download/install/patch a selection of custom content, and launch into playing the original Quake campaign, missionpacks, or user-created addons. If you're curious, documentation is included to explain what's going on and to point you in the direction of even more content.</p>
+  <p>This is a (Windows only) package with tools for setting up a playable Quake installation and downloading/playing/managing many highly-regarded addons. This includes any necessary patching and recommended configurations for the addons! It's menu-driven and super easy to use.</p>
+  <p>This package also contains quite a bit of documentation on configuring Quake and exploring other user-created content.</p>
+  <p>New players can use Quakestarter as a quick way to get going with Quake and the many amazing things created for it since 1996.</p>
+  <p>Veteran players can use it as a nice way to bootstrap &quot;yet another Quake installation&quot;, or to discover overlooked gems -- since no one can keep up with every single piece of custom content released.</p>
   <h2>Downloads</h2>
   <h3>&bull; Current Version</h3>
   <ul>
     [listitem_download('https://github.com/neogeographica/quakestarter/releases/latest','package')]
-    [listitem_download('https://raw.githubusercontent.com/neogeographica/quakestarter/master/README_FIRST.txt','top-level readme','(included in package)')]
+    [listitem_download('https://raw.githubusercontent.com/neogeographica/quakestarter/master/quakestarter_readme.txt','top-level readme','(included in package)')]
   </ul>
   <h2>Background</h2>
-  <p>Over 20 years after Quake's release, there's still an amazing amount of creativity being put into maintaining and improving "Quake engines" (Quake-playing programs), content authoring tools, and new maps and mods. If you haven't been keeping up with developments over the years though, it can be difficult to get up to speed to the point where you are actually playing fun new stuff.</p>
-  <p>I spent some time <a href="[docs_guides_home_path]">writing guides</a> to collect relevant info, but that doesn't really lower the entrance bar very much, especially when it comes to figuring out how to play custom content. A true "Quake for dummies" installer would be a great thing to have and be able to give to newbies. This isn't quite that, but it's getting closer.</p>
+  <p>Over 20 years after Quake's release, there's still an amazing amount of creativity being put into maintaining and improving &quot;Quake engines&quot; (Quake-playing programs), content authoring tools, and new maps and mods. If you haven't been keeping up with developments over the years though, it can be difficult to get up to speed to the point where you are actually playing fun new stuff.</p>
+  <p>I spent some time <a href="[docs_guides_home_path]">writing guides</a> to collect relevant info, but that doesn't really lower the entrance bar very much, especially when it comes to figuring out how to play custom content. A true &quot;Quake for dummies&quot; installer would be a great thing to have and be able to give to newbies. This isn't quite that, but it's getting closer.</p>
   <h2>Contents</h2>
   <p>Here's what this package includes:</p>
   <ul>
-  	  <li>the <a href="http://quakeone.com/markv/">Mark V</a> Quake engine</li>
+  	  <li>the <a href="https://fte.triptohell.info/moodles/qss/">Quakespasm-Spiked</a> Quake engine</li>
   	  <li>the <a href="https://github.com/m-x-d/Simple-Quake-Launcher-2/releases/latest">Simple Quake Launcher 2</a> front-end</li>
-  	  <li>a utility that can find pak files on the local system, install soundtrack music files, and install &amp; launch a selection of maps and mods</li>
+  	  <li>the Quakestarter utility that can find pak files on your local system, install soundtrack music files, and install &amp; launch a selection of maps and mods</li>
   	  <li>documentation about configuring and running Quake</li>
   	  <li>documentation about finding/installing/launching maps and mods</li>
   	  <li>even more docs on other topics!</li>
   </ul>
-  <p>The documentation is there as a fallback if something doesn't work, or if you want to learn more about a topic. The actual process of getting up and running is fairly simple as described in the "How to use this" section of the <a href="https://raw.githubusercontent.com/neogeographica/quakestarter/master/README_FIRST.txt">top-level readme</a>.</p>
-  <h2>Why Mark V?</h2>
-  <p>It's fair to ask why a Quake engine should be included in this package, and why Mark V is the one I chose.</p>
-  <p>To answer that first part: I'm trying as much as possible to provide an all-in-one solution that doesn't tell folks to first go download something else. I realize that means that the packaged Quake engine may get out of date, but I think that's the lesser evil.</p>
-  <p>As to "why Mark V", a big reason is that the installer script can then use the Mark V engine itself to download other content, since Mark V has a built-in maps/mods downloader (unlike most other non-QuakeWorld engines). Mark V is also at a good spot on the spectrum of authenticity, compatibility, and usability. It provides multiple renderer options and ways to get close to original WinQuake or GLQuake appearance if that's what you want. It runs pretty much all custom content, and it has good menus/features/defaults that reduce the need to explain arcane methods of getting some things set up correctly. It doesn't rely on a lot of external libraries that clutter up the Quake folder.</p>
-  <p>That being said, I'm still a fan of the <a href="http://quakespasm.sourceforge.net/download.htm">Quakespasm</a> engine too, and you can easily drop that engine's files into this Quake folder if you want to play via Quakespasm. You should still leave "mark_v.exe" in the folder though if you intend to use the installer script to download content.</p>
+  <p>The documentation is there as a fallback if something doesn't work, or if you want to learn more about a topic. The actual process of getting up and running is fairly simple as described in the &quot;How to use this&quot; section of the <a href="https://raw.githubusercontent.com/neogeographica/quakestarter/master/quakestarter_readme.txt">top-level readme</a>.</p>
+  <h2>Why Quakespasm-Spiked?</h2>
+  <p>It's fair to ask why a Quake engine should be included in this package, and why Quakespasm-Spiked is the one I chose.</p>
+  <p>To answer that first part, I'm trying as much as possible to provide an all-in-one solution that doesn't tell folks to first go download something else. I realize that means that the packaged Quake engine may get out of date, but I think that's the lesser evil.</p>
+  <p>As to why choose Quakespasm-Spiked in particular:</p>
+  <p>Currently Quakespasm is a sort of &quot;reference standard&quot; for playing new singleplayer map releases. Quakespasm-Spiked (QSS) essentially matches Quakespasm for compatibility, and it adds important usability improvements that can smooth out the experience of playing or managing many existing addons... like supporting higher framerates and the ability to load multiple mod folders. It also implements features like advanced particle systems and customizable HUD/menus that newer addons can take advantage of. Arcane Dimensions is one example of a recent mod that can make use of these QSS features.</p>
+  <p>Previous versions of Quakestarter bundled Mark V instead, and Mark V does still have several advantages especially in its in-game menus. But while QSS has increased its compatibility/stability and its adoption among singleplayer users, Mark V has stagnated and now cannot play (or at least play well) some recent releases.</p>
   <h2>Why not Quake Injector?</h2>
-  <p>The other big question about this package is probably why I included Simple Quake Launcher 2 and wrote some mod installer scripts instead of just bundling in <a href="https://www.quaddicted.com/tools/quake_injector">Quake Injector</a>.</p>
-  <p>Quake Injector is great. But since it is a Java application, getting it running correctly is just one more hurdle that a lot of new players falter at. For most Windows users at least, it is easier to get them started using the tools in this package instead of dropping Quake Injector on their heads right off the bat. For people who want to keep playing and exploring more content, Quake Injector is a very handy tool; I do discuss it in the documentation about finding and installing more maps &amp; mods.</p>
+  <p>The other big question about this package is probably why I included Simple Quake Launcher 2 and wrote the Quakestarter utility instead of just bundling in <a href="https://www.quaddicted.com/tools/quake_injector">Quake Injector</a>.</p>
+  <p>Quake Injector is great. But since it is a Java application, getting it running correctly is just one more hurdle that a lot of new players falter at. For most Windows users at least, it is easier to get them started using the tools in this package instead of dropping Quake Injector on their heads right off the bat. For people who want to keep playing and exploring more content, Quake Injector is a handy tool; I do discuss it in the documentation about finding and installing more maps &amp; mods.</p>
 
