@@ -17,7 +17,7 @@ The latest stable version of each engine was:
 [/list]
 The latest version of each mod was:
 [list]
-[*]Omicron: version 1.02
+[*]Omicron: version 1.02 (with my fixes)
 [*]FBX++ (my tweak to FBX+)
 [*]FBCA standalone: version 1.02kt beta
 [*]FBCA modified by Trinca: build 379
@@ -31,6 +31,10 @@ The latest version of each mod was:
 [b]2020[/b]
 [list]
 [*]Dec 06: What, an update? Just modifying the linked Omicron Bots package a bit. Mainly this update fixes some cases in modern Quake engines where you'd get a lot of console error message spew about problems with some of the soundfiles. Also some fixes included for Linux users.
+[/list]
+[b]2019[/b]
+[list]
+[*]Jul 23: fixing broken links
 [/list]
 [b]2015[/b]
 [list]
