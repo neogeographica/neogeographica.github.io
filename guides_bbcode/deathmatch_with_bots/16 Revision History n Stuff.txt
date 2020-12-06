@@ -28,6 +28,10 @@ The latest version of each mod was:
 [/list]
 [h1]Guide Change History[/h1]
 
+[b]2020[/b]
+[list]
+[*]Dec 06: What, an update? Just modifying the linked Omicron Bots package a bit. Mainly this update fixes some cases in modern Quake engines where you'd get a lot of console error message spew about problems with some of the soundfiles. Also some fixes included for Linux users.
+[/list]
 [b]2015[/b]
 [list]
 [*]May 03: recent builds of FTE have fixed any issues w/ FBCA

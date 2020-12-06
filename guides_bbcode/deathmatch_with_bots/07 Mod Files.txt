@@ -21,9 +21,9 @@ Here's the files you would need for installing each bot mod:
 [list]
 [/list]
 [h1]Omicron[/h1]
-[b]Download:[/b] [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/obots102.zip]Omicron version 1.02[/url]
+[b]Download:[/b] [url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/obots102-fixed.zip]Omicron version 1.02 (with fixes)[/url]
 
-This is the Omicron bot created by Jan Paul van Waveren (who also worked on the Quake 2 Gladiator bot and was later hired by id software for Quake 3). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
+This is the Omicron bot created by Jan Paul van Waveren (who also worked on the Quake 2 Gladiator bot and was later hired by id software for Quake 3). A few minor fixes by me (see readme-fixes.txt for details). Maps supported out-of-the-box: dm1-dm6.  See the "Extra Map Support" section below for more map support.
 [list]
 [/list]
 [h1]FBX++[/h1]

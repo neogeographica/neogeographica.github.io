@@ -24,7 +24,7 @@ For convenience here's a collection of all the files (and outside links) in this
 [/list]
 [h1]Bot Mods[/h1]
 [list]
-[*][url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/obots102.zip]Omicron version 1.02[/url]
+[*][url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/obots102-fixed.zip]Omicron version 1.02 (with fixes)[/url]
 [/list]
 [list]
 [*][url=https://s3.amazonaws.com/neogeographica-downloads/guides/deathmatch_with_bots/fbx++.zip]FrikBot X++ (FBX++)[/url]
