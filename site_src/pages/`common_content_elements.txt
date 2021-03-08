@@ -40,10 +40,10 @@ def centered_image_row4(imgwidth, img1, caption1, img2, caption2, img3, caption3
   return centered_image_row_common(imgwidth, [img1, img2, img3, img4], [caption1, caption2, caption3, caption4])
 #.controls_video_code#
 def controls_video(ytid,vidclass):
-  return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?showinfo=0&autohide=1&fs=1&modestbranding=1&rel=0&showsearch=0" frameborder="0" allowfullscreen="1"></iframe>'
+  return '<iframe class="' + vidclass + '" src="https://www.youtube.com/embed/' + ytid + '?showinfo=0&autohide=1&fs=1&modestbranding=1&rel=0&showsearch=0" frameborder="0" allowfullscreen="1"></iframe>'
 #.nocontrols_video_code#
 def nocontrols_video(ytid,vidclass):
-  return '<iframe class="' + vidclass + '" src="http://www.youtube.com/embed/' + ytid + '?vq=medium&showinfo=0&autohide=1&fs=0&modestbranding=1&rel=0&controls=0&autoplay=1&loop=1&playlist=' + ytid + '" frameborder="0" allowfullscreen="0"></iframe>'
+  return '<iframe class="' + vidclass + '" src="https://www.youtube.com/embed/' + ytid + '?vq=medium&showinfo=0&autohide=1&fs=0&modestbranding=1&rel=0&controls=0&autoplay=1&loop=1&playlist=' + ytid + '" frameborder="0" allowfullscreen="0"></iframe>'
 #.listitem_code#
 def listitem(text):
   return '<li>' + text + '</li>'
