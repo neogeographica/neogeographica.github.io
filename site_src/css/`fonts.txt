@@ -9,4 +9,4 @@
  * e.g. http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363
  * Still hoping that Google will just get its act together w.r.t. this.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700,400italic);
