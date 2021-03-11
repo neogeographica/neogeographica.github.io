@@ -1,14 +1,17 @@
 #sidebar_choice_key#
 c9fos
+interview
 kitty1
 t3demos
 none
 #sidebar_choice_active#
 [sidebar_choice_active_template('c9fos','Clan 9 From Outer Space')]
+[sidebar_choice_active_template('interview','PlanetQuake Interview')]
 [sidebar_choice_active_template('kitty1','Custom Maps @ kitty1')]
 [sidebar_choice_active_template('t3demos','ClanRing Tourney 3 Demos')]
 #sidebar_choice_inactive#
 [sidebar_choice_inactive_template('c9fos','Clan 9 From Outer Space')]
+[sidebar_choice_inactive_template('interview','PlanetQuake Interview')]
 [sidebar_choice_inactive_template('kitty1','Custom Maps @ kitty1')]
 [sidebar_choice_inactive_template('t3demos','ClanRing Tourney 3 Demos')]
 #

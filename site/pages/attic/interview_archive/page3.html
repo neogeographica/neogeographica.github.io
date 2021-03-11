@@ -16,6 +16,8 @@
 <!--[if lte IE 6]>
 <link href="../../../css/patches/ie_6.min.css" rel="stylesheet" type="text/css" />
 <![endif]-->
+<link href="../../../css/screen/pq.min.css" rel="stylesheet" type="text/css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="../../../js/common.min.js"></script>
 
@@ -92,10 +94,10 @@
 <div class="sidebar_content clearfix">
 <div class="navthumbs">
   <ul>
-    <li><a href="../c9fos.html"><img src="../../../images/attic/motw_archive/../common/c9fos_nav_thumb.png" /><strong>Clan 9 From Outer Space</strong></a></li>
-    <li><a href="../interview.html"><img src="../../../images/attic/motw_archive/../common/interview_nav_thumb.png" /><strong>PlanetQuake Interview</strong></a></li>
-    <li class=active><img src="../../../images/attic/motw_archive/../common/kitty1_nav_thumb.png" /><strong>Custom Maps @ kitty1</strong></li>
-    <li><a href="../t3demos.html"><img src="../../../images/attic/motw_archive/../common/t3demos_nav_thumb.png" /><strong>ClanRing Tourney 3 Demos</strong></a></li>
+    <li><a href="../c9fos.html"><img src="../../../images/attic/interview_archive/../common/c9fos_nav_thumb.png" /><strong>Clan 9 From Outer Space</strong></a></li>
+    <li class=active><img src="../../../images/attic/interview_archive/../common/interview_nav_thumb.png" /><strong>PlanetQuake Interview</strong></li>
+    <li><a href="../kitty1.html"><img src="../../../images/attic/interview_archive/../common/kitty1_nav_thumb.png" /><strong>Custom Maps @ kitty1</strong></a></li>
+    <li><a href="../t3demos.html"><img src="../../../images/attic/interview_archive/../common/t3demos_nav_thumb.png" /><strong>ClanRing Tourney 3 Demos</strong></a></li>
   </ul>
 </div>
 </div>
@@ -104,37 +106,74 @@
 <!-- begin: main column (#main_maincol) -->
 <div id="main_maincol" class="maincol" role="main">
 <div class="maincol_content clearfix">
-<p class="info_banner center">This page is archived from the MOTW pages of kitty1.stanford.edu.<br/>To exit this archive, use the top/side navbars or <a href="..\kitty1.html">return to the kitty1 page</a>.</p>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10>
-<TR><TD ALIGN=CENTER VALIGN=CENTER><IMG SRC="../../../images/attic/motw_archive/../kitty1/motw_dboxctf2.jpg" HEIGHT=256 WIDTH=256 ALT="levelshot"></TD><TD ALIGN=LEFT VALIGN=CENTER>The MOTW for Monday 9/18/00 was Crossed Paths (dboxctf2).
-</TD></TABLE>
-<CENTER>
-<BR/>
-<HR WIDTH=50%>
-<BR/>
-<P>
-<B>MOTW QUICK LOOK</B>
-</P>
-</CENTER>
-<P>
-Like last week's map, there are three paths involved.  But in this case they are arranged top to bottom, not left to right.  It's not intuitively obvious which flagroom exit leads to which level, but that's what this overview is for, right?
-</P>
-<CENTER>
-<IMG SRC="../../../images/attic/motw_archive/../kitty1/plan_dboxctf2_smaller.jpg" HEIGHT=480 WIDTH=640 ALT="cutaway overhead view">
-</CENTER>
-<P>
-- Exit the flagroom (Red/Blue Base) by the jumppad, and you'll be in a large L-shaped hallway (Upper Red/Blue Hallway) that leads to the top bridge (Upper Central) across the middle.  Just past the corner of the L is an opportunity to drop down one level.
-</P>
-<P>
-- If you exit the flagroom by the archway, you'll enter a smaller L-shaped hallway (Middle Red/Blue Hallway) that leads to the middle bridge (Middle Central).  Before the corner of the L you can take a jumppad up, and past the corner you can drop down.
-</P>
-<P>
-- If you exit the flagroom by the ramp or by the door nearby, the hallway beyond (Lower Red/Blue Hallway) takes you to the lowest, square-shaped bridge (Lower Central).  Two teleporters on this bridge will send you up to get the central powerup and land on the top bridge.
-</P>
-<P>
-Item breakdown: The middle powerup chooses randomly between regen and invis.  There is a YA in each base, and also at the end of each Lower Hallway; there are shards at the corner of each Upper Hallway in a rounded alcove.  RLs can be found at the beginning of each Lower Hallway (just after going up the ramp); LGs in the center, at each end of the middle bridge; and RGs at the end of each Upper Hallway.  The map seems pretty straightforward, no tricks or oddities.  Only weirdness to watch out for: there's a vertical chain-link fence at one spot in each Lower Hallway, and because of some Q3 goofiness, on some graphics cards that fence is only visible from one side.
-</P>
-<p class="info_banner center">This page is archived from the MOTW pages of kitty1.stanford.edu.<br/>To exit this archive, use the top/side navbars or <a href="..\kitty1.html">return to the kitty1 page</a>.</p>
+<p class="info_banner center">This page is part of an archived PlanetQuake article.<br/>To exit this archive, use the top/side navbars or <a href="..\interview.html">return to the description page</a>.</p>
+
+
+<div class="pq">
+
+  <br>
+
+  <table style="border-collapse:collapse; width:100%">
+    <tr>
+      <td style="padding:0; margin:0; width:1%"><img src="../../../images/attic/interview_archive/../interview/server-header.gif" alt="PlanetQuake" border="0" width="512" height="65"></td>
+      <td style="padding:0; margin:0; background-image:url(../../../images/attic/interview_archive/../interview/bar.gif);">&nbsp;</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <p><i><b>PlanetQuake takes a look at Quake server admins.</b></i></p>
+
+  <p> 
+  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr> 
+      <td bgcolor="#006666" valign="top"> 
+        <table cellspacing="0" cellpadding="2" border="0">
+          <tr> 
+            <td colspan="2"><img src="../../../images/attic/interview_archive/../interview/dot_clear.gif" border="0" height="1" width="1"></td>
+          </tr>
+          <tr> 
+            <td><img src="../../../images/attic/interview_archive/../interview/dot_clear.gif" border="0" height="1" width="1"></td>
+            <td valign="top">
+              <p><b><img src="../../../images/attic/interview_archive/../interview/bullet3.gif" border="0" height="11" width="13">PQ: 
+                What's going on with kitty1 now?</b></p>
+              <p><i>lemurboy</i>: 
+                I handed the reins over to ahnuld a while ago in a vain attempt 
+                to help me graduate, so it's up to him. I think just very recently 
+                he's finally taken our Quake servers out into the pasture and 
+                shot them. ::sniff:: I assume we'll continue to run Q3A public 
+                FFA servers, and eventually a team server or two. Occasionally 
+                I also have the urge to put up a QuakeWorld server, maybe to run 
+                a custom DM maps rotation again. We've &quot;lost&quot; two of our four 
+                CPUs to legit non-Quaking uses, so we won't be going as hog-wild 
+                with servers as we did with Quake, but at the very least there 
+                will be a few Q3A servers humming along.</p>
+              <p>Anyway... 
+                every now and then I see a Web page update or a message board 
+                post or something, where an old school Quaker reminisces about 
+                the good ol' days on kitty1, and that &quot;makes it all worthwhile&quot; 
+                as they say. The PQ-hosted write-in poll where kitty1 ranked third 
+                as &quot;best server of 1997&quot; (behind a popular Thunderwalker server 
+                and inferno.idsoftware.com) was also cool, and unexpected. We've 
+                been in a lull during the reign of Q2 -- and during most of us 
+                actually getting some work done in our degree programs -- but 
+                we'll be getting back some of our former game-hosting glory soon. 
+                :-)</p>
+              <img src="../../../images/attic/interview_archive/../interview/dot_clear.gif" border="0" height="1" width="1"> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </p>
+
+</div>
+
+<br>
+
+<p class="info_banner center">This page is part of an archived PlanetQuake article.<br/>To exit this archive, use the top/side navbars or <a href="..\interview.html">return to the description page</a>.</p>
+
+
 </div>
 <div id="ie_clearing">&nbsp;</div>
 </div>

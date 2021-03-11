@@ -1,0 +1,33 @@
+/**
+ * Mimicking old PlanetQuake styling, sort of.
+ */
+
+@media all
+{
+  div.pq {
+    background: #000000;
+    padding: 8px;
+  }
+
+  div.pq * {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+  }
+
+  div.pq strong, div.pq b {
+    font-weight: bold;
+  }
+
+  div.pq a {
+    color: #FFFF00;
+  }
+
+  div.pq a:visited {
+    color: #FFFF00;
+  }
+
+  div.pq a:active {
+    color: #FF0000;
+  }
+}
