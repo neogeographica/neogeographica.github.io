@@ -100,6 +100,23 @@
     line-height: 0;
   }
 
+  /* Classes for special spans/divs */
+ /**
+  * Note that display:flex is not supported in older browsers, so vertcenter
+  * can only be used as a visual nice-to-have.
+  */
+  .vertcenter {
+    display: flex;
+    align-items: center;
+  }
+  .poptext {
+    font-weight: 700;
+    font-size:large;
+  }
+  .tall {
+    line-height: 2em;
+  }
+
   /* Links */
   a {
     color: [link_color];
@@ -113,6 +130,10 @@
 
   /* Image as inline text */
   img.intext { vertical-align: text-bottom; }
+  img.intext-tall {
+    vertical-align: bottom;
+    height: 2em;
+  }
 
   /* Small images beside text */
   .pic,
