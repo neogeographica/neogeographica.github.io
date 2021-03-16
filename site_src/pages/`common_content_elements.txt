@@ -40,7 +40,7 @@ def centered_image_row4(imgwidth, img1, caption1, img2, caption2, img3, caption3
   return centered_image_row_common(imgwidth, [img1, img2, img3, img4], [caption1, caption2, caption3, caption4])
 #.main_download_code#
 def main_download(url,description):
-  return '<br/><p class="info_banner center">&nbsp;<br/><strong>&gt;&gt;&gt;</strong><a href="' + url + '"><span class="tall"><img src="' + global_common_images_path + 'download-64.png" class="intext-tall" /><span class="poptext">Get It!</span> (' + description + ')</span></a> <strong>&lt;&lt;&lt;</strong><br/>&nbsp;</p><br/>'
+  return '<br/><p class="info_banner center">&nbsp;<br/><strong>&gt;&gt;&gt;</strong><a id="main-dl-link" href="' + url + '"><span class="tall"><img src="' + global_common_images_path + 'download-64.png" class="intext-tall" /><span class="poptext">Get It!</span> (<span id="main-dl-desc">' + description + '</span>)</span></a> <strong>&lt;&lt;&lt;</strong><br/>&nbsp;</p><br/>'
 #.main_local_download_code#
 def main_local_download(file,description):
   return main_download(local_downloads_path() + file,description)

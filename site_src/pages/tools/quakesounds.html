@@ -2,6 +2,21 @@
 [common_styles]
 #scripts#
 [common_scripts]
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    DownloadURL = "https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_lightweight.zip";
+    DownloadDesc = "quakesounds_1.1_lightweight.zip";
+    if (navigator.platform.indexOf('Win') > -1) {
+      DownloadURL = "https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_win.zip"
+      DownloadDesc = "quakesounds_1.1_win.zip";
+    } else if (navigator.platform.indexOf('Mac') > -1) {
+      DownloadURL = "https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_mac.zip"
+      DownloadDesc = "quakesounds_1.1_mac.zip";
+    }
+    document.getElementById("main-dl-link").setAttribute("href", encodeURI(DownloadURL));
+    document.getElementById("main-dl-desc").innerHTML = DownloadDesc;
+  });
+</script>
 #optional_skiplinks [skiplinks]
 #optional_skiplinks_support [skiplinks_support]
 #sidebar_active_navitem quakesounds
@@ -10,18 +25,19 @@
     <li>audio processing pipeline for Quake sound samples</li>
     <li>version 1.1 released February 2014</li>
   </ul>
+[main_download('https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_lightweight.zip','quakesounds_1.1_lightweight.zip')]
   <p>quakesounds is a utility for easily ripping sounds out of Quake pak files and pushing them through a sequence of audio processing effects. The motivation and still the main intended usecase for it is generating phone ringtone/alert sounds; however it's data-driven to the extent where you could use it to apply an arbitrary processing pipeline, using any external utilities that you like, to anything contained in a pak file.</p>
-  <h2>Downloads</h2>
-  <h3>&bull; Current Version</h3>
+  <h2>Downloads &amp; Things</h2>
+  <h3>&bull; Application Package</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/quakesounds/releases/latest','application bundle')]
-    [listitem_download('https://github.com/neogeographica/quakesounds/blob/main/README.md','readme','(included in application bundle)')]
-    [listitem_download('https://github.com/neogeographica/quakesounds/blob/main/LAUNCHING.md','more about launching the application','(included in application bundle)')]
-    [listitem_download('https://github.com/neogeographica/quakesounds/blob/main/CONFIGURING.md','more details about configuration','(included in application bundle)')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_win.zip','quakesounds for Windows (quakesounds_1.1_win.zip)','&mdash; contains bundled Windows utilities')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_mac.zip','quakesounds for macOS (quakesounds_1.1_mac.zip)','&mdash; contains bundled 64-bit macOS utilities')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/releases/download/v1.1/quakesounds_1.1_lightweight.zip','quakesounds lightweight (quakesounds_1.1_lightweight.zip)','&mdash; no bundled utilities; platform-agnostic')]
+    [listitem_download('https://github.com/neogeographica/quakesounds/blob/main/README.md','readme','&mdash; included in zipfiles')]
   </ul>
   <h3>&bull; Source (not required)</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/quakesounds','GitHub repository')]
+    [listitem_download('https://github.com/neogeographica/quakesounds','repository on GitHub')]
   </ul>
   <h2>Background</h2>
   <p>quakesounds was originally put together to fill a slot in the 2013 &quot;Quake Advent Calendar&quot; at <a href="https://www.quaddicted.com/">quaddicted.com</a>. I'll just copy the blurb here:</p>

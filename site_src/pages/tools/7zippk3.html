@@ -10,17 +10,17 @@
     <li>full support for Quake Live pk3 files in 7-Zip tools (Windows only)</li>
     <li>version 9.20-pk3-1.1 released November 2013</li>
   </ul>
-  <p><strong>Note that Quake Live has changed its pk3 format and no longer encodes the archive; as with Quake 3, the Quake Live pk3 files are now just zip archives with a different extension. This utility is now only useful if for some reason you need to open an encoded pk3 from the old version of Quake Live.</strong></p>
+  <p class="info_banner poptext" style="padding-left:2em;padding-right:2em">&nbsp;<br/>Note that Quake Live has changed its pk3 format and no longer encodes the archive; as with Quake 3, the Quake Live pk3 files are now just zip archives with a different extension. This set of utilities is now only useful if for some reason you need to open an encoded pk3 from the old version of Quake Live.<br/>&nbsp;</p>
   <p>This set of utilities is based on 7-Zip 9.20. It has all of the functionality of the 7-Zip toolset; additionally, it supports operations on pk3 files, including encoded Quake Live pk3s.</p>
   <p>More specifically: 7-Zip could previously manage reading and updating Quake 3 pk3 files, and you could create a Quake 3 pk3 file by making a zip archive and then changing its extension. That is still possible with this modified version of 7-Zip. However now you can also use it to read, update, and create Quake Live pk3 files. And all of the features available for zip archives (except for encryption) are now also available for pk3 files &mdash; this is especially nice in the case of File Manager functionality, affecting several parts ranging from just being an option in various menus all the way to optional association with the pk3 file extension and Windows Explorer context menu integration.</p>
-  <h2>Downloads</h2>
-  <h3>&bull; Current Version</h3>
+  <h2>Downloads &amp; Things</h2>
+  <h3>&bull; Application Installers</h3>
   <ul>
     [listitem_download('https://github.com/neogeographica/7-zip-pk3/releases/latest','installer choices')]
   </ul>
   <h3>&bull; Source (not required)</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/7-zip-pk3','GitHub repository')]
+    [listitem_download('https://github.com/neogeographica/7-zip-pk3','repository on GitHub')]
   </ul>
   <h2>Background</h2>
   <p>Quake 3 assets are contained in &quot;.pk3&quot; files, which are actually just zip archives with a different file extension. Quake Live assets are also in pk3 files, but in this case the zip archive is mangled and can't be manipulated using normal zip utilities.</p>

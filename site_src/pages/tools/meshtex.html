@@ -10,17 +10,22 @@
   	<li>level editor plugin for manipulating patch mesh textures</li>
     <li>version 3.0 beta for GtkRadiant 1.5; included in <a href="https://github.com/Garux/netradiant-custom">NetRadiant-custom</a></li>
   </ul>
+[main_local_download('meshtex_3.0beta.zip','meshtex_3.0beta.zip')]
   <p>MeshTex adds operations for patch mesh texturing to the GtkRadiant level editor. These operations generally are concerned with having precise control over where texture coordinates end up on the mesh surface &mdash; especially along the edges &mdash; or precisely specifying the scale and/or tiling amount of the texture. You can download a beta version below, with some caveats: the documentation could be a lot better, and some texture placements that you attempt to do with these operations may be defeated by the way that Quake 3 actually renders the patch mesh in-game (more about that below).</p>
-  <p>Also of course it only works with GtkRadiant 1.5, not with the completely revised 1.6 series. It will probably also work with at least some of the many forked variants of 1.5 out there, and it is included by default in the <a href="https://github.com/Garux/netradiant-custom">NetRadiant-custom</a> distribution.</p>
-  <h2>Downloads</h2>
-  <h3>&bull; Current Version</h3>
+  <p>Also of course it only works with GtkRadiant 1.5, not with the completely revised 1.6 series. It will probably also work with at least some of the many forked variants of 1.5 out there, and it is included by default in the <a href="https://garux.github.io/NRC/">netradiant-custom</a> distribution.</p>
+  <h2>Downloads &amp; Things</h2>
+  <h3>&bull; Plugin Package</h3>
   <ul>
-    [listitem_local_download('meshtex_3.0beta.zip','plugin package')]
+    [listitem_local_download('meshtex_3.0beta.zip','MeshTex (meshtex_3.0beta.zip)')]
+  </ul>
+  <h3>&bull; Bundled with Map Editor</h3>
+  <ul>
+    [listitem_download('https://garux.github.io/NRC/','netradiant-custom')]
   </ul>
   <h3>&bull; Source (not required)</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/MeshTex','GitHub repository')]
-    [listitem_download('https://rawgit.com/neogeographica/MeshTex/main/docs/html/index.html','source code documentation','(Doxygen generated)')]
+    [listitem_download('https://github.com/neogeographica/MeshTex','repository on GitHub')]
+    [listitem_download('https://rawgit.com/neogeographica/MeshTex/main/docs/html/index.html','source code documentation')]
   </ul>
   <h2>Background</h2>
   <p>Back in 2001 I had noticed some problems with the way I textured patch meshes in <a href="[docs_q3maps_home_path]jlctf1.html">jlctf1</a>, and I wanted to be able to handle those operations better in future maps. So I wrote a quick and dirty plugin called PatchAlign for GtkRadiant 1.1-TA. My main concerns were to have better control over what parts of the texture ended up on the mesh edges and to scale the texture in ways that looked the same as the texture scale on neighboring brushes.</p>

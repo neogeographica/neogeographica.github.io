@@ -116,6 +116,13 @@
   .tall {
     line-height: 2em;
   }
+  .smallbox {
+    font-size: 75%;
+    vertical-align: middle;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: [smallbox_outline_color];
+  }
 
   /* Links */
   a {
