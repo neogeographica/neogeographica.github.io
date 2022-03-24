@@ -112,10 +112,10 @@
 <h1>Quakestarter:<br/>The Quake Singleplayer Starter Pack</h1>
   <ul>
     <li>easily start playing Quake, with custom singleplayer content</li>
-    <li>version 2.2.1 released March 2021</li>
+    <li>version 2.3.0 released March 2022</li>
     <li>you can also reach this page with the URL <a href="http://quakestarter.com">quakestarter.com</a></li>
   </ul>
-<br/><p class="info_banner center">&nbsp;<br/><strong>&gt;&gt;&gt;</strong><a id="main-dl-link" href="https://github.com/neogeographica/quakestarter/releases/download/v2.2.1/quakestarter-2.2.1.zip"><span class="tall"><img src="../../images/common/download-64.png" class="intext-tall" /><span class="poptext">Get It!</span> (<span id="main-dl-desc">quakestarter-2.2.1.zip</span>)</span></a> <strong>&lt;&lt;&lt;</strong><br/>&nbsp;</p><br/>
+<br/><p class="info_banner center">&nbsp;<br/><strong>&gt;&gt;&gt;</strong><a id="main-dl-link" href="https://github.com/neogeographica/quakestarter/releases/download/v2.3.0/quakestarter-2.3.0.zip"><span class="tall"><img src="../../images/common/download-64.png" class="intext-tall" /><span class="poptext">Get It!</span> (<span id="main-dl-desc">quakestarter-2.3.0.zip</span>)</span></a> <strong>&lt;&lt;&lt;</strong><br/>&nbsp;</p><br/>
   <p>This is a (Windows only) package with tools for setting up a playable Quake installation and downloading/playing/managing many highly-regarded addons. This includes any necessary patching and recommended configurations for the addons! It's menu-driven and super easy to use.</p>
   <p>This package also contains quite a bit of documentation on configuring Quake and exploring other user-created content.</p>
   <p>New players can use Quakestarter as a quick way to get going with Quake and the many amazing things created for it since 1996.</p>
@@ -123,12 +123,12 @@
   <h2>Downloads &amp; Things</h2>
   <h3>&bull; Latest Version</h3>
   <ul>
-    <li><a href="https://github.com/neogeographica/quakestarter/releases/download/v2.2.1/quakestarter-2.2.1.zip"><b>Quakestarter (quakestarter-2.2.1.zip)</b></a></li>
+    <li><a href="https://github.com/neogeographica/quakestarter/releases/download/v2.3.0/quakestarter-2.3.0.zip"><b>Quakestarter (quakestarter-2.3.0.zip)</b></a></li>
     <li><a href="https://raw.githubusercontent.com/neogeographica/quakestarter/main/quakestarter_readme.txt"><b>top-level readme</b></a> &mdash; included in zipfile</li>
   </ul>
   <h3>&bull; &quot;Quake Engine Not Included&quot; Variant for Power Users</h3>
   <ul>
-    <li><a href="https://github.com/neogeographica/quakestarter/releases/download/v2.2.1/quakestarter-noengine-2.2.1.zip"><b>Quakestarter "no engine" (quakestarter-noengine-2.2.1.zip)</b></a></li>
+    <li><a href="https://github.com/neogeographica/quakestarter/releases/download/v2.3.0/quakestarter-noengine-2.3.0.zip"><b>Quakestarter "no engine" (quakestarter-noengine-2.3.0.zip)</b></a></li>
   </ul>
   <h3>&bull; More Info</h3>
   <ul>
@@ -158,10 +158,13 @@
   <p>To answer that first part, I'm trying as much as possible to provide an all-in-one solution that doesn't tell folks to first go download something else. I realize that means that the packaged Quake engine may get out of date, but I think that's the lesser evil.</p>
   <p>As to why choose Quakespasm-Spiked in particular:</p>
   <p>Currently Quakespasm is a sort of &quot;reference standard&quot; for playing new singleplayer map releases. Quakespasm-Spiked (QSS) essentially matches Quakespasm for compatibility, and it adds important usability improvements that can smooth out the experience of playing or managing many existing addons... like supporting higher framerates and the ability to load multiple mod folders. It also implements features like advanced particle systems and customizable HUD/menus that newer addons can take advantage of. Arcane Dimensions is one example of a recent mod that can make use of these QSS features.</p>
-  <p>Previous versions of Quakestarter bundled Mark V instead, and Mark V does still have several advantages especially in its in-game menus. But while QSS has increased its compatibility/stability and its adoption among singleplayer users, Mark V has stagnated and now cannot play (or at least play well) some recent releases.</p>
+  <p>The included documentation discusses other Quake engines you may choose to use instead of QSS, depending on your priorities and preferences. In particular <a href="https://github.com/Novum/vkQuake">vkQuake</a> and <a href="https://github.com/andrei-drexler/ironwail">Ironwail</a> are other Quakespasm variants that should also work great with this package, but at the moment it still looks like QSS is the best default for most folks.</p>
+  <h2>Why not the &quot;enhanced&quot; Quake rerelease?</h2>
+  <p>The recent rerelease/remaster of Quake is a cool project, and it's a great way to (re)play the original campaign and official missionpacks. It's compatible with some custom map releases as well... but not all. So for the foreseeable future, the best way to play custom singleplayer maps will still be by using a community-developed Quake engine.</p>
   <h2>Why not Quake Injector?</h2>
   <p>The other big question about this package is probably why I included Simple Quake Launcher 2 and wrote the Quakestarter utility instead of just bundling in <a href="https://www.quaddicted.com/tools/quake_injector">Quake Injector</a>.</p>
-  <p>Quake Injector is great. But since it is a Java application, getting it running correctly is just one more hurdle that a lot of new players falter at. For most Windows users at least, it is easier to get them started using the tools in this package instead of dropping Quake Injector on their heads right off the bat. For people who want to keep playing and exploring more content, Quake Injector is a handy tool; I do discuss it in the documentation about finding and installing more maps &amp; mods.</p>
+  <p>Quake Injector is great. But since it is a Java application, getting it running correctly is just one more hurdle that a lot of new players falter at. For most Windows users at least, it is easier to get them started using the tools in this package instead of dropping Quake Injector on their heads right off the bat. Quakestarter also has a different focus of &quot;showcase the best stuff and make absolutely sure it painlessly works&quot; as opposed to Quake Injector's mission of being a broad gateway to every release out there.</p>
+  <p>For people who want to keep playing and exploring more content, Quake Injector is an undeniably handy tool. I do discuss it in the included documentation on finding and installing more maps &amp; mods.</p>
 
 
 </div>
