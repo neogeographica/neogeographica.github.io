@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>.Net Dependency &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Launcherless Launch" href="no_launcher.html" />
+    <link rel="prev" title="Auto Setup Logic" href="auto_setup_logic.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_setup_logic.html">Auto Setup Logic</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">.Net Dependency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_launcher.html">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="auto_setup_logic.html" title="Previous document">Auto Setup Logic</a>
+        </li>
+        <li>
+          <a href="no_launcher.html" title="Next document">Launcherless Launch</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="net-dependency">
+<h1>.Net Dependency<a class="headerlink" href="#net-dependency" title="Permalink to this headline">¶</a></h1>
+<p>You may have come to this page because you read about the .Net dependency in another chapter, or because Quakestarter refused to start and told you to come here. The basic situation is as follows:</p>
+<p>The Quakestarter script uses .Net assemblies to decompress the zipfiles for mods and patches, and in some cases (particularly on Windows 7/8) to do the downloads too. Simple Quake Launcher 2 also relies on .Net. In both cases, .Net Framework 4.5 is the minimum requirement. And at least in the case of Quakestarter this places a requirement on your version of Powershell as well.</p>
+<p>If you’re using Windows 8 or Windows 10 or later, then you shouldn’t have to worry about this; you can ignore this chapter unless you’re getting that aforementioned Quakestarter error message.</p>
+<p>On Windows 7 though it’s likely you’ll need to upgrade something. For various Microsoft-y reasons it can be a little awkward so I apologize in advance for that. Let’s walk through it…</p>
+<section id="finding-what-you-have">
+<h2>Finding what you have<a class="headerlink" href="#finding-what-you-have" title="Permalink to this headline">¶</a></h2>
+<p>You can determine your current PowerShell version just by running “powershell” and then entering the command “$PSVersionTable”. The “PSVersion” shown in the output of that command is what you are looking for.</p>
+<p>Determining the installed .Net framework version(s) is trickier, as <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed">described by Microsoft</a>. One nice way though is with the <a class="reference external" href="https://github.com/jmalarcon/DotNetVersions">DotNetVersions tool</a>.</p>
+<p>As mentioned above, you must have .Net Framework 4.5 or later installed. Also, if your most recent installed .Net Framework version is 4.7.1 or later, then you must be using PowerShell 5.1 or later.</p>
+</section>
+<section id="upgrading-net">
+<h2>Upgrading .Net<a class="headerlink" href="#upgrading-net" title="Permalink to this headline">¶</a></h2>
+<p>If your latest installed .Net version is less than 4.5, you can upgrade your .Net framework using a download <a class="reference external" href="https://www.microsoft.com/net/download/all">from Microsoft</a>. If your PowerShell version is pre-5.1 then make sure to pick a .Net version that is 4.7 or earlier. Also make sure that you get a “.Net Framework” runtime package, <em>not</em> anything else like “.Net Core” or a developer pack or etc.</p>
+<p>If you upgrade .Net, make sure to reboot afterward.</p>
+</section>
+<section id="upgrading-powershell">
+<h2>Upgrading PowerShell<a class="headerlink" href="#upgrading-powershell" title="Permalink to this headline">¶</a></h2>
+<p>Hopefully you won’t have to touch PowerShell. But let’s say your .Net version is already 4.7.1 or later, and your PowerShell version is older than 5.1. In that case, you can get PowerShell 5.1 <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=54616">from Microsoft too</a>.</p>
+<p>Make sure to choose the download appropriate for your OS. Likely you’re looking for the Windows 7 download, which last time I looked was called “Win7-KB3191566-x86.zip”. I downloaded that zipfile, decompressed it, right-clicked on the resulting “Install-WMF5.1.ps1” file, and chose “Run with PowerShell”. That properly installed the new version of PowerShell.</p>
+<p>If you upgrade PowerShell, make sure to reboot afterward.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="auto_setup_logic.html" title="Previous document">Auto Setup Logic</a>
+        </li>
+        <li>
+          <a href="no_launcher.html" title="Next document">Launcherless Launch</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

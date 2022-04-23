@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mod Requirements &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="quake.rc" href="quake_rc.html" />
+    <link rel="prev" title="Pak Files" href="pak_files.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_setup_logic.html">Auto Setup Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_net_version_dependency.html">.Net Dependency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_launcher.html">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="pak_files.html" title="Previous document">Pak Files</a>
+        </li>
+        <li>
+          <a href="quake_rc.html" title="Next document">quake.rc</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="mod-requirements">
+<h1>Mod Requirements<a class="headerlink" href="#mod-requirements" title="Permalink to this headline">¶</a></h1>
+<p>The readme that comes with an addon may describe some requirements for successfully playing its content. Note that if some addon was installed through Quakestarter and is being launched through Quakestarter then things should “just work”, especially in the default Quakestarter configuration. This chapter is more useful if you are working outside of Quakestarter.</p>
+<section id="engine-requirements">
+<h2>Engine requirements<a class="headerlink" href="#engine-requirements" title="Permalink to this headline">¶</a></h2>
+<p>If the readme says that the addon requires Fitzquake, the content will also work with Quakespasm and Quakespasm-variant engines, as well as almost certainly working fine with Mark V and other engines. The capabilities of the old popular Fitzquake engine have been adopted by basically every mainstream modern Quake engine that has a singleplayer focus.</p>
+<p>If the readme says that it requires an engine that supports the “bsp2” map format, Quakespasm-ish engines are OK with that too, as are most currently-maintained Quake engines.</p>
+<p>Generally it’s unusual for a modern and maintained Quake engine to be unable to play a widely-known release, if the engine is meant for singleplayer use. The standout exception would probably be the Nehahra episode as discussed <a class="reference external" href="https://www.quaddicted.com/reviews/nehahra.html">on its Quaddicted page</a>.</p>
+<p>The section on customizing your choice of Quake engine in the <a class="reference internal" href="advanced_quakestarter_cfg.html"><span class="doc">Advanced Configuration</span></a> chapter has more discussion of appropriate Quake engines.</p>
+</section>
+<section id="mod-dependencies">
+<h2>Mod dependencies<a class="headerlink" href="#mod-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>If the mod is in its own folder but it builds on another mod, for example a map release that depends on Arcane Dimensions (AD) or Copper, then you will need to account for that dependency when launching it.</p>
+<p>This does <em>not</em> include maps/mods that depend on Quoth or an official missionpack. This also doesn’t include mods that carry their own copy of the AD or Copper mod. This is about pure map releases that are meant to be played with AD or Copper, but which have been installed into their own separate mod folder (e.g. as Quakestarter will install things).</p>
+<p>To launch a mod that has been installed this way, you will need to use a Quake engine that supports activating multiple mod folders. This includes Quakespasm-Spiked, vkQuake, Ironwail, FTE, DarkPlaces, and qbism Super8. This will <em>not</em> for example work with the original Quakespasm or with Mark V.</p>
+<p>To activate multiple mod folders, on an engine that supports it, you just need to list them in order of increasing precedence. Let’s look at an example using the “udob_v1_1” folder, which depends on the Copper mod in the “copper_v1_17” folder.</p>
+<p>If you were composing a Quake command line to launch this, you would use these “-game” arguments (along with whatever other Quake arguments you need):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-game copper_v1_17 -game udob_v1_1
+</pre></div>
+</div>
+<p>(And that’s what you will see when Quakestarter shows you the command line it uses to launch “udob_v1_1”.)</p>
+<p>If you were using the “game” command in the Quake console, it would look like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game copper_v1_17 udob_v1_1
+</pre></div>
+</div>
+<p>If you’re unsure about whether your Quake engine supports activating multiple mod folders, you can try a “game” console command in that format, and see if it works or if it gives you an error.</p>
+<p><strong>Note:</strong> The qbism Super8 engine uses a different syntax on the command line, where the first (base mod) switch is “-game2” rather than “-game”. Super8 also does <em>not</em> have a corresponding console command.</p>
+<p>If you are using an engine that doesn’t support activating multiple mod folders, then you can’t play things that have been installed in this way. In that case, to play such content you will need to just dump it into the Arcane Dimensions or Copper mod folder (as appropriate), so that you can then load that folder as the single mod.</p>
+</section>
+<section id="mod-configurations">
+<h2>Mod configurations<a class="headerlink" href="#mod-configurations" title="Permalink to this headline">¶</a></h2>
+<p>When using a modern and maintained Quake engine you can largely ignore recommendations in the readme for increasing “heapsize”, “zone”, “winmem”, or “max_edicts”. Your Quake engine will likely use sufficiently large values already for these (and many other) settings. This is especially true for older addons that were released before any of these modern engines.</p>
+<p>If other settings are recommended, there are various ways to handle those. Note that if this mod was installed through Quakestarter, this has probably already been handled for you with “modsettings.cfg”. Otherwise you may want to manually put such settings into the mod’s “quake.rc”. See the <a class="reference internal" href="quake_rc.html"><span class="doc">quake.rc</span></a> chapter for more details.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="pak_files.html" title="Previous document">Pak Files</a>
+        </li>
+        <li>
+          <a href="quake_rc.html" title="Next document">quake.rc</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

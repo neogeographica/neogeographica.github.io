@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Launcherless Launch &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Beyond Windows" href="not_windows.html" />
+    <link rel="prev" title=".Net Dependency" href="dot_net_version_dependency.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_setup_logic.html">Auto Setup Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_net_version_dependency.html">.Net Dependency</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="dot_net_version_dependency.html" title="Previous document">.Net Dependency</a>
+        </li>
+        <li>
+          <a href="not_windows.html" title="Next document">Beyond Windows</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="launcherless-launch">
+<h1>Launcherless Launch<a class="headerlink" href="#launcherless-launch" title="Permalink to this headline">¶</a></h1>
+<p>If you don’t have or want to use a launcher, the main things you’ll need to know are the name of the game (mod) folder that you want to activate (if any), the name of the map you want to play, and whether the map/mod requires Quoth or a missionpack. The <a class="reference internal" href="../maps_and_mods/running_with_sql2.html"><span class="doc">Running with SQL2</span></a> chapter (under Maps and Mods) goes into more detail about how to interpret what a readme says about such dependencies.</p>
+<p>When you know those things, you can handle all launcher-type activities yourself.</p>
+<p>One approach is to use command-line options when launching Quake, but this chapter won’t cover that. You can get some info about command-line options from the section “The Command Line” in <a class="reference external" href="http://steamcommunity.com/sharedfiles/filedetails/?id=120426294">the Quake Owner’s Manual guide on Steam</a> and also some of <a class="reference external" href="http://steamcommunity.com/sharedfiles/filedetails/?id=166554615">the Custom Singleplayer Levels guide</a>. If you do want to go that route, note that when using Quakestarter or Simple Quake Launcher 2 you’ll see helpful examples of Quake command lines.</p>
+<p>Here, we’ll focus on using the Quake console, which is often easier.</p>
+<section id="opening-the-console">
+<h2>Opening the console<a class="headerlink" href="#opening-the-console" title="Permalink to this headline">¶</a></h2>
+<p>Once Quake has launched, if you are at the main menu with no game or demo running, then you can open the console with the ESC key. When a game or demo is running you can get to the console with the “~” key, or on international keyboards typically whatever key is under ESC. You can close the Quake console by hitting that key again or by hitting ESC. While the console is open you can type commands to cause stuff to happen, or type in new values for various settings.</p>
+<p>This chapter will just mention a few console commands. If you’re curious to learn more, much of <a class="reference external" href="http://steamcommunity.com/sharedfiles/filedetails/?id=120426294">the Quake Owner’s Manual guide on Steam</a> is relevant.</p>
+</section>
+<section id="setting-the-mod-folder-s-and-or-missionpack">
+<h2>Setting the mod folder(s) and/or missionpack<a class="headerlink" href="#setting-the-mod-folder-s-and-or-missionpack" title="Permalink to this headline">¶</a></h2>
+<p>If the map you want to run is just a .bsp file in the “id1\maps” folder, <a class="reference internal" href="#setting-difficulty"><span class="std std-ref">skip this section</span></a>. That’s the normal/default map location and doesn’t involve any mod code.</p>
+<p>Otherwise though, you’ll need to specify the mod folder(s) to activate. The map/mod may also have a dependency on Quoth or an official missionpack, or even on some other mod.</p>
+<p>You specify these things using the “game” command in the Quake console.</p>
+<p>If the folder containing the addon content is named “foo” and doesn’t depend on any other special game content, then you would just activate it with this command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game foo
+</pre></div>
+</div>
+<p>If the folder is named “foo” and requires Quoth, then you would activate it with this command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game foo -quoth
+</pre></div>
+</div>
+<p>If the folder is named “foo” and requires missionpack 1, then you would activate it with this command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game foo -hipnotic
+</pre></div>
+</div>
+<p>If the folder is named “foo” and requires missionpack 2, then you would activate it with this command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game foo -rogue
+</pre></div>
+</div>
+<p>If the folder depends on another non-Quoth non-missionpack mod folder (as described in the <a class="reference internal" href="mod_requirements.html"><span class="doc">Mod Requirements</span></a> chapter) you can add that dependency as the first argument. For example to run “udob_v1_1” that depends on “copper_v1_17”, you would use the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>game copper_v1_17 udob_v1_1
+</pre></div>
+</div>
+<p>If trying any of these commands results in an error message, then your Quake engine does not support doing a “game” command from the console. You’ll have to use command-line options as described in the <a class="reference internal" href="mod_requirements.html"><span class="doc">Mod Requirements</span></a> chapter.</p>
+<p>If you get an error <em>only</em> from that last form of the command, then your Quake engine does not support activating multiple mod folders.</p>
+<p>Once you’ve executed the “game” command, if you see the message “execing quake.rc” appear in the console, you’re ready to play. (This should be the case with any recent Quakespasm-variant engine.) Otherwise see the <a class="reference internal" href="quake_rc.html"><span class="doc">quake.rc</span></a> chapter for some more necessary details.</p>
+</section>
+<section id="setting-difficulty">
+<h2>Setting difficulty<a class="headerlink" href="#setting-difficulty" title="Permalink to this headline">¶</a></h2>
+<p>If you know that you almost always want to play at the same difficulty, you should add a line with a “skill” setting to your “id1\autoexec.cfg” file. The legal values for skill are from 0 to 3, which corresponds to difficulty levels Easy to Nightmare. For example if you pretty much always want to play Hard difficulty you could add a line to your autoexec.cfg that says:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>skill 2
+</pre></div>
+</div>
+<p>(Note that if you do use a launcher, the skill setting from the launcher will override this.)</p>
+<p>If you don’t have this setting in your autoexec.cfg, or if you do but you want to make an exception this time and play at a different difficulty level, then you can use the Quake console to choose the difficulty. Just enter a skill setting in the console <em>after</em> switching the game setting as above (if necessary) and <em>before</em> starting a map.</p>
+</section>
+<section id="launching-a-map">
+<h2>Launching a map<a class="headerlink" href="#launching-a-map" title="Permalink to this headline">¶</a></h2>
+<p>Some Quake engines provide an in-game menu that you can use to choose the map. However any Quake engine will also let you select a map using the console. You’ll need to know the map filename. If for example the filename of the map you want to play is “whatsit.bsp”, you would use the console command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>map whatsit
+</pre></div>
+</div>
+<p>In most Quake engines you can use autocomplete to see what maps are available. Just type “map” followed by a space and then press the Tab key. You can also use the autocomplete feature to avoid having to type the entire name of the map.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="dot_net_version_dependency.html" title="Previous document">.Net Dependency</a>
+        </li>
+        <li>
+          <a href="not_windows.html" title="Next document">Beyond Windows</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

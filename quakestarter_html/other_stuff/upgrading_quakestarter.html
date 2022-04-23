@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Upgrading Quakestarter &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quake Engines" href="quake_engines.html" />
+    <link rel="prev" title="Other Topics" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_setup_logic.html">Auto Setup Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_net_version_dependency.html">.Net Dependency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_launcher.html">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Other Topics</a>
+        </li>
+        <li>
+          <a href="quake_engines.html" title="Next document">Quake Engines</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="upgrading-quakestarter">
+<h1>Upgrading Quakestarter<a class="headerlink" href="#upgrading-quakestarter" title="Permalink to this headline">¶</a></h1>
+<section id="from-2-x">
+<h2>From 2.x<a class="headerlink" href="#from-2-x" title="Permalink to this headline">¶</a></h2>
+<p>If you already have a Quake installation that contains a 2.x version of Quakestarter, and you want to replace the 2.x Quakestarter with a newer 3.x version, you can just overwrite the existing files with the new files. You should probably check the <a class="reference internal" href="changelog.html"><span class="doc">Changelog</span></a> in the new documentation to see what has changed, in case there’s some new thing you want to take advantage of.</p>
+<p>Note that the first time you run Quakestarter after a 2.x-to-3.x upgrade, it will remove the old 2.x documentation.</p>
+<p>That’s it!</p>
+</section>
+<section id="from-1-x">
+<h2>From 1.x<a class="headerlink" href="#from-1-x" title="Permalink to this headline">¶</a></h2>
+<p>However if your Quake installation contains a 1.x version of Quakestarter, and you want to replace the 1.x Quakestarter with a 2.x or 3.x version, you’ll need to address some things. Please see the <a class="reference external" href="https://raw.githubusercontent.com/neogeographica/quakestarter/v2.5.0/quakestarter_docs/other_stuff/upgrading_quakestarter.txt">1.x to 2.x upgrade instructions</a> archived on GitHub. (These will also apply to any 1.x-to-3.x upgrades.)</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Other Topics</a>
+        </li>
+        <li>
+          <a href="quake_engines.html" title="Next document">Quake Engines</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

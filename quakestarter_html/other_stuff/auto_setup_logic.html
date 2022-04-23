@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Auto Setup Logic &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title=".Net Dependency" href="dot_net_version_dependency.html" />
+    <link rel="prev" title="Advanced Configuration" href="advanced_quakestarter_cfg.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Auto Setup Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_net_version_dependency.html">.Net Dependency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_launcher.html">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="advanced_quakestarter_cfg.html" title="Previous document">Advanced Configuration</a>
+        </li>
+        <li>
+          <a href="dot_net_version_dependency.html" title="Next document">.Net Dependency</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="auto-setup-logic">
+<h1>Auto Setup Logic<a class="headerlink" href="#auto-setup-logic" title="Permalink to this headline">¶</a></h1>
+<p>The first and second options in the Quakestarter main menu help you get set up with the Quake game data (required) and soundtrack (optional).</p>
+<p>If you already have an installation of the original Quake game somewhere on the same computer, Quakestarter can probably find it and use it to source the necessary files. Usually/hopefully this should be a pretty automatic process, and you shouldn’t need to look under the hood! But just in case it’s helpful, this chapter contains more details of how it works.</p>
+<section id="stores-cheat-sheet">
+<h2>Stores cheat-sheet<a class="headerlink" href="#stores-cheat-sheet" title="Permalink to this headline">¶</a></h2>
+<p>If you just want to know how Quake installations from various stores can help the Quakestarter auto-setup, here’s the bottom line about the files that those store installations provide (as of the last time this doc was updated, April 2022).</p>
+<ul class="simple">
+<li><p>The original Quake pak files (game data) are provided by Steam and GOG.</p></li>
+</ul>
+<p><div style="line-height: 0; padding: 0; margin: 0"></div></p>
+<ul class="simple">
+<li><p>Quake soundtrack files (from the Quake rerelease) are provided by Steam, Bethesda, and Xbox Game Pass.</p></li>
+</ul>
+<p>So for example if you don’t have any other Quake installations on your computer and don’t have any Quake paks or soundtrack files on hand, doing an installation of Quake from Steam is the simplest one-shot way to fetch everything you need. After doing the Steam install you could then run Quakestarter and auto-setup the pak files and soundtrack into your new modern Quake singleplayer installation.</p>
+</section>
+<section id="how-quakestarter-knows-where-to-look">
+<h2>How Quakestarter knows where to look<a class="headerlink" href="#how-quakestarter-knows-where-to-look" title="Permalink to this headline">¶</a></h2>
+<p>When Quakestarter wants to copy a file or directory from some existing Quake installation, it will run through a series of candidate locations. Each time it finds something that looks good, it asks you if you want to copy the necessary file/directory from that location. If you say no, it keeps looking.</p>
+<p>The first steps in this process involve checking the Windows registry for installations from Steam, GOG, or Bethesda. (The info for Xbox Game Pass installations is not in the registry.)</p>
+<p>If Quakestarter doesn’t get the file from any of those places, it then checks 1) on every disk, 2) across a set of top-level folders, for each of 3) a list of likely paths under those top-level folders.</p>
+<p>The top-level folders checked on each disk are:</p>
+<ul class="simple">
+<li><p>Program Files (x86)</p></li>
+<li><p>Program Files</p></li>
+<li><p>Games</p></li>
+<li><p>…and just the top folder on the disk</p></li>
+</ul>
+<p>The paths checked under each of those folders are:</p>
+<ul class="simple">
+<li><p>Quake</p></li>
+<li><p>Quake\rerelease</p></li>
+<li><p>QUAKE\Content</p></li>
+<li><p>Steam\steamapps\common\Quake</p></li>
+<li><p>Steam\steamapps\common\Quake\rerelease</p></li>
+<li><p>GOG Games\Quake</p></li>
+<li><p>GOG Galaxy\Games\Quake</p></li>
+<li><p>Bethesda.net Launcher\games\Quake</p></li>
+<li><p>XboxGames\QUAKE\Content</p></li>
+</ul>
+<p>(Some of these locations are specifically for the Quake rerelease rather than the original game; those locations are helpful for locating soundtrack files but not for the original pak files.)</p>
+<p>If you know of some other place that Quakestarter should reasonably be looking for Quake installations, let me know!</p>
+</section>
+<section id="pak-files">
+<h2>Pak files<a class="headerlink" href="#pak-files" title="Permalink to this headline">¶</a></h2>
+<p>One kind of thing that Quakestarter can locate in Quake installations is the necessary game data (maps, models, sounds, etc.). This data is stored in files with the “.pak” extension.</p>
+<p>The original Quake campaign requires “pak0.pak” and “pak1.pak” in the “id1” subfolder. Missionpack 1 requires a “pak0.pak” in the “hipnotic” subfolder. Missionpack 2 requires a “pak0.pak” in the “rogue” subfolder. So Quakestarter can be used to find and copy all of those, starting from option 1 on the main menu.</p>
+<p>Note that when Quakestarter looks for pak files, it checks the files (using an MD5 checksum) to make sure they are the right files. This means for example that it will not grab pak files from the Quake rerelease, since those pak files are different from the originals. In the case of “id1\pak0.pak” Quakestarter also specifically looks for the last version of “pak0.pak” (1.06) that was shipped for Quake, not any earlier version. If Quakestarter seems to be ignoring an available pak file it might be because that file doesn’t have the right checksum.</p>
+<p>Pak files are described in more detail in the <a class="reference internal" href="pak_files.html"><span class="doc">Pak Files</span></a> chapter, including methods of getting pak files if Quakestarter can’t find them automatically.</p>
+</section>
+<section id="soundtrack-files">
+<h2>Soundtrack files<a class="headerlink" href="#soundtrack-files" title="Permalink to this headline">¶</a></h2>
+<p>The other setup files that Quakestarter can help you with are the soundtrack files for the original campaign and missionpack. These files are always stored in a “music” subfolder inside “id1”, “hipnotic”, and/or “rogue”.</p>
+<p>Valid soundtrack files can be of various types (e.g. MP3 or OGG) and can come from various sources. So it’s not feasible or even desirable for Quakestarter to do a checksum of these files to validate them. Instead, if Quakestarter finds any “music” subfolder in the right place, it will always just ask you if that’s the one you want to copy and use.</p>
+<p>If Quakestarter get to the end of the file search process without successfully copying the “music” folder that it is looking for, it will give you the option to download those soundtrack files from Quaddicted.</p>
+<p><strong>Note:</strong> Now that official soundtrack files are available from the Quake rerelease, this download option may be removed from Quakestarter in the future.</p>
+<p>Also keep in mind that if you still have your physical Quake CD, or a CD image (for example from GOG), you can rip the tracks yourself. This gives you ultimate control over the quality and settings for the rip. Soundtrack files start with track 2 of the CD and are named in the format “track02.ogg” or “track02.mp3”.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="advanced_quakestarter_cfg.html" title="Previous document">Advanced Configuration</a>
+        </li>
+        <li>
+          <a href="dot_net_version_dependency.html" title="Next document">.Net Dependency</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

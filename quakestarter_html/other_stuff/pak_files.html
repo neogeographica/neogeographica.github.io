@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pak Files &#8212; Quakestarter 3.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mod Requirements" href="mod_requirements.html" />
+    <link rel="prev" title="Quake Engines" href="quake_engines.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../quakestarter_readme.html">Quakestarter</a></h1>
+
+
+
+<p class="blurb">Quake Singleplayer Starter Pack</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Basic Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/running.html">Running</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Maps and Mods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/mod_folders.html">Mod Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_quakestarter.html">Running with Quakestarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/running_with_sql2.html">Running with SQL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maps_and_mods/explore_more.html">Explore More</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Etc</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pak Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quake_rc.html">quake.rc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_quakestarter_cfg.html">Advanced Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_setup_logic.html">Auto Setup Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_net_version_dependency.html">.Net Dependency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_launcher.html">Launcherless Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_windows.html">Beyond Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selection_criteria.html">Selection Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="http://quakestarter.com">Quakestarter website</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="quake_engines.html" title="Previous document">Quake Engines</a>
+        </li>
+        <li>
+          <a href="mod_requirements.html" title="Next document">Mod Requirements</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="pak-files">
+<h1>Pak Files<a class="headerlink" href="#pak-files" title="Permalink to this headline">¶</a></h1>
+<section id="what-are-pak-files">
+<h2>What are pak files?<a class="headerlink" href="#what-are-pak-files" title="Permalink to this headline">¶</a></h2>
+<p>A “pak” file is a collection of Quake game data. To play the original Quake campaign using a modern Quake program, all you need are two files from the original Quake game content: “pak0.pak” and “pak1.pak”. They’re sometimes also named “PAK0.PAK” and “PAK1.PAK”.</p>
+<p>Inside the folder that holds your Quake program, you will need a folder named “id1”. Create that folder if necessary. Then put the two pak files inside of “id1”. You’re ready to play!</p>
+<p>Similarly each of the official missionpacks has a “pak0.pak” file that you need in order to play that expansion:</p>
+<ul class="simple">
+<li><p>To play missionpack 1, Scourge of Armagon, you need a folder named “hipnotic” inside your Quake folder. Inside the “hipnotic” folder you need the “pak0.pak” file from missionpack 1.</p></li>
+</ul>
+<p><div style="line-height: 0; padding: 0; margin: 0"></div></p>
+<ul class="simple">
+<li><p>To play missionpack 2, Dissolution of Eternity, you need a folder named “rogue” inside your Quake folder. Inside the “rogue” folder you need the “pak0.pak” file from missionpack 2.</p></li>
+</ul>
+<p>If you already have your pak files and are ready to go, you don’t need to read the rest of this. Otherwise:</p>
+</section>
+<section id="getting-the-pak-files-from-a-quake-installation">
+<h2>Getting the pak files from a Quake installation<a class="headerlink" href="#getting-the-pak-files-from-a-quake-installation" title="Permalink to this headline">¶</a></h2>
+<p>If you already have Quake installed somewhere on this computer, or if you are able to install Quake now (e.g. from Steam or GOG), then that will be the easiest way to get these files. The first menu option in Quakestarter will find that Quake installation and copy the necessary files from it. If you’re curious about how Quakestarter looks for those files, check out the <a class="reference internal" href="auto_setup_logic.html"><span class="doc">Auto Setup Logic</span></a> chapter.</p>
+<p>If that process can’t find your Quake pak files, you can go look for them yourself. They will be inside a folder named “id1”, which itself is inside your Quake install directory. So find and open up the “id1” folder, then make the copies you need of “pak0.pak” and “pak1.pak”. Similarly if you have one or both of the missionpacks installed, you can get the “pak0.pak” file out of the “hipnotic” and/or “rogue” folder inside an existing Quake installation.</p>
+<p>If you’re manually copying pak files into a Quakestarter-managed Quake installation, you should also be careful to get the pak files from the original Quake and not the rerelease. You can easily tell the difference since the “id1” folder in the rerelease only contains “pak0.pak” and does not have a “pak1.pak”. As of the last update to this part of the docs (April 2022), various stores provide original and/or rereleased Quake as follows:</p>
+<ul class="simple">
+<li><p>Steam provides the original Quake and also the rerelease (in a “rerelease” subfolder)</p></li>
+<li><p>GOG provides only the original</p></li>
+<li><p>Xbox Game Pass provides only the rerelease</p></li>
+<li><p>Bethesda provides only the rerelease</p></li>
+</ul>
+</section>
+<section id="getting-the-pak-files-from-a-quake-cd">
+<h2>Getting the pak files from a Quake CD<a class="headerlink" href="#getting-the-pak-files-from-a-quake-cd" title="Permalink to this headline">¶</a></h2>
+<p>If all you have is a Quake CD, and the CD’s installer no longer works on your version of Windows, then you can try to get the pak files directly from the CD.</p>
+<p>There were several different kinds of Quake CDs produced. In some cases you may be able to search through the CD’s files and find the necessary pak files ready for you to copy.</p>
+<p>If you don’t see the pak files on the CD, I’d recommend getting in touch with a Quake-owning friend and asking for copies of the pak files from them. You’re a legit Quake owner so there’s nothing wrong with that.</p>
+<p>If <em>that</em> doesn’t work out for some reason, then:</p>
+<p>If you see a file named “RESOURCE.1” on your CD, you can extract the pak files from inside that archive, as described <a class="reference external" href="http://steamcommunity.com/app/2310/discussions/0/558750717183948274/">on the Steam forums</a>.</p>
+<p>If you see a couple of files named “QUAKE101.1” and “QUAKE101.2”, I’d guess it would be possible to concatenate those files together (e.g. “type QUAKE101.1 QUAKE101.2 &gt; RESOURCE.x”) and use lha or 7-Zip on that resulting file, similar to the process described in the link above. I haven’t tried that myself though, and I’m not sure if the concatenated file name matters and if so whether it should be named RESOURCE.x, RESOURCE.1, or something else.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="quake_engines.html" title="Previous document">Quake Engines</a>
+        </li>
+        <li>
+          <a href="mod_requirements.html" title="Next document">Mod Requirements</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
