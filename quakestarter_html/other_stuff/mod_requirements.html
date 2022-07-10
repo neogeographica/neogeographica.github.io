@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Mod Requirements &#8212; Quakestarter 3.1.0 documentation</title>
+    <title>Mod Requirements &#8212; Quakestarter 3.2.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
@@ -128,7 +128,7 @@
 <h2>Mod dependencies<a class="headerlink" href="#mod-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>If the mod is in its own folder but it builds on another mod, for example a map release that depends on Arcane Dimensions (AD) or Copper, then you will need to account for that dependency when launching it.</p>
 <p>This does <em>not</em> include maps/mods that depend on Quoth or an official missionpack. This also doesn’t include mods that carry their own copy of the AD or Copper mod. This is about pure map releases that are meant to be played with AD or Copper, but which have been installed into their own separate mod folder (e.g. as Quakestarter will install things).</p>
-<p>To launch a mod that has been installed this way, you will need to use a Quake engine that supports activating multiple mod folders. This includes Quakespasm-Spiked, vkQuake, Ironwail, FTE, DarkPlaces, and qbism Super8. This will <em>not</em> for example work with the original Quakespasm or with Mark V.</p>
+<p>To launch a mod that has been installed this way, you will need to use a Quake engine that supports activating multiple mod folders. This includes vkQuake, Ironwail, Quakespasm-Spiked, FTE, DarkPlaces, and qbism Super8. This will <em>not</em> for example work with the original Quakespasm or with Mark V.</p>
 <p>To activate multiple mod folders, on an engine that supports it, you just need to list them in order of increasing precedence. Let’s look at an example using the “udob_v1_1” folder, which depends on the Copper mod in the “copper_v1_17” folder.</p>
 <p>If you were composing a Quake command line to launch this, you would use these “-game” arguments (along with whatever other Quake arguments you need):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-game copper_v1_17 -game udob_v1_1

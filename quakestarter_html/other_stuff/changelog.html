@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Changelog &#8212; Quakestarter 3.1.0 documentation</title>
+    <title>Changelog &#8212; Quakestarter 3.2.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
@@ -98,6 +98,22 @@
             
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">v3.2.0 (Jul 2022)</p>
+<p>The main point of this release is to change the bundled Quake engine(s). Instead of <a class="reference external" href="https://fte.triptohell.info/moodles/qss/">Quakespasm-Spiked</a>, Quakestarter will now bundle both <a class="reference external" href="https://github.com/Novum/vkQuake">vkQuake</a> and <a class="reference external" href="https://github.com/andrei-drexler/ironwail">Ironwail</a>. A new item has been added to the main Quakestarter menu to help you switch between any Quake engines that are present in the Quake folder, and the <a class="reference internal" href="quake_engines.html"><span class="doc">Quake Engines</span></a> chapter of the docs has a more extended description of these two engines.</p>
+<p>This change is motivated by occasional reported compatibility issues in recent Quakespasm-Spiked releases, an active and transparent development process for vkQuake and Ironwail, and just a general sense of where the conventional wisdom currently rests about the best general-purpose singleplayer engine. Quakespasm-Spiked is still a great program and still has several features not found in vkQuake or Ironwail, but for now vkQuake and Ironwail will be the bundled engines here.</p>
+<p>If you have an existing older Quakestarter installation that bundled Quakespasm-Spiked, you have a few choices when upgrading to a newer Quakestarter version that bundles vkQuake/Ironwail:</p>
+<ul class="simple">
+<li><p><strong>If you want to continue using Quakespasm-Spiked and you don’t care about having vkQuake/Ironwail</strong>, use the “noengine” version of the new Quakestarter release and overwrite your existing files. Then use the engine-choice menu item to choose your Quakespasm-Spiked executable.</p></li>
+</ul>
+<p><div style="line-height: 0; padding: 0; margin: 0"></div></p>
+<ul class="simple">
+<li><p><strong>If you want to have the ability to switch between all three Quake engines</strong>, use the normal version of the new Quakestarter release and overwrite your existing files.</p></li>
+</ul>
+<p><div style="line-height: 0; padding: 0; margin: 0"></div></p>
+<ul class="simple">
+<li><p><strong>If you want to get rid of the Quakespasm-Spiked files (and only use vkQuake/Ironwail going forward)</strong>, then you could do so before the upgrade by deleting qss_manifest.txt and all the files it lists. If you’ve already done the upgrade and overwritten various files though, the only files you should delete are: qss_manifest.txt, libvorbisidec-1.dll, quakespasm.pak, Quakespasm-Spiked.txt, Quakespasm-Spiked-Revision.txt, and quakespasm-spiked-win64.exe.</p></li>
+</ul>
+<p>This release also has a few doc updates to take into account the opening of <a class="reference external" href="https://www.slipseer.com/">Slipgate Sightseer</a>, and it now handles <a class="reference external" href="http://lunaran.com/copper/">Copper</a> dependencies using the recent release of Copper version 1.19.</p>
 <p class="rubric">v3.1.0 (Jun 2022)</p>
 <p>This release is purely about updating the lists of installables. Four 2022 releases have popped up just over the ratings threshold, but interestingly so have several older releases all the way back to 1997. For this release I’m experimenting with doing a little blurb for each addition, so here’s a rundown from newest to oldest.</p>
 <p>In the New Hotness menus (Episodes and Other):</p>

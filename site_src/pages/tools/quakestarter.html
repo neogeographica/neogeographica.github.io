@@ -8,10 +8,10 @@
 <h1>Quakestarter:<br/>The Quake Singleplayer Starter Pack</h1>
   <ul>
     <li>easily start playing Quake, with custom singleplayer content</li>
-    <li>version 3.1.0 released June 2022</li>
+    <li>version 3.2.0 released July 2022</li>
     <li>you can also reach this page with the URL <a href="http://quakestarter.com">quakestarter.com</a></li>
   </ul>
-[main_download('https://github.com/neogeographica/quakestarter/releases/download/v3.1.0/quakestarter-3.1.0.zip','quakestarter-3.1.0.zip')]
+[main_download('https://github.com/neogeographica/quakestarter/releases/download/v3.2.0/quakestarter-3.2.0.zip','quakestarter-3.2.0.zip')]
   <p>This is a (Windows only) package with tools for setting up a playable Quake installation and downloading/playing/managing many highly-regarded addons. This includes any necessary patching and recommended configurations for the addons! It's menu-driven and super easy to use.</p>
   <p>This package also contains quite a bit of documentation on configuring Quake and exploring other user-created content.</p>
   <p>New players can use Quakestarter as a quick way to get going with Quake and the many amazing things created for it since 1996.</p>
@@ -19,12 +19,12 @@
   <h2>Downloads &amp; Things</h2>
   <h3>&bull; Latest Version</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/quakestarter/releases/download/v3.1.0/quakestarter-3.1.0.zip','Quakestarter (quakestarter-3.1.0.zip)')]
+    [listitem_download('https://github.com/neogeographica/quakestarter/releases/download/v3.2.0/quakestarter-3.2.0.zip','Quakestarter (quakestarter-3.2.0.zip)')]
     [listitem_download('https://neogeographica.com/quakestarter_readme.html','documentation','&mdash; also included in zipfile')]
   </ul>
   <h3>&bull; &quot;Quake Engine Not Included&quot; Variant for Power Users</h3>
   <ul>
-    [listitem_download('https://github.com/neogeographica/quakestarter/releases/download/v3.1.0/quakestarter-noengine-3.1.0.zip','Quakestarter "no engine" (quakestarter-noengine-3.1.0.zip)')]
+    [listitem_download('https://github.com/neogeographica/quakestarter/releases/download/v3.2.0/quakestarter-noengine-3.2.0.zip','Quakestarter "no engine" (quakestarter-noengine-3.2.0.zip)')]
   </ul>
   <h3>&bull; More Info</h3>
   <ul>
@@ -43,7 +43,7 @@
   <h2>Contents</h2>
   <p>Here's what this package includes:</p>
   <ul>
-  	  <li>the <a href="https://fte.triptohell.info/moodles/qss/">Quakespasm-Spiked</a> Quake engine</li>
+  	  <li>the <a href="https://github.com/Novum/vkQuake">vkQuake</a> and <a href="https://github.com/andrei-drexler/ironwail">Ironwail</a> Quake engines</li>
   	  <li>the <a href="https://github.com/m-x-d/Simple-Quake-Launcher-2/releases/latest">Simple Quake Launcher 2</a> front-end</li>
   	  <li>the Quakestarter utility that can find pak files on your local system, install soundtrack music files, and install &amp; launch a selection of maps and mods</li>
   	  <li>documentation about configuring and running Quake</li>
@@ -51,12 +51,11 @@
   	  <li>even more info on other topics!</li>
   </ul>
   <p>The documentation is there as a fallback if something doesn't work, or if you want to learn more about a topic. The actual process of getting up and running is fairly simple as described in the &quot;How to use this&quot; section of the <a href="https://neogeographica.com/quakestarter_readme.html">first page of the docs</a>.</p>
-  <h2>Why Quakespasm-Spiked?</h2>
-  <p>It's fair to ask why a Quake engine should be included in this package, and why Quakespasm-Spiked is the one I chose.</p>
-  <p>To answer that first part, I'm trying as much as possible to provide an all-in-one solution that doesn't tell folks to first go download something else. I realize that means that the packaged Quake engine may get out of date, but I think that's the lesser evil.</p>
-  <p>As to why choose Quakespasm-Spiked in particular:</p>
-  <p>Currently Quakespasm is a sort of &quot;reference standard&quot; for playing new singleplayer map releases. Quakespasm-Spiked (QSS) essentially matches Quakespasm for compatibility, and it adds important usability improvements that can smooth out the experience of playing or managing many existing addons... like supporting higher framerates and the ability to load multiple mod folders. It also implements features like advanced particle systems and customizable HUD/menus that newer addons can take advantage of. Arcane Dimensions is one example of a recent mod that can make use of these QSS features.</p>
-  <p>The included documentation discusses other Quake engines you may choose to use instead of QSS, depending on your priorities and preferences. In particular <a href="https://github.com/Novum/vkQuake">vkQuake</a> and <a href="https://github.com/andrei-drexler/ironwail">Ironwail</a> are other Quakespasm variants that should also work great with this package, but at the moment it still looks like QSS is the best default for most folks.</p>
+  <h2>Why vkQuake/Ironwail?</h2>
+  <p>It's fair to ask why any Quake engine should be included in this package, and why vkQuake and Ironwail are the ones I chose.</p>
+  <p>To answer that first part, I'm trying as much as possible to provide an all-in-one solution that doesn't tell folks to first go download something else. I realize that means that the packaged Quake engines may get out of date, but I think that's the lesser evil.</p>
+  <p>As to why choose vkQuake/Ironwail in particular:</p>
+  <p>Currently Quakespasm is a sort of &quot;reference standard&quot; for playing new singleplayer map releases, but there are other engines that build on Quakespasm to offer new useful features without sacrificing that basic level of compatibility. vkQuake and Ironwail are two excellent choices in that field. The <a href="https://neogeographica.com/quakestarter_html/other_stuff/quake_engines.html">Quake Engines</a> chapter of the docs has more detail about what vkQuake and Ironwail add to the Quakespasm baseline, and how they differ from each other.</p>
   <h2>Why not the &quot;enhanced&quot; Quake rerelease?</h2>
   <p>The recent rerelease/remaster of Quake is a cool project, and it's a great way to (re)play the original campaign and official missionpacks. It's compatible with some custom map releases as well... but not all. So for the foreseeable future, the best way to play custom singleplayer maps will still be by using a community-developed Quake engine.</p>
   <h2>Why not Quake Injector?</h2>
