@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Advanced Configuration &#8212; Quakestarter 3.2.0 documentation</title>
+    <title>Advanced Configuration &#8212; Quakestarter 3.3.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
@@ -57,7 +57,7 @@
 <p class="caption" role="heading"><span class="caption-text">Etc</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Upgrading Quakestarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrading_quakestarter.html">Updating Quakestarter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quake_engines.html">Quake Engines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pak_files.html">Pak Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mod_requirements.html">Mod Requirements</a></li>
@@ -129,30 +129,55 @@
 </pre></div>
 </div>
 <p>You should always handle any preferences like this through your own “_quakestarter_cfg.cmd” file, <em>not</em> by modifying the “_quakestarter_cfg_defaults.cmd” file. That way, your preferences won’t get overwritten when you take in the files for some future release of Quakestarter.</p>
-<p>The “_quakestarter_cfg_defaults.cmd” file describes these settings in detail, so most of them don’t need extra description here. We’ll cover a couple of them below though.</p>
+<p>The “_quakestarter_cfg_defaults.cmd” file describes these settings in detail, so most of them don’t need extra description here.</p>
+</section>
+<section id="download-behavior">
+<h2>Download behavior<a class="headerlink" href="#download-behavior" title="Permalink to this headline">¶</a></h2>
+<p>Quakestarter will use “curl.exe” to download zipfiles, if that utility is in a directory included in your Windows PATH environment variable. This will be the case in current versions of Windows 10 (or later).</p>
+<p>If Quakestarter can’t find that curl utility, it will use a .Net assembly to do the download instead. This should work fine. One downside though is that this approach will not show a progress bar during the download.</p>
+<p>If you don’t have “curl.exe” in one of your PATH directories and you really do want that progress bar – or if for some reason the .Net assembly isn’t working and you want to try using curl instead – then you could install curl yourself. You can get a perfectly good “curl.exe” from <a class="reference external" href="https://curl.se/windows/">its website</a>. Then you can either place that utility into some directory that is already in your PATH, or edit your PATH value to include the directory where you put curl.</p>
+<p>(How to edit system environment variables like PATH is outside the scope of this chapter, but is well-covered in Google results.)</p>
 </section>
 <section id="engine-choice">
 <h2>Engine choice<a class="headerlink" href="#engine-choice" title="Permalink to this headline">¶</a></h2>
-<p>If you want Quakestarter to launch a particular Quake engine of your choice – other than the options of vkQuake and Ironwail which are usually bundled with Quakestarter – then the files for that Quake engine need to be placed in the Quake folder along with Quakestarter.</p>
-<p>If you’re intending to keep multiple Quake engine choices in this same folder, be careful about the files from one engine overwriting the files from another. For Quakespasm-family engines, they use the same library files which are often either identical among the various engine releases or differing only by minor version. In that case you can often get away with just keeping the latest version of each such library in the Quake folder, along with the various engine executables. But this is definitely a “power user” situation where you need to be careful about what you are doing. Engines that use notably different versions of the same library file cannot be kept in the same folder together.</p>
-<p>If you’re not using the “noengine” bundle, and you need to get rid of the vkQuake and Ironwail files before installing some other engine, check “engines_manifest.txt” to see what files are used by those engines.</p>
-<p>Once you have your desired Quake engine installed into this Quake folder, you can set a new quake_exe value in your “_quakestarter_cfg.cmd” file to indicate the Quake program that should be launched by Quakestarter.</p>
-<p>The easiest way to do this is by using the third item in the main Quakestarter menu. That will give you a selection of executables to choose from, and then Quakestarter will handle making the necessary changes to “_quakestarter_cfg.cmd”.</p>
-<p>However you can also just manually edit “_quakestarter_cfg.cmd” to make the change yourself, if you want to. One reason you might want to do this is if you need to add some command-line arguments that should always be used whenever launching your Quake program. For example, if you are launching qbism Super8, its default “heapsize” value is quite low and on modern systems there’s no downside to always cranking it up, so that more maps will work correctly. So you could choose to specify this in your “_quakestarter_cfg.cmd”:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>set quake_exe=qbismS8.exe -heapsize 256000
-</pre></div>
-</div>
-<p>Note however that if you use the Quakestarter menu item to change your Quake engine executable, then any extra arguments like this will be discarded.</p>
-<p>In any case, if you do set your own quake_exe (through the menu or manually) then the following things are <em>not</em> always guaranteed:</p>
+<p>If you want Quakestarter to launch a particular Quake engine of your choice – other than the options of vkQuake and Ironwail which are usually bundled with Quakestarter – you can certainly do that! Let’s talk about what other Quake engines you might use, describe the easy/common way to install them, and then finally cover a few power-user things.</p>
+<section id="which-engine">
+<h3>Which engine<a class="headerlink" href="#which-engine" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="quake_engines.html"><span class="doc">Quake Engines</span></a> chapter talks a bit about the variety of Quake-playing programs out there. vkQuake and Ironwail are great general-purpose singleplayer Quake engines, but they might not work on your computer for some reason. Or some other engine may have that one special feature that makes it a must-have for you.</p>
+<p>You can use other Quake engines through Quakestarter, but keep in mind that for other Quake engines the following things are <em>not</em> always guaranteed:</p>
 <ul class="simple">
 <li><p>that your choice of Quake engine will be able to properly run every selection from the Quakestarter menus</p></li>
 <li><p>that your choice of Quake engine will be able to play soundtrack files</p></li>
 <li><p>that all the settings in the example autoexec.cfg will work for your choice of Quake engine, or have the indicated defaults</p></li>
 <li><p>that existing savegames will work for your choice of Quake engine</p></li>
 </ul>
-<p>vkQuake and Ironwail are safe engine choices, and Quakespasm-Spiked usually is too. The original Quakespasm engine is also widely compatible, although since the original Quakespasm lacks multigame support (see below) there will be a small number of Quakestarter items that it cannot launch.</p>
+<p>vkQuake and Ironwail are safe engine choices, and Quakespasm-Spiked usually is too. The original Quakespasm engine is also widely compatible, although since the original Quakespasm lacks multigame support (<a class="reference internal" href="#multigame-support"><span class="std std-ref">see below</span></a>) there will be a small number of Quakestarter items that Quakespasm cannot launch.</p>
 <p>Beyond those choices, it’s more on your shoulders to look into compatibility issues and be aware that something might go wrong. Even some Quake engine that is a perfectly fine piece of software engineering may have troubles running a particular map release if the map was never tested against that engine, and FWIW most releases are tested against a Quakespasm-family engine. A map may even malfunction in ways that are not immediately apparent if you haven’t played it before (e.g. missing monsters, lighting errors).</p>
 <p>That said, there are many players who are perfectly happy with their preference for a specialty engine like FTE or DarkPlaces, willing to do a bit of troubleshooting if necessary in order to benefit from unique features that those engines provide. The only inarguable “bad choice” for a Quake engine, when it comes to the purpose of playing custom addons, would be a multiplayer-focused engine like ezQuake.</p>
+</section>
+<section id="installing-an-engine-easy-mode">
+<h3>Installing an engine - easy mode<a class="headerlink" href="#installing-an-engine-easy-mode" title="Permalink to this headline">¶</a></h3>
+<p>If you want to use some other Quake engine, then the files that make up that engine need to be placed in the Quake folder along with Quakestarter.</p>
+<p>If you’re interested in doing this, it’s highly recommended to start with a “noengine” installation of Quakestarter. That way you won’t have to worry about dealing with the vkQuake/Ironwail files from the normal Quakestarter bundle, and you also won’t be in danger of a Quakestarter update doing anything unexpected to the files of your own Quake engine of choice.</p>
+<p>This “easy mode” section will assume that you are working with a “noengine” Quakestarter installation.</p>
+<p>If you’re intending to manually place multiple Quake engine choices into this Quake folder, be careful about the files from one engine overwriting the files from another. For Quakespasm-family engines, they use the same library files which are often either identical among the various engine releases or differing only by minor version. In that case you can often get away with just keeping the latest version of each such library file in the Quake folder, along with the various engine executables. But this is definitely a situation where you need to be careful about what you are doing. Engines that use notably different versions of the same library file cannot be kept in the same folder together.</p>
+<p>Once you have your desired Quake engine(s) installed into this Quake folder, you can set a new quake_exe value in your “_quakestarter_cfg.cmd” file to indicate the Quake program that should be launched by Quakestarter.</p>
+<p>The easiest way to do this is by using the third item in the main Quakestarter menu. That will give you a selection of executables to choose from, and then Quakestarter will handle making the necessary changes to “_quakestarter_cfg.cmd” to honor your choice.</p>
+<p>However you can also just manually edit “_quakestarter_cfg.cmd” to make the change yourself, if you want to. One reason you might want to do this is if you need to add some command-line arguments that should always be used whenever launching your Quake program. For example, if you are launching qbism Super8, its default “heapsize” value is quite low and on modern systems there’s no downside to always cranking it up, so that more maps will work correctly. So you could choose to specify this in your “_quakestarter_cfg.cmd”:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>set quake_exe=qbismS8.exe -heapsize 256000
+</pre></div>
+</div>
+<p><strong>Note:</strong> If you use the Quakestarter menu item to change your Quake engine executable, then any extra arguments like those will be discarded.</p>
+</section>
+<section id="installing-an-engine-hard-mode">
+<h3>Installing an engine - hard mode<a class="headerlink" href="#installing-an-engine-hard-mode" title="Permalink to this headline">¶</a></h3>
+<p>Let’s say you <em>don’t</em> have a “noengine” installation, but you still want to install some other Quake engines.</p>
+<p>If you are OK with transforming your current Quakestarter installation into a “noengine” form, there’s a couple of ways to do that. One way to do this is to get the “noengine” bundle for the same version of Quakestarter and unzip it over top of your current Quakestarter files. Another way is to use Quakestarter’s update process to install a “noengine” variant of a newer version of Quakestarter, choosing to “detach” or “erase” your current engine files as part of that process. These things are described in the chapter <a class="reference internal" href="upgrading_quakestarter.html"><span class="doc">Updating Quakestarter</span></a>. Once you’ve achieved a “noengine” setup, you can go back to the “easy mode” process described above.</p>
+<p>But OK, maybe you want to keep the vkQuake/Ironwail files and keep them “managed” by Quakestarter, but you also want to add some new engine…</p>
+<p>If this new engine is a single executable, that is still pretty easy. You can just drop its exe into the Quake folder and it will now be available as a Quakestarter engine choice.</p>
+<p>If this new engine is made up of multiple files, that is trickier. If those files overlap with any of the vkQuake/Ironwail files, they can be affected when Quakestarter updates. And even if they don’t currently overlap, conceivably they still might be affected by some future Quakestarter update in which vkQuake/Ironwail use different library files. This is less of a “power user” situation and more of a “don’t do this” situation, generally speaking. But… do what you like! Just be aware of what happens to the managed vkQuake/Ironwail files <a class="reference internal" href="upgrading_quakestarter.html"><span class="doc">when Quakestarter is updated</span></a>.</p>
+<p>FYI if you have vkQuake/Ironwail files that were installed by Quakestarter, those files will be listed in “engines_manifest.txt”.</p>
+</section>
 </section>
 <section id="multigame-support">
 <h2>Multigame support<a class="headerlink" href="#multigame-support" title="Permalink to this headline">¶</a></h2>
@@ -182,14 +207,6 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>my_quake_program.exe -game2 copper_v1_17 -game udob_v1_1 +map start
 </pre></div>
 </div>
-</section>
-<section id="download-behavior">
-<h2>Download behavior<a class="headerlink" href="#download-behavior" title="Permalink to this headline">¶</a></h2>
-<p>And finally, a consideration that is outside of that configuration file:</p>
-<p>Quakestarter will use “curl.exe” to download zipfiles, if that utility is in a directory included in your Windows PATH environment variable. This will be the case in current versions of Windows 10 (or later).</p>
-<p>If Quakestarter can’t find that curl utility, it will use a .Net assembly to do the download instead. This should work fine. One downside though is that this approach will not show a progress bar during the download.</p>
-<p>If you don’t have “curl.exe” in one of your PATH directories and you really do want that progress bar – or if for some reason the .Net assembly isn’t working and you want to try using curl instead – then you could install curl yourself. You can get a perfectly good “curl.exe” from <a class="reference external" href="https://curl.se/windows/">its website</a>. Then you can either place that utility into some directory that is already in your PATH, or edit your PATH value to include the directory where you put curl.</p>
-<p>(How to edit system environment variables like PATH is outside the scope of this chapter, but is well-covered in Google results.)</p>
 </section>
 </section>
 
