@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Auto Setup Logic &#8212; Quakestarter 3.5.0 documentation</title>
+    <title>Auto Setup Logic &#8212; Quakestarter 3.6.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
@@ -126,14 +126,14 @@
 </ul>
 <p><div style="line-height: 0; padding: 0; margin: 0"></div></p>
 <ul class="simple">
-<li><p>Quake soundtrack files (from the Quake rerelease) are provided by Steam, Bethesda, and Xbox Game Pass.</p></li>
+<li><p>Quake soundtrack files (from the Quake rerelease) are provided by Steam, Xbox Game Pass, and the Epic Games Store. And although the Bethesda store has been shut down, existing Quake installations from the Bethesda store can also provide the soundtrack files.</p></li>
 </ul>
 <p>So for example if you don’t have any other Quake installations on your computer and don’t have any Quake paks or soundtrack files on hand, doing an installation of Quake from Steam is the simplest one-shot way to fetch everything you need. After doing the Steam install you could then run Quakestarter and auto-setup the pak files and soundtrack into your new modern Quake singleplayer installation.</p>
 </section>
 <section id="how-quakestarter-knows-where-to-look">
 <h2>How Quakestarter knows where to look<a class="headerlink" href="#how-quakestarter-knows-where-to-look" title="Permalink to this headline">¶</a></h2>
 <p>When Quakestarter wants to copy a file or directory from some existing Quake installation, it will run through a series of candidate locations. Each time it finds something that looks good, it asks you if you want to copy the necessary file/directory from that location. If you say no, it keeps looking.</p>
-<p>The first steps in this process involve checking the Windows registry for installations from Steam, GOG, or Bethesda. (The info for Xbox Game Pass installations is not in the registry.)</p>
+<p>The first steps in this process involve checking the Windows registry for installations from Steam, GOG, or Bethesda. (The info for Xbox Game Pass installations is not in the registry. Not sure yet about the Epic store.)</p>
 <p>If Quakestarter doesn’t get the file from any of those places, it then checks 1) on every disk, 2) across a set of top-level folders, for each of 3) a list of likely paths under those top-level folders.</p>
 <p>The top-level folders checked on each disk are:</p>
 <ul class="simple">
@@ -151,8 +151,9 @@
 <li><p>Steam\steamapps\common\Quake\rerelease</p></li>
 <li><p>GOG Games\Quake</p></li>
 <li><p>GOG Galaxy\Games\Quake</p></li>
-<li><p>Bethesda.net Launcher\games\Quake</p></li>
 <li><p>XboxGames\QUAKE\Content</p></li>
+<li><p>Epic Games\Quake</p></li>
+<li><p>Bethesda.net Launcher\games\Quake</p></li>
 </ul>
 <p>(Some of these locations are specifically for the Quake rerelease rather than the original game; those locations are helpful for locating soundtrack files but not for the original pak files.)</p>
 <p>If you know of some other place that Quakestarter should reasonably be looking for Quake installations, let me know!</p>
