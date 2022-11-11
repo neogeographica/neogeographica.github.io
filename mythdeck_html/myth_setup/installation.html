@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Installation &#8212; MythDeck 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/media.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/page.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/imagetoggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Preferences" href="preferences.html" />
+    <link rel="prev" title="Overview" href="../mythdeck_readme.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../mythdeck_readme.html">MythDeck</a></h1>
+
+
+
+<p class="blurb">Steam Deck setup for Myth 2</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Myth Setup</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controls.html">Controls</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deck Config</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/basics.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/menus.html">Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/camera_and_time.html">Camera and Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/selection.html">Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/movement.html">Movement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/targeting.html">Targeting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/unit_actions.html">Unit Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/other_stuff.html">Other Stuff</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tips</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tips/miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/myth_tfl.html">Myth: TFL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/reconfiguration.html">Reconfiguration</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../mythdeck_readme.html" title="Previous document">Overview</a>
+        </li>
+        <li>
+          <a href="preferences.html" title="Next document">Preferences</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>There’s a lot to learn/know around the topic of installing non-Steam games on the Deck, and I won’t begin to try to cover it all here. But I can go over some things specific to Myth.</p>
+<p>Most importantly, you do need to own Myth 2 so that you can get a copy of the necessary game data. Myth 2 is unfortunately not on any digital games store these days but CDs can still be found.</p>
+<p>You will also be using the Linux patch for Myth 2 from <a class="reference external" href="https://projectmagma.net/downloads/myth2_updates/">Project Magma</a>. As I’ll describe below, likely you will just be running a script that automatically fetches this file for you, and you don’t have to worry about specifics. But it’s also acceptable to manually download and use a specific version of the patch if you need to. FYI I originally designed and tested this configuration using the 1.8.3 patch, and I’ve used 1.8.4 too. Anything 1.8.3 or later should hopefully be fine.</p>
+<div class="admonition- admonition">
+<p class="admonition-title"></p>
+<p>A quick digression here. Given that we’re going to need to use the Project Magma patch, which comes with an installer program, why can’t we just run that installer program? There’s a couple of main reasons:</p>
+<ul class="simple">
+<li><p>The installer wants you to point it at either an existing Myth 2 installation to update, or a mounted Myth 2 CD, neither of which you are likely to have handy for your Deck.</p></li>
+<li><p>The installer requires a code library (libgtk) that is not natively present on the Deck, and which would be a hassle to install correctly.</p></li>
+</ul>
+<p>So we’ll just be yanking the necessary files out of the patch/installer and putting them where they need to go.</p>
+</div>
+<p>You can do the Myth 2 installation work directly on the Deck itself. Or, you can do it on some other Linux system, and then transfer all the Myth 2 files to the Deck when you’re done.</p>
+<p>In either case you will need to know how to transfer files to the Deck and how to run shell commands on the Deck. I <em>very strongly recommend against</em> trying to do the procedure below using the Deck’s onscreen virtual keyboard! If you want to do the entire procedure on the Deck, you should have some other means of entering commands. You can connect a keyboard directly to the Deck, or use other methods (personally I run an ssh server on my Deck so that I can log in remotely to type commands from another computer).</p>
+</section>
+<section id="necessary-files">
+<h2>Necessary Files<a class="headerlink" href="#necessary-files" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, you will need the game data for Myth 2, which comes in the form of five “tags” files with these names:</p>
+<ul class="simple">
+<li><p>international large install</p></li>
+<li><p>large install</p></li>
+<li><p>medium install</p></li>
+<li><p>international small install</p></li>
+<li><p>small install</p></li>
+</ul>
+<p>If you already have an existing Myth 2 installation somewhere (or can create one), you can find these in the “tags” folder where the game is installed. Depending on what kind of Myth 2 CD you have you may also be able to easily find and copy them directly from the CD. In any case, you need to have these files on hand.</p>
+<p>With these files on hand you can create a fully patched-up Myth 2 installation, either on the Deck itself or on some other Linux system. Away we go…</p>
+</section>
+<section id="game-install">
+<h2>Game Install<a class="headerlink" href="#game-install" title="Permalink to this headline">¶</a></h2>
+<p>Now you’re going to need to enter commands in a shell, working in a filesystem where you have those five “tags” files available. If you’re working on some other Linux system or logging into the Deck remotely, you already have a shell you prefer to use. If you’re just connecting a keyboard directly to the Deck, you need to put the Deck into desktop mode and you can start the Konsole app to get a shell.</p>
+<p>There are three different ways you can do this installation:</p>
+<ul class="simple">
+<li><p>Using the provided script and accepting all the default behaviors.</p></li>
+<li><p>Using the provided script and modifying the defaults.</p></li>
+<li><p>Manually doing the steps yourself.</p></li>
+</ul>
+<p>Likely the first way will be fine, but I’ll also describe the other ways in case you need to handle some “things aren’t working” or “I need to do something differently” issues.</p>
+<section id="scripted">
+<h3>Scripted<a class="headerlink" href="#scripted" title="Permalink to this headline">¶</a></h3>
+<p>The easiest approach is to download a script and let it run with its default behavior. Here’s the three things that the script will normally assume:</p>
+<ul class="simple">
+<li><p>The “tags” files are in your current working directory (when you run the script).</p></li>
+<li><p>The Project Magma patch file is the 1.8.4 patch, to be downloaded using the URL that was correct at the most recent update of this script.</p></li>
+<li><p>The desired location for the Myth 2 installation is the <code class="docutils literal notranslate"><span class="pre">Games/Myth2</span></code> subdirectory under your home directory.</p></li>
+</ul>
+<p>If all these assumptions are good, you can run the install script without having to tweak anything. If on the other hand you think you will need to change one or more of those assumed behaviors, you should still read this section, but then continue on to the next section below to learn how to do those tweaks.</p>
+<p>For now let’s say you’re sticking with the defaults. One of those defaults means that your “working directory” needs to be the directory that contains the “tags” files. You can use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command if necessary to get your working directory correct before running the script. For example if the “tags” files are all in <code class="docutils literal notranslate"><span class="pre">/home/deck/Downloads</span></code> and you want to make that your working directory, then you should execute this command in the shell:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/deck/Downloads
+</pre></div>
+</div>
+<p>When you’re happy with your working directory, you’re ready to go. Execute the following commands in the shell. You can skip any line that begins with “#”; that’s just a comment to tell you what is going on.</p>
+<p>(Note that the <code class="docutils literal notranslate"><span class="pre">-LO</span></code> argument to <code class="docutils literal notranslate"><span class="pre">curl</span></code> below ends with a letter O, not a zero.)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the script.</span>
+curl -LO https://github.com/neogeographica/mythdeck/raw/master/install-myth2.sh
+
+<span class="c1"># At this point you can optionally use &quot;cat install-myth2.sh&quot; or a text</span>
+<span class="c1"># editor like &quot;nano&quot; to examine the script; make sure it&#39;s not doing</span>
+<span class="c1"># anything shady.</span>
+
+<span class="c1"># Now run the script.</span>
+bash install-myth2.sh
+
+<span class="c1"># Assuming all went well, you can delete the script.</span>
+rm install-myth2.sh
+</pre></div>
+</div>
+</section>
+<section id="scripted-but-with-tweaks">
+<h3>Scripted but with Tweaks<a class="headerlink" href="#scripted-but-with-tweaks" title="Permalink to this headline">¶</a></h3>
+<p>You can change any or all of the three defaults by using “export” commands before you run the script. Note that the export commands described here <strong>must be done in the same shell window where you will then run the script</strong>.</p>
+<p>If you need to indicate that the tags files are in some directory that is <em>not</em> the current working directory, you can export a value for <code class="docutils literal notranslate"><span class="pre">MYTH2_TAGSDIR</span></code>. For example if your tags files are all in the <code class="docutils literal notranslate"><span class="pre">/tmp/tags</span></code> directory then you would do this before running the script:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MYTH2_TAGSDIR</span><span class="o">=</span><span class="s2">&quot;/tmp/tags&quot;</span>
+</pre></div>
+</div>
+<p>If you need to get the Project Magma patch from some other location – maybe the URL used by the script is broken, or maybe they’ve released a new version you want to use and the script hasn’t updated yet – then you can export a value for <code class="docutils literal notranslate"><span class="pre">PM_MYTH2_INSTALLER</span></code>.</p>
+<p>One way to do this is to manually download the patch yourself and then use the path to that download as the value for <code class="docutils literal notranslate"><span class="pre">PM_MYTH2_INSTALLER</span></code>. For example if you’ve manually downloaded <code class="docutils literal notranslate"><span class="pre">Myth2_192_Linux.tar.gz</span></code> into the <code class="docutils literal notranslate"><span class="pre">/home/deck/Downloads</span></code> directory then you would do this before running the script:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PM_MYTH2_INSTALLER</span><span class="o">=</span><span class="s2">&quot;/home/deck/Downloads/Myth2_192_Linux.tar.gz&quot;</span>
+</pre></div>
+</div>
+<p>Alternatively you can set <code class="docutils literal notranslate"><span class="pre">PM_MYTH2_INSTALLER</span></code> to the URL where the patch is hosted, if you want the script to do the download for you. For example something like this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PM_MYTH2_INSTALLER</span><span class="o">=</span><span class="s2">&quot;https://some.website.com/stuff/Myth2_192_Linux.tar.gz&quot;</span>
+</pre></div>
+</div>
+<p>The final thing you can tweak is the directory where Myth 2 should be installed. This can be changed by exporting a value for <code class="docutils literal notranslate"><span class="pre">MYTH2_INSTALLDIR</span></code>. For example if you want it to be installed to <code class="docutils literal notranslate"><span class="pre">/home/deck/M2</span></code> then you would do this before running the script:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MYTH2_INSTALLDIR</span><span class="o">=</span><span class="s2">&quot;/home/deck/M2&quot;</span>
+</pre></div>
+</div>
+<p>Once you’ve done the exports for your tweaks, you can download and run the script as described in the previous section.</p>
+</section>
+<section id="manually">
+<h3>Manually<a class="headerlink" href="#manually" title="Permalink to this headline">¶</a></h3>
+<p>Perhaps there’s some reason you can’t use the script at all – e.g. maybe you need to change some particular behavior that’s not one of the three tweakable defaults. In that case you can do the work yourself with a series of shell commands.</p>
+<p>If the script isn’t working for you, these commands might not work either, but at least you can see “under the hood” and perhaps change what you need to. Obviously you could also look at the script itself to see what it’s doing, but the core sequence of necessary commands is simpler.</p>
+<p>Since hopefully nooooobody will need this, <a class="reference external" href="https://github.com/neogeographica/mythdeck/raw/master/install-myth2-manual-commands.txt">I’ve put those commands in a separate file</a>. Have a look if you really must.</p>
+</section>
+</section>
+<section id="sanity-check">
+<h2>Sanity Check<a class="headerlink" href="#sanity-check" title="Permalink to this headline">¶</a></h2>
+<p>At this point, you might want to test that the game actually works!</p>
+<p>Note that if you were logging into the Deck remotely to do the above work, at this point you do need to switch over to the Deck in desktop mode and run a Konsole shell there.</p>
+<p>The program you want to run is <code class="docutils literal notranslate"><span class="pre">Myth2_64bit</span></code> inside your Myth 2 install directory. So if you installed Myth 2 into <code class="docutils literal notranslate"><span class="pre">/home/deck/Games/Myth2</span></code>, you would execute this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/home/deck/Games/Myth2/Myth2_64bit
+</pre></div>
+</div>
+<p>Myth 2 should start up and run correctly. Once you get to the main menu, go ahead and quit out of it for now.</p>
+</section>
+<section id="other-addons">
+<h2>Other Addons<a class="headerlink" href="#other-addons" title="Permalink to this headline">¶</a></h2>
+<p>To take advantage of community work on Myth 2 you may want to add a few other modifications. <a class="reference external" href="https://tain.totalcodex.net/">The Tain</a> is one good place to get Myth stuff. FYI my Myth 2 installation always includes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tain.totalcodex.net/items/show/detail-texture-megapack">Detail Texture Megapack</a></p></li>
+<li><p><a class="reference external" href="https://tain.totalcodex.net/items/show/myth-ii-quicktime-cutscenes">Myth II QuickTime Cutscenes</a></p></li>
+</ul>
+<p>And also, support for playing the entire Myth:TFL campaign and multiplayer in the Myth 2 engine:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tain.totalcodex.net/items/show/the-fallen-levels-v2">The Fallen Levels v2</a></p></li>
+<li><p><a class="reference external" href="https://tain.totalcodex.net/items/show/myth-tfl-quicktime-cutscenes">Myth TFL Quicktime Cutscenes</a></p></li>
+<li><p><a class="reference external" href="https://tain.totalcodex.net/items/show/myth-tfl-multiplayer-mappack">Myth TFL Multiplayer Mappack</a></p></li>
+</ul>
+<p>Installing Myth addons is generally just a matter of extracting files into the right location as per their READMEs. In these cases, the end result will be:</p>
+<ul class="simple">
+<li><p>For the two “Cutscenes” patches: a bunch of “.mov” files that go into a <code class="docutils literal notranslate"><span class="pre">cutscenes</span></code> subdirectory in your Myth 2 installation. Create that subdirectory if it’s not there, using <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">cutscenes</span></code> while working in your Myth 2 directory.</p></li>
+<li><p>For the other three downloads: three large files that go into the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> subdirectory.</p></li>
+</ul>
+</section>
+<section id="adding-to-steam">
+<h2>Adding to Steam<a class="headerlink" href="#adding-to-steam" title="Permalink to this headline">¶</a></h2>
+<p>Once you have your complete working Myth 2 installation in some location on the Deck’s filesystem, you can add it to Steam as a shortcut to a non-Steam game. If you’re not familiar with that process, here’s a quick rundown:</p>
+<ul class="simple">
+<li><p>In desktop mode on the Deck, open Steam and click the “Games” menu on the top of the window.</p></li>
+<li><p>Choose “Add a Non-Steam Game to My Library”.</p></li>
+<li><p>In the resulting dialog, click “Browse”, and change the “File type” at the bottom of the file chooser to “All Files”.</p></li>
+<li><p>Navigate to find and select the “Myth2_64bit” file in your Myth installation.</p></li>
+<li><p>Once you have double-clicked on that (or selected it and clicked “Open”), the final step is to click “ADD SELECTED PROGRAMS”.</p></li>
+</ul>
+</section>
+<section id="renaming">
+<h2>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">¶</a></h2>
+<p>Regardless of whether you are already an expert at adding non-Steam games, pay attention to this next step. <strong>You need to use a specific name for this game.</strong> Otherwise the MythDeck configuration won’t be available.</p>
+<p>If you search around in your Steam games library you should see an entry for “Myth2_64bit”. Select that, click on the little “gear” symbol to manage the game, and click on “Properties”. In the resulting dialog you must change the name of this shortcut. Instead of “Myth2_64bit” you must use the name “Myth II: Soulblighter”. It really does need to be exactly that, with the space after the colon and everything. I had to pick some name to associate the config with, so I decided I might as well use the official one.</p>
+<p>At this point you could also add custom library art for the game but that’s a topic outside of what I can cover here. Basically, Myth 2 is now installed and ready to configure!</p>
+</section>
+<section id="selecting-mythdeck">
+<h2>Selecting MythDeck<a class="headerlink" href="#selecting-mythdeck" title="Permalink to this headline">¶</a></h2>
+<p>Switch your Steam Deck back to gaming mode (where hopefully we can now remain). Find “Myth II: Soulblighter” in your library and select it.</p>
+<p>Select the little controller icon to manage your input settings, then go to the top of that page and choose to “Browse Community Layouts”. This will take you to a window that shows both “TEMPLATES” and “COMMUNITY LAYOUTS”; move right or hit the right bumper to switch to showing the community layouts. Hopefully you can find and select the MythDeck configuration there!</p>
+<p>Among other things, the MythDeck config provides mouse support:</p>
+<blockquote>
+<div><p><img alt="right trackpad" title="right trackpad" src="../_static/icons/SteamDeck_Right_Track.png" class="inline-icon"/> to move the cursor.</p>
+<p><img alt="right trigger" title="right trigger" src="../_static/icons/SteamDeck_R2.png" class="inline-icon"/> or click <img alt="right trackpad" title="right trackpad" src="../_static/icons/SteamDeck_Right_Track.png" class="inline-icon"/> to do a mouseclick.</p>
+</div></blockquote>
+<p>You can use that to navigate the game menus during initial configuration.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="../mythdeck_readme.html" title="Previous document">Overview</a>
+        </li>
+        <li>
+          <a href="preferences.html" title="Next document">Preferences</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

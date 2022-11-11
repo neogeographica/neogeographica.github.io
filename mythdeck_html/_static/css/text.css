@@ -1,0 +1,16 @@
+.caption-text {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.rubric {
+    font-size: larger;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+p.admonition-title:after {
+    content: "";
+}

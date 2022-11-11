@@ -1,0 +1,16 @@
+.smallVid {
+  display: block;
+  width: 320px;
+}
+
+
+.pic_left {
+  margin-bottom: 0.75em;
+  padding: 5px;
+  background-color: #eee;
+  height: auto;
+  border: 1px #888 solid;
+  margin-top: 4px;
+  float: left;
+  margin-right: 1em;
+}

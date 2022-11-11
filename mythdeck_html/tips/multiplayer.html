@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Multiplayer &#8212; MythDeck 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/media.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/page.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/imagetoggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reconfiguration" href="reconfiguration.html" />
+    <link rel="prev" title="Myth: TFL" href="myth_tfl.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../mythdeck_readme.html">MythDeck</a></h1>
+
+
+
+<p class="blurb">Steam Deck setup for Myth 2</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Myth Setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/controls.html">Controls</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deck Config</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/basics.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/menus.html">Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/camera_and_time.html">Camera and Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/selection.html">Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/movement.html">Movement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/targeting.html">Targeting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/unit_actions.html">Unit Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deck_config/other_stuff.html">Other Stuff</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tips</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="myth_tfl.html">Myth: TFL</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multiplayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reconfiguration.html">Reconfiguration</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="myth_tfl.html" title="Previous document">Myth: TFL</a>
+        </li>
+        <li>
+          <a href="reconfiguration.html" title="Next document">Reconfiguration</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="multiplayer">
+<h1>Multiplayer<a class="headerlink" href="#multiplayer" title="Permalink to this headline">¶</a></h1>
+<p>I’m not really sure how enjoyable it would be to do multiplayer Myth using the Steam Deck. Maybe co-op play? Maybe if everyone else was also on the Deck?</p>
+<p>Well regardless, a few words about multiplayer:</p>
+<p>The multiplayer modes still work perfectly fine, both co-op and competitive.</p>
+<p>It’s peer-to-peer and doesn’t do any fancy NAT holepunch stuff; anyone hosting a game will need to explicitly configure port-forwarding on their home router so that port 3453 (UDP and TCP) goes to the hosting computer.</p>
+<p>To join a game, you either need to know the externally-visible IP address of the host (which the host can find out via sites like <a class="reference external" href="https://www.whatismyip.com/">WhatIsMyIP.com</a>) in order to do a direct IP connection … or, the host can set up the game in a lobby in the <a class="reference external" href="http://gateofstorms.net/">Gate of Storms</a> service. In the latter case, anyone connecting to Gate of Storms can see and join the game. (Note that a host can choose to password-protect a game.)</p>
+<p>The archived old <a class="reference external" href="https://web.archive.org/web/20170421203613/http://mythgraveyard.org:80/Myth_Starter_Guide/">Myth Starter Guide</a> still has some relevant info about multiplayer, although it is now out of date when it comes to some specifics of setup and configuration.</p>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="myth_tfl.html" title="Previous document">Myth: TFL</a>
+        </li>
+        <li>
+          <a href="reconfiguration.html" title="Next document">Reconfiguration</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

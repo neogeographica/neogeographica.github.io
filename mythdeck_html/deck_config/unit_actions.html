@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Unit Actions &#8212; MythDeck 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/text.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/media.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/page.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/imagetoggle.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interface" href="interface.html" />
+    <link rel="prev" title="Targeting" href="targeting.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../mythdeck_readme.html">MythDeck</a></h1>
+
+
+
+<p class="blurb">Steam Deck setup for Myth 2</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Myth Setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../myth_setup/controls.html">Controls</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deck Config</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menus.html">Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="camera_and_time.html">Camera and Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selection.html">Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movement.html">Movement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="targeting.html">Targeting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Unit Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_stuff.html">Other Stuff</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tips</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tips/miscellaneous.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/myth_tfl.html">Myth: TFL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/multiplayer.html">Multiplayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips/reconfiguration.html">Reconfiguration</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="targeting.html" title="Previous document">Targeting</a>
+        </li>
+        <li>
+          <a href="interface.html" title="Next document">Interface</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="unit-actions">
+<h1>Unit Actions<a class="headerlink" href="#unit-actions" title="Permalink to this headline">¶</a></h1>
+<section id="main-controls">
+<h2>Main Controls<a class="headerlink" href="#main-controls" title="Permalink to this headline">¶</a></h2>
+<p>When a Myth unit finishes with some order, it falls into a default “stance” (set of behaviors). In this stance it keeps its position if no hostile units are nearby. If it detects a hostile unit however it will attack, chasing if necessary.</p>
+<p>If you want to put selected units into a different stance you can use the face buttons:</p>
+<blockquote>
+<div><p><img alt="A button" title="A button" src="../_static/icons/SteamDeck_A.png" class="inline-icon"/> for <strong>Stop</strong> to halt any movement of selected units and prevent them from attacking unless and until they are attacked. Attacked units will fight back; for ranged units this can include movement to try to open up enough distance to fire back.</p>
+<p><img alt="B button" title="B button" src="../_static/icons/SteamDeck_B.png" class="inline-icon"/> for <strong>Retreat</strong> to instruct selected units to run away from any nearby hostile.</p>
+<p><img alt="X button" title="X button" src="../_static/icons/SteamDeck_X.png" class="inline-icon"/> for <strong>Guard</strong>/<strong>Hold</strong> is similar to Stop, with the exception that ranged units are free to open fire on any enemies they detect (but they still will not chase).</p>
+<p><img alt="Y button" title="Y button" src="../_static/icons/SteamDeck_Y.png" class="inline-icon"/> for <strong>Scatter</strong> to instruct selected units to run away from the center of their group, for a short distance. After the Scatter is complete, the units go back to the default stance.</p>
+</div></blockquote>
+<p>Giving a unit some attack or move order will break its stance, and it will return to the default stance when the order is done.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="other-controls">
+<h2>Other Controls<a class="headerlink" href="#other-controls" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><img alt="left trigger" title="left trigger" src="../_static/icons/SteamDeck_L2.png" class="inline-icon"/> <img alt="+" title="+" src="../_static/icons/combo.png"/ class="inline-icon"/> <img alt="A button" title="A button" src="../_static/icons/SteamDeck_A.png" class="inline-icon"/> to play the “taunt” animation for selected units.</p>
+<p><img alt="left trigger" title="left trigger" src="../_static/icons/SteamDeck_L2.png" class="inline-icon"/> <img alt="+" title="+" src="../_static/icons/combo.png"/ class="inline-icon"/> <img alt="X button" title="X button" src="../_static/icons/SteamDeck_X.png" class="inline-icon"/> double-tap to rename selected units. Double-tap is required here to avoid entering the rename action’s text entry box by accident. To finish the rename action you will need to open the virtual keyboard (Steam button + X) and type the new name.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="targeting.html" title="Previous document">Targeting</a>
+        </li>
+        <li>
+          <a href="interface.html" title="Next document">Interface</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, Joel Baxter <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
