@@ -110,7 +110,7 @@
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>There’s a lot to learn/know around the topic of installing non-Steam games on the Deck, and I won’t begin to try to cover it all here. But I can go over some things specific to Myth.</p>
-<p>Most importantly, you do need to own Myth 2 so that you can get a copy of the necessary game data. Myth 2 is unfortunately not on any digital games store these days but CDs can still be found.</p>
+<p>Most importantly, you do need to have Myth 2 so that you can get a copy of the necessary game data. Myth 2 is unfortunately not on sale through any games store these days, but CDs can still be found for cheap in marketplaces like Amazon and eBay – either the original <em>Myth II: Soulblighter</em> CD or pack-ins like <em>Myth II: Worlds</em> or <em>Myth: The Total Codex</em> will get you what you need. And FWIW, Myth 2 is also a prime example of something that the gaming internet considers to be “abandonware”, with all that implies.</p>
 <p>You will also be using the Linux patch for Myth 2 from <a class="reference external" href="https://projectmagma.net/downloads/myth2_updates/">Project Magma</a>. As I’ll describe below, likely you will just be running a script that automatically fetches this file for you, and you don’t have to worry about specifics. But it’s also acceptable to manually download and use a specific version of the patch if you need to. FYI I originally designed and tested this configuration using the 1.8.3 patch, and I’ve used 1.8.4 too. Anything 1.8.3 or later should hopefully be fine.</p>
 <div class="admonition- admonition">
 <p class="admonition-title"></p>
@@ -163,7 +163,7 @@
 <p>When you’re happy with your working directory, you’re ready to go. Execute the following commands in the shell. You can skip any line that begins with “#”; that’s just a comment to tell you what is going on.</p>
 <p>(Note that the <code class="docutils literal notranslate"><span class="pre">-LO</span></code> argument to <code class="docutils literal notranslate"><span class="pre">curl</span></code> below ends with a letter O, not a zero.)</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the script.</span>
-curl -LO https://github.com/neogeographica/mythdeck/raw/master/install-myth2.sh
+curl -LO https://github.com/neogeographica/mythdeck/raw/main/install-myth2.sh
 
 <span class="c1"># At this point you can optionally use &quot;cat install-myth2.sh&quot; or a text</span>
 <span class="c1"># editor like &quot;nano&quot; to examine the script; make sure it&#39;s not doing</span>
@@ -203,7 +203,7 @@ rm install-myth2.sh
 <h3>Manually<a class="headerlink" href="#manually" title="Permalink to this headline">¶</a></h3>
 <p>Perhaps there’s some reason you can’t use the script at all – e.g. maybe you need to change some particular behavior that’s not one of the three tweakable defaults. In that case you can do the work yourself with a series of shell commands.</p>
 <p>If the script isn’t working for you, these commands might not work either, but at least you can see “under the hood” and perhaps change what you need to. Obviously you could also look at the script itself to see what it’s doing, but the core sequence of necessary commands is simpler.</p>
-<p>Since hopefully nooooobody will need this, <a class="reference external" href="https://github.com/neogeographica/mythdeck/raw/master/install-myth2-manual-commands.txt">I’ve put those commands in a separate file</a>. Have a look if you really must.</p>
+<p>Since hopefully nooooobody will need this, <a class="reference external" href="https://github.com/neogeographica/mythdeck/raw/main/install-myth2-manual-commands.txt">I’ve put those commands in a separate file</a>. Have a look if you really must.</p>
 </section>
 </section>
 <section id="sanity-check">
@@ -288,7 +288,7 @@ rm install-myth2.sh
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2022, Joel Baxter <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>.
+      &copy;2022, Joel Baxter <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> (except for <a href="https://thoseawesomeguys.com/prompts/">button icons</a>).
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
