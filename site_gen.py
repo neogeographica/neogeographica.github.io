@@ -306,10 +306,10 @@ def min_refs(dest_dir, sub_dir, file_ext, match_pattern, replace_fun):
                         for line in in_fd:
                             new_line = match_pattern.sub(replace_fun, line)
                             out_fd.write(new_line)
-                # Delete the source file and rename the temporary file to
+                # Delete the source file and move the temporary file to
                 # replace it.
                 os.remove(in_path)
-                os.rename(out_path, in_path)
+                shutil.move(out_path, in_path)
 
 
 # OK, definitions done, away we go:

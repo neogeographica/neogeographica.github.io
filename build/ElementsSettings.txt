@@ -1,0 +1,49 @@
+# ! This line contains an elementFile *comment*.
+# ! This ElementsSetting.txt file is the first elementFile read when processing a site.
+# ! Comments begin with one elementMarker (usually a "#") followed by a space. 
+# ! The elementMarker in the ElementsSettings.txt file is always "#",
+# !		even if elementMarker is changed below, while elements
+# ! 	in a site begin with the value of elementMarker
+#
+# ! All the following elements must be defined either here or in each site.
+#elementMarker #
+#elementFilePrefix `
+#contentExtensions .html,.htm,.php,.php3,.asp,.jhtml,.inc
+#displayPage index.html,index.htm,default.html,index.php,index.asp,index.jhtml
+#codeBlockMarker .
+#markerStart {
+#markerEnd }
+#firstElement {template}
+#content {{fileName}}
+#copyAssets true
+#debugOn true
+#
+# ! lineSep may be "unix", "mac", or "win"
+#lineSep unix
+#
+# ! All following elements in this file are optional.
+# ! 	being defined here, they will be available to all sites
+#ptt {pathToTop}
+#en &#8211;
+#em &#8212;
+#bullet &#8226;
+#tm &#8482;
+#
+# ! The following element is a multiLineElement.
+# ! 	The codeBlockMarker is the first char of the multiLineElement's name, 
+# !		thus identifying it as a block of Python code for evaluation.
+#.defaultCode#
+def displayInfo():
+	"Show all the elements available to the calling page."
+	s = ['<b>info</b>'] # a list
+	g = globals() # most scripts don't need to use the globals() function
+	# on the other hand, scripts that want to change the value of a element must declare the element global
+	keys = g.keys()
+	keys.sort()
+	for key in keys:
+		if type(g[key]) == types.StringType and key[:2] != '__': # filter out most non-Graft items
+			keyString = string.replace(g[key], '<', "&lt;")
+			keyString = string.replace(keyString, markerStart, "\\"+markerStart)
+			s.append('<b>'+ key + '</b>: ' + keyString) #plunk them each in a list
+	return string.join(s, "<br>\n") # convert the list to a string at the end
+#
