@@ -9,7 +9,8 @@ So, the coward's way out here is to just build it in a container:
 local system.
 
 * If the container image exists on the local system, use the build-site.sh
-script to run site-gen.py.
+script to run site-gen.py. Arguments to this script will be passed to
+site-gen.py (e.g. --css, --js, and/or --nohtml).
 
 This should have the same output as "natively" running site-gen.py with
 Python 2. The only difference is that it will not be able to automatically

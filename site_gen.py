@@ -21,7 +21,7 @@ minimize_css = True
 minimize_js = True
 
 # Identify the YUI jarfile to use.
-yui_jar = 'yuicompressor-2.4.8.jar'
+yui_jar = os.path.join('build', 'yuicompressor-2.4.8.jar')
 min_cmd_prefix = ['java', '-jar', os.path.join(this_dir, yui_jar)]
 
 # To avoid confusion, the filenames for minimized scripts will have ".min"

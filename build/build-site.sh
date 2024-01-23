@@ -7,4 +7,4 @@ do
 done
 cd -P "$(dirname "$SELF")/.."
 
-docker run -it --rm -v "$PWD":/usr/src/neogeographica.github.io -w /usr/src/neogeographica.github.io site-gen site_gen.py
+docker run -it --rm -v "$PWD":/usr/src/neogeographica.github.io -w /usr/src/neogeographica.github.io site-gen site_gen.py "$@"
