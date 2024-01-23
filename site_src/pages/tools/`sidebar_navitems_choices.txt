@@ -1,6 +1,6 @@
 #sidebar_choice_key#
-quakestarter
 linuxdesktop
+quakestarter
 steamcontroller
 server_scripts
 quakesounds
@@ -10,8 +10,8 @@ birdseye
 qsmack
 none
 #sidebar_choice_active#
-[sidebar_choice_active_template('quakestarter','Singleplayer Starter Pack')]
 [sidebar_choice_active_template('linuxdesktop','Linux Desktop Integration')]
+[sidebar_choice_active_template('quakestarter','Singleplayer Starter Pack')]
 [sidebar_choice_active_template('steamcontroller','Steam Controller Quake')]
 [sidebar_choice_active_template('server_scripts','Gameserver Scripts')]
 [sidebar_choice_active_template('quakesounds','quakesounds')]
@@ -20,8 +20,8 @@ none
 [sidebar_choice_active_template('birdseye','Birdseye Map Overviews')]
 [sidebar_choice_active_template('qsmack','QSmack Quake Admin')]
 #sidebar_choice_inactive#
-[sidebar_choice_inactive_template('quakestarter','Singleplayer Starter Pack')]
 [sidebar_choice_inactive_template('linuxdesktop','Linux Desktop Integration')]
+[sidebar_choice_inactive_template('quakestarter','Singleplayer Starter Pack')]
 [sidebar_choice_inactive_template('steamcontroller','Steam Controller Quake')]
 [sidebar_choice_inactive_template('server_scripts','Gameserver Scripts')]
 [sidebar_choice_inactive_template('quakesounds','quakesounds')]
