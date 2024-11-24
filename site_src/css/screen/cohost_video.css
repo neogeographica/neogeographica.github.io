@@ -1,0 +1,5 @@
+.cohostVid {
+  display: block;
+  width: 550px;
+  height: [video_widescreen_height(550)]px;
+}

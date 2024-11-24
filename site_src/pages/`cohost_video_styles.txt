@@ -1,0 +1,2 @@
+<link href="[styles_path]screen/cohost_video.css" rel="preload" as="style">
+<link href="[styles_path]screen/cohost_video.css" rel="stylesheet">

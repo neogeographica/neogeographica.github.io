@@ -1,5 +1,5 @@
 import Elements, postmarkup
-import argparse, sys, os, re, shutil, contextlib, subprocess, tempfile
+import argparse, sys, os, os.path, re, shutil, contextlib, subprocess, tempfile
 
 # Paths are relative to the home dir of this script.
 this_dir = sys.path[0]
@@ -24,17 +24,33 @@ minimize_js = True
 yui_jar = os.path.join('build', 'yuicompressor-2.4.8.jar')
 min_cmd_prefix = ['java', '-jar', os.path.join(this_dir, yui_jar)]
 
+# Files to skip xforming (because they break the xformer).
+# None at the moment!
+noxform = {}
+noxform['css'] = []
+noxform['js'] = []
+noxform['txt'] = []
+
 # To avoid confusion, the filenames for minimized scripts will have ".min"
 # inserted before the final extension (".css" or ".js"). That means that any
 # internal references to those filenames will need to be fixed up. Below are
-# definitions for the necessary regex work.
-css_import_pattern = re.compile('@import url\(([^h][^\)]*)\.css\)')
-css_min_import_fun = lambda match: ''.join(['@import url(', match.group(1),
-                                            '.min.css)'])
-css_href_pattern = re.compile('href="([^h][^"]*/[^/"]*)\.css"')
-css_min_href_fun = lambda match: ''.join(['href="', match.group(1), '.min.css"'])
-js_src_pattern = re.compile('src="([^h][^"]*/[^/"]*)\.js"')
-js_min_src_fun = lambda match: ''.join(['src="', match.group(1), '.min.js"'])
+# definitions for the necessary regex work. Scripts from external sources
+# (start with "http") or in the noxform lists above are not affected.
+css_import_pattern = re.compile('@import url\(([^\)]*?([^/\)]*))\.css\)')
+def css_min_import_fun(m):
+    if m.group(1).startswith("http") or m.group(2) in noxform['css']:
+        return m.group(0)
+    return ''.join(['@import url(', m.group(1), '.min.css)'])
+css_href_pattern = re.compile('href="([^"]*?([^/"]*))\.css"')
+def css_min_href_fun(m):
+    if m.group(1).startswith("http") or m.group(2) in noxform['css']:
+        return m.group(0)
+    return ''.join(['href="', m.group(1), '.min.css"'])
+js_src_pattern = re.compile('src="([^"]*?([^/"]*))\.js"')
+def js_min_src_fun(m):
+    if m.group(1).startswith("http") or m.group(2) in noxform['js']:
+        return m.group(0)
+    return ''.join(['src="', m.group(1), '.min.js"'])
 
 # Replacements for contents of links to Steam Guides.
 link_xlate = {
@@ -270,11 +286,12 @@ def copy_files(src_dir, dest_dir, sub_dir, file_ext, xform=None, dir_func=None):
                 if f.endswith(dot_ext):
                     in_path = os.path.join(cur_src_dir, f)
                     if xform is not None:
-                        # Apply xform.
-                        xform(in_path, f, dot_ext, cur_dest_dir)
-                        # If in-place, remove the original file.
-                        if in_place:
-                            os.remove(in_path)
+                        # Apply xform unless file is excluded from that.
+                        if os.path.splitext(f)[0] not in noxform[file_ext]:
+                          xform(in_path, f, dot_ext, cur_dest_dir)
+                          # If in-place, remove the original file.
+                          if in_place:
+                              os.remove(in_path)
                     else:
                         # If not xforming, just copy the file.
                         out_path = os.path.join(cur_dest_dir, f)
