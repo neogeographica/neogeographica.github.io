@@ -1,1 +1,1 @@
-<p class="info_banner center">This page is part of an archived PlanetQuake article.<br/>To exit this archive, use the top/side navbars or <a href="..\interview.html">return to the description page</a>.</p>
+<p class="info_banner center">This page is part of an archived PlanetQuake article (pages <a href="page1.html">1</a>, <a href="page2.html">2</a>, <a href="page3.html">3</a>).<br/>To exit this archive, use the top/side navbars or <a href="..\interview.html">return to the description page</a>.</p>
